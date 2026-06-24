@@ -39,6 +39,7 @@
 - 新增历年卷资料为用户回忆文本，不是原始扫描卷；需要标注“回忆版/模拟补全”。
 - 已新增 `notes/past-exams.md`，包含回忆卷 A 选择/填空、简答题池，以及 2024-2025 大题回忆。
 - 已扩展 `content/notes.json` 的 `search_text` 字段，支持正文关键词搜索。
+- 线上历年卷页面已验证：`https://foreverhyx.github.io/iotsec/#past-exams`
 
 ## 技术决策
 | 决策 | 理由 |
@@ -72,6 +73,7 @@
 - 网站入口：`index.html`
 - GitHub 仓库：`https://github.com/ForeverHYX/iotsec`
 - GitHub Pages：`https://foreverhyx.github.io/iotsec/`
+- 历年卷页面：`https://foreverhyx.github.io/iotsec/#past-exams`
 
 ## 视觉/浏览器发现
 <!-- 关键：每执行2次查看/浏览器操作后必须更新此部分 -->

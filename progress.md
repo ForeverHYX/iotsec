@@ -139,7 +139,7 @@
 ## 会话：2026-06-25
 
 ### 阶段 7：补充历年卷回忆题
-- **状态：** in_progress
+- **状态：** complete
 - **开始时间：** 2026-06-25 Asia/Shanghai
 - 执行的操作：
   - 接收用户提供的两份历年卷回忆题。
@@ -150,6 +150,9 @@
   - 重新生成 `content/notes.json`，当前 13 个笔记入口。
   - 发现搜索只匹配标题/slug/source，无法按 hidden 等正文关键词找到历年卷页；添加正文 `search_text` 索引和前端 `noteMatchesQuery`。
   - 使用 agent-browser 本地验证 `#past-exams` 页面显示、`hidden` 搜索命中历年卷页。
+  - 提交 `bf1757d` 并推送，等待 Pages workflow `28116738427` 完成。
+  - 验证线上首页、`content/notes.json`、`notes/past-exams.md` 均返回 HTTP 200。
+  - 使用 agent-browser 验证线上 `#past-exams` 页面渲染和 `hidden` 正文搜索。
 - 创建/修改的文件：
   - `task_plan.md`
   - `findings.md`
@@ -173,3 +176,8 @@
 | 全量测试 | `npm test` | 全部通过 | Python 8 个、Node 3 个通过 | 通过 |
 | 本地历年卷页面 | `agent-browser open http://localhost:4173/#past-exams` | 显示历年卷入口与题目标题 | 显示 99 历年卷入口及所有题型标题 | 通过 |
 | 本地正文搜索 | 搜索 `hidden` | 命中历年卷页 | 命中“历年卷回忆题与参考答案”和 MAC 章节 | 通过 |
+| Pages workflow | `gh run view 28116738427 ...` | 部署成功 | `status: completed`, `conclusion: success` | 通过 |
+| 线上历年卷文件 | `curl -L .../notes/past-exams.md` | HTTP 200 | HTTP 200 | 通过 |
+| 线上 manifest | 读取 `https://foreverhyx.github.io/iotsec/content/notes.json` | 13 个入口且含 `past-exams` | `count 13`, `['past-exams']` | 通过 |
+| 线上历年卷页面 | `agent-browser open https://foreverhyx.github.io/iotsec/?v=bf1757d#past-exams` | 页面渲染历年卷题目 | 显示 99 历年卷入口、20 道小题、简答题池和 2024-2025 大题 | 通过 |
+| 线上正文搜索 | 搜索 `hidden` | 命中历年卷页 | 命中历年卷页和 MAC 章节 | 通过 |
