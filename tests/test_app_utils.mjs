@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { markdownToHtml, viewerForMaterial } from "../assets/app.js";
+import { markdownToHtml, noteMatchesQuery, viewerForMaterial } from "../assets/app.js";
 
 test("markdownToHtml removes frontmatter and renders headings and bullets", () => {
   const html = markdownToHtml(`---
@@ -33,4 +33,17 @@ test("viewerForMaterial uses direct PDF links and Office viewer for PPTX", () =>
   assert.equal(pptx.type, "office");
   assert.match(pptx.url, /^https:\/\/view\.officeapps\.live\.com\/op\/embed\.aspx\?src=/);
   assert.match(decodeURIComponent(pptx.url), /Lecture%2012%20RFID%20Security%20and%20Privacy\.pptx/);
+});
+
+test("noteMatchesQuery searches note body index", () => {
+  const note = {
+    title: "历年卷回忆题与参考答案",
+    source: "student recollection",
+    slug: "past-exams",
+    search_text: "Hidden Terminal WEP 加密过程 Security Demands",
+  };
+
+  assert.equal(noteMatchesQuery(note, "hidden"), true);
+  assert.equal(noteMatchesQuery(note, "Security Demands"), true);
+  assert.equal(noteMatchesQuery(note, "not-present"), false);
 });

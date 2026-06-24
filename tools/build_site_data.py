@@ -43,6 +43,17 @@ def _slug_from_note(path: Path) -> str:
     return re.sub(r"[^a-zA-Z0-9.-]+", "-", path.stem.lower()).strip("-")
 
 
+def _search_text(meta: dict[str, Any], body: str) -> str:
+    raw = " ".join(
+        [
+            str(meta.get("title", "")),
+            str(meta.get("source", "")),
+            re.sub(r"[#>*_`\\[\\]()|:-]+", " ", body),
+        ]
+    )
+    return re.sub(r"\s+", " ", raw).strip()[:12000]
+
+
 def build_notes_manifest(notes_dir: Path, materials_manifest: Path, output_path: Path) -> list[dict[str, Any]]:
     materials = json.loads(materials_manifest.read_text(encoding="utf-8"))
     materials_by_slug = {item["slug"]: item for item in materials}
@@ -61,6 +72,7 @@ def build_notes_manifest(notes_dir: Path, materials_manifest: Path, output_path:
             "order": order,
             "note_path": note_path.relative_to(project_root).as_posix(),
             "word_count": len(re.findall(r"[\w\u4e00-\u9fff]+", body)),
+            "search_text": _search_text(meta, body),
             "material": material,
         }
         records.append(record)

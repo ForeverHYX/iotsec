@@ -135,3 +135,41 @@
 
 ---
 *每个阶段完成后或遇到错误时更新此文件*
+
+## 会话：2026-06-25
+
+### 阶段 7：补充历年卷回忆题
+- **状态：** in_progress
+- **开始时间：** 2026-06-25 Asia/Shanghai
+- 执行的操作：
+  - 接收用户提供的两份历年卷回忆题。
+  - 决定以“回忆版 + 模拟补全”的方式加入网站，避免误称为原卷逐字。
+  - 编写 `tests/test_exam_content.py`，先验证历年卷页面和 manifest 缺失时失败。
+  - 新增 `notes/past-exams.md`，补全选择/填空题 20 道、简答题池和 2024-2025 大题回忆答案。
+  - 更新 `notes/index.md`。
+  - 重新生成 `content/notes.json`，当前 13 个笔记入口。
+  - 发现搜索只匹配标题/slug/source，无法按 hidden 等正文关键词找到历年卷页；添加正文 `search_text` 索引和前端 `noteMatchesQuery`。
+  - 使用 agent-browser 本地验证 `#past-exams` 页面显示、`hidden` 搜索命中历年卷页。
+- 创建/修改的文件：
+  - `task_plan.md`
+  - `findings.md`
+  - `progress.md`
+  - `notes/past-exams.md`
+  - `notes/index.md`
+  - `content/notes.json`
+  - `tools/build_site_data.py`
+  - `assets/app.js`
+  - `tests/test_exam_content.py`
+  - `tests/test_build_site_data.py`
+  - `tests/test_app_utils.mjs`
+
+## 2026-06-25 测试结果
+| 测试 | 输入 | 预期结果 | 实际结果 | 状态 |
+|------|------|---------|---------|------|
+| 历年卷内容测试（红灯） | `python3 -m unittest tests/test_exam_content.py -v` | 缺失页面时失败 | `past-exams` 不在 manifest，文件不存在 | 已验证失败 |
+| 历年卷内容测试（绿灯） | 新增页面并生成 manifest 后运行同一测试 | 2 个测试通过 | 2 个测试通过 | 通过 |
+| 正文搜索索引测试（红灯） | `python3 -m unittest tests/test_build_site_data.py -v` / `node --test tests/test_app_utils.mjs` | 缺 `search_text`/`noteMatchesQuery` 时失败 | 按预期失败 | 已验证失败 |
+| 正文搜索索引测试（绿灯） | 添加 `search_text` 和 `noteMatchesQuery` 后重跑 | 相关测试通过 | Python 3 个、Node 3 个通过 | 通过 |
+| 全量测试 | `npm test` | 全部通过 | Python 8 个、Node 3 个通过 | 通过 |
+| 本地历年卷页面 | `agent-browser open http://localhost:4173/#past-exams` | 显示历年卷入口与题目标题 | 显示 99 历年卷入口及所有题型标题 | 通过 |
+| 本地正文搜索 | 搜索 `hidden` | 命中历年卷页 | 命中“历年卷回忆题与参考答案”和 MAC 章节 | 通过 |

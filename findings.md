@@ -6,6 +6,7 @@
 - 将原始资料和笔记上传到用户的 GitHub。
 - 使用 GitHub Pages 部署在线阅读网站，可查看 PPT/PDF 和总结笔记。
 - GitHub 仓库必须创建为公开仓库。
+- 新增用户提供的两份历年卷回忆，补全题干选项和参考答案，并加入网站。
 
 ## 当前资料清单
 - `Week 1-2026.pdf`
@@ -35,6 +36,9 @@
 - 已创建 public GitHub 仓库：`https://github.com/ForeverHYX/iotsec`
 - 已部署 GitHub Pages：`https://foreverhyx.github.io/iotsec/`
 - Pages 当前状态：`built`，`build_type=workflow`，HTTPS 已启用。
+- 新增历年卷资料为用户回忆文本，不是原始扫描卷；需要标注“回忆版/模拟补全”。
+- 已新增 `notes/past-exams.md`，包含回忆卷 A 选择/填空、简答题池，以及 2024-2025 大题回忆。
+- 已扩展 `content/notes.json` 的 `search_text` 字段，支持正文关键词搜索。
 
 ## 技术决策
 | 决策 | 理由 |
@@ -48,6 +52,8 @@
 | GitHub 仓库创建为 public | 用户明确要求默认 public |
 | 网站直接使用原生 HTML/CSS/JS | GitHub Pages 可直接托管，不需要构建步骤 |
 | 使用 GitHub Actions Pages workflow 部署 | legacy Pages build 失败，workflow artifact 部署成功 |
+| 历年卷做成独立 Markdown 笔记页 | 复用现有网站目录、搜索、Markdown 渲染和 GitHub Pages 部署流程 |
+| 为笔记 manifest 增加正文搜索索引 | 历年卷页面需要通过 hidden、WEP、RFID 等正文关键词被搜到 |
 
 ## 遇到的问题
 | 问题 | 解决方案 |

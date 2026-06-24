@@ -59,6 +59,25 @@ order: 3.2
         self.assertEqual(payload[0]["material"]["filename"], "a.pdf")
         self.assertEqual(payload[1]["note_path"], "notes/b.md")
 
+    def test_build_notes_manifest_indexes_note_body_for_search(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            notes_dir = root / "notes"
+            content_dir = root / "content"
+            notes_dir.mkdir()
+            content_dir.mkdir()
+            (notes_dir / "past-exams.md").write_text(
+                '---\ntitle: "Past Exams"\nsource: "student recollection"\norder: 99\n---\n'
+                "# Past Exams\n\nHidden Terminal and WEP 加密过程。\n",
+                encoding="utf-8",
+            )
+            (content_dir / "materials.json").write_text("[]", encoding="utf-8")
+
+            records = build_notes_manifest(notes_dir, content_dir / "materials.json", content_dir / "notes.json")
+
+        self.assertIn("hidden terminal", records[0]["search_text"].lower())
+        self.assertIn("wep 加密过程", records[0]["search_text"].lower())
+
 
 if __name__ == "__main__":
     unittest.main()

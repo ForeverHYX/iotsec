@@ -113,13 +113,15 @@ function noteMeta(note) {
   return `${material.extension.toUpperCase()} · ${count}`;
 }
 
+export function noteMatchesQuery(note, query) {
+  const normalized = query.trim().toLowerCase();
+  if (!normalized) return true;
+  return `${note.title} ${note.source} ${note.slug} ${note.search_text || ""}`.toLowerCase().includes(normalized);
+}
+
 function renderChapterList(filter = "") {
   const target = document.querySelector("#chapterList");
-  const query = filter.trim().toLowerCase();
-  const notes = state.notes.filter((note) => {
-    if (!query) return true;
-    return `${note.title} ${note.source} ${note.slug}`.toLowerCase().includes(query);
-  });
+  const notes = state.notes.filter((note) => noteMatchesQuery(note, filter));
 
   target.innerHTML = notes
     .map(
