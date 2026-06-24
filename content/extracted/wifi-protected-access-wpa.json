@@ -1,0 +1,624 @@
+{
+  "slug": "wifi-protected-access-wpa",
+  "title": "第四周WiFi Protected Access (WPA)",
+  "filename": "第四周WiFi Protected Access (WPA).pptx",
+  "extension": "pptx",
+  "kind": "pptx",
+  "slide_count": 36,
+  "page_count": null,
+  "slides": [
+    {
+      "number": 1,
+      "title": "Lecture 10: Wi-Fi Protected Access (WPA)",
+      "lines": [
+        "Lecture 10: Wi-Fi Protected Access (WPA)",
+        "Instructor:",
+        "Kui",
+        "Ren",
+        "Wireless network and IoT security"
+      ],
+      "text": "Lecture 10: Wi-Fi Protected Access (WPA)\nInstructor:\nKui\nRen\nWireless network and IoT security"
+    },
+    {
+      "number": 2,
+      "title": "Wi-Fi Protected Access (WPA) is",
+      "lines": [
+        "Wi-Fi Protected Access (WPA) is",
+        "A response by the WLAN industry to offer an immediate, a stronger security solution than WEP.",
+        "WPA is intended to be:",
+        "A software/firmware upgrade to existing access points",
+        "Inexpensive in terms of time and cost to implement",
+        "Compatible with vendors",
+        "Suitable for enterprise, small sites, home networks",
+        "Wi-Fi Protected Access (WPA)"
+      ],
+      "text": "Wi-Fi Protected Access (WPA) is\nA response by the WLAN industry to offer an immediate, a stronger security solution than WEP.\nWPA is intended to be:\nA software/firmware upgrade to existing access points\nInexpensive in terms of time and cost to implement\nCompatible with vendors\nSuitable for enterprise, small sites, home networks\nWi-Fi Protected Access (WPA)"
+    },
+    {
+      "number": 3,
+      "title": "WPA wraps RC4 cipher engine in four new algorithms",
+      "lines": [
+        "WPA wraps RC4 cipher engine in four new algorithms",
+        "A Message Integrity Code (MIC) called Michael",
+        "Designed for deployed hardware",
+        "Requires use of active countermeasures",
+        "Extended 48-bit IV and IV Sequencing Rules",
+        "2",
+        "48",
+        "is a large number! More than 500 trillion",
+        "Sequencing rules specify how IVs are selected and verified",
+        "Key Derivation and Distribution",
+        "Creating a key hierarchy out of the master key",
+        "Master keys can be refreshed in a secure manner",
+        "Temporal Key Integrity Protocol generates per-packet keys",
+        "How WPA Addresses the WEP Vulnerabilities"
+      ],
+      "text": "WPA wraps RC4 cipher engine in four new algorithms\nA Message Integrity Code (MIC) called Michael\nDesigned for deployed hardware\nRequires use of active countermeasures\nExtended 48-bit IV and IV Sequencing Rules\n2\n48\nis a large number! More than 500 trillion\nSequencing rules specify how IVs are selected and verified\nKey Derivation and Distribution\nCreating a key hierarchy out of the master key\nMaster keys can be refreshed in a secure manner\nTemporal Key Integrity Protocol generates per-packet keys\nHow WPA Addresses the WEP Vulnerabilities"
+    },
+    {
+      "number": 4,
+      "title": "Encryption method:",
+      "lines": [
+        "Encryption method:",
+        "RC4",
+        "Key size:",
+        "128 bits (varies)",
+        "Changes encryption key every frame",
+        "Key management:",
+        "TKIP",
+        "Resolves keys to be used, looks at client’s configuration;",
+        "Sets unique default key for each client",
+        "Hash method:",
+        "Michael",
+        "8 bytes, placed between data and ICV",
+        "802.1x authentication:",
+        "can be required",
+        "Key WPA Facts"
+      ],
+      "text": "Encryption method:\nRC4\nKey size:\n128 bits (varies)\nChanges encryption key every frame\nKey management:\nTKIP\nResolves keys to be used, looks at client’s configuration;\nSets unique default key for each client\nHash method:\nMichael\n8 bytes, placed between data and ICV\n802.1x authentication:\ncan be required\nKey WPA Facts"
+    },
+    {
+      "number": 5,
+      "title": "Message Integrity Code (MIC) - 64-bit message calculated using the “Michael” algorithm",
+      "lines": [
+        "Message Integrity Code (MIC) - 64-bit message calculated using the “Michael” algorithm",
+        "Designed for deployed legacy hardware",
+        "The Michael algorithm was the strongest that WPA designers could come up with that would still work with most older network cards",
+        "Uses a lot swaps, shifts, even discarding operations",
+        "Protects both data and header",
+        "The MIC is a hash that is calculated on a per-packet basis",
+        "The MIC is also on a per-sender, per-receiver basis",
+        "The MIC is based on seed value (IVs), destination MAC, source MAC, and payload",
+        "Message Integrity Check: Michael Algorithm"
+      ],
+      "text": "Message Integrity Code (MIC) - 64-bit message calculated using the “Michael” algorithm\nDesigned for deployed legacy hardware\nThe Michael algorithm was the strongest that WPA designers could come up with that would still work with most older network cards\nUses a lot swaps, shifts, even discarding operations\nProtects both data and header\nThe MIC is a hash that is calculated on a per-packet basis\nThe MIC is also on a per-sender, per-receiver basis\nThe MIC is based on seed value (IVs), destination MAC, source MAC, and payload\nMessage Integrity Check: Michael Algorithm"
+    },
+    {
+      "number": 6,
+      "title": "Data Integrity: The Michael MIC Algorithm",
+      "lines": [
+        "Data Integrity: The Michael MIC Algorithm",
+        "Destination MAC",
+        "Source MAC",
+        "802.11 Data Payload",
+        "Michael",
+        "64 Bit MIC",
+        "Data Payload",
+        "16 Bit IV",
+        "64 Bit",
+        "MIC",
+        "32 Bit",
+        "ICV",
+        "Per Frame",
+        "Encryption",
+        "Frame Transmitted"
+      ],
+      "text": "Data Integrity: The Michael MIC Algorithm\nDestination MAC\nSource MAC\n802.11 Data Payload\nMichael\n64 Bit MIC\nData Payload\n16 Bit IV\n64 Bit\nMIC\n32 Bit\nICV\nPer Frame\nEncryption\nFrame Transmitted"
+    },
+    {
+      "number": 7,
+      "title": "Due to inevitable weaknesses of Michael, WPA implements",
+      "lines": [
+        "Due to inevitable weaknesses of Michael, WPA implements",
+        "a 16-bit monotonically incrementing counter",
+        "that discourages replay attacks:",
+        "Take the 1st and 3rd bytes of the old IV",
+        "Reset packet sequence # to 0 on rekey",
+        "Increment sequence # by 1 on each packet",
+        "Drop any packet received out of sequence",
+        "Defeating Replays: IV Sequence Enforcement",
+        "Access Point",
+        "Wireless Station",
+        "Hdr",
+        "Packet",
+        "n",
+        "Hdr",
+        "Packet",
+        "n",
+        "+ 1",
+        "Hdr",
+        "Packet",
+        "n"
+      ],
+      "text": "Due to inevitable weaknesses of Michael, WPA implements\na 16-bit monotonically incrementing counter\nthat discourages replay attacks:\nTake the 1st and 3rd bytes of the old IV\nReset packet sequence # to 0 on rekey\nIncrement sequence # by 1 on each packet\nDrop any packet received out of sequence\nDefeating Replays: IV Sequence Enforcement\nAccess Point\nWireless Station\nHdr\nPacket\nn\nHdr\nPacket\nn\n+ 1\nHdr\nPacket\nn"
+    },
+    {
+      "number": 8,
+      "title": "Refers to a process of delivering fresh encryption and integrity keys (MIC Keys) to the stations and Aps.",
+      "lines": [
+        "Refers to a process of delivering fresh encryption and integrity keys (MIC Keys) to the stations and Aps.",
+        "WPA Key hierarchy consists of a master key and session keys",
+        "Master key, called the",
+        "Pairwise Master Key",
+        "(PMK), is derived from either an 802.1X key exchange or from the passphrase",
+        "Session keys, collectively called the",
+        "Pairwise Transient Key",
+        "(PTK), are derived from the master key",
+        "TKIP Re-Key Mechanism"
+      ],
+      "text": "Refers to a process of delivering fresh encryption and integrity keys (MIC Keys) to the stations and Aps.\nWPA Key hierarchy consists of a master key and session keys\nMaster key, called the\nPairwise Master Key\n(PMK), is derived from either an 802.1X key exchange or from the passphrase\nSession keys, collectively called the\nPairwise Transient Key\n(PTK), are derived from the master key\nTKIP Re-Key Mechanism"
+    },
+    {
+      "number": 9,
+      "title": "Pairwise",
+      "lines": [
+        "Pairwise",
+        "Master Key (PMK) Construction",
+        "Passphrase",
+        "SSID",
+        "SSID Length",
+        "Number of iteration: 4096",
+        "Length of  the result key: 256",
+        "(Password-Based Key Derivation Function 2 (PBKDF2)",
+        "Pairwise",
+        "Master Key (PMK)"
+      ],
+      "text": "Pairwise\nMaster Key (PMK) Construction\nPassphrase\nSSID\nSSID Length\nNumber of iteration: 4096\nLength of  the result key: 256\n(Password-Based Key Derivation Function 2 (PBKDF2)\nPairwise\nMaster Key (PMK)"
+    },
+    {
+      "number": 10,
+      "title": "Pairwise",
+      "lines": [
+        "Pairwise",
+        "Transient",
+        "Key (PTK) Construction",
+        "PMK",
+        "ANonce",
+        "SNonce",
+        "STA MAC Address",
+        "AP MAC Address",
+        "HASH",
+        "Pairwise Transient Key (PTK)"
+      ],
+      "text": "Pairwise\nTransient\nKey (PTK) Construction\nPMK\nANonce\nSNonce\nSTA MAC Address\nAP MAC Address\nHASH\nPairwise Transient Key (PTK)"
+    },
+    {
+      "number": 11,
+      "title": "WEP",
+      "lines": [
+        "WEP",
+        "constructs a per-packet key by simply concatenating a base-key and the IV",
+        "TKIP",
+        "constructs a per-packet key by going through 2 key mixing phases",
+        "The mixing phases make difficult for an attacker to correlate IVs and per-packet key",
+        "TKIP:",
+        "Per-Packet Key Mixing",
+        "Phase 1",
+        "Phase 2",
+        "Temporal Key",
+        "MAC",
+        "Addr",
+        "Intermediate Key",
+        "Sequence Number",
+        "Per-packet key"
+      ],
+      "text": "WEP\nconstructs a per-packet key by simply concatenating a base-key and the IV\nTKIP\nconstructs a per-packet key by going through 2 key mixing phases\nThe mixing phases make difficult for an attacker to correlate IVs and per-packet key\nTKIP:\nPer-Packet Key Mixing\nPhase 1\nPhase 2\nTemporal Key\nMAC\nAddr\nIntermediate Key\nSequence Number\nPer-packet key"
+    },
+    {
+      "number": 12,
+      "title": "TKIP Encryption Process",
+      "lines": [
+        "TKIP Encryption Process"
+      ],
+      "text": "TKIP Encryption Process"
+    },
+    {
+      "number": 13,
+      "title": "TKIP Decryption Process",
+      "lines": [
+        "TKIP Decryption Process"
+      ],
+      "text": "TKIP Decryption Process"
+    },
+    {
+      "number": 14,
+      "title": "TKIP appears to provide weak but genuine security",
+      "lines": [
+        "TKIP appears to provide weak but genuine security",
+        "External review by Ron",
+        "Rivest",
+        ", David Wagner, John Kelsey, Susan Langford, and others",
+        "TKIP meets goal of software deployment on almost all existing equipment",
+        "Does not appear to  significantly degrade performance over WEP",
+        "Meets market’s requirement for a migration path based on pre-existing installed base",
+        "TKIP Summary"
+      ],
+      "text": "TKIP appears to provide weak but genuine security\nExternal review by Ron\nRivest\n, David Wagner, John Kelsey, Susan Langford, and others\nTKIP meets goal of software deployment on almost all existing equipment\nDoes not appear to  significantly degrade performance over WEP\nMeets market’s requirement for a migration path based on pre-existing installed base\nTKIP Summary"
+    },
+    {
+      "number": 15,
+      "title": "Pre-Shared Key Mode",
+      "lines": [
+        "Pre-Shared Key Mode",
+        "No RADIUS server required",
+        "“Shared Secret” is used for authentication to access point",
+        "Management is handled on the AP",
+        "Vulnerable to dictionary attacks",
+        "Enterprise Mode",
+        "Requires an authentication server",
+        "Uses RADIUS protocols for authentication and key distribution",
+        "Centralizes management of user credentials",
+        "How to Negotiate a Passphrase and PTK?"
+      ],
+      "text": "Pre-Shared Key Mode\nNo RADIUS server required\n“Shared Secret” is used for authentication to access point\nManagement is handled on the AP\nVulnerable to dictionary attacks\nEnterprise Mode\nRequires an authentication server\nUses RADIUS protocols for authentication and key distribution\nCentralizes management of user credentials\nHow to Negotiate a Passphrase and PTK?"
+    },
+    {
+      "number": 16,
+      "title": "For home / SOHO use",
+      "lines": [
+        "For home / SOHO use",
+        "Significantly increases the effort required to allow passive monitoring and decrypting of traffic",
+        "Adopts",
+        "4-Way Handshake Authentication",
+        "Also generates the secret session keys (PTK)",
+        "Pre-shared Key + TKIP",
+        "No standardized way of changing shared secret",
+        "If shared secret becomes known, network security may be compromised",
+        "Weak against passive dictionary attack",
+        "The more complex the shared secret, the less likely it will fall to dictionary attacks",
+        "WPA-PSK Overview"
+      ],
+      "text": "For home / SOHO use\nSignificantly increases the effort required to allow passive monitoring and decrypting of traffic\nAdopts\n4-Way Handshake Authentication\nAlso generates the secret session keys (PTK)\nPre-shared Key + TKIP\nNo standardized way of changing shared secret\nIf shared secret becomes known, network security may be compromised\nWeak against passive dictionary attack\nThe more complex the shared secret, the less likely it will fall to dictionary attacks\nWPA-PSK Overview"
+    },
+    {
+      "number": 17,
+      "title": "The Role of 4-Way Handshake:  Authentication and Key Exchange",
+      "lines": [
+        "The Role of 4-Way Handshake:  Authentication and Key Exchange"
+      ],
+      "text": "The Role of 4-Way Handshake:  Authentication and Key Exchange"
+    },
+    {
+      "number": 18,
+      "title": "PSK: 4-Way",
+      "lines": [
+        "PSK: 4-Way",
+        "Handshake",
+        "Authentication"
+      ],
+      "text": "PSK: 4-Way\nHandshake\nAuthentication"
+    },
+    {
+      "number": 19,
+      "title": "4-way handshake protected with PTK",
+      "lines": [
+        "4-way handshake protected with PTK",
+        "The strenght of PTK relies on the strength of the password",
+        "PSK = PBKDF2 (Password, SSID,",
+        "SSIDlength",
+        ", 4096, 256)",
+        "Offline brute-force",
+        "and",
+        "dictionary attacks",
+        "possible",
+        "Attacker captures (records) 4-way handshake messages",
+        "Attacker performs brute-force or dictionary attacks (at home)",
+        "Vulnerabilities of 4-way handshake"
+      ],
+      "text": "4-way handshake protected with PTK\nThe strenght of PTK relies on the strength of the password\nPSK = PBKDF2 (Password, SSID,\nSSIDlength\n, 4096, 256)\nOffline brute-force\nand\ndictionary attacks\npossible\nAttacker captures (records) 4-way handshake messages\nAttacker performs brute-force or dictionary attacks (at home)\nVulnerabilities of 4-way handshake"
+    },
+    {
+      "number": 20,
+      "title": "How much time it will take to crack a simple passphrase with only alphanumerical values (upper and lower case)",
+      "lines": [
+        "How much time it will take to crack a simple passphrase with only alphanumerical values (upper and lower case)",
+        "Smallest WPA passphrase: 8 characters (max 63)",
+        "62 possibilities per character: [A-Z][a-z][0-9]",
+        "62^8 = 218 340 105 584 896 possible keys",
+        "Using a 280GTX processor (11000 keys/sec)",
+        "218340105584896/11000k/s= 19 849 100 508 sec",
+        "19849100508 sec = 5 513 639 hours",
+        "5513639 hours = 229 735 days",
+        "229735 days = 630 years",
+        "WPA-PSK: the Brute Force Attack"
+      ],
+      "text": "How much time it will take to crack a simple passphrase with only alphanumerical values (upper and lower case)\nSmallest WPA passphrase: 8 characters (max 63)\n62 possibilities per character: [A-Z][a-z][0-9]\n62^8 = 218 340 105 584 896 possible keys\nUsing a 280GTX processor (11000 keys/sec)\n218340105584896/11000k/s= 19 849 100 508 sec\n19849100508 sec = 5 513 639 hours\n5513639 hours = 229 735 days\n229735 days = 630 years\nWPA-PSK: the Brute Force Attack"
+    },
+    {
+      "number": 21,
+      "title": "A bit too long for a simple passphrase",
+      "lines": [
+        "A bit too long for a simple passphrase",
+        "For a 12 character long passphrase, brute force will take 9 309 091 680 years.",
+        "Dictionary attack",
+        "is",
+        "still the better solution.",
+        "630 Years for an 8 Character Key",
+        "The better solution"
+      ],
+      "text": "A bit too long for a simple passphrase\nFor a 12 character long passphrase, brute force will take 9 309 091 680 years.\nDictionary attack\nis\nstill the better solution.\n630 Years for an 8 Character Key\nThe better solution"
+    },
+    {
+      "number": 22,
+      "title": "Rainbow tables are indexed hash lists",
+      "lines": [
+        "Rainbow tables are indexed hash lists",
+        "Pre-hash millions of words against top SSID's",
+        "Required 2-3 TB of space",
+        "Known tables exist for up to 14 characters",
+        "Cracks WPA v1 and v2 with pre-shared key",
+        "Drastically faster checking onsite",
+        "WPA-PSK: Rainbow Table"
+      ],
+      "text": "Rainbow tables are indexed hash lists\nPre-hash millions of words against top SSID's\nRequired 2-3 TB of space\nKnown tables exist for up to 14 characters\nCracks WPA v1 and v2 with pre-shared key\nDrastically faster checking onsite\nWPA-PSK: Rainbow Table"
+    },
+    {
+      "number": 23,
+      "title": "WPA-PSK should be used with care",
+      "lines": [
+        "WPA-PSK should be used with care",
+        "Vulnerable to external dictionary attacks, if short",
+        "Choose WPA + 802.1X",
+        "No effective attacks found so far",
+        "Suggestions for WPA-PSK"
+      ],
+      "text": "WPA-PSK should be used with care\nVulnerable to external dictionary attacks, if short\nChoose WPA + 802.1X\nNo effective attacks found so far\nSuggestions for WPA-PSK"
+    },
+    {
+      "number": 24,
+      "title": "Authentication server distributes different keys to each user using 802.1X.",
+      "lines": [
+        "Authentication server distributes different keys to each user using 802.1X.",
+        "Provide enhanced security and authentication",
+        "Preferred for enterprise mode - business, government, education",
+        "WPA Enterprise Mode"
+      ],
+      "text": "Authentication server distributes different keys to each user using 802.1X.\nProvide enhanced security and authentication\nPreferred for enterprise mode - business, government, education\nWPA Enterprise Mode"
+    },
+    {
+      "number": 25,
+      "title": "802.1X is an IEEE standard for port-based network access control for LANs",
+      "lines": [
+        "802.1X is an IEEE standard for port-based network access control for LANs",
+        "It fulfills the security loopholes of access control, authentication and key management in the 802.11 architecture",
+        "The authentication is usually done by a third-party entity, such as a RADIUS (Remote Authentication Dial In User Service) server",
+        "IEEE 802.1X"
+      ],
+      "text": "802.1X is an IEEE standard for port-based network access control for LANs\nIt fulfills the security loopholes of access control, authentication and key management in the 802.11 architecture\nThe authentication is usually done by a third-party entity, such as a RADIUS (Remote Authentication Dial In User Service) server\nIEEE 802.1X"
+    },
+    {
+      "number": 26,
+      "title": "Main 802.1X components",
+      "lines": [
+        "Main 802.1X components",
+        "Supplicant (e.g., a wireless client)",
+        "Authenticator (e.g., an Access Point)",
+        "Authentication Server (e.g., a RADIUS server)"
+      ],
+      "text": "Main 802.1X components\nSupplicant (e.g., a wireless client)\nAuthenticator (e.g., an Access Point)\nAuthentication Server (e.g., a RADIUS server)"
+    },
+    {
+      "number": 27,
+      "title": "B",
+      "lines": [
+        "B",
+        "ased",
+        "on",
+        "EAP",
+        "(Extensible Authentication Protocol)",
+        "and the specific authentication method agreed in the association phase.",
+        "802.1X",
+        "Authentication"
+      ],
+      "text": "B\nased\non\nEAP\n(Extensible Authentication Protocol)\nand the specific authentication method agreed in the association phase.\n802.1X\nAuthentication"
+    },
+    {
+      "number": 28,
+      "title": "A carrier protocol designed to transport the messages of “real” authentication protocols (e.g., TLS)",
+      "lines": [
+        "A carrier protocol designed to transport the messages of “real” authentication protocols (e.g., TLS)",
+        "It is a generic (flexible) authentication protocol  that can run over any link layer protocol",
+        "It Provides some common functions and a negotiation of the desired authentication mechanism called methods.",
+        "Extensible Authentication Protocol (EAP)"
+      ],
+      "text": "A carrier protocol designed to transport the messages of “real” authentication protocols (e.g., TLS)\nIt is a generic (flexible) authentication protocol  that can run over any link layer protocol\nIt Provides some common functions and a negotiation of the desired authentication mechanism called methods.\nExtensible Authentication Protocol (EAP)"
+    },
+    {
+      "number": 29,
+      "title": "EAP is very simple, only four types of messages:",
+      "lines": [
+        "EAP is very simple, only four types of messages:",
+        "EAP request – carries messages from AS to M",
+        "EAP response – carries messages from M to the AS",
+        "EAP success – signals successful authentication",
+        "EAP failure – signals authentication failure",
+        "A",
+        "uthenticator (AP) doesn’t understand what is inside the EAP messages, it recognizes only EAP success and failure",
+        "EAP is not an authentication method itself",
+        "Extensible Authentication Protocol (EAP)"
+      ],
+      "text": "EAP is very simple, only four types of messages:\nEAP request – carries messages from AS to M\nEAP response – carries messages from M to the AS\nEAP success – signals successful authentication\nEAP failure – signals authentication failure\nA\nuthenticator (AP) doesn’t understand what is inside the EAP messages, it recognizes only EAP success and failure\nEAP is not an authentication method itself\nExtensible Authentication Protocol (EAP)"
+    },
+    {
+      "number": 30,
+      "title": "End-to-end transport between client and authentication server",
+      "lines": [
+        "End-to-end transport between client and authentication server",
+        "AP proxies EAP between 802.1X and backend protocol between AP and AS (e.g. RADIUS)",
+        "Extensible Authentication Protocol (EAP)",
+        "EAP-TLS",
+        "EAP",
+        "EAP",
+        "o",
+        "L (802.1X)",
+        "802.11",
+        "EAP over RADIUS",
+        "RADIUS",
+        "TCP/IP",
+        "802.3",
+        "ili drugi",
+        "Mobile client",
+        "Access point",
+        "Authentication server",
+        "within the scope of IEEE 802.11i"
+      ],
+      "text": "End-to-end transport between client and authentication server\nAP proxies EAP between 802.1X and backend protocol between AP and AS (e.g. RADIUS)\nExtensible Authentication Protocol (EAP)\nEAP-TLS\nEAP\nEAP\no\nL (802.1X)\n802.11\nEAP over RADIUS\nRADIUS\nTCP/IP\n802.3\nili drugi\nMobile client\nAccess point\nAuthentication server\nwithin the scope of IEEE 802.11i"
+    },
+    {
+      "number": 31,
+      "title": "EAPoL",
+      "lines": [
+        "EAPoL",
+        "(EAP over LAN) [802.1X]",
+        "Encapsulate EAP messages into LAN protocols (e.g., Ethernet)",
+        "Used to carry EAP messages between the client and the AP",
+        "RADIUS (Remote Access Dial-In User Service)",
+        "Used to carry EAP messages between the AP and the authentication server",
+        "Extensible Authentication Protocol (EAP)",
+        "EAP-TLS",
+        "EAP",
+        "EAP",
+        "o",
+        "L (802.1X)",
+        "802.11",
+        "EAP over RADIUS",
+        "RADIUS",
+        "TCP/IP",
+        "802.3",
+        "ili drugi",
+        "Mobile client",
+        "Access point",
+        "Authentication server"
+      ],
+      "text": "EAPoL\n(EAP over LAN) [802.1X]\nEncapsulate EAP messages into LAN protocols (e.g., Ethernet)\nUsed to carry EAP messages between the client and the AP\nRADIUS (Remote Access Dial-In User Service)\nUsed to carry EAP messages between the AP and the authentication server\nExtensible Authentication Protocol (EAP)\nEAP-TLS\nEAP\nEAP\no\nL (802.1X)\n802.11\nEAP over RADIUS\nRADIUS\nTCP/IP\n802.3\nili drugi\nMobile client\nAccess point\nAuthentication server"
+    },
+    {
+      "number": 32,
+      "title": "EAP in Action",
+      "lines": [
+        "EAP in Action",
+        "AP",
+        "Client",
+        "Auth",
+        "server",
+        "EAP Request (Identity)",
+        "EAP Response (Identity)",
+        "EAP Response (Identity)",
+        "EAP Request 1",
+        "EAP Request 1",
+        "EAP Response 1",
+        "EAP Response 1",
+        "EAP Success",
+        "EAP Success",
+        "EAP Request",
+        "n",
+        "EAP Request",
+        "n",
+        "EAP Response",
+        "n",
+        "EAP Response",
+        "n",
+        "...",
+        "...",
+        "embedded auth. protocol",
+        "EAP",
+        "OL-Start",
+        "encapsulated in EAPOL",
+        "encapsulated in RADIUS"
+      ],
+      "text": "EAP in Action\nAP\nClient\nAuth\nserver\nEAP Request (Identity)\nEAP Response (Identity)\nEAP Response (Identity)\nEAP Request 1\nEAP Request 1\nEAP Response 1\nEAP Response 1\nEAP Success\nEAP Success\nEAP Request\nn\nEAP Request\nn\nEAP Response\nn\nEAP Response\nn\n...\n...\nembedded auth. protocol\nEAP\nOL-Start\nencapsulated in EAPOL\nencapsulated in RADIUS"
+    },
+    {
+      "number": 33,
+      "title": "At the end of authentication:",
+      "lines": [
+        "At the end of authentication:",
+        "The authentication server and client have established a session",
+        "The authentication server and client possess a mutually authenticated Master Key (derived from the concrete EAP method)",
+        "Master Key represents decision to grant access based on authentication",
+        "Client and authentication server have derived PMK (Pairwise Master Key)",
+        "PMK is an authorization token to enforce access control decision at AP",
+        "Authentication server has distributed PMK to an AP",
+        "IEEE 802.1X authentication summary"
+      ],
+      "text": "At the end of authentication:\nThe authentication server and client have established a session\nThe authentication server and client possess a mutually authenticated Master Key (derived from the concrete EAP method)\nMaster Key represents decision to grant access based on authentication\nClient and authentication server have derived PMK (Pairwise Master Key)\nPMK is an authorization token to enforce access control decision at AP\nAuthentication server has distributed PMK to an AP\nIEEE 802.1X authentication summary"
+    },
+    {
+      "number": 34,
+      "title": "Still, TKIP is not a favorable solution due to  the weakness of RC4",
+      "lines": [
+        "Still, TKIP is not a favorable solution due to  the weakness of RC4",
+        "Beck-",
+        "Tews",
+        "attack",
+        "Active attack based on",
+        "chopchop",
+        "method for recovering plaintext",
+        "Requires support for alternative",
+        "QoS",
+        "channels to by-pass anti-replay protection",
+        "Rate-limited since correctness of plaintext guess is indicated by MIC verification failure, and only 2 failures per minute are tolerated",
+        "The Need for A Better (Long Term) Security Standard"
+      ],
+      "text": "Still, TKIP is not a favorable solution due to  the weakness of RC4\nBeck-\nTews\nattack\nActive attack based on\nchopchop\nmethod for recovering plaintext\nRequires support for alternative\nQoS\nchannels to by-pass anti-replay protection\nRate-limited since correctness of plaintext guess is indicated by MIC verification failure, and only 2 failures per minute are tolerated\nThe Need for A Better (Long Term) Security Standard"
+    },
+    {
+      "number": 35,
+      "title": "The Beck-",
+      "lines": [
+        "The Beck-",
+        "Tews",
+        "attack:",
+        "Chopchop",
+        "Method",
+        "Encrypted Data",
+        "ENC. ICV",
+        "Encrypted Data",
+        "?",
+        "Guess the value of the deleted byte and calculate new ICV",
+        "FA"
+      ],
+      "text": "The Beck-\nTews\nattack:\nChopchop\nMethod\nEncrypted Data\nENC. ICV\nEncrypted Data\n?\nGuess the value of the deleted byte and calculate new ICV\nFA"
+    },
+    {
+      "number": 36,
+      "title": "Normally, in WPA, a falsified encrypted packet that is made from an encrypted packet accepted in the past",
+      "lines": [
+        "Normally, in WPA, a falsified encrypted packet that is made from an encrypted packet accepted in the past",
+        "is discarded",
+        "since the value of IV is checked.",
+        "However, the",
+        "chopchop",
+        "attack can be executed on WPA implementations those support",
+        "IEEE802.11e",
+        "QoS",
+        "features",
+        ", which allow",
+        "8 different channels",
+        "for different data flows, and each channel has the",
+        "TSC counter independently",
+        ".",
+        "The attacker can capture an encrypted packet from one channel and execute the",
+        "chopchop",
+        "attack on",
+        "another channel",
+        "that has a smaller TSC counter.",
+        "The Beck-",
+        "Tews",
+        "attack"
+      ],
+      "text": "Normally, in WPA, a falsified encrypted packet that is made from an encrypted packet accepted in the past\nis discarded\nsince the value of IV is checked.\nHowever, the\nchopchop\nattack can be executed on WPA implementations those support\nIEEE802.11e\nQoS\nfeatures\n, which allow\n8 different channels\nfor different data flows, and each channel has the\nTSC counter independently\n.\nThe attacker can capture an encrypted packet from one channel and execute the\nchopchop\nattack on\nanother channel\nthat has a smaller TSC counter.\nThe Beck-\nTews\nattack"
+    }
+  ],
+  "full_text": "Lecture 10: Wi-Fi Protected Access (WPA)\nInstructor:\nKui\nRen\nWireless network and IoT security\n\nWi-Fi Protected Access (WPA) is\nA response by the WLAN industry to offer an immediate, a stronger security solution than WEP.\nWPA is intended to be:\nA software/firmware upgrade to existing access points\nInexpensive in terms of time and cost to implement\nCompatible with vendors\nSuitable for enterprise, small sites, home networks\nWi-Fi Protected Access (WPA)\n\nWPA wraps RC4 cipher engine in four new algorithms\nA Message Integrity Code (MIC) called Michael\nDesigned for deployed hardware\nRequires use of active countermeasures\nExtended 48-bit IV and IV Sequencing Rules\n2\n48\nis a large number! More than 500 trillion\nSequencing rules specify how IVs are selected and verified\nKey Derivation and Distribution\nCreating a key hierarchy out of the master key\nMaster keys can be refreshed in a secure manner\nTemporal Key Integrity Protocol generates per-packet keys\nHow WPA Addresses the WEP Vulnerabilities\n\nEncryption method:\nRC4\nKey size:\n128 bits (varies)\nChanges encryption key every frame\nKey management:\nTKIP\nResolves keys to be used, looks at client’s configuration;\nSets unique default key for each client\nHash method:\nMichael\n8 bytes, placed between data and ICV\n802.1x authentication:\ncan be required\nKey WPA Facts\n\nMessage Integrity Code (MIC) - 64-bit message calculated using the “Michael” algorithm\nDesigned for deployed legacy hardware\nThe Michael algorithm was the strongest that WPA designers could come up with that would still work with most older network cards\nUses a lot swaps, shifts, even discarding operations\nProtects both data and header\nThe MIC is a hash that is calculated on a per-packet basis\nThe MIC is also on a per-sender, per-receiver basis\nThe MIC is based on seed value (IVs), destination MAC, source MAC, and payload\nMessage Integrity Check: Michael Algorithm\n\nData Integrity: The Michael MIC Algorithm\nDestination MAC\nSource MAC\n802.11 Data Payload\nMichael\n64 Bit MIC\nData Payload\n16 Bit IV\n64 Bit\nMIC\n32 Bit\nICV\nPer Frame\nEncryption\nFrame Transmitted\n\nDue to inevitable weaknesses of Michael, WPA implements\na 16-bit monotonically incrementing counter\nthat discourages replay attacks:\nTake the 1st and 3rd bytes of the old IV\nReset packet sequence # to 0 on rekey\nIncrement sequence # by 1 on each packet\nDrop any packet received out of sequence\nDefeating Replays: IV Sequence Enforcement\nAccess Point\nWireless Station\nHdr\nPacket\nn\nHdr\nPacket\nn\n+ 1\nHdr\nPacket\nn\n\nRefers to a process of delivering fresh encryption and integrity keys (MIC Keys) to the stations and Aps.\nWPA Key hierarchy consists of a master key and session keys\nMaster key, called the\nPairwise Master Key\n(PMK), is derived from either an 802.1X key exchange or from the passphrase\nSession keys, collectively called the\nPairwise Transient Key\n(PTK), are derived from the master key\nTKIP Re-Key Mechanism\n\nPairwise\nMaster Key (PMK) Construction\nPassphrase\nSSID\nSSID Length\nNumber of iteration: 4096\nLength of  the result key: 256\n(Password-Based Key Derivation Function 2 (PBKDF2)\nPairwise\nMaster Key (PMK)\n\nPairwise\nTransient\nKey (PTK) Construction\nPMK\nANonce\nSNonce\nSTA MAC Address\nAP MAC Address\nHASH\nPairwise Transient Key (PTK)\n\nWEP\nconstructs a per-packet key by simply concatenating a base-key and the IV\nTKIP\nconstructs a per-packet key by going through 2 key mixing phases\nThe mixing phases make difficult for an attacker to correlate IVs and per-packet key\nTKIP:\nPer-Packet Key Mixing\nPhase 1\nPhase 2\nTemporal Key\nMAC\nAddr\nIntermediate Key\nSequence Number\nPer-packet key\n\nTKIP Encryption Process\n\nTKIP Decryption Process\n\nTKIP appears to provide weak but genuine security\nExternal review by Ron\nRivest\n, David Wagner, John Kelsey, Susan Langford, and others\nTKIP meets goal of software deployment on almost all existing equipment\nDoes not appear to  significantly degrade performance over WEP\nMeets market’s requirement for a migration path based on pre-existing installed base\nTKIP Summary\n\nPre-Shared Key Mode\nNo RADIUS server required\n“Shared Secret” is used for authentication to access point\nManagement is handled on the AP\nVulnerable to dictionary attacks\nEnterprise Mode\nRequires an authentication server\nUses RADIUS protocols for authentication and key distribution\nCentralizes management of user credentials\nHow to Negotiate a Passphrase and PTK?\n\nFor home / SOHO use\nSignificantly increases the effort required to allow passive monitoring and decrypting of traffic\nAdopts\n4-Way Handshake Authentication\nAlso generates the secret session keys (PTK)\nPre-shared Key + TKIP\nNo standardized way of changing shared secret\nIf shared secret becomes known, network security may be compromised\nWeak against passive dictionary attack\nThe more complex the shared secret, the less likely it will fall to dictionary attacks\nWPA-PSK Overview\n\nThe Role of 4-Way Handshake:  Authentication and Key Exchange\n\nPSK: 4-Way\nHandshake\nAuthentication\n\n4-way handshake protected with PTK\nThe strenght of PTK relies on the strength of the password\nPSK = PBKDF2 (Password, SSID,\nSSIDlength\n, 4096, 256)\nOffline brute-force\nand\ndictionary attacks\npossible\nAttacker captures (records) 4-way handshake messages\nAttacker performs brute-force or dictionary attacks (at home)\nVulnerabilities of 4-way handshake\n\nHow much time it will take to crack a simple passphrase with only alphanumerical values (upper and lower case)\nSmallest WPA passphrase: 8 characters (max 63)\n62 possibilities per character: [A-Z][a-z][0-9]\n62^8 = 218 340 105 584 896 possible keys\nUsing a 280GTX processor (11000 keys/sec)\n218340105584896/11000k/s= 19 849 100 508 sec\n19849100508 sec = 5 513 639 hours\n5513639 hours = 229 735 days\n229735 days = 630 years\nWPA-PSK: the Brute Force Attack\n\nA bit too long for a simple passphrase\nFor a 12 character long passphrase, brute force will take 9 309 091 680 years.\nDictionary attack\nis\nstill the better solution.\n630 Years for an 8 Character Key\nThe better solution\n\nRainbow tables are indexed hash lists\nPre-hash millions of words against top SSID's\nRequired 2-3 TB of space\nKnown tables exist for up to 14 characters\nCracks WPA v1 and v2 with pre-shared key\nDrastically faster checking onsite\nWPA-PSK: Rainbow Table\n\nWPA-PSK should be used with care\nVulnerable to external dictionary attacks, if short\nChoose WPA + 802.1X\nNo effective attacks found so far\nSuggestions for WPA-PSK\n\nAuthentication server distributes different keys to each user using 802.1X.\nProvide enhanced security and authentication\nPreferred for enterprise mode - business, government, education\nWPA Enterprise Mode\n\n802.1X is an IEEE standard for port-based network access control for LANs\nIt fulfills the security loopholes of access control, authentication and key management in the 802.11 architecture\nThe authentication is usually done by a third-party entity, such as a RADIUS (Remote Authentication Dial In User Service) server\nIEEE 802.1X\n\nMain 802.1X components\nSupplicant (e.g., a wireless client)\nAuthenticator (e.g., an Access Point)\nAuthentication Server (e.g., a RADIUS server)\n\nB\nased\non\nEAP\n(Extensible Authentication Protocol)\nand the specific authentication method agreed in the association phase.\n802.1X\nAuthentication\n\nA carrier protocol designed to transport the messages of “real” authentication protocols (e.g., TLS)\nIt is a generic (flexible) authentication protocol  that can run over any link layer protocol\nIt Provides some common functions and a negotiation of the desired authentication mechanism called methods.\nExtensible Authentication Protocol (EAP)\n\nEAP is very simple, only four types of messages:\nEAP request – carries messages from AS to M\nEAP response – carries messages from M to the AS\nEAP success – signals successful authentication\nEAP failure – signals authentication failure\nA\nuthenticator (AP) doesn’t understand what is inside the EAP messages, it recognizes only EAP success and failure\nEAP is not an authentication method itself\nExtensible Authentication Protocol (EAP)\n\nEnd-to-end transport between client and authentication server\nAP proxies EAP between 802.1X and backend protocol between AP and AS (e.g. RADIUS)\nExtensible Authentication Protocol (EAP)\nEAP-TLS\nEAP\nEAP\no\nL (802.1X)\n802.11\nEAP over RADIUS\nRADIUS\nTCP/IP\n802.3\nili drugi\nMobile client\nAccess point\nAuthentication server\nwithin the scope of IEEE 802.11i\n\nEAPoL\n(EAP over LAN) [802.1X]\nEncapsulate EAP messages into LAN protocols (e.g., Ethernet)\nUsed to carry EAP messages between the client and the AP\nRADIUS (Remote Access Dial-In User Service)\nUsed to carry EAP messages between the AP and the authentication server\nExtensible Authentication Protocol (EAP)\nEAP-TLS\nEAP\nEAP\no\nL (802.1X)\n802.11\nEAP over RADIUS\nRADIUS\nTCP/IP\n802.3\nili drugi\nMobile client\nAccess point\nAuthentication server\n\nEAP in Action\nAP\nClient\nAuth\nserver\nEAP Request (Identity)\nEAP Response (Identity)\nEAP Response (Identity)\nEAP Request 1\nEAP Request 1\nEAP Response 1\nEAP Response 1\nEAP Success\nEAP Success\nEAP Request\nn\nEAP Request\nn\nEAP Response\nn\nEAP Response\nn\n...\n...\nembedded auth. protocol\nEAP\nOL-Start\nencapsulated in EAPOL\nencapsulated in RADIUS\n\nAt the end of authentication:\nThe authentication server and client have established a session\nThe authentication server and client possess a mutually authenticated Master Key (derived from the concrete EAP method)\nMaster Key represents decision to grant access based on authentication\nClient and authentication server have derived PMK (Pairwise Master Key)\nPMK is an authorization token to enforce access control decision at AP\nAuthentication server has distributed PMK to an AP\nIEEE 802.1X authentication summary\n\nStill, TKIP is not a favorable solution due to  the weakness of RC4\nBeck-\nTews\nattack\nActive attack based on\nchopchop\nmethod for recovering plaintext\nRequires support for alternative\nQoS\nchannels to by-pass anti-replay protection\nRate-limited since correctness of plaintext guess is indicated by MIC verification failure, and only 2 failures per minute are tolerated\nThe Need for A Better (Long Term) Security Standard\n\nThe Beck-\nTews\nattack:\nChopchop\nMethod\nEncrypted Data\nENC. ICV\nEncrypted Data\n?\nGuess the value of the deleted byte and calculate new ICV\nFA\n\nNormally, in WPA, a falsified encrypted packet that is made from an encrypted packet accepted in the past\nis discarded\nsince the value of IV is checked.\nHowever, the\nchopchop\nattack can be executed on WPA implementations those support\nIEEE802.11e\nQoS\nfeatures\n, which allow\n8 different channels\nfor different data flows, and each channel has the\nTSC counter independently\n.\nThe attacker can capture an encrypted packet from one channel and execute the\nchopchop\nattack on\nanother channel\nthat has a smaller TSC counter.\nThe Beck-\nTews\nattack"
+}

@@ -1,0 +1,527 @@
+{
+  "slug": "protected-access-2-wpa2",
+  "title": "第四周Protected Access 2 (WPA2)",
+  "filename": "第四周Protected Access 2 (WPA2).pptx",
+  "extension": "pptx",
+  "kind": "pptx",
+  "slide_count": 40,
+  "page_count": null,
+  "slides": [
+    {
+      "number": 1,
+      "title": "Lecture 11: Wi-Fi Protected Access 2 (WPA2)",
+      "lines": [
+        "Lecture 11: Wi-Fi Protected Access 2 (WPA2)",
+        "Instructor:",
+        "Kui",
+        "Ren",
+        "Wireless network",
+        "and IoT security"
+      ],
+      "text": "Lecture 11: Wi-Fi Protected Access 2 (WPA2)\nInstructor:\nKui\nRen\nWireless network\nand IoT security"
+    },
+    {
+      "number": 2,
+      "title": "Based on the IEEE 802.11i standard.",
+      "lines": [
+        "Based on the IEEE 802.11i standard.",
+        "The primary enhancement over WPA is the use of the",
+        "AES-based CCMP",
+        "Wi-Fi Protected Access 2 (WPA2)",
+        "The final form of the 802.11i standard is RSN (Robust Security Network)"
+      ],
+      "text": "Based on the IEEE 802.11i standard.\nThe primary enhancement over WPA is the use of the\nAES-based CCMP\nWi-Fi Protected Access 2 (WPA2)\nThe final form of the 802.11i standard is RSN (Robust Security Network)"
+    },
+    {
+      "number": 3,
+      "title": "The Personal mode uses a PSK (Pre-Shared Key) and doesn't require a separate authentication of users.",
+      "lines": [
+        "The Personal mode uses a PSK (Pre-Shared Key) and doesn't require a separate authentication of users.",
+        "The Enterprise mode requires the users to be separately authenticated by using the Extended EAP (Extensible Authentication Protocol).",
+        "Wi-Fi Protected Access 2 (WPA2)",
+        "WPA2 Versions",
+        "Personal",
+        "Enterprise"
+      ],
+      "text": "The Personal mode uses a PSK (Pre-Shared Key) and doesn't require a separate authentication of users.\nThe Enterprise mode requires the users to be separately authenticated by using the Extended EAP (Extensible Authentication Protocol).\nWi-Fi Protected Access 2 (WPA2)\nWPA2 Versions\nPersonal\nEnterprise"
+    },
+    {
+      "number": 4,
+      "title": "Phase 1: The AP and the client agree on the security policy",
+      "lines": [
+        "Phase 1: The AP and the client agree on the security policy",
+        "Phase 2: Generate the",
+        "master key",
+        "Phase 3: Creating",
+        "temporary keys",
+        "Phase 4: All keys generated in phase 3 will be used by the CCMP protocol to provide data",
+        "confidentiality",
+        "and",
+        "integrity",
+        "WPA2 Phases of Operation"
+      ],
+      "text": "Phase 1: The AP and the client agree on the security policy\nPhase 2: Generate the\nmaster key\nPhase 3: Creating\ntemporary keys\nPhase 4: All keys generated in phase 3 will be used by the CCMP protocol to provide data\nconfidentiality\nand\nintegrity\nWPA2 Phases of Operation"
+    },
+    {
+      "number": 5,
+      "title": "Capability Discovery",
+      "lines": [
+        "Capability Discovery",
+        "Open System Authentication",
+        "Association",
+        "Phase 1: Discovery"
+      ],
+      "text": "Capability Discovery\nOpen System Authentication\nAssociation\nPhase 1: Discovery"
+    },
+    {
+      "number": 6,
+      "title": "An AP uses messages called Beacons and Probe Responses to advertise its security capabilities",
+      "lines": [
+        "An AP uses messages called Beacons and Probe Responses to advertise its security capabilities",
+        "Advertised in an RSN Information Element (RSN IE)",
+        "The STA uses these to identify an AP for a WLAN with which it wishes to communicate",
+        "The STA associates with the AP, which it uses to select the cipher suite and authentication mechanism in Association Request",
+        "Capability Discovery"
+      ],
+      "text": "An AP uses messages called Beacons and Probe Responses to advertise its security capabilities\nAdvertised in an RSN Information Element (RSN IE)\nThe STA uses these to identify an AP for a WLAN with which it wishes to communicate\nThe STA associates with the AP, which it uses to select the cipher suite and authentication mechanism in Association Request\nCapability Discovery"
+    },
+    {
+      "number": 7,
+      "title": "The purpose of this frame sequence, is simply to maintain backward compatibility with the IEEE 802.11 state machine",
+      "lines": [
+        "The purpose of this frame sequence, is simply to maintain backward compatibility with the IEEE 802.11 state machine",
+        "It provides no security",
+        "In essence, the two devices (STA and AP) simply exchange identifiers",
+        "Open System Authentication"
+      ],
+      "text": "The purpose of this frame sequence, is simply to maintain backward compatibility with the IEEE 802.11 state machine\nIt provides no security\nIn essence, the two devices (STA and AP) simply exchange identifiers\nOpen System Authentication"
+    },
+    {
+      "number": 8,
+      "title": "The purpose of this stage is to agree on a set of security capabilities to be used",
+      "lines": [
+        "The purpose of this stage is to agree on a set of security capabilities to be used",
+        "The STA then sends an Association Request frame to the AP.",
+        "Specify one set of matching capabilities (one authentication and key management suite, one pairwise cipher suite, and one group-key cipher suite) from among those advertised by the AP",
+        "Association"
+      ],
+      "text": "The purpose of this stage is to agree on a set of security capabilities to be used\nThe STA then sends an Association Request frame to the AP.\nSpecify one set of matching capabilities (one authentication and key management suite, one pairwise cipher suite, and one group-key cipher suite) from among those advertised by the AP\nAssociation"
+    },
+    {
+      "number": 9,
+      "title": "This phase is based on EAP and the authentication method which has been agreed on in phase 1",
+      "lines": [
+        "This phase is based on EAP and the authentication method which has been agreed on in phase 1",
+        "Phase 2: Authentication"
+      ],
+      "text": "This phase is based on EAP and the authentication method which has been agreed on in phase 1\nPhase 2: Authentication"
+    },
+    {
+      "number": 10,
+      "title": "Connect to AS",
+      "lines": [
+        "Connect to AS",
+        "The STA sends a request to its AP that it has an association with for connection to the AS;",
+        "The AP acknowledges this request and sends an access request to the AS",
+        "EAP exchange",
+        "Authenticate the STA and AS to each other",
+        "Secure key delivery",
+        "Once authentication is established, the AS generates a",
+        "master session key",
+        "and sends it to the STA",
+        "Authentication Steps"
+      ],
+      "text": "Connect to AS\nThe STA sends a request to its AP that it has an association with for connection to the AS;\nThe AP acknowledges this request and sends an access request to the AS\nEAP exchange\nAuthenticate the STA and AS to each other\nSecure key delivery\nOnce authentication is established, the AS generates a\nmaster session key\nand sends it to the STA\nAuthentication Steps"
+    },
+    {
+      "number": 11,
+      "title": "Starts the 802.11X exchange with EAPOL-start message",
+      "lines": [
+        "Starts the 802.11X exchange with EAPOL-start message",
+        "Authenticator issues an EAP-request/identity frame",
+        "Supplicant replies with EAP-response/identity frame and passed to the radius server",
+        "Radius server determines the type of authentication required and sends an EAP-request for particular method type",
+        "The supplicant replies with an EAP-response/method frame",
+        "Steps 4 and 5 are repeated to complete the authentication",
+        "The radius server grants request with Radius-access-accept packet",
+        "EAP Exchange Process"
+      ],
+      "text": "Starts the 802.11X exchange with EAPOL-start message\nAuthenticator issues an EAP-request/identity frame\nSupplicant replies with EAP-response/identity frame and passed to the radius server\nRadius server determines the type of authentication required and sends an EAP-request for particular method type\nThe supplicant replies with an EAP-response/method frame\nSteps 4 and 5 are repeated to complete the authentication\nThe radius server grants request with Radius-access-accept packet\nEAP Exchange Process"
+    },
+    {
+      "number": 12,
+      "title": "PMK – Pairwise Master Key",
+      "lines": [
+        "PMK – Pairwise Master Key",
+        "Sent from the AS to the Authenticator",
+        "Both the Supplicant and Authenticator now have the same PMK",
+        "PMK is permanent for the entire session",
+        "Must generate a Pairwise Transient Key for encryption of data.",
+        "Done using",
+        "4-way handshake",
+        "Phase 3 Key Management"
+      ],
+      "text": "PMK – Pairwise Master Key\nSent from the AS to the Authenticator\nBoth the Supplicant and Authenticator now have the same PMK\nPMK is permanent for the entire session\nMust generate a Pairwise Transient Key for encryption of data.\nDone using\n4-way handshake\nPhase 3 Key Management"
+    },
+    {
+      "number": 13,
+      "title": "Confirm that the client holds the PMK.",
+      "lines": [
+        "Confirm that the client holds the PMK.",
+        "Confirm that the PMK is correct and up-to-date.",
+        "Create pairwise transient key (PTK) from the PMK.",
+        "Install the pairwise encryption and integrity keys into IEEE 802.11.",
+        "Transport the group temporal key (GTK) and GTK sequence number from Authenticator to Supplicant and install the GTK and GTK sequence number in the STA and, if not already installed, in the AP.",
+        "Confirm the cipher suite selection.",
+        "Four-Way Handshake"
+      ],
+      "text": "Confirm that the client holds the PMK.\nConfirm that the PMK is correct and up-to-date.\nCreate pairwise transient key (PTK) from the PMK.\nInstall the pairwise encryption and integrity keys into IEEE 802.11.\nTransport the group temporal key (GTK) and GTK sequence number from Authenticator to Supplicant and install the GTK and GTK sequence number in the STA and, if not already installed, in the AP.\nConfirm the cipher suite selection.\nFour-Way Handshake"
+    },
+    {
+      "number": 14,
+      "title": "Four-Way Handshake",
+      "lines": [
+        "Four-Way Handshake"
+      ],
+      "text": "Four-Way Handshake"
+    },
+    {
+      "number": 15,
+      "title": "The PMK (Pairwise Master Key) derivation depends on what we have used on the authentication method",
+      "lines": [
+        "The PMK (Pairwise Master Key) derivation depends on what we have used on the authentication method",
+        "If we used",
+        "PSK (Pre-Shared Key)",
+        ", then the PMK will be equal to PSK.",
+        "If we used an",
+        "authentication server",
+        ", then the PMK will be derived from the 802.1X authentication MK.",
+        "Pairwise Key Hierarchies",
+        "Master Key (MK)",
+        "Pair-wise Master Key (PMK)",
+        "Pair-wise Transient Key (PTK)",
+        "Key Confirmation Key (KCK)",
+        "Key Encryption Key (KEK)",
+        "Temporal Key (TK)",
+        "Pre-Shared Key (PSK)"
+      ],
+      "text": "The PMK (Pairwise Master Key) derivation depends on what we have used on the authentication method\nIf we used\nPSK (Pre-Shared Key)\n, then the PMK will be equal to PSK.\nIf we used an\nauthentication server\n, then the PMK will be derived from the 802.1X authentication MK.\nPairwise Key Hierarchies\nMaster Key (MK)\nPair-wise Master Key (PMK)\nPair-wise Transient Key (PTK)\nKey Confirmation Key (KCK)\nKey Encryption Key (KEK)\nTemporal Key (TK)\nPre-Shared Key (PSK)"
+    },
+    {
+      "number": 16,
+      "title": "16 bytes of EAPOL-Key Confirmation Key (KCK)",
+      "lines": [
+        "16 bytes of EAPOL-Key Confirmation Key (KCK)",
+        "Used to compute MIC on WPA EAPOL Key message",
+        "16 bytes of EAPOL-Key Encryption Key (KEK)",
+        "AP uses this key to encrypt additional data sent (in the 'Key Data' field) to the client (for example, the RSN IE or the GTK)",
+        "16 bytes of Temporal Key (TK)",
+        "Used to encrypt/decrypt Unicast data packets",
+        "64 bytes Pairwise Transient Key"
+      ],
+      "text": "16 bytes of EAPOL-Key Confirmation Key (KCK)\nUsed to compute MIC on WPA EAPOL Key message\n16 bytes of EAPOL-Key Encryption Key (KEK)\nAP uses this key to encrypt additional data sent (in the 'Key Data' field) to the client (for example, the RSN IE or the GTK)\n16 bytes of Temporal Key (TK)\nUsed to encrypt/decrypt Unicast data packets\n64 bytes Pairwise Transient Key"
+    },
+    {
+      "number": 17,
+      "title": "The primary enhancement over WPA is the use of the AES (Advanced Encryption Standard) algorithm.",
+      "lines": [
+        "The primary enhancement over WPA is the use of the AES (Advanced Encryption Standard) algorithm.",
+        "128 bit AES using the",
+        "Counter-Mode/CBC-MAC Protocol",
+        "(CCMP)",
+        "WPA2 Encryption",
+        "CCMP",
+        "CTR",
+        "CBC-MAC"
+      ],
+      "text": "The primary enhancement over WPA is the use of the AES (Advanced Encryption Standard) algorithm.\n128 bit AES using the\nCounter-Mode/CBC-MAC Protocol\n(CCMP)\nWPA2 Encryption\nCCMP\nCTR\nCBC-MAC"
+    },
+    {
+      "number": 18,
+      "title": "The encryption service in WPA2 is based on the AES algorithm used in the CTR mode.",
+      "lines": [
+        "The encryption service in WPA2 is based on the AES algorithm used in the CTR mode.",
+        "It generates the next keystream block by encrypting successive values of a \"counter\"",
+        "Counter Mode Encryption"
+      ],
+      "text": "The encryption service in WPA2 is based on the AES algorithm used in the CTR mode.\nIt generates the next keystream block by encrypting successive values of a \"counter\"\nCounter Mode Encryption"
+    },
+    {
+      "number": 19,
+      "title": "In WPA2, the data integrity check is carried out by computing the CBC-MAC message authentication code",
+      "lines": [
+        "In WPA2, the data integrity check is carried out by computing the CBC-MAC message authentication code",
+        "XOR each 128- bit block of the data with the AES encrypted value as obtained from the previous 128-bit block",
+        "Cipher Block Chaining (CBC) - MAC"
+      ],
+      "text": "In WPA2, the data integrity check is carried out by computing the CBC-MAC message authentication code\nXOR each 128- bit block of the data with the AES encrypted value as obtained from the previous 128-bit block\nCipher Block Chaining (CBC) - MAC"
+    },
+    {
+      "number": 20,
+      "title": "Counter-Mode/CBC-MAC Protocol (CCMP)",
+      "lines": [
+        "Counter-Mode/CBC-MAC Protocol (CCMP)"
+      ],
+      "text": "Counter-Mode/CBC-MAC Protocol (CCMP)"
+    },
+    {
+      "number": 21,
+      "title": "CCMP provides integrity protection over both the frame body and nearly the entire header in a MAC frame,",
+      "lines": [
+        "CCMP provides integrity protection over both the frame body and nearly the entire header in a MAC frame,",
+        "which prevents an adversary from exploiting the MAC headers",
+        "CCMP uses a 48-bit Packet Number (PN)",
+        "to prevent replay attacks and construct a fresh nonce for each packet",
+        "Analysis suggests that once CCMP is implemented,",
+        "an adversary will not able to break the data confidentiality and integrity without the knowledge of the key",
+        "AES – CCMP Features"
+      ],
+      "text": "CCMP provides integrity protection over both the frame body and nearly the entire header in a MAC frame,\nwhich prevents an adversary from exploiting the MAC headers\nCCMP uses a 48-bit Packet Number (PN)\nto prevent replay attacks and construct a fresh nonce for each packet\nAnalysis suggests that once CCMP is implemented,\nan adversary will not able to break the data confidentiality and integrity without the knowledge of the key\nAES – CCMP Features"
+    },
+    {
+      "number": 22,
+      "title": "Encryption Method Comparison",
+      "lines": [
+        "Encryption Method Comparison",
+        "WEP",
+        "WPA",
+        "WPA2",
+        "Cipher",
+        "RC4",
+        "RC4",
+        "AES",
+        "Key Sizes",
+        "40 bits",
+        "128bits encryption",
+        "64 bits authentication",
+        "128 bits",
+        "Key Life",
+        "24 bit IV",
+        "48 bit IV",
+        "48 bit IV",
+        "Packet Key",
+        "Concatenated",
+        "Mixing Function",
+        "Not Needed",
+        "Data Integrity",
+        "CRC-32",
+        "Michael Algorithm",
+        "CCM",
+        "Header Integrity",
+        "None",
+        "Michael Algorithm",
+        "CCM",
+        "Defeat",
+        "Replay Attacks",
+        "None",
+        "IV Sequence",
+        "IV Sequence",
+        "Key Management",
+        "None",
+        "EAP Based",
+        "EAP Based"
+      ],
+      "text": "Encryption Method Comparison\nWEP\nWPA\nWPA2\nCipher\nRC4\nRC4\nAES\nKey Sizes\n40 bits\n128bits encryption\n64 bits authentication\n128 bits\nKey Life\n24 bit IV\n48 bit IV\n48 bit IV\nPacket Key\nConcatenated\nMixing Function\nNot Needed\nData Integrity\nCRC-32\nMichael Algorithm\nCCM\nHeader Integrity\nNone\nMichael Algorithm\nCCM\nDefeat\nReplay Attacks\nNone\nIV Sequence\nIV Sequence\nKey Management\nNone\nEAP Based\nEAP Based"
+    },
+    {
+      "number": 23,
+      "title": "The WPA2 has immunity against many types of hacker attacks, like:",
+      "lines": [
+        "The WPA2 has immunity against many types of hacker attacks, like:",
+        "Man-in-the-middle.",
+        "Authentication forging.",
+        "Replay.",
+        "Key collision.",
+        "Weak keys.",
+        "Packet forging.",
+        "Brute–force/dictionary attacks.",
+        "WPA2 Pros"
+      ],
+      "text": "The WPA2 has immunity against many types of hacker attacks, like:\nMan-in-the-middle.\nAuthentication forging.\nReplay.\nKey collision.\nWeak keys.\nPacket forging.\nBrute–force/dictionary attacks.\nWPA2 Pros"
+    },
+    {
+      "number": 24,
+      "title": "WPA2 adds two enhancements to support fast roaming as follow:",
+      "lines": [
+        "WPA2 adds two enhancements to support fast roaming as follow:",
+        "Allow the client to reconnect to the access points which he has recently been connected to without needing to re-authenticate because of the PMK caching feature.",
+        "Allow the client to pre-authenticate himself with the access point which he is moving toward while he is still connected to the access point which he is moving away from.",
+        "WPA2 Pros (cont.)"
+      ],
+      "text": "WPA2 adds two enhancements to support fast roaming as follow:\nAllow the client to reconnect to the access points which he has recently been connected to without needing to re-authenticate because of the PMK caching feature.\nAllow the client to pre-authenticate himself with the access point which he is moving toward while he is still connected to the access point which he is moving away from.\nWPA2 Pros (cont.)"
+    },
+    {
+      "number": 25,
+      "title": "Like all Wi-Fi security standard, the WPA2 can't stand in front of the physical layer attacks like:",
+      "lines": [
+        "Like all Wi-Fi security standard, the WPA2 can't stand in front of the physical layer attacks like:",
+        "RF jamming.",
+        "Data flooding.",
+        "Access points failure.",
+        "WPA2 Cons"
+      ],
+      "text": "Like all Wi-Fi security standard, the WPA2 can't stand in front of the physical layer attacks like:\nRF jamming.\nData flooding.\nAccess points failure.\nWPA2 Cons"
+    },
+    {
+      "number": 26,
+      "title": "The attacker can get and discover lots of network information by analyzing the unprotected control and management frames",
+      "lines": [
+        "The attacker can get and discover lots of network information by analyzing the unprotected control and management frames.",
+        "It is vulnerable for the",
+        "DoS",
+        "attack.",
+        "It is vulnerable to the MAC addresses spoofing and the mass de-authentication attacks.",
+        "WPA2 Cons (cont.)"
+      ],
+      "text": "The attacker can get and discover lots of network information by analyzing the unprotected control and management frames.\nIt is vulnerable for the\nDoS\nattack.\nIt is vulnerable to the MAC addresses spoofing and the mass de-authentication attacks.\nWPA2 Cons (cont.)"
+    },
+    {
+      "number": 27,
+      "title": "KRACK is short for Key Reinstallation Attack",
+      "lines": [
+        "KRACK is short for Key Reinstallation Attack",
+        "The attack uses vulnerabilities in the 4-way handshake of the current WPA- 2 protocol.",
+        "Threat level : Pretty bad – All Wi-Fi routers everywhere are vulnerable",
+        "The KRACK Attack"
+      ],
+      "text": "KRACK is short for Key Reinstallation Attack\nThe attack uses vulnerabilities in the 4-way handshake of the current WPA- 2 protocol.\nThreat level : Pretty bad – All Wi-Fi routers everywhere are vulnerable\nThe KRACK Attack"
+    },
+    {
+      "number": 28,
+      "title": "Used to connect to any protected Wi-Fi network",
+      "lines": [
+        "Used to connect to any protected Wi-Fi network",
+        "Two main purposes:",
+        "Mutual authentication",
+        "Negotiate fresh PTK: pairwise temporal key",
+        "Appeared to be secure:",
+        "No attacks in over a decade (apart from password guessing)",
+        "Proven that negotiated key (PTK) is secret",
+        "And encryption protocol proven secure",
+        "The 4-way handshake"
+      ],
+      "text": "Used to connect to any protected Wi-Fi network\nTwo main purposes:\nMutual authentication\nNegotiate fresh PTK: pairwise temporal key\nAppeared to be secure:\nNo attacks in over a decade (apart from password guessing)\nProven that negotiated key (PTK) is secret\nAnd encryption protocol proven secure\nThe 4-way handshake"
+    },
+    {
+      "number": 29,
+      "title": "4-way handshake (simplified)",
+      "lines": [
+        "4-way handshake (simplified)",
+        "PTK = Combine(shared secret,",
+        "ANonce",
+        ",",
+        "SNonce",
+        ")"
+      ],
+      "text": "4-way handshake (simplified)\nPTK = Combine(shared secret,\nANonce\n,\nSNonce\n)"
+    },
+    {
+      "number": 30,
+      "title": "4-way handshake (simplified)",
+      "lines": [
+        "4-way handshake (simplified)",
+        "PTK is installed"
+      ],
+      "text": "4-way handshake (simplified)\nPTK is installed"
+    },
+    {
+      "number": 31,
+      "title": "The Key Reinstallation Attack on WPA2",
+      "lines": [
+        "The Key Reinstallation Attack on WPA2"
+      ],
+      "text": "The Key Reinstallation Attack on WPA2"
+    },
+    {
+      "number": 32,
+      "title": "Frame encryption (simplified)",
+      "lines": [
+        "Frame encryption (simplified)",
+        "Nonce reuse implies keystream reuse (in all WPA2 ciphers)"
+      ],
+      "text": "Frame encryption (simplified)\nNonce reuse implies keystream reuse (in all WPA2 ciphers)"
+    },
+    {
+      "number": 33,
+      "title": "4-way handshake (simplified)",
+      "lines": [
+        "4-way handshake (simplified)",
+        "Installing PTK initializes nonce to zero"
+      ],
+      "text": "4-way handshake (simplified)\nInstalling PTK initializes nonce to zero"
+    },
+    {
+      "number": 34,
+      "title": "Reinstallation Attack",
+      "lines": [
+        "Reinstallation Attack"
+      ],
+      "text": "Reinstallation Attack"
+    },
+    {
+      "number": 35,
+      "title": "Reinstallation Attack",
+      "lines": [
+        "Reinstallation Attack",
+        "Block MSG4"
+      ],
+      "text": "Reinstallation Attack\nBlock MSG4"
+    },
+    {
+      "number": 36,
+      "title": "Reinstallation Attack",
+      "lines": [
+        "Reinstallation Attack",
+        "Because PTK has been installed",
+        "Msg4 is now encrypted"
+      ],
+      "text": "Reinstallation Attack\nBecause PTK has been installed\nMsg4 is now encrypted"
+    },
+    {
+      "number": 37,
+      "title": "Reinstallation Attack",
+      "lines": [
+        "Reinstallation Attack",
+        "Key Reinstallation!",
+        "Nonce is reset"
+      ],
+      "text": "Reinstallation Attack\nKey Reinstallation!\nNonce is reset"
+    },
+    {
+      "number": 38,
+      "title": "Reinstallation Attack",
+      "lines": [
+        "Reinstallation Attack",
+        "Same nonce is used"
+      ],
+      "text": "Reinstallation Attack\nSame nonce is used"
+    },
+    {
+      "number": 39,
+      "title": "Reinstallation Attack",
+      "lines": [
+        "Reinstallation Attack",
+        "Keystream",
+        "Decrypted Data"
+      ],
+      "text": "Reinstallation Attack\nKeystream\nDecrypted Data"
+    },
+    {
+      "number": 40,
+      "title": "Limitations of formal proofs:",
+      "lines": [
+        "Limitations of formal proofs:",
+        "WPA 4-way handshake has proven to be secure",
+        "Encryption ciphers have been mathematically proven to be secure",
+        "Combination is not proven secure",
+        "Enterprise PMK was just as vulnerable as Personal pre-shared keys.",
+        "Creates a false sense of security.",
+        "Abstract model ≠ real code",
+        "Must assure code matches specification",
+        "Key Takeaway"
+      ],
+      "text": "Limitations of formal proofs:\nWPA 4-way handshake has proven to be secure\nEncryption ciphers have been mathematically proven to be secure\nCombination is not proven secure\nEnterprise PMK was just as vulnerable as Personal pre-shared keys.\nCreates a false sense of security.\nAbstract model ≠ real code\nMust assure code matches specification\nKey Takeaway"
+    }
+  ],
+  "full_text": "Lecture 11: Wi-Fi Protected Access 2 (WPA2)\nInstructor:\nKui\nRen\nWireless network\nand IoT security\n\nBased on the IEEE 802.11i standard.\nThe primary enhancement over WPA is the use of the\nAES-based CCMP\nWi-Fi Protected Access 2 (WPA2)\nThe final form of the 802.11i standard is RSN (Robust Security Network)\n\nThe Personal mode uses a PSK (Pre-Shared Key) and doesn't require a separate authentication of users.\nThe Enterprise mode requires the users to be separately authenticated by using the Extended EAP (Extensible Authentication Protocol).\nWi-Fi Protected Access 2 (WPA2)\nWPA2 Versions\nPersonal\nEnterprise\n\nPhase 1: The AP and the client agree on the security policy\nPhase 2: Generate the\nmaster key\nPhase 3: Creating\ntemporary keys\nPhase 4: All keys generated in phase 3 will be used by the CCMP protocol to provide data\nconfidentiality\nand\nintegrity\nWPA2 Phases of Operation\n\nCapability Discovery\nOpen System Authentication\nAssociation\nPhase 1: Discovery\n\nAn AP uses messages called Beacons and Probe Responses to advertise its security capabilities\nAdvertised in an RSN Information Element (RSN IE)\nThe STA uses these to identify an AP for a WLAN with which it wishes to communicate\nThe STA associates with the AP, which it uses to select the cipher suite and authentication mechanism in Association Request\nCapability Discovery\n\nThe purpose of this frame sequence, is simply to maintain backward compatibility with the IEEE 802.11 state machine\nIt provides no security\nIn essence, the two devices (STA and AP) simply exchange identifiers\nOpen System Authentication\n\nThe purpose of this stage is to agree on a set of security capabilities to be used\nThe STA then sends an Association Request frame to the AP.\nSpecify one set of matching capabilities (one authentication and key management suite, one pairwise cipher suite, and one group-key cipher suite) from among those advertised by the AP\nAssociation\n\nThis phase is based on EAP and the authentication method which has been agreed on in phase 1\nPhase 2: Authentication\n\nConnect to AS\nThe STA sends a request to its AP that it has an association with for connection to the AS;\nThe AP acknowledges this request and sends an access request to the AS\nEAP exchange\nAuthenticate the STA and AS to each other\nSecure key delivery\nOnce authentication is established, the AS generates a\nmaster session key\nand sends it to the STA\nAuthentication Steps\n\nStarts the 802.11X exchange with EAPOL-start message\nAuthenticator issues an EAP-request/identity frame\nSupplicant replies with EAP-response/identity frame and passed to the radius server\nRadius server determines the type of authentication required and sends an EAP-request for particular method type\nThe supplicant replies with an EAP-response/method frame\nSteps 4 and 5 are repeated to complete the authentication\nThe radius server grants request with Radius-access-accept packet\nEAP Exchange Process\n\nPMK – Pairwise Master Key\nSent from the AS to the Authenticator\nBoth the Supplicant and Authenticator now have the same PMK\nPMK is permanent for the entire session\nMust generate a Pairwise Transient Key for encryption of data.\nDone using\n4-way handshake\nPhase 3 Key Management\n\nConfirm that the client holds the PMK.\nConfirm that the PMK is correct and up-to-date.\nCreate pairwise transient key (PTK) from the PMK.\nInstall the pairwise encryption and integrity keys into IEEE 802.11.\nTransport the group temporal key (GTK) and GTK sequence number from Authenticator to Supplicant and install the GTK and GTK sequence number in the STA and, if not already installed, in the AP.\nConfirm the cipher suite selection.\nFour-Way Handshake\n\nFour-Way Handshake\n\nThe PMK (Pairwise Master Key) derivation depends on what we have used on the authentication method\nIf we used\nPSK (Pre-Shared Key)\n, then the PMK will be equal to PSK.\nIf we used an\nauthentication server\n, then the PMK will be derived from the 802.1X authentication MK.\nPairwise Key Hierarchies\nMaster Key (MK)\nPair-wise Master Key (PMK)\nPair-wise Transient Key (PTK)\nKey Confirmation Key (KCK)\nKey Encryption Key (KEK)\nTemporal Key (TK)\nPre-Shared Key (PSK)\n\n16 bytes of EAPOL-Key Confirmation Key (KCK)\nUsed to compute MIC on WPA EAPOL Key message\n16 bytes of EAPOL-Key Encryption Key (KEK)\nAP uses this key to encrypt additional data sent (in the 'Key Data' field) to the client (for example, the RSN IE or the GTK)\n16 bytes of Temporal Key (TK)\nUsed to encrypt/decrypt Unicast data packets\n64 bytes Pairwise Transient Key\n\nThe primary enhancement over WPA is the use of the AES (Advanced Encryption Standard) algorithm.\n128 bit AES using the\nCounter-Mode/CBC-MAC Protocol\n(CCMP)\nWPA2 Encryption\nCCMP\nCTR\nCBC-MAC\n\nThe encryption service in WPA2 is based on the AES algorithm used in the CTR mode.\nIt generates the next keystream block by encrypting successive values of a \"counter\"\nCounter Mode Encryption\n\nIn WPA2, the data integrity check is carried out by computing the CBC-MAC message authentication code\nXOR each 128- bit block of the data with the AES encrypted value as obtained from the previous 128-bit block\nCipher Block Chaining (CBC) - MAC\n\nCounter-Mode/CBC-MAC Protocol (CCMP)\n\nCCMP provides integrity protection over both the frame body and nearly the entire header in a MAC frame,\nwhich prevents an adversary from exploiting the MAC headers\nCCMP uses a 48-bit Packet Number (PN)\nto prevent replay attacks and construct a fresh nonce for each packet\nAnalysis suggests that once CCMP is implemented,\nan adversary will not able to break the data confidentiality and integrity without the knowledge of the key\nAES – CCMP Features\n\nEncryption Method Comparison\nWEP\nWPA\nWPA2\nCipher\nRC4\nRC4\nAES\nKey Sizes\n40 bits\n128bits encryption\n64 bits authentication\n128 bits\nKey Life\n24 bit IV\n48 bit IV\n48 bit IV\nPacket Key\nConcatenated\nMixing Function\nNot Needed\nData Integrity\nCRC-32\nMichael Algorithm\nCCM\nHeader Integrity\nNone\nMichael Algorithm\nCCM\nDefeat\nReplay Attacks\nNone\nIV Sequence\nIV Sequence\nKey Management\nNone\nEAP Based\nEAP Based\n\nThe WPA2 has immunity against many types of hacker attacks, like:\nMan-in-the-middle.\nAuthentication forging.\nReplay.\nKey collision.\nWeak keys.\nPacket forging.\nBrute–force/dictionary attacks.\nWPA2 Pros\n\nWPA2 adds two enhancements to support fast roaming as follow:\nAllow the client to reconnect to the access points which he has recently been connected to without needing to re-authenticate because of the PMK caching feature.\nAllow the client to pre-authenticate himself with the access point which he is moving toward while he is still connected to the access point which he is moving away from.\nWPA2 Pros (cont.)\n\nLike all Wi-Fi security standard, the WPA2 can't stand in front of the physical layer attacks like:\nRF jamming.\nData flooding.\nAccess points failure.\nWPA2 Cons\n\nThe attacker can get and discover lots of network information by analyzing the unprotected control and management frames.\nIt is vulnerable for the\nDoS\nattack.\nIt is vulnerable to the MAC addresses spoofing and the mass de-authentication attacks.\nWPA2 Cons (cont.)\n\nKRACK is short for Key Reinstallation Attack\nThe attack uses vulnerabilities in the 4-way handshake of the current WPA- 2 protocol.\nThreat level : Pretty bad – All Wi-Fi routers everywhere are vulnerable\nThe KRACK Attack\n\nUsed to connect to any protected Wi-Fi network\nTwo main purposes:\nMutual authentication\nNegotiate fresh PTK: pairwise temporal key\nAppeared to be secure:\nNo attacks in over a decade (apart from password guessing)\nProven that negotiated key (PTK) is secret\nAnd encryption protocol proven secure\nThe 4-way handshake\n\n4-way handshake (simplified)\nPTK = Combine(shared secret,\nANonce\n,\nSNonce\n)\n\n4-way handshake (simplified)\nPTK is installed\n\nThe Key Reinstallation Attack on WPA2\n\nFrame encryption (simplified)\nNonce reuse implies keystream reuse (in all WPA2 ciphers)\n\n4-way handshake (simplified)\nInstalling PTK initializes nonce to zero\n\nReinstallation Attack\n\nReinstallation Attack\nBlock MSG4\n\nReinstallation Attack\nBecause PTK has been installed\nMsg4 is now encrypted\n\nReinstallation Attack\nKey Reinstallation!\nNonce is reset\n\nReinstallation Attack\nSame nonce is used\n\nReinstallation Attack\nKeystream\nDecrypted Data\n\nLimitations of formal proofs:\nWPA 4-way handshake has proven to be secure\nEncryption ciphers have been mathematically proven to be secure\nCombination is not proven secure\nEnterprise PMK was just as vulnerable as Personal pre-shared keys.\nCreates a false sense of security.\nAbstract model ≠ real code\nMust assure code matches specification\nKey Takeaway"
+}

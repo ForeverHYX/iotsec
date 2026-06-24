@@ -1,0 +1,11 @@
+{
+  "name": "iotsec-review-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "python3 -m unittest discover -s tests -p 'test_*.py' && node --test tests/*.mjs",
+    "build:data": "python3 tools/extract_materials.py --source-dir materials --output-dir content/extracted --manifest content/materials.json && python3 tools/build_site_data.py --notes-dir notes --materials content/materials.json --output content/notes.json",
+    "serve": "python3 -m http.server 4173"
+  }
+}

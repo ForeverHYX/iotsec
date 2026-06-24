@@ -1,0 +1,1078 @@
+{
+  "slug": "lecture-13-bluetooth-security-and-privacy",
+  "title": "Lecture 13 Bluetooth Security and Privacy",
+  "filename": "Lecture 13 Bluetooth Security and Privacy.pptx",
+  "extension": "pptx",
+  "kind": "pptx",
+  "slide_count": 57,
+  "page_count": null,
+  "slides": [
+    {
+      "number": 1,
+      "title": "Bluetooth Security and Privacy",
+      "lines": [
+        "Bluetooth Security and Privacy",
+        "Instructor: Jinsong",
+        "Han",
+        "Wireless network and security"
+      ],
+      "text": "Bluetooth Security and Privacy\nInstructor: Jinsong\nHan\nWireless network and security"
+    },
+    {
+      "number": 2,
+      "title": "In the 2000s, the",
+      "lines": [
+        "In the 2000s, the",
+        "age of the smartphone",
+        ", this figure rose to 2 billion.",
+        "By 2021 there will be 48 billion devices connected to the internet, in what we’re likely to term",
+        "the age of the IoT",
+        ".",
+        "Bluetooth"
+      ],
+      "text": "In the 2000s, the\nage of the smartphone\n, this figure rose to 2 billion.\nBy 2021 there will be 48 billion devices connected to the internet, in what we’re likely to term\nthe age of the IoT\n.\nBluetooth"
+    },
+    {
+      "number": 3,
+      "title": "Bluetooth is a wireless technology standard for exchanging data over short distances",
+      "lines": [
+        "Bluetooth is a wireless technology standard for exchanging data over short distances",
+        "ISM band from 2.4 to 2.485 GHz",
+        "fixed and mobile devices",
+        "building personal area networks(PANs)",
+        "First proposed by telecom vendor Ericsson in 1994",
+        "Originally conceived as a wireless alternative to RS-232 data cables",
+        "What is Bluetooth?"
+      ],
+      "text": "Bluetooth is a wireless technology standard for exchanging data over short distances\nISM band from 2.4 to 2.485 GHz\nfixed and mobile devices\nbuilding personal area networks(PANs)\nFirst proposed by telecom vendor Ericsson in 1994\nOriginally conceived as a wireless alternative to RS-232 data cables\nWhat is Bluetooth?"
+    },
+    {
+      "number": 4,
+      "title": "Bluetooth is managed by the",
+      "lines": [
+        "Bluetooth is managed by the",
+        "Bluetooth Special Interest Group",
+        "(SIG),",
+        "founded in 1998  by a group of companies",
+        "more than 20,000 member companies as of 2014",
+        "Bluetooth was standardized as",
+        "IEEE 802.15.1",
+        ", but the standard is no longer maintained.",
+        "The SIG oversees the development of the specification, manages the qualification program, and protects the trademarks.",
+        "Bluetooth Special Interest Group"
+      ],
+      "text": "Bluetooth is managed by the\nBluetooth Special Interest Group\n(SIG),\nfounded in 1998  by a group of companies\nmore than 20,000 member companies as of 2014\nBluetooth was standardized as\nIEEE 802.15.1\n, but the standard is no longer maintained.\nThe SIG oversees the development of the specification, manages the qualification program, and protects the trademarks.\nBluetooth Special Interest Group"
+    },
+    {
+      "number": 5,
+      "title": "The 10th Century king of Denmark Harald \"Bluetooth\"",
+      "lines": [
+        "The 10th Century king of Denmark Harald \"Bluetooth\"",
+        "Gormsson",
+        "united all the tiny island around Denmark, southern Sweden, and southern Norway into a single country.",
+        "He got his name from his penchant for blueberries.",
+        "Bluetooth, the new low-cost radio technology, is designed to unite or connect all different types of devices to effectively work as one.",
+        "The Name: “Bluetooth”"
+      ],
+      "text": "The 10th Century king of Denmark Harald \"Bluetooth\"\nGormsson\nunited all the tiny island around Denmark, southern Sweden, and southern Norway into a single country.\nHe got his name from his penchant for blueberries.\nBluetooth, the new low-cost radio technology, is designed to unite or connect all different types of devices to effectively work as one.\nThe Name: “Bluetooth”"
+    },
+    {
+      "number": 6,
+      "title": "Audio and data peripherals",
+      "lines": [
+        "Audio and data peripherals",
+        "Headsets, Speakers, …",
+        "Keyboards, Cameras, Printers, …",
+        "Intelligent devices",
+        "Cellular phones, laptops, …",
+        "Embedded applications",
+        "Cars, Industrial systems, …",
+        "Bluetooth Applications"
+      ],
+      "text": "Audio and data peripherals\nHeadsets, Speakers, …\nKeyboards, Cameras, Printers, …\nIntelligent devices\nCellular phones, laptops, …\nEmbedded applications\nCars, Industrial systems, …\nBluetooth Applications"
+    },
+    {
+      "number": 7,
+      "title": "Unlicensed 2.4 GHz radio band: ISM (industrial, scientific, medical) band – available worldwide",
+      "lines": [
+        "Unlicensed 2.4 GHz radio band: ISM (industrial, scientific, medical) band – available worldwide",
+        "Gross data rate of 1 Mbit/s (EDR: 3Mbit/s, HS: 24Mbit/s)",
+        "Basic 10m range extended to 100m with amplifiers",
+        "TDMA-TDD-Slow Frequency Hopping spread spectrum",
+        "Supports up to 8 devices in a",
+        "piconet",
+        "(1 master and 7 slaves)",
+        "Piconets",
+        "can combine to form",
+        "scatternets",
+        "Mixed voice/data connections possible",
+        "Encryption",
+        "Ubiquitous radio link",
+        "Bluetooth Characteristics"
+      ],
+      "text": "Unlicensed 2.4 GHz radio band: ISM (industrial, scientific, medical) band – available worldwide\nGross data rate of 1 Mbit/s (EDR: 3Mbit/s, HS: 24Mbit/s)\nBasic 10m range extended to 100m with amplifiers\nTDMA-TDD-Slow Frequency Hopping spread spectrum\nSupports up to 8 devices in a\npiconet\n(1 master and 7 slaves)\nPiconets\ncan combine to form\nscatternets\nMixed voice/data connections possible\nEncryption\nUbiquitous radio link\nBluetooth Characteristics"
+    },
+    {
+      "number": 8,
+      "title": "OSI and Bluetooth Protocol",
+      "lines": [
+        "OSI and Bluetooth Protocol"
+      ],
+      "text": "OSI and Bluetooth Protocol"
+    },
+    {
+      "number": 9,
+      "title": "Collection of devices connected in an ad hoc fashion",
+      "lines": [
+        "Collection of devices connected in an ad hoc fashion",
+        "One unit will act as master",
+        "Sets clock and frequency hopping pattern",
+        "Can connect to 7 active or 255 inactive (parked) slaves",
+        "Determines bit rate allocated to each slave",
+        "Unique frequency hopping pattern/ID",
+        "All devices synchronized to a common clock and hopping sequence.",
+        "Slaves can communicate only with the master",
+        "Communication Topology: Bluetooth",
+        "Piconet",
+        "Master",
+        "Slave 1",
+        "Unit C",
+        "Unit D",
+        "Unit B",
+        "Slave 2",
+        "Slave 3",
+        "Unit A",
+        "Unit E"
+      ],
+      "text": "Collection of devices connected in an ad hoc fashion\nOne unit will act as master\nSets clock and frequency hopping pattern\nCan connect to 7 active or 255 inactive (parked) slaves\nDetermines bit rate allocated to each slave\nUnique frequency hopping pattern/ID\nAll devices synchronized to a common clock and hopping sequence.\nSlaves can communicate only with the master\nCommunication Topology: Bluetooth\nPiconet\nMaster\nSlave 1\nUnit C\nUnit D\nUnit B\nSlave 2\nSlave 3\nUnit A\nUnit E"
+    },
+    {
+      "number": 10,
+      "title": "A device may participate concurrently in two or more",
+      "lines": [
+        "A device may participate concurrently in two or more",
+        "piconets",
+        "on time-division multiplexing (TDM) basis.",
+        "A device can be both master and slave.",
+        "A device can never be a master of more than one",
+        "piconet",
+        ".",
+        "Two or more",
+        "piconets",
+        "that include one or more devices participating in more than one",
+        "piconet",
+        "form a",
+        "scatternet",
+        ".",
+        "Communication Topology: Bluetooth",
+        "Scatternet",
+        "Master A",
+        "Slave A1",
+        "Common",
+        "slave",
+        "Slave A2",
+        "Master B",
+        "Slave B1",
+        "Slave B2",
+        "Slave B3"
+      ],
+      "text": "A device may participate concurrently in two or more\npiconets\non time-division multiplexing (TDM) basis.\nA device can be both master and slave.\nA device can never be a master of more than one\npiconet\n.\nTwo or more\npiconets\nthat include one or more devices participating in more than one\npiconet\nform a\nscatternet\n.\nCommunication Topology: Bluetooth\nScatternet\nMaster A\nSlave A1\nCommon\nslave\nSlave A2\nMaster B\nSlave B1\nSlave B2\nSlave B3"
+    },
+    {
+      "number": 11,
+      "title": "When the",
+      "lines": [
+        "When the",
+        "piconet",
+        "is established, the Master Clock (CLK) is communicated to the slaves.",
+        "Devices in a",
+        "piconet",
+        "use a specific",
+        "frequency hopping pattern",
+        ", which is determined by fields in the device address and the clock of the master.",
+        "The basic hopping pattern is a pseudo-random ordering of the 79 frequencies in the ISM band.",
+        "Adaptive Frequency Hopping (AFH) is used to improve the performance of physical links in the presence of interference as well as reducing the interference caused by physical links on other devices in the ISM band.",
+        "AFH uses less than the full 79 frequencies that the basic",
+        "piconet",
+        "uses.",
+        "Physical Layer: Frequency Hopping"
+      ],
+      "text": "When the\npiconet\nis established, the Master Clock (CLK) is communicated to the slaves.\nDevices in a\npiconet\nuse a specific\nfrequency hopping pattern\n, which is determined by fields in the device address and the clock of the master.\nThe basic hopping pattern is a pseudo-random ordering of the 79 frequencies in the ISM band.\nAdaptive Frequency Hopping (AFH) is used to improve the performance of physical links in the presence of interference as well as reducing the interference caused by physical links on other devices in the ISM band.\nAFH uses less than the full 79 frequencies that the basic\npiconet\nuses.\nPhysical Layer: Frequency Hopping"
+    },
+    {
+      "number": 12,
+      "title": "The basic",
+      "lines": [
+        "The basic",
+        "piconet",
+        "physical channel is divided into time slots, each 625",
+        "μs",
+        "in length.",
+        "A time division duplex (TDD) scheme is used where master and slave alternatively transmit.",
+        "The packet start should be aligned with the slot start. Packets may extend over up to five time slots.",
+        "Physical Layer:",
+        "Time Slots"
+      ],
+      "text": "The basic\npiconet\nphysical channel is divided into time slots, each 625\nμs\nin length.\nA time division duplex (TDD) scheme is used where master and slave alternatively transmit.\nThe packet start should be aligned with the slot start. Packets may extend over up to five time slots.\nPhysical Layer:\nTime Slots"
+    },
+    {
+      "number": 13,
+      "title": "The Bluetooth Special Interest Group (SIG) is taking care of current and future versions of this industry standard",
+      "lines": [
+        "The Bluetooth Special Interest Group (SIG) is taking care of current and future versions of this industry standard",
+        "For Bluetooth v1.1 and Bluetooth v1.2 there has been a collaboration with IEEE802.15.1",
+        "IEEE Standards 802.15.1-2002 and 802.15.1-2005",
+        "Afterwards the IEEE Study Group 802.15.1b voted unanimously to discontinue the relation to Bluetooth SIG",
+        "later versions of Bluetooth did not become IEEE standards",
+        "Bluetooth v2.0 with optional Enhanced Data Rate (EDR) has been published in November 2004.",
+        "combination of GFSK and DPSK to increase data rate to 3Mbps",
+        "Recent History of Bluetooth",
+        "Bluetooth v2.1 + EDR (July 2007)",
+        "Secure simple pairing protocol speeds up pairing procedure",
+        "Bluetooth v3.0 + HS (high speed) published April 2009",
+        "alternate PHY based on",
+        "WiFi",
+        "used for high data rate (up to 24Mbps)",
+        "UWB Multiband was candidate PHY but was dropped due to IPR problems",
+        "Bluetooth PHY used for control channels and medium rate traffic",
+        "Bluetooth Smart (v4.0) published June 2010: Classic Bluetooth,",
+        "Bluetooth+HS",
+        "and Bluetooth Low Energy",
+        "low energy protocol originates from the",
+        "Wibree",
+        "system (Nokia);",
+        "LE not compatible with other Bluetooth modes",
+        "Bluetooth v5 (June 2016)",
+        "2x the data rate, 4x the range, 8x the broadcast capability"
+      ],
+      "text": "The Bluetooth Special Interest Group (SIG) is taking care of current and future versions of this industry standard\nFor Bluetooth v1.1 and Bluetooth v1.2 there has been a collaboration with IEEE802.15.1\nIEEE Standards 802.15.1-2002 and 802.15.1-2005\nAfterwards the IEEE Study Group 802.15.1b voted unanimously to discontinue the relation to Bluetooth SIG\nlater versions of Bluetooth did not become IEEE standards\nBluetooth v2.0 with optional Enhanced Data Rate (EDR) has been published in November 2004.\ncombination of GFSK and DPSK to increase data rate to 3Mbps\nRecent History of Bluetooth\nBluetooth v2.1 + EDR (July 2007)\nSecure simple pairing protocol speeds up pairing procedure\nBluetooth v3.0 + HS (high speed) published April 2009\nalternate PHY based on\nWiFi\nused for high data rate (up to 24Mbps)\nUWB Multiband was candidate PHY but was dropped due to IPR problems\nBluetooth PHY used for control channels and medium rate traffic\nBluetooth Smart (v4.0) published June 2010: Classic Bluetooth,\nBluetooth+HS\nand Bluetooth Low Energy\nlow energy protocol originates from the\nWibree\nsystem (Nokia);\nLE not compatible with other Bluetooth modes\nBluetooth v5 (June 2016)\n2x the data rate, 4x the range, 8x the broadcast capability"
+    },
+    {
+      "number": 14,
+      "title": "New low power design, no downward compatibility to Classic Bluetooth (CB)",
+      "lines": [
+        "New low power design, no downward compatibility to Classic Bluetooth (CB)",
+        "To  be used in sensor networks",
+        "sensors transmit short data packets with a low duty cycle",
+        "support low latency",
+        "not optimized for streaming data",
+        "asymmetric node complexity (slave - master)",
+        "Reuse to as much as possible Classic Bluetooth hardware",
+        "Bluetooth Low Energy (BLE, Smart Bluetooth)",
+        "Simplified physical layer as compared to Classic Bluetooth",
+        "three advertising channels (CB uses 16 or 32 for Inquiry and Page) used for connection process",
+        "37x2MHz data channels (CB: 79x1MHz)",
+        "increased modulation index of GMSK",
+        "3ms latency from",
+        "nonconnected",
+        "state (CB: >100ms)"
+      ],
+      "text": "New low power design, no downward compatibility to Classic Bluetooth (CB)\nTo  be used in sensor networks\nsensors transmit short data packets with a low duty cycle\nsupport low latency\nnot optimized for streaming data\nasymmetric node complexity (slave - master)\nReuse to as much as possible Classic Bluetooth hardware\nBluetooth Low Energy (BLE, Smart Bluetooth)\nSimplified physical layer as compared to Classic Bluetooth\nthree advertising channels (CB uses 16 or 32 for Inquiry and Page) used for connection process\n37x2MHz data channels (CB: 79x1MHz)\nincreased modulation index of GMSK\n3ms latency from\nnonconnected\nstate (CB: >100ms)"
+    },
+    {
+      "number": 15,
+      "title": "Dual Mode Chipsets (Bluetooth Smart Ready)",
+      "lines": [
+        "Dual Mode Chipsets (Bluetooth Smart Ready)"
+      ],
+      "text": "Dual Mode Chipsets (Bluetooth Smart Ready)"
+    },
+    {
+      "number": 16,
+      "title": "Classic Bluetooth Versus Bluetooth Smart",
+      "lines": [
+        "Classic Bluetooth Versus Bluetooth Smart",
+        "Technical Specification",
+        "Classic Bluetooth technology",
+        "Bluetooth Smart technology",
+        "Distance/Range (theoretical max.)",
+        "100 m (330 ft)",
+        "<100 m (<330 ft)",
+        "Over the air data rate",
+        "1–3 Mbit/s",
+        "1 Mbit/s",
+        "Application throughput",
+        "0.7–2.1 Mbit/s",
+        "0.27 Mbit/s",
+        "Active slaves",
+        "7",
+        "Not defined; implementation dependent",
+        "Security",
+        "56/128-bit and application layer user defined",
+        "128-bit",
+        "AES",
+        "with",
+        "Counter Mode CBC-MAC",
+        "and application layer user defined",
+        "Robustness",
+        "Adaptive fast frequency hopping,",
+        "FEC",
+        ", fast",
+        "ACK",
+        "Adaptive frequency hopping, Lazy Acknowledgement, 24-bit CRC, 32-bit Message Integrity Check",
+        "Latency (from a non-connected state)",
+        "Typically 100 ms",
+        "6 ms",
+        "Total time to send data (det.battery life)",
+        "100 ms",
+        "3 ms",
+        "Voice capable",
+        "Yes",
+        "No",
+        "Network topology",
+        "Scatternet",
+        "Scatternet",
+        "Power consumption",
+        "1 W as the reference",
+        "0.01 to 0.5 W (depending on use case)",
+        "Peak current consumption",
+        "<30 mA",
+        "<15 mA",
+        "Service discovery",
+        "Yes",
+        "Yes",
+        "Profile concept",
+        "Yes",
+        "Yes"
+      ],
+      "text": "Classic Bluetooth Versus Bluetooth Smart\nTechnical Specification\nClassic Bluetooth technology\nBluetooth Smart technology\nDistance/Range (theoretical max.)\n100 m (330 ft)\n<100 m (<330 ft)\nOver the air data rate\n1–3 Mbit/s\n1 Mbit/s\nApplication throughput\n0.7–2.1 Mbit/s\n0.27 Mbit/s\nActive slaves\n7\nNot defined; implementation dependent\nSecurity\n56/128-bit and application layer user defined\n128-bit\nAES\nwith\nCounter Mode CBC-MAC\nand application layer user defined\nRobustness\nAdaptive fast frequency hopping,\nFEC\n, fast\nACK\nAdaptive frequency hopping, Lazy Acknowledgement, 24-bit CRC, 32-bit Message Integrity Check\nLatency (from a non-connected state)\nTypically 100 ms\n6 ms\nTotal time to send data (det.battery life)\n100 ms\n3 ms\nVoice capable\nYes\nNo\nNetwork topology\nScatternet\nScatternet\nPower consumption\n1 W as the reference\n0.01 to 0.5 W (depending on use case)\nPeak current consumption\n<30 mA\n<15 mA\nService discovery\nYes\nYes\nProfile concept\nYes\nYes"
+    },
+    {
+      "number": 17,
+      "title": "Authentication",
+      "lines": [
+        "Authentication",
+        "Verifies the identification of the devices that are communicating in the channel.",
+        "Confidentiality",
+        "Protecting the data from the attacker by allowing only authorized users to access the data.",
+        "Authorization",
+        "Only authorized users have control over the resources.",
+        "Bluetooth Security"
+      ],
+      "text": "Authentication\nVerifies the identification of the devices that are communicating in the channel.\nConfidentiality\nProtecting the data from the attacker by allowing only authorized users to access the data.\nAuthorization\nOnly authorized users have control over the resources.\nBluetooth Security"
+    },
+    {
+      "number": 18,
+      "title": "Security Mode 1",
+      "lines": [
+        "Security Mode 1",
+        "Non-Secure Mode",
+        "Security Mode 2",
+        "Service level enforced security mode",
+        "Security Mode 3",
+        "Link-level enforced security mode",
+        "Security",
+        "Modes",
+        "of Bluetooth"
+      ],
+      "text": "Security Mode 1\nNon-Secure Mode\nSecurity Mode 2\nService level enforced security mode\nSecurity Mode 3\nLink-level enforced security mode\nSecurity\nModes\nof Bluetooth"
+    },
+    {
+      "number": 19,
+      "title": "Only security at this level is by the nature of the connection: data-hopping and short-distance",
+      "lines": [
+        "Only security at this level is by the nature of the connection: data-hopping and short-distance",
+        "Bluetooth devices transmit over the unlicensed 2.45GHz radio band, the same band used by microwave ovens and cordless phones.(FHSS)",
+        "All Bluetooth devices employ “data-hopping”, which entails skipping around the radio band up to 1600 times per second, at 1MHz intervals (79 different frequencies)",
+        "Most connections are less than 10 meters, so there is a limit as to eavesdropping possibilities",
+        "Mode 1: No Security"
+      ],
+      "text": "Only security at this level is by the nature of the connection: data-hopping and short-distance\nBluetooth devices transmit over the unlicensed 2.45GHz radio band, the same band used by microwave ovens and cordless phones.(FHSS)\nAll Bluetooth devices employ “data-hopping”, which entails skipping around the radio band up to 1600 times per second, at 1MHz intervals (79 different frequencies)\nMost connections are less than 10 meters, so there is a limit as to eavesdropping possibilities\nMode 1: No Security"
+    },
+    {
+      "number": 20,
+      "title": "Service Access depends on device:",
+      "lines": [
+        "Service Access depends on device:",
+        "Trusted devices have unrestricted access to all services, fixed relationship to other devices",
+        "Untrusted devices generally have no permanent relationship and services that it has access to are limited.",
+        "Unfortunately, all services on a device are given the same security policy, other than application layer add-ons.",
+        "Mode 2: Service Level Security"
+      ],
+      "text": "Service Access depends on device:\nTrusted devices have unrestricted access to all services, fixed relationship to other devices\nUntrusted devices generally have no permanent relationship and services that it has access to are limited.\nUnfortunately, all services on a device are given the same security policy, other than application layer add-ons.\nMode 2: Service Level Security"
+    },
+    {
+      "number": 21,
+      "title": "Services can have one of 3 security levels:",
+      "lines": [
+        "Services can have one of 3 security levels:",
+        "Level 3",
+        ": Requires Authentication and Authorization.  PIN number must be entered.",
+        "Level 2",
+        ": Authentication only, fixed PIN ok.",
+        "Level 1",
+        ": Open to all devices, the default level. Security for legacy applications, for example.",
+        "Mode 2: Service Security Levels"
+      ],
+      "text": "Services can have one of 3 security levels:\nLevel 3\n: Requires Authentication and Authorization.  PIN number must be entered.\nLevel 2\n: Authentication only, fixed PIN ok.\nLevel 1\n: Open to all devices, the default level. Security for legacy applications, for example.\nMode 2: Service Security Levels"
+    },
+    {
+      "number": 22,
+      "title": "Security is implemented by symmetric keys in a challenge-response system.",
+      "lines": [
+        "Security is implemented by symmetric keys in a challenge-response system.",
+        "Security implementations in Bluetooth units are all the same, and are publicly available:",
+        "http://www.bluetooth.com/pdf/Bluetooth_11_Specifications_Book.pdf",
+        "Critical ingredients",
+        "PIN, BD_ADDR, RAND(), Link and Encryption Keys",
+        "Mode 3: Link level security"
+      ],
+      "text": "Security is implemented by symmetric keys in a challenge-response system.\nSecurity implementations in Bluetooth units are all the same, and are publicly available:\nhttp://www.bluetooth.com/pdf/Bluetooth_11_Specifications_Book.pdf\nCritical ingredients\nPIN, BD_ADDR, RAND(), Link and Encryption Keys\nMode 3: Link level security"
+    },
+    {
+      "number": 23,
+      "title": "0x2",
+      "lines": [
+        "0x2",
+        "蓝牙的信任模式",
+        "受信任：设备已与另一设备建立固定关系，且对所有服务的访问不受限制。",
+        "不受信任：虽然已成功通过身份验证，但设备只能访问一组受限制的服务。",
+        "0x3",
+        "设备的可发现性",
+        "BD_ADDR",
+        "0x4",
+        "蓝牙安全服务",
+        "基于挑战",
+        "/",
+        "应答",
+        "(",
+        "Challenge/Response)",
+        "方式执行身份验证。",
+        "PIN",
+        "码",
+        "/",
+        "SSP",
+        "0x5",
+        "其他安全功能",
+        "自适应跳频",
+        "E0",
+        "加密算法",
+        "不可见性",
+        "配对",
+        "蓝牙安全运作流程"
+      ],
+      "text": "0x2\n蓝牙的信任模式\n受信任：设备已与另一设备建立固定关系，且对所有服务的访问不受限制。\n不受信任：虽然已成功通过身份验证，但设备只能访问一组受限制的服务。\n0x3\n设备的可发现性\nBD_ADDR\n0x4\n蓝牙安全服务\n基于挑战\n/\n应答\n(\nChallenge/Response)\n方式执行身份验证。\nPIN\n码\n/\nSSP\n0x5\n其他安全功能\n自适应跳频\nE0\n加密算法\n不可见性\n配对\n蓝牙安全运作流程"
+    },
+    {
+      "number": 24,
+      "title": "Problems with the standard Bluetooth Security",
+      "lines": [
+        "Problems with the standard Bluetooth Security",
+        "Security Issue",
+        "Remarks",
+        "Strength of the Random Number Generator (RNG) is unknown.",
+        "RNG may produce periodic numbers that reduces the strength of authentication mechanism.",
+        "Short PINs are allowed.",
+        "Such weak PINs are used to generate link and encryption keys that are easily predictable.",
+        "Encryption key length is negotiable.",
+        "More robust initialization key generation procedure should be developed.",
+        "No user authentication exists.",
+        "As only device authentication is provided, application security and user authentication can be employed.",
+        "Stream cipher is weak and key length is negotiable.",
+        "Robust encryption procedure and minimum key length should be decided and passed as an agreement."
+      ],
+      "text": "Problems with the standard Bluetooth Security\nSecurity Issue\nRemarks\nStrength of the Random Number Generator (RNG) is unknown.\nRNG may produce periodic numbers that reduces the strength of authentication mechanism.\nShort PINs are allowed.\nSuch weak PINs are used to generate link and encryption keys that are easily predictable.\nEncryption key length is negotiable.\nMore robust initialization key generation procedure should be developed.\nNo user authentication exists.\nAs only device authentication is provided, application security and user authentication can be employed.\nStream cipher is weak and key length is negotiable.\nRobust encryption procedure and minimum key length should be decided and passed as an agreement."
+    },
+    {
+      "number": 25,
+      "title": "Problems with the standard Bluetooth Security (Cont’d)",
+      "lines": [
+        "Problems with the standard Bluetooth Security (Cont’d)",
+        "Security Issue",
+        "Remarks",
+        "Privacy can be compromised if the BD_ADDR is captured and associated with a particular user.",
+        "Once the BD_ADDR is associated with a particular user, that user’s activity can be logged. So, loss of privacy can be compromised.",
+        "Device authentication is simple shared key challenge response.",
+        "One-way authentication may be subjected to man-in-middle attacks. Mutual authentication is a good idea to provide verification."
+      ],
+      "text": "Problems with the standard Bluetooth Security (Cont’d)\nSecurity Issue\nRemarks\nPrivacy can be compromised if the BD_ADDR is captured and associated with a particular user.\nOnce the BD_ADDR is associated with a particular user, that user’s activity can be logged. So, loss of privacy can be compromised.\nDevice authentication is simple shared key challenge response.\nOne-way authentication may be subjected to man-in-middle attacks. Mutual authentication is a good idea to provide verification."
+    },
+    {
+      "number": 26,
+      "title": "Denial of service",
+      "lines": [
+        "Denial of service",
+        "Makes the device unusable and drains the mobile device battery.",
+        "Fuzzing attacks",
+        "Sending malformed messages to the",
+        "bluetooth",
+        "device.",
+        "Blue jacking",
+        "Uses IMEI identifier to route all the incoming calls.",
+        "Blue",
+        "snarfing",
+        "Causes harm when the user sends the data to the other user.",
+        "Security Threats"
+      ],
+      "text": "Denial of service\nMakes the device unusable and drains the mobile device battery.\nFuzzing attacks\nSending malformed messages to the\nbluetooth\ndevice.\nBlue jacking\nUses IMEI identifier to route all the incoming calls.\nBlue\nsnarfing\nCauses harm when the user sends the data to the other user.\nSecurity Threats"
+    },
+    {
+      "number": 27,
+      "title": "Scanning",
+      "lines": [
+        "Scanning"
+      ],
+      "text": "Scanning"
+    },
+    {
+      "number": 28,
+      "title": "使用德州仪器（",
+      "lines": [
+        "使用德州仪器（",
+        "TI",
+        "）",
+        "CC2540",
+        "蓝牙低功耗模块配合官方的",
+        "SmartRF",
+        "协议软件包监听器：",
+        "PACKET-SNIFFER",
+        "，",
+        "可对三个蓝牙广播信道进行嗅探。",
+        "Sniffing",
+        "–",
+        "对广播信道的嗅探",
+        "Ti.com.cn/packet-sniffer",
+        "https://www.cnblogs.com/k1two2/p/5577301.html"
+      ],
+      "text": "使用德州仪器（\nTI\n）\nCC2540\n蓝牙低功耗模块配合官方的\nSmartRF\n协议软件包监听器：\nPACKET-SNIFFER\n，\n可对三个蓝牙广播信道进行嗅探。\nSniffing\n–\n对广播信道的嗅探\nTi.com.cn/packet-sniffer\nhttps://www.cnblogs.com/k1two2/p/5577301.html"
+    },
+    {
+      "number": 29,
+      "title": "Sniffing",
+      "lines": [
+        "Sniffing",
+        "–",
+        "对",
+        "通信过程",
+        "的嗅探",
+        "lib",
+        "库",
+        "libbtbb",
+        "ubertooth",
+        "wireshark",
+        "kismet",
+        "BLE",
+        "解密工具",
+        "crackle",
+        "https://github.com/mikeryan/crackle"
+      ],
+      "text": "Sniffing\n–\n对\n通信过程\n的嗅探\nlib\n库\nlibbtbb\nubertooth\nwireshark\nkismet\nBLE\n解密工具\ncrackle\nhttps://github.com/mikeryan/crackle"
+    },
+    {
+      "number": 30,
+      "title": "用",
+      "lines": [
+        "用",
+        "Light Blue",
+        "来强制连接蓝牙设备",
+        "进入连接页面，可以看到该蓝牙设备更详细的信息，",
+        "连接小米手环进行重放攻击。",
+        "BLE",
+        "-",
+        "Replay",
+        "Attack"
+      ],
+      "text": "用\nLight Blue\n来强制连接蓝牙设备\n进入连接页面，可以看到该蓝牙设备更详细的信息，\n连接小米手环进行重放攻击。\nBLE\n-\nReplay\nAttack"
+    },
+    {
+      "number": 31,
+      "title": "Breaking Secure Pairing of Bluetooth Low Energy Using Downgrade Attacks",
+      "lines": [
+        "Breaking Secure Pairing of Bluetooth Low Energy Using Downgrade Attacks",
+        "Yue Zhang, Jian Weng,",
+        "Rajib",
+        "Dey",
+        ",",
+        "Yier",
+        "Jin",
+        ",",
+        "Zhiqiang",
+        "Lin,",
+        "Xinwen",
+        "Fu",
+        "USENIX Security Symposium. August 12–14, 2020"
+      ],
+      "text": "Breaking Secure Pairing of Bluetooth Low Energy Using Downgrade Attacks\nYue Zhang, Jian Weng,\nRajib\nDey\n,\nYier\nJin\n,\nZhiqiang\nLin,\nXinwen\nFu\nUSENIX Security Symposium. August 12–14, 2020"
+    },
+    {
+      "number": 32,
+      "title": "BLE-Guardian: Protecting the Privacy of BLE Users",
+      "lines": [
+        "BLE-Guardian: Protecting the Privacy of BLE Users",
+        "Kassem",
+        "Fawaz",
+        "*",
+        ",",
+        "Kyu",
+        "-Han Kim",
+        "†",
+        ", Kang G. Shin",
+        "*",
+        "*",
+        "Computer Science and Engineering, University of Michigan",
+        "†",
+        "Hewlett Packard Labs",
+        "USENIX Security 2016"
+      ],
+      "text": "BLE-Guardian: Protecting the Privacy of BLE Users\nKassem\nFawaz\n*\n,\nKyu\n-Han Kim\n†\n, Kang G. Shin\n*\n*\nComputer Science and Engineering, University of Michigan\n†\nHewlett Packard Labs\nUSENIX Security 2016"
+    },
+    {
+      "number": 33,
+      "title": "Attractive communication technology",
+      "lines": [
+        "Attractive communication technology",
+        "Short range",
+        "Low energy footprint",
+        "Supported by most hosts",
+        "Currently:",
+        "74K unique products with BLE support",
+        "2013:",
+        "1.2 billion BLE products shipped",
+        "2020:",
+        "2.7 billion BLE products expected",
+        "Bluetooth Low Energy"
+      ],
+      "text": "Attractive communication technology\nShort range\nLow energy footprint\nSupported by most hosts\nCurrently:\n74K unique products with BLE support\n2013:\n1.2 billion BLE products shipped\n2020:\n2.7 billion BLE products expected\nBluetooth Low Energy"
+    },
+    {
+      "number": 34,
+      "title": "BLE Primer",
+      "lines": [
+        "BLE Primer",
+        "Standby:",
+        "Low Power Mode. Receiver and transmitter switched ‘off’",
+        "Advertising:",
+        "Used by low power ‘Server’. Only transmitter required.",
+        "Scanning:",
+        "Used by ‘Client’. Receiver listens to advertising channels.",
+        "Initiating:",
+        "‘Server’ sends connection request",
+        "Connection:",
+        "After scanning, ‘Client’ responds to ‘Server’ advertisement",
+        "Scanning",
+        "Connection",
+        "Advertising",
+        "Initiating",
+        "Standby"
+      ],
+      "text": "BLE Primer\nStandby:\nLow Power Mode. Receiver and transmitter switched ‘off’\nAdvertising:\nUsed by low power ‘Server’. Only transmitter required.\nScanning:\nUsed by ‘Client’. Receiver listens to advertising channels.\nInitiating:\n‘Server’ sends connection request\nConnection:\nAfter scanning, ‘Client’ responds to ‘Server’ advertisement\nScanning\nConnection\nAdvertising\nInitiating\nStandby"
+    },
+    {
+      "number": 35,
+      "title": "BLE Advertisements",
+      "lines": [
+        "BLE Advertisements",
+        "3 dedicated advertising channels:",
+        "2402 MHz (37), 2426 MHz (38), 2480 MHz (39)",
+        "Type",
+        "Description",
+        "Frequency",
+        "ADV_DIRECT_IND",
+        "Connect to a particular device only",
+        "3.75",
+        "ms",
+        ",",
+        "but only for 1.28 seconds",
+        "ADV_IND",
+        "General presence known + connections",
+        "20ms – 10.24s",
+        "Listen",
+        "Advertisement",
+        "𝑟",
+        "∈[0,10]",
+        "𝑎𝑑𝑣"
+      ],
+      "text": "BLE Advertisements\n3 dedicated advertising channels:\n2402 MHz (37), 2426 MHz (38), 2480 MHz (39)\nType\nDescription\nFrequency\nADV_DIRECT_IND\nConnect to a particular device only\n3.75\nms\n,\nbut only for 1.28 seconds\nADV_IND\nGeneral presence known + connections\n20ms – 10.24s\nListen\nAdvertisement\n𝑟\n∈[0,10]\n𝑎𝑑𝑣"
+    },
+    {
+      "number": 36,
+      "title": "Pairing & bonding",
+      "lines": [
+        "Pairing & bonding",
+        "Prevent unauthorized access to device or secured services",
+        "Address randomization",
+        "Prevent user tracking",
+        "Direct Advertisements",
+        "Prevent user tracking and profiling",
+        "BLE Security and Privacy"
+      ],
+      "text": "Pairing & bonding\nPrevent unauthorized access to device or secured services\nAddress randomization\nPrevent user tracking\nDirect Advertisements\nPrevent user tracking and profiling\nBLE Security and Privacy"
+    },
+    {
+      "number": 37,
+      "title": "Passively",
+      "lines": [
+        "Passively",
+        "scan for BLE advertisements",
+        "Collect:",
+        "<Timestamp, BT Address, advertisement content, RSSI>",
+        "BLE Privacy & Security Effectiveness",
+        "Site",
+        "Participants",
+        "Period",
+        "Hewlett Packard Labs",
+        "1",
+        "40 days",
+        "Ann Arbor",
+        "13",
+        "2 months",
+        "Phone LAB/ SUNY Buffalo",
+        "86",
+        "2 months"
+      ],
+      "text": "Passively\nscan for BLE advertisements\nCollect:\n<Timestamp, BT Address, advertisement content, RSSI>\nBLE Privacy & Security Effectiveness\nSite\nParticipants\nPeriod\nHewlett Packard Labs\n1\n40 days\nAnn Arbor\n13\n2 months\nPhone LAB/ SUNY Buffalo\n86\n2 months"
+    },
+    {
+      "number": 38,
+      "title": "Indirect Advertisements",
+      "lines": [
+        "Indirect Advertisements",
+        "Detected 214 different unique types of devices",
+        "Address Randomization",
+        "BLE Privacy & Security Effectiveness",
+        "Name",
+        "Description",
+        "ihere",
+        "key finder",
+        "DEXCOMRX",
+        "Glucose monitor",
+        "Frances’s Band ea:9d",
+        "smartband",
+        "Otbeat",
+        "heart rate monitor",
+        "JS00002074",
+        "digital pen",
+        "Device",
+        "Days observed",
+        "One",
+        "37",
+        "Flex",
+        "37",
+        "Zip",
+        "37",
+        "Forerunner 920",
+        "36",
+        "Basis Peak",
+        "25",
+        "Address",
+        "00:17:E9:CB:F3:61",
+        "00:17:E9:CB:F5:01",
+        "Revealing Names",
+        "Consistent Addresses",
+        "Poor Randomization"
+      ],
+      "text": "Indirect Advertisements\nDetected 214 different unique types of devices\nAddress Randomization\nBLE Privacy & Security Effectiveness\nName\nDescription\nihere\nkey finder\nDEXCOMRX\nGlucose monitor\nFrances’s Band ea:9d\nsmartband\nOtbeat\nheart rate monitor\nJS00002074\ndigital pen\nDevice\nDays observed\nOne\n37\nFlex\n37\nZip\n37\nForerunner 920\n36\nBasis Peak\n25\nAddress\n00:17:E9:CB:F3:61\n00:17:E9:CB:F5:01\nRevealing Names\nConsistent Addresses\nPoor Randomization"
+    },
+    {
+      "number": 39,
+      "title": "Device paring",
+      "lines": [
+        "Device paring",
+        "BLE Privacy & Security Effectiveness",
+        "Battery level",
+        "Unique identifiers",
+        "Advertise and accept connections"
+      ],
+      "text": "Device paring\nBLE Privacy & Security Effectiveness\nBattery level\nUnique identifiers\nAdvertise and accept connections"
+    },
+    {
+      "number": 40,
+      "title": "It all starts with the advertisements…",
+      "lines": [
+        "It all starts with the advertisements…",
+        "Tracking User",
+        "Consistent addresses, poor randomization, unique device names and identifiers"
+      ],
+      "text": "It all starts with the advertisements…\nTracking User\nConsistent addresses, poor randomization, unique device names and identifiers"
+    },
+    {
+      "number": 41,
+      "title": "Health situation, user’s lifestyle, behavior, preferences, and personal interests",
+      "lines": [
+        "Health situation, user’s lifestyle, behavior, preferences, and personal interests",
+        "It all starts with the advertisements…",
+        "Tracking User",
+        "Profiling User"
+      ],
+      "text": "Health situation, user’s lifestyle, behavior, preferences, and personal interests\nIt all starts with the advertisements…\nTracking User\nProfiling User"
+    },
+    {
+      "number": 42,
+      "title": "Fingerprinting of and unauthorized access for sensitive systems and devices",
+      "lines": [
+        "Fingerprinting of and unauthorized access for sensitive systems and devices",
+        "It all starts with the advertisements…",
+        "Tracking User",
+        "Profiling User",
+        "Harming User"
+      ],
+      "text": "Fingerprinting of and unauthorized access for sensitive systems and devices\nIt all starts with the advertisements…\nTracking User\nProfiling User\nHarming User"
+    },
+    {
+      "number": 43,
+      "title": "Can we effectively fend off the threats to BLE-equipped devices",
+      "lines": [
+        "Can we effectively fend off the threats to BLE-equipped devices",
+        "in a device-agnostic manner,",
+        "using COTS (Commercial-Off-The-Shelf) hardware only, and",
+        "with as little user intervention as possible?",
+        "Research Questions"
+      ],
+      "text": "Can we effectively fend off the threats to BLE-equipped devices\nin a device-agnostic manner,\nusing COTS (Commercial-Off-The-Shelf) hardware only, and\nwith as little user intervention as possible?\nResearch Questions"
+    },
+    {
+      "number": 44,
+      "title": "BLE-Guardian",
+      "lines": [
+        "BLE-Guardian"
+      ],
+      "text": "BLE-Guardian"
+    },
+    {
+      "number": 45,
+      "title": "Ubertooth",
+      "lines": [
+        "Ubertooth",
+        "One",
+        "Programmable BT radio",
+        "Open source firmware",
+        "Rx/",
+        "Tx",
+        "on each BT channel",
+        "User-level app",
+        "Control BLE-Guardian",
+        "Update firmware seamlessly",
+        "BLE-Guardian"
+      ],
+      "text": "Ubertooth\nOne\nProgrammable BT radio\nOpen source firmware\nRx/\nTx\non each BT channel\nUser-level app\nControl BLE-Guardian\nUpdate firmware seamlessly\nBLE-Guardian"
+    },
+    {
+      "number": 46,
+      "title": "High-level Description",
+      "lines": [
+        "High-level Description",
+        "BLE-Guardian running",
+        "Connection Enabling",
+        "Authorized client",
+        "User Alert",
+        "Attacker detected",
+        "Device Hiding Module",
+        "Owner chooses target BLE device",
+        "Client Authorization",
+        "Whitelist Client",
+        "New client",
+        "Access Control Module",
+        "Access denied",
+        "Access granted"
+      ],
+      "text": "High-level Description\nBLE-Guardian running\nConnection Enabling\nAuthorized client\nUser Alert\nAttacker detected\nDevice Hiding Module\nOwner chooses target BLE device\nClient Authorization\nWhitelist Client\nNew client\nAccess Control Module\nAccess denied\nAccess granted"
+    },
+    {
+      "number": 47,
+      "title": "Jam BLE device advertisements to hide its existence",
+      "lines": [
+        "Jam BLE device advertisements to hide its existence",
+        "Need to learn device advertising Sequence",
+        "Otherwise jamming will be ineffective or inefficient",
+        "Device Hiding",
+        "Advertisement",
+        "Listen",
+        "𝑎𝑑𝑣",
+        "𝑟",
+        "∈[0,10]",
+        "37",
+        "38",
+        "39",
+        "…"
+      ],
+      "text": "Jam BLE device advertisements to hide its existence\nNeed to learn device advertising Sequence\nOtherwise jamming will be ineffective or inefficient\nDevice Hiding\nAdvertisement\nListen\n𝑎𝑑𝑣\n𝑟\n∈[0,10]\n37\n38\n39\n…"
+    },
+    {
+      "number": 48,
+      "title": "Device Hiding",
+      "lines": [
+        "Device Hiding",
+        "𝑇",
+        "𝑁",
+        "+",
+        "𝑎𝑑𝑣",
+        "’",
+        "𝑇",
+        "𝑁",
+        "Monitoring interval",
+        "𝑇",
+        "𝑁",
+        "+",
+        "𝑎𝑑",
+        "𝑣",
+        "′",
+        "−",
+        "𝑒",
+        "𝑇",
+        "𝑁",
+        "+",
+        "𝑎𝑑",
+        "𝑣",
+        "′",
+        "+",
+        "𝑒",
+        "+10",
+        "𝑡",
+        "1",
+        "Advertisement session",
+        "𝑡",
+        "2",
+        "𝑡",
+        "3",
+        "𝑡",
+        "4",
+        "Estimate advertising interval:",
+        "𝑎𝑑",
+        "𝑣",
+        "′",
+        "=",
+        "𝐸",
+        "(",
+        "𝑡",
+        "𝑖",
+        ")−5",
+        "Max delay"
+      ],
+      "text": "Device Hiding\n𝑇\n𝑁\n+\n𝑎𝑑𝑣\n’\n𝑇\n𝑁\nMonitoring interval\n𝑇\n𝑁\n+\n𝑎𝑑\n𝑣\n′\n−\n𝑒\n𝑇\n𝑁\n+\n𝑎𝑑\n𝑣\n′\n+\n𝑒\n+10\n𝑡\n1\nAdvertisement session\n𝑡\n2\n𝑡\n3\n𝑡\n4\nEstimate advertising interval:\n𝑎𝑑\n𝑣\n′\n=\n𝐸\n(\n𝑡\n𝑖\n)−5\nMax delay"
+    },
+    {
+      "number": 49,
+      "title": "Device Hiding",
+      "lines": [
+        "Device Hiding",
+        "Monitoring interval",
+        "jamming",
+        "Detect RSSI (received signal strength indication) increase",
+        "Apply jamming and follow advertising sequence"
+      ],
+      "text": "Device Hiding\nMonitoring interval\njamming\nDetect RSSI (received signal strength indication) increase\nApply jamming and follow advertising sequence"
+    },
+    {
+      "number": 50,
+      "title": "At this point, the target BLE device is hidden.",
+      "lines": [
+        "At this point, the target BLE device is hidden.",
+        "How to enable access to it?"
+      ],
+      "text": "At this point, the target BLE device is hidden.\nHow to enable access to it?"
+    },
+    {
+      "number": 51,
+      "title": "Access Control",
+      "lines": [
+        "Access Control",
+        "Authorization:",
+        "Bluetooth classic as an OOB channel.",
+        "Bt_addr",
+        ", UUID",
+        "Attempt connection",
+        "jamming",
+        "adv",
+        "Connection",
+        "request",
+        "Client authorized by user",
+        "Send pairing request",
+        "User",
+        "completes pairing"
+      ],
+      "text": "Access Control\nAuthorization:\nBluetooth classic as an OOB channel.\nBt_addr\n, UUID\nAttempt connection\njamming\nadv\nConnection\nrequest\nClient authorized by user\nSend pairing request\nUser\ncompletes pairing"
+    },
+    {
+      "number": 52,
+      "title": "Access Control",
+      "lines": [
+        "Access Control",
+        "Connection Enabling:",
+        "Connection parameters to distinguish legitimate connection request.",
+        "Connection",
+        "parameters",
+        "jamming",
+        "adv",
+        "Legitimate connection",
+        "data",
+        "data",
+        "adv",
+        "jamming",
+        "Reduced Adv.",
+        "Connection request"
+      ],
+      "text": "Access Control\nConnection Enabling:\nConnection parameters to distinguish legitimate connection request.\nConnection\nparameters\njamming\nadv\nLegitimate connection\ndata\ndata\nadv\njamming\nReduced Adv.\nConnection request"
+    },
+    {
+      "number": 53,
+      "title": "Cut-off Distance",
+      "lines": [
+        "Cut-off Distance",
+        "Evaluation",
+        "Attacker",
+        "BLE device",
+        "BLE-Guardian",
+        "Cut-off distance",
+        "d"
+      ],
+      "text": "Cut-off Distance\nEvaluation\nAttacker\nBLE device\nBLE-Guardian\nCut-off distance\nd"
+    },
+    {
+      "number": 54,
+      "title": "Cut-off Distance",
+      "lines": [
+        "Cut-off Distance",
+        "Evaluation",
+        "Adversary has to be within 1 m of BLE device to read its advertisements"
+      ],
+      "text": "Cut-off Distance\nEvaluation\nAdversary has to be within 1 m of BLE device to read its advertisements"
+    },
+    {
+      "number": 55,
+      "title": "Impact on Advertising Channels",
+      "lines": [
+        "Impact on Advertising Channels",
+        "Protect single device at advertising intervals:",
+        "20ms, 960ms, and 10.24 sec",
+        "Two devices advertising at 20",
+        "ms",
+        "15 other devices",
+        "With varying advertising frequencies",
+        "Evaluation",
+        "The number of unnecessary jamming instance is minimal",
+        "unnecessary jams"
+      ],
+      "text": "Impact on Advertising Channels\nProtect single device at advertising intervals:\n20ms, 960ms, and 10.24 sec\nTwo devices advertising at 20\nms\n15 other devices\nWith varying advertising frequencies\nEvaluation\nThe number of unnecessary jamming instance is minimal\nunnecessary jams"
+    },
+    {
+      "number": 56,
+      "title": "Energy Overhead",
+      "lines": [
+        "Energy Overhead",
+        "BLE-device and authorized clients",
+        "No overhead",
+        "Smartphone as a gateway",
+        "Idle power: 1370mW",
+        "Overhead: less than 16%",
+        "Evaluation"
+      ],
+      "text": "Energy Overhead\nBLE-device and authorized clients\nNo overhead\nSmartphone as a gateway\nIdle power: 1370mW\nOverhead: less than 16%\nEvaluation"
+    },
+    {
+      "number": 57,
+      "title": "Slides are adapted from talks given by:",
+      "lines": [
+        "Slides are adapted from talks given by:",
+        "Scott Anson from University of Washington: “Bluetooth Security”",
+        "Jaymin",
+        "Shah: “An Analysis of Bluetooth Security”",
+        "Kassem",
+        "Fawaz",
+        "from University of Michigan: “BLE-Guardian: Protecting the Privacy of BLE Users”",
+        "Acknowledgement"
+      ],
+      "text": "Slides are adapted from talks given by:\nScott Anson from University of Washington: “Bluetooth Security”\nJaymin\nShah: “An Analysis of Bluetooth Security”\nKassem\nFawaz\nfrom University of Michigan: “BLE-Guardian: Protecting the Privacy of BLE Users”\nAcknowledgement"
+    }
+  ],
+  "full_text": "Bluetooth Security and Privacy\nInstructor: Jinsong\nHan\nWireless network and security\n\nIn the 2000s, the\nage of the smartphone\n, this figure rose to 2 billion.\nBy 2021 there will be 48 billion devices connected to the internet, in what we’re likely to term\nthe age of the IoT\n.\nBluetooth\n\nBluetooth is a wireless technology standard for exchanging data over short distances\nISM band from 2.4 to 2.485 GHz\nfixed and mobile devices\nbuilding personal area networks(PANs)\nFirst proposed by telecom vendor Ericsson in 1994\nOriginally conceived as a wireless alternative to RS-232 data cables\nWhat is Bluetooth?\n\nBluetooth is managed by the\nBluetooth Special Interest Group\n(SIG),\nfounded in 1998  by a group of companies\nmore than 20,000 member companies as of 2014\nBluetooth was standardized as\nIEEE 802.15.1\n, but the standard is no longer maintained.\nThe SIG oversees the development of the specification, manages the qualification program, and protects the trademarks.\nBluetooth Special Interest Group\n\nThe 10th Century king of Denmark Harald \"Bluetooth\"\nGormsson\nunited all the tiny island around Denmark, southern Sweden, and southern Norway into a single country.\nHe got his name from his penchant for blueberries.\nBluetooth, the new low-cost radio technology, is designed to unite or connect all different types of devices to effectively work as one.\nThe Name: “Bluetooth”\n\nAudio and data peripherals\nHeadsets, Speakers, …\nKeyboards, Cameras, Printers, …\nIntelligent devices\nCellular phones, laptops, …\nEmbedded applications\nCars, Industrial systems, …\nBluetooth Applications\n\nUnlicensed 2.4 GHz radio band: ISM (industrial, scientific, medical) band – available worldwide\nGross data rate of 1 Mbit/s (EDR: 3Mbit/s, HS: 24Mbit/s)\nBasic 10m range extended to 100m with amplifiers\nTDMA-TDD-Slow Frequency Hopping spread spectrum\nSupports up to 8 devices in a\npiconet\n(1 master and 7 slaves)\nPiconets\ncan combine to form\nscatternets\nMixed voice/data connections possible\nEncryption\nUbiquitous radio link\nBluetooth Characteristics\n\nOSI and Bluetooth Protocol\n\nCollection of devices connected in an ad hoc fashion\nOne unit will act as master\nSets clock and frequency hopping pattern\nCan connect to 7 active or 255 inactive (parked) slaves\nDetermines bit rate allocated to each slave\nUnique frequency hopping pattern/ID\nAll devices synchronized to a common clock and hopping sequence.\nSlaves can communicate only with the master\nCommunication Topology: Bluetooth\nPiconet\nMaster\nSlave 1\nUnit C\nUnit D\nUnit B\nSlave 2\nSlave 3\nUnit A\nUnit E\n\nA device may participate concurrently in two or more\npiconets\non time-division multiplexing (TDM) basis.\nA device can be both master and slave.\nA device can never be a master of more than one\npiconet\n.\nTwo or more\npiconets\nthat include one or more devices participating in more than one\npiconet\nform a\nscatternet\n.\nCommunication Topology: Bluetooth\nScatternet\nMaster A\nSlave A1\nCommon\nslave\nSlave A2\nMaster B\nSlave B1\nSlave B2\nSlave B3\n\nWhen the\npiconet\nis established, the Master Clock (CLK) is communicated to the slaves.\nDevices in a\npiconet\nuse a specific\nfrequency hopping pattern\n, which is determined by fields in the device address and the clock of the master.\nThe basic hopping pattern is a pseudo-random ordering of the 79 frequencies in the ISM band.\nAdaptive Frequency Hopping (AFH) is used to improve the performance of physical links in the presence of interference as well as reducing the interference caused by physical links on other devices in the ISM band.\nAFH uses less than the full 79 frequencies that the basic\npiconet\nuses.\nPhysical Layer: Frequency Hopping\n\nThe basic\npiconet\nphysical channel is divided into time slots, each 625\nμs\nin length.\nA time division duplex (TDD) scheme is used where master and slave alternatively transmit.\nThe packet start should be aligned with the slot start. Packets may extend over up to five time slots.\nPhysical Layer:\nTime Slots\n\nThe Bluetooth Special Interest Group (SIG) is taking care of current and future versions of this industry standard\nFor Bluetooth v1.1 and Bluetooth v1.2 there has been a collaboration with IEEE802.15.1\nIEEE Standards 802.15.1-2002 and 802.15.1-2005\nAfterwards the IEEE Study Group 802.15.1b voted unanimously to discontinue the relation to Bluetooth SIG\nlater versions of Bluetooth did not become IEEE standards\nBluetooth v2.0 with optional Enhanced Data Rate (EDR) has been published in November 2004.\ncombination of GFSK and DPSK to increase data rate to 3Mbps\nRecent History of Bluetooth\nBluetooth v2.1 + EDR (July 2007)\nSecure simple pairing protocol speeds up pairing procedure\nBluetooth v3.0 + HS (high speed) published April 2009\nalternate PHY based on\nWiFi\nused for high data rate (up to 24Mbps)\nUWB Multiband was candidate PHY but was dropped due to IPR problems\nBluetooth PHY used for control channels and medium rate traffic\nBluetooth Smart (v4.0) published June 2010: Classic Bluetooth,\nBluetooth+HS\nand Bluetooth Low Energy\nlow energy protocol originates from the\nWibree\nsystem (Nokia);\nLE not compatible with other Bluetooth modes\nBluetooth v5 (June 2016)\n2x the data rate, 4x the range, 8x the broadcast capability\n\nNew low power design, no downward compatibility to Classic Bluetooth (CB)\nTo  be used in sensor networks\nsensors transmit short data packets with a low duty cycle\nsupport low latency\nnot optimized for streaming data\nasymmetric node complexity (slave - master)\nReuse to as much as possible Classic Bluetooth hardware\nBluetooth Low Energy (BLE, Smart Bluetooth)\nSimplified physical layer as compared to Classic Bluetooth\nthree advertising channels (CB uses 16 or 32 for Inquiry and Page) used for connection process\n37x2MHz data channels (CB: 79x1MHz)\nincreased modulation index of GMSK\n3ms latency from\nnonconnected\nstate (CB: >100ms)\n\nDual Mode Chipsets (Bluetooth Smart Ready)\n\nClassic Bluetooth Versus Bluetooth Smart\nTechnical Specification\nClassic Bluetooth technology\nBluetooth Smart technology\nDistance/Range (theoretical max.)\n100 m (330 ft)\n<100 m (<330 ft)\nOver the air data rate\n1–3 Mbit/s\n1 Mbit/s\nApplication throughput\n0.7–2.1 Mbit/s\n0.27 Mbit/s\nActive slaves\n7\nNot defined; implementation dependent\nSecurity\n56/128-bit and application layer user defined\n128-bit\nAES\nwith\nCounter Mode CBC-MAC\nand application layer user defined\nRobustness\nAdaptive fast frequency hopping,\nFEC\n, fast\nACK\nAdaptive frequency hopping, Lazy Acknowledgement, 24-bit CRC, 32-bit Message Integrity Check\nLatency (from a non-connected state)\nTypically 100 ms\n6 ms\nTotal time to send data (det.battery life)\n100 ms\n3 ms\nVoice capable\nYes\nNo\nNetwork topology\nScatternet\nScatternet\nPower consumption\n1 W as the reference\n0.01 to 0.5 W (depending on use case)\nPeak current consumption\n<30 mA\n<15 mA\nService discovery\nYes\nYes\nProfile concept\nYes\nYes\n\nAuthentication\nVerifies the identification of the devices that are communicating in the channel.\nConfidentiality\nProtecting the data from the attacker by allowing only authorized users to access the data.\nAuthorization\nOnly authorized users have control over the resources.\nBluetooth Security\n\nSecurity Mode 1\nNon-Secure Mode\nSecurity Mode 2\nService level enforced security mode\nSecurity Mode 3\nLink-level enforced security mode\nSecurity\nModes\nof Bluetooth\n\nOnly security at this level is by the nature of the connection: data-hopping and short-distance\nBluetooth devices transmit over the unlicensed 2.45GHz radio band, the same band used by microwave ovens and cordless phones.(FHSS)\nAll Bluetooth devices employ “data-hopping”, which entails skipping around the radio band up to 1600 times per second, at 1MHz intervals (79 different frequencies)\nMost connections are less than 10 meters, so there is a limit as to eavesdropping possibilities\nMode 1: No Security\n\nService Access depends on device:\nTrusted devices have unrestricted access to all services, fixed relationship to other devices\nUntrusted devices generally have no permanent relationship and services that it has access to are limited.\nUnfortunately, all services on a device are given the same security policy, other than application layer add-ons.\nMode 2: Service Level Security\n\nServices can have one of 3 security levels:\nLevel 3\n: Requires Authentication and Authorization.  PIN number must be entered.\nLevel 2\n: Authentication only, fixed PIN ok.\nLevel 1\n: Open to all devices, the default level. Security for legacy applications, for example.\nMode 2: Service Security Levels\n\nSecurity is implemented by symmetric keys in a challenge-response system.\nSecurity implementations in Bluetooth units are all the same, and are publicly available:\nhttp://www.bluetooth.com/pdf/Bluetooth_11_Specifications_Book.pdf\nCritical ingredients\nPIN, BD_ADDR, RAND(), Link and Encryption Keys\nMode 3: Link level security\n\n0x2\n蓝牙的信任模式\n受信任：设备已与另一设备建立固定关系，且对所有服务的访问不受限制。\n不受信任：虽然已成功通过身份验证，但设备只能访问一组受限制的服务。\n0x3\n设备的可发现性\nBD_ADDR\n0x4\n蓝牙安全服务\n基于挑战\n/\n应答\n(\nChallenge/Response)\n方式执行身份验证。\nPIN\n码\n/\nSSP\n0x5\n其他安全功能\n自适应跳频\nE0\n加密算法\n不可见性\n配对\n蓝牙安全运作流程\n\nProblems with the standard Bluetooth Security\nSecurity Issue\nRemarks\nStrength of the Random Number Generator (RNG) is unknown.\nRNG may produce periodic numbers that reduces the strength of authentication mechanism.\nShort PINs are allowed.\nSuch weak PINs are used to generate link and encryption keys that are easily predictable.\nEncryption key length is negotiable.\nMore robust initialization key generation procedure should be developed.\nNo user authentication exists.\nAs only device authentication is provided, application security and user authentication can be employed.\nStream cipher is weak and key length is negotiable.\nRobust encryption procedure and minimum key length should be decided and passed as an agreement.\n\nProblems with the standard Bluetooth Security (Cont’d)\nSecurity Issue\nRemarks\nPrivacy can be compromised if the BD_ADDR is captured and associated with a particular user.\nOnce the BD_ADDR is associated with a particular user, that user’s activity can be logged. So, loss of privacy can be compromised.\nDevice authentication is simple shared key challenge response.\nOne-way authentication may be subjected to man-in-middle attacks. Mutual authentication is a good idea to provide verification.\n\nDenial of service\nMakes the device unusable and drains the mobile device battery.\nFuzzing attacks\nSending malformed messages to the\nbluetooth\ndevice.\nBlue jacking\nUses IMEI identifier to route all the incoming calls.\nBlue\nsnarfing\nCauses harm when the user sends the data to the other user.\nSecurity Threats\n\nScanning\n\n使用德州仪器（\nTI\n）\nCC2540\n蓝牙低功耗模块配合官方的\nSmartRF\n协议软件包监听器：\nPACKET-SNIFFER\n，\n可对三个蓝牙广播信道进行嗅探。\nSniffing\n–\n对广播信道的嗅探\nTi.com.cn/packet-sniffer\nhttps://www.cnblogs.com/k1two2/p/5577301.html\n\nSniffing\n–\n对\n通信过程\n的嗅探\nlib\n库\nlibbtbb\nubertooth\nwireshark\nkismet\nBLE\n解密工具\ncrackle\nhttps://github.com/mikeryan/crackle\n\n用\nLight Blue\n来强制连接蓝牙设备\n进入连接页面，可以看到该蓝牙设备更详细的信息，\n连接小米手环进行重放攻击。\nBLE\n-\nReplay\nAttack\n\nBreaking Secure Pairing of Bluetooth Low Energy Using Downgrade Attacks\nYue Zhang, Jian Weng,\nRajib\nDey\n,\nYier\nJin\n,\nZhiqiang\nLin,\nXinwen\nFu\nUSENIX Security Symposium. August 12–14, 2020\n\nBLE-Guardian: Protecting the Privacy of BLE Users\nKassem\nFawaz\n*\n,\nKyu\n-Han Kim\n†\n, Kang G. Shin\n*\n*\nComputer Science and Engineering, University of Michigan\n†\nHewlett Packard Labs\nUSENIX Security 2016\n\nAttractive communication technology\nShort range\nLow energy footprint\nSupported by most hosts\nCurrently:\n74K unique products with BLE support\n2013:\n1.2 billion BLE products shipped\n2020:\n2.7 billion BLE products expected\nBluetooth Low Energy\n\nBLE Primer\nStandby:\nLow Power Mode. Receiver and transmitter switched ‘off’\nAdvertising:\nUsed by low power ‘Server’. Only transmitter required.\nScanning:\nUsed by ‘Client’. Receiver listens to advertising channels.\nInitiating:\n‘Server’ sends connection request\nConnection:\nAfter scanning, ‘Client’ responds to ‘Server’ advertisement\nScanning\nConnection\nAdvertising\nInitiating\nStandby\n\nBLE Advertisements\n3 dedicated advertising channels:\n2402 MHz (37), 2426 MHz (38), 2480 MHz (39)\nType\nDescription\nFrequency\nADV_DIRECT_IND\nConnect to a particular device only\n3.75\nms\n,\nbut only for 1.28 seconds\nADV_IND\nGeneral presence known + connections\n20ms – 10.24s\nListen\nAdvertisement\n𝑟\n∈[0,10]\n𝑎𝑑𝑣\n\nPairing & bonding\nPrevent unauthorized access to device or secured services\nAddress randomization\nPrevent user tracking\nDirect Advertisements\nPrevent user tracking and profiling\nBLE Security and Privacy\n\nPassively\nscan for BLE advertisements\nCollect:\n<Timestamp, BT Address, advertisement content, RSSI>\nBLE Privacy & Security Effectiveness\nSite\nParticipants\nPeriod\nHewlett Packard Labs\n1\n40 days\nAnn Arbor\n13\n2 months\nPhone LAB/ SUNY Buffalo\n86\n2 months\n\nIndirect Advertisements\nDetected 214 different unique types of devices\nAddress Randomization\nBLE Privacy & Security Effectiveness\nName\nDescription\nihere\nkey finder\nDEXCOMRX\nGlucose monitor\nFrances’s Band ea:9d\nsmartband\nOtbeat\nheart rate monitor\nJS00002074\ndigital pen\nDevice\nDays observed\nOne\n37\nFlex\n37\nZip\n37\nForerunner 920\n36\nBasis Peak\n25\nAddress\n00:17:E9:CB:F3:61\n00:17:E9:CB:F5:01\nRevealing Names\nConsistent Addresses\nPoor Randomization\n\nDevice paring\nBLE Privacy & Security Effectiveness\nBattery level\nUnique identifiers\nAdvertise and accept connections\n\nIt all starts with the advertisements…\nTracking User\nConsistent addresses, poor randomization, unique device names and identifiers\n\nHealth situation, user’s lifestyle, behavior, preferences, and personal interests\nIt all starts with the advertisements…\nTracking User\nProfiling User\n\nFingerprinting of and unauthorized access for sensitive systems and devices\nIt all starts with the advertisements…\nTracking User\nProfiling User\nHarming User\n\nCan we effectively fend off the threats to BLE-equipped devices\nin a device-agnostic manner,\nusing COTS (Commercial-Off-The-Shelf) hardware only, and\nwith as little user intervention as possible?\nResearch Questions\n\nBLE-Guardian\n\nUbertooth\nOne\nProgrammable BT radio\nOpen source firmware\nRx/\nTx\non each BT channel\nUser-level app\nControl BLE-Guardian\nUpdate firmware seamlessly\nBLE-Guardian\n\nHigh-level Description\nBLE-Guardian running\nConnection Enabling\nAuthorized client\nUser Alert\nAttacker detected\nDevice Hiding Module\nOwner chooses target BLE device\nClient Authorization\nWhitelist Client\nNew client\nAccess Control Module\nAccess denied\nAccess granted\n\nJam BLE device advertisements to hide its existence\nNeed to learn device advertising Sequence\nOtherwise jamming will be ineffective or inefficient\nDevice Hiding\nAdvertisement\nListen\n𝑎𝑑𝑣\n𝑟\n∈[0,10]\n37\n38\n39\n…\n\nDevice Hiding\n𝑇\n𝑁\n+\n𝑎𝑑𝑣\n’\n𝑇\n𝑁\nMonitoring interval\n𝑇\n𝑁\n+\n𝑎𝑑\n𝑣\n′\n−\n𝑒\n𝑇\n𝑁\n+\n𝑎𝑑\n𝑣\n′\n+\n𝑒\n+10\n𝑡\n1\nAdvertisement session\n𝑡\n2\n𝑡\n3\n𝑡\n4\nEstimate advertising interval:\n𝑎𝑑\n𝑣\n′\n=\n𝐸\n(\n𝑡\n𝑖\n)−5\nMax delay\n\nDevice Hiding\nMonitoring interval\njamming\nDetect RSSI (received signal strength indication) increase\nApply jamming and follow advertising sequence\n\nAt this point, the target BLE device is hidden.\nHow to enable access to it?\n\nAccess Control\nAuthorization:\nBluetooth classic as an OOB channel.\nBt_addr\n, UUID\nAttempt connection\njamming\nadv\nConnection\nrequest\nClient authorized by user\nSend pairing request\nUser\ncompletes pairing\n\nAccess Control\nConnection Enabling:\nConnection parameters to distinguish legitimate connection request.\nConnection\nparameters\njamming\nadv\nLegitimate connection\ndata\ndata\nadv\njamming\nReduced Adv.\nConnection request\n\nCut-off Distance\nEvaluation\nAttacker\nBLE device\nBLE-Guardian\nCut-off distance\nd\n\nCut-off Distance\nEvaluation\nAdversary has to be within 1 m of BLE device to read its advertisements\n\nImpact on Advertising Channels\nProtect single device at advertising intervals:\n20ms, 960ms, and 10.24 sec\nTwo devices advertising at 20\nms\n15 other devices\nWith varying advertising frequencies\nEvaluation\nThe number of unnecessary jamming instance is minimal\nunnecessary jams\n\nEnergy Overhead\nBLE-device and authorized clients\nNo overhead\nSmartphone as a gateway\nIdle power: 1370mW\nOverhead: less than 16%\nEvaluation\n\nSlides are adapted from talks given by:\nScott Anson from University of Washington: “Bluetooth Security”\nJaymin\nShah: “An Analysis of Bluetooth Security”\nKassem\nFawaz\nfrom University of Michigan: “BLE-Guardian: Protecting the Privacy of BLE Users”\nAcknowledgement"
+}

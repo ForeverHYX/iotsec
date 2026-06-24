@@ -1,0 +1,1043 @@
+{
+  "slug": "week-1-2026",
+  "title": "Week 1-2026",
+  "filename": "Week 1-2026.pdf",
+  "extension": "pdf",
+  "kind": "pdf",
+  "slide_count": null,
+  "page_count": 94,
+  "slides": [
+    {
+      "number": 1,
+      "title": "1",
+      "lines": [
+        "1",
+        "Lecture 1: Course Introduction",
+        "Lecture 1: Course IntroductionInstructor: KuiRenWIRELESS NETWORK AND IOT SECURITY"
+      ],
+      "text": "1\nLecture 1: Course Introduction\nLecture 1: Course IntroductionInstructor: KuiRenWIRELESS NETWORK AND IOT SECURITY"
+    },
+    {
+      "number": 2,
+      "title": "2",
+      "lines": [
+        "2",
+        "Lecture 1: Course Introduction",
+        "•Kui Ren(任奎)•Professor, School of Cyber Science and Technology, Zhejiang University•Professor, College of Computer Science and Technology, Zhejiang University•Email: kuiren@zju.edu.cn•Office: Room 205, KeGongBuilding, Yuquan campus of Zhejiang University•Homepage: https://person.zju.edu.cn/kuirenInstructor"
+      ],
+      "text": "2\nLecture 1: Course Introduction\n•Kui Ren(任奎)•Professor, School of Cyber Science and Technology, Zhejiang University•Professor, College of Computer Science and Technology, Zhejiang University•Email: kuiren@zju.edu.cn•Office: Room 205, KeGongBuilding, Yuquan campus of Zhejiang University•Homepage: https://person.zju.edu.cn/kuirenInstructor"
+    },
+    {
+      "number": 3,
+      "title": "4",
+      "lines": [
+        "4",
+        "Lecture 1: Course Introduction",
+        "•Course: Fundamentalof Wireless Network and IoT Security•Time: 13:25–15:50(Lecture, Thursday), 16:15–17:50(Lab, Thursday)•Classroom: 7thTeaching Building –Room 104(Lecture)West CaoguangbiaoBuilding –Room 501 (Lab)•Prerequisite: None•Teaching Assistant: JianwenZhou(周建文), jianwenz@zju.edu.cnCourse Overview"
+      ],
+      "text": "4\nLecture 1: Course Introduction\n•Course: Fundamentalof Wireless Network and IoT Security•Time: 13:25–15:50(Lecture, Thursday), 16:15–17:50(Lab, Thursday)•Classroom: 7thTeaching Building –Room 104(Lecture)West CaoguangbiaoBuilding –Room 501 (Lab)•Prerequisite: None•Teaching Assistant: JianwenZhou(周建文), jianwenz@zju.edu.cnCourse Overview"
+    },
+    {
+      "number": 4,
+      "title": "5",
+      "lines": [
+        "5",
+        "Lecture 1: Course Introduction",
+        "•Major in Information Security,•Major in Computer Science and Technology, •and•are familiar with basic computer networks and discrete mathematics,•are preparing to obtain fundamentals and recent developments in the wireless and Internet of Things (IoT) security.Target Students"
+      ],
+      "text": "5\nLecture 1: Course Introduction\n•Major in Information Security,•Major in Computer Science and Technology, •and•are familiar with basic computer networks and discrete mathematics,•are preparing to obtain fundamentals and recent developments in the wireless and Internet of Things (IoT) security.Target Students"
+    },
+    {
+      "number": 5,
+      "title": "6",
+      "lines": [
+        "6",
+        "Lecture 1: Course Introduction",
+        "•Textbook:•1. Security and Cooperation in Wireless Networks, by LeventeButtyanand Jean-Pierre Hubaux, Cambridge University Press, ISBN 9780521873710, 2007•2. Cryptography and Network Security: Principles and Practice, Seventh Edition, by William Stallings, Pearson Education, 2017•and also many recently published papers (will be delivered)Resources"
+      ],
+      "text": "6\nLecture 1: Course Introduction\n•Textbook:•1. Security and Cooperation in Wireless Networks, by LeventeButtyanand Jean-Pierre Hubaux, Cambridge University Press, ISBN 9780521873710, 2007•2. Cryptography and Network Security: Principles and Practice, Seventh Edition, by William Stallings, Pearson Education, 2017•and also many recently published papers (will be delivered)Resources"
+    },
+    {
+      "number": 6,
+      "title": "7",
+      "lines": [
+        "7",
+        "Lecture 1: Course Introduction",
+        "•Lectures•Labs (Total 3)•One Lab for Two Weeks, except the first and last week•One Final ExamTeaching"
+      ],
+      "text": "7\nLecture 1: Course Introduction\n•Lectures•Labs (Total 3)•One Lab for Two Weeks, except the first and last week•One Final ExamTeaching"
+    },
+    {
+      "number": 7,
+      "title": "9",
+      "lines": [
+        "9",
+        "Lecture 1: Course Introduction",
+        "•Academic integrity: lifeline in academia•Your labsand exams must be your own -we have a zero tolerance policy towards cheating of any kind and any student who cheats will get•Zerofor the project/exam for the course •Both the cheater and the person(s) who aided the cheater will be held responsible for the cheatingAcademic Integrity Policy"
+      ],
+      "text": "9\nLecture 1: Course Introduction\n•Academic integrity: lifeline in academia•Your labsand exams must be your own -we have a zero tolerance policy towards cheating of any kind and any student who cheats will get•Zerofor the project/exam for the course •Both the cheater and the person(s) who aided the cheater will be held responsible for the cheatingAcademic Integrity Policy"
+    },
+    {
+      "number": 8,
+      "title": "10",
+      "lines": [
+        "10",
+        "Lecture 1: Course Introduction",
+        "•Lectures do not cover everything•Not all questions in exam are from lectures•But many of them are J•Your responsibility•Always attend lectures •Carefully readtextbook, lecture notes, assigned papers •Actively ask questions•Well prepare for the examsLecture Format"
+      ],
+      "text": "10\nLecture 1: Course Introduction\n•Lectures do not cover everything•Not all questions in exam are from lectures•But many of them are J•Your responsibility•Always attend lectures •Carefully readtextbook, lecture notes, assigned papers •Actively ask questions•Well prepare for the examsLecture Format"
+    },
+    {
+      "number": 9,
+      "title": "11",
+      "lines": [
+        "11",
+        "Lecture 1: Course Introduction",
+        "•Fundamentals of Wireless Communication and IoT•Wireless Network Security (WiFi/ Cellular Mobile Network)•Near Field Sensing and Security (RFID, NFC)•Bluetooth Security and Localization Security (GPS, UWB)•IoT Security (Fundamentals, Accessibility, System Security)•Other Related Topics (Side channel/ Anonymous communication)•Due to the time limits, we will try to cover most of the major topics without going into too much detail.Table of Contents"
+      ],
+      "text": "11\nLecture 1: Course Introduction\n•Fundamentals of Wireless Communication and IoT•Wireless Network Security (WiFi/ Cellular Mobile Network)•Near Field Sensing and Security (RFID, NFC)•Bluetooth Security and Localization Security (GPS, UWB)•IoT Security (Fundamentals, Accessibility, System Security)•Other Related Topics (Side channel/ Anonymous communication)•Due to the time limits, we will try to cover most of the major topics without going into too much detail.Table of Contents"
+    },
+    {
+      "number": 10,
+      "title": "12",
+      "lines": [
+        "12",
+        "Lecture 1: Course Introduction",
+        "Now Let’s Start from Security!"
+      ],
+      "text": "12\nLecture 1: Course Introduction\nNow Let’s Start from Security!"
+    },
+    {
+      "number": 11,
+      "title": "13",
+      "lines": [
+        "13",
+        "Lecture 1: Course Introduction",
+        "•Security (failures) are constantly on the news•Malware Infections•Ransomware•Data Breaches•Espionage•Cyberwar•Everyone is affected•Individuals•Corporations•GovernmentsWhat is Security?"
+      ],
+      "text": "13\nLecture 1: Course Introduction\n•Security (failures) are constantly on the news•Malware Infections•Ransomware•Data Breaches•Espionage•Cyberwar•Everyone is affected•Individuals•Corporations•GovernmentsWhat is Security?"
+    },
+    {
+      "number": 12,
+      "title": "14",
+      "lines": [
+        "14",
+        "Lecture 1: Course Introduction",
+        "•Some scary numbers•1 in 13 web requests lead to malware•Spam accounts for 55% of email•An average user receives dozens of viruses in email per year•Credit card numbers are sold for $0.5 -$25•Hacked gmailaccounts sell for $0.1 -$5•Malware can be as cheap a $1•Identity (name, SSN, DOB) goes for $0.1 -$1.5Data Breaches are Increasingly Common"
+      ],
+      "text": "14\nLecture 1: Course Introduction\n•Some scary numbers•1 in 13 web requests lead to malware•Spam accounts for 55% of email•An average user receives dozens of viruses in email per year•Credit card numbers are sold for $0.5 -$25•Hacked gmailaccounts sell for $0.1 -$5•Malware can be as cheap a $1•Identity (name, SSN, DOB) goes for $0.1 -$1.5Data Breaches are Increasingly Common"
+    },
+    {
+      "number": 13,
+      "title": "15",
+      "lines": [
+        "15",
+        "Lecture 1: Course Introduction",
+        "•The NIST Computer Security Handbook defines the term Computer Security as: “The protection afforded to an automated information system in order to attain the applicable objectives of preserving the integrity, availabilityand confidentialityof information system resources”  (includes hardware, software, firmware, information/data, and telecommunications)What is Security on Earth?"
+      ],
+      "text": "15\nLecture 1: Course Introduction\n•The NIST Computer Security Handbook defines the term Computer Security as: “The protection afforded to an automated information system in order to attain the applicable objectives of preserving the integrity, availabilityand confidentialityof information system resources”  (includes hardware, software, firmware, information/data, and telecommunications)What is Security on Earth?"
+    },
+    {
+      "number": 14,
+      "title": "16",
+      "lines": [
+        "16",
+        "Lecture 1: Course Introduction",
+        "•Confidentiality covers•Data confidentiality: sensitive information is available to authorized parties only•Privacy: individuals can control what information about them can be collected and stored and to whom it is made available•Integrity covers•Data integrity: information and software can be modified only in a predetermined and authorized manner•System integrity: a system performs its intended functions in an expected manner and has not be manipulated in an unauthorized way•Availability: Assures that systems work promptly and service is not denied to authorized usersSecurity Objectives"
+      ],
+      "text": "16\nLecture 1: Course Introduction\n•Confidentiality covers•Data confidentiality: sensitive information is available to authorized parties only•Privacy: individuals can control what information about them can be collected and stored and to whom it is made available•Integrity covers•Data integrity: information and software can be modified only in a predetermined and authorized manner•System integrity: a system performs its intended functions in an expected manner and has not be manipulated in an unauthorized way•Availability: Assures that systems work promptly and service is not denied to authorized usersSecurity Objectives"
+    },
+    {
+      "number": 15,
+      "title": "17",
+      "lines": [
+        "17",
+        "Lecture 1: Course Introduction",
+        "•Authenticity: the property of being genuine and being able to be verified and trusted•entity authentication: the entity is who it claims it is•data authentication: the data is coming from a trusted source•Access control: only authorized parties can use specific resources incompliance with their privileges•Non-repudiability(repudiability): inability (ability) to deny communication or actions•Accountability: the requirement that all actions of an entity are traced uniquely to that entity•covers non-repudiability, intrusion detection, fault isolation, and etc.More on Security Objectives"
+      ],
+      "text": "17\nLecture 1: Course Introduction\n•Authenticity: the property of being genuine and being able to be verified and trusted•entity authentication: the entity is who it claims it is•data authentication: the data is coming from a trusted source•Access control: only authorized parties can use specific resources incompliance with their privileges•Non-repudiability(repudiability): inability (ability) to deny communication or actions•Accountability: the requirement that all actions of an entity are traced uniquely to that entity•covers non-repudiability, intrusion detection, fault isolation, and etc.More on Security Objectives"
+    },
+    {
+      "number": 16,
+      "title": "18",
+      "lines": [
+        "18",
+        "Lecture 1: Course Introduction",
+        "•The means of achieving these objectives greatly differ•Cryptographic techniques•Access control policies•Software checking tools•Spam filters, etc.•Each system must be evaluated uniquelyin terms of its requirements•Security mechanisms must be adequately chosen in accordance with those requirementsHow do We Achieve These Goals?"
+      ],
+      "text": "18\nLecture 1: Course Introduction\n•The means of achieving these objectives greatly differ•Cryptographic techniques•Access control policies•Software checking tools•Spam filters, etc.•Each system must be evaluated uniquelyin terms of its requirements•Security mechanisms must be adequately chosen in accordance with those requirementsHow do We Achieve These Goals?"
+    },
+    {
+      "number": 17,
+      "title": "19",
+      "lines": [
+        "19",
+        "Lecture 1: Course Introduction",
+        "•Potential attacks on the security features need to be considered•Procedures used to provide particular services are often counter-intuitive•It is necessary to decide where to use the various security mechanisms•Requires constantmonitoring•Attackers only need to find a single weakness, the developer needs to find all weaknesses•Users and system managers tend to NOT see the benefits of security until a failure occurs•…Security is not Simple"
+      ],
+      "text": "19\nLecture 1: Course Introduction\n•Potential attacks on the security features need to be considered•Procedures used to provide particular services are often counter-intuitive•It is necessary to decide where to use the various security mechanisms•Requires constantmonitoring•Attackers only need to find a single weakness, the developer needs to find all weaknesses•Users and system managers tend to NOT see the benefits of security until a failure occurs•…Security is not Simple"
+    },
+    {
+      "number": 18,
+      "title": "20",
+      "lines": [
+        "20",
+        "Lecture 1: Course Introduction",
+        "•Assets can have different security grades depending on the impact of a security breach that can range from low to high•By building more secure systems, we make it harder for an attacker to breach security•The more resources we can invest in a system, the more secure we can make it•There is a trade-off between security and resources (money, equipment, personnel, training)•Training must cover all users, as security can often be easiest breached by exploiting human errorSecurity is not Absolute"
+      ],
+      "text": "20\nLecture 1: Course Introduction\n•Assets can have different security grades depending on the impact of a security breach that can range from low to high•By building more secure systems, we make it harder for an attacker to breach security•The more resources we can invest in a system, the more secure we can make it•There is a trade-off between security and resources (money, equipment, personnel, training)•Training must cover all users, as security can often be easiest breached by exploiting human errorSecurity is not Absolute"
+    },
+    {
+      "number": 19,
+      "title": "21",
+      "lines": [
+        "21",
+        "Lecture 1: Course Introduction",
+        "•Adversary•Attack•Countermeasure•Risk•Security Policy•System Resource•Threat•VulnerabilityComputer Security Terminology"
+      ],
+      "text": "21\nLecture 1: Course Introduction\n•Adversary•Attack•Countermeasure•Risk•Security Policy•System Resource•Threat•VulnerabilityComputer Security Terminology"
+    },
+    {
+      "number": 20,
+      "title": "22",
+      "lines": [
+        "22",
+        "Lecture 1: Course Introduction",
+        "•Passive: observes information without intervention•e.g., passively monitoring a communication link•Active: alters system resources or affects their operation•e.g., changing messages, replaying old messages on the network, corrupting users, etc.•Insider: is legitimately a part of the system with access to internal data or is inside the security perimeter•Outsider: is outside of the security perimeter or is not a legitimate userTypes of Adversaries"
+      ],
+      "text": "22\nLecture 1: Course Introduction\n•Passive: observes information without intervention•e.g., passively monitoring a communication link•Active: alters system resources or affects their operation•e.g., changing messages, replaying old messages on the network, corrupting users, etc.•Insider: is legitimately a part of the system with access to internal data or is inside the security perimeter•Outsider: is outside of the security perimeter or is not a legitimate userTypes of Adversaries"
+    },
+    {
+      "number": 21,
+      "title": "23",
+      "lines": [
+        "23",
+        "Lecture 1: Course Introduction",
+        "•Policy defines “security” for the site, system, etc.•composition of policies is non-trivial•if policies conflict, discrepancies can create security vulnerabilities•Mechanismsenforce policies•Security goals w.r.t. policies•Prevention: prevent attackers from violating security policy•Detection: detect attacks’ violation of security policy•Recovery: stop attack, assess and repair damage; continue to function even if attack succeedsPolicies and Mechanisms"
+      ],
+      "text": "23\nLecture 1: Course Introduction\n•Policy defines “security” for the site, system, etc.•composition of policies is non-trivial•if policies conflict, discrepancies can create security vulnerabilities•Mechanismsenforce policies•Security goals w.r.t. policies•Prevention: prevent attackers from violating security policy•Detection: detect attacks’ violation of security policy•Recovery: stop attack, assess and repair damage; continue to function even if attack succeedsPolicies and Mechanisms"
+    },
+    {
+      "number": 22,
+      "title": "25",
+      "lines": [
+        "25",
+        "Lecture 1: Course Introduction",
+        "•Economy of Mechanism•Open Design •Modularity, Layering•Fail-safe Defaults•Separation ofPrivilege, Least Privilege•Least Common Mechanism•Psychological Acceptability, Least Astonishment•Isolation, EncapsulationSecurity Design Principles"
+      ],
+      "text": "25\nLecture 1: Course Introduction\n•Economy of Mechanism•Open Design •Modularity, Layering•Fail-safe Defaults•Separation ofPrivilege, Least Privilege•Least Common Mechanism•Psychological Acceptability, Least Astonishment•Isolation, EncapsulationSecurity Design Principles"
+    },
+    {
+      "number": 23,
+      "title": "26",
+      "lines": [
+        "26",
+        "Lecture 1: Course Introduction",
+        "•Security is a broad field•Building and maintaining a secure system is a complex task•security requirements are determined at early stages of product development•the design should be guided by security specifications•maintaining secure operation is also non-trivial•Security threat trends are constantly changingSummary"
+      ],
+      "text": "26\nLecture 1: Course Introduction\n•Security is a broad field•Building and maintaining a secure system is a complex task•security requirements are determined at early stages of product development•the design should be guided by security specifications•maintaining secure operation is also non-trivial•Security threat trends are constantly changingSummary"
+    },
+    {
+      "number": 24,
+      "title": "27",
+      "lines": [
+        "27",
+        "Lecture 1: Course Introduction",
+        "•Lecture slides from LawrieBrown•Lecture slides from MhmetHadiGunes•Lecture slides from Marina BlantonResources Used"
+      ],
+      "text": "27\nLecture 1: Course Introduction\n•Lecture slides from LawrieBrown•Lecture slides from MhmetHadiGunes•Lecture slides from Marina BlantonResources Used"
+    },
+    {
+      "number": 25,
+      "title": "28",
+      "lines": [
+        "28",
+        "Lecture 1: Course Introduction",
+        "Lecture 2: Overview of Wireless NetworkingInstructor: KuiRenWIRELESS NETWORK AND IOT SECURITY"
+      ],
+      "text": "28\nLecture 1: Course Introduction\nLecture 2: Overview of Wireless NetworkingInstructor: KuiRenWIRELESS NETWORK AND IOT SECURITY"
+    },
+    {
+      "number": 26,
+      "title": "29",
+      "lines": [
+        "29",
+        "Lecture 1: Course Introduction",
+        "Wireless HistorylRadio invented in the 1880s by MarconilMany sophisticated military radio systems were developed during and after WW2",
+        "lWifi also enjoying tremendous success and growthlBluetooth pervasive, satellites also widespreadlAncient Systems: Smoke Signals, Carrier Pigeons, …lExponential growth in cellular use since 1988: approx. 8B worldwide users todaylIgnited the wireless revolutionlVoice, data, and multimedia ubiquitouslUse in 3rd world countries growing rapidly"
+      ],
+      "text": "29\nLecture 1: Course Introduction\nWireless HistorylRadio invented in the 1880s by MarconilMany sophisticated military radio systems were developed during and after WW2\nlWifi also enjoying tremendous success and growthlBluetooth pervasive, satellites also widespreadlAncient Systems: Smoke Signals, Carrier Pigeons, …lExponential growth in cellular use since 1988: approx. 8B worldwide users todaylIgnited the wireless revolutionlVoice, data, and multimedia ubiquitouslUse in 3rd world countries growing rapidly"
+    },
+    {
+      "number": 27,
+      "title": "30",
+      "lines": [
+        "30",
+        "Lecture 1: Course Introduction",
+        "Future Wireless NetworksUbiquitous Communication Among People and Devices",
+        "Next-generation CellularWireless Internet AccessWireless MultimediaSensor Networks Smart Homes/SpacesAutomated HighwaysIn-Body NetworksAll this and more …"
+      ],
+      "text": "30\nLecture 1: Course Introduction\nFuture Wireless NetworksUbiquitous Communication Among People and Devices\nNext-generation CellularWireless Internet AccessWireless MultimediaSensor Networks Smart Homes/SpacesAutomated HighwaysIn-Body NetworksAll this and more …"
+    },
+    {
+      "number": 28,
+      "title": "31",
+      "lines": [
+        "31",
+        "Lecture 1: Course Introduction",
+        "Challenges",
+        "CellularMemBTCPU",
+        "GPSWiFimmW",
+        "Cog",
+        "RadiolNetwork/Radio ChallengeslGbps data rates with “no” errorslEnergy efficiencylScarce/bifurcated spectrumlReliability and coveragelHeterogeneous networkslSeamless internetwork handoff",
+        "AdHocShort-Range5GlDevice/SoC ChallengeslPerformance lComplexitylSize, Power, CostlHigh frequencies/mmWavelMultiple AntennaslMultiradio Integration lCoexistance"
+      ],
+      "text": "31\nLecture 1: Course Introduction\nChallenges\nCellularMemBTCPU\nGPSWiFimmW\nCog\nRadiolNetwork/Radio ChallengeslGbps data rates with “no” errorslEnergy efficiencylScarce/bifurcated spectrumlReliability and coveragelHeterogeneous networkslSeamless internetwork handoff\nAdHocShort-Range5GlDevice/SoC ChallengeslPerformance lComplexitylSize, Power, CostlHigh frequencies/mmWavelMultiple AntennaslMultiradio Integration lCoexistance"
+    },
+    {
+      "number": 29,
+      "title": "32",
+      "lines": [
+        "32",
+        "Lecture 1: Course Introduction",
+        "Software-Defined (SD) Radio:",
+        "Wideband antennas and A/Ds span BW of desired signalsDSP programmed to process desired signal: no specialized HW",
+        "CellularAppsProcessorBTMediaProcessor",
+        "GPSWLANWimax",
+        "DVB-H",
+        "FM/XMA/DA/DDSPA/DA/DIs this the solution to the device challenges?Is this the solution to the device challenges?"
+      ],
+      "text": "32\nLecture 1: Course Introduction\nSoftware-Defined (SD) Radio: \nWideband antennas and A/Ds span BW of desired signalsDSP programmed to process desired signal: no specialized HW\nCellularAppsProcessorBTMediaProcessor\nGPSWLANWimax\nDVB-H\nFM/XMA/DA/DDSPA/DA/DIs this the solution to the device challenges?Is this the solution to the device challenges?"
+    },
+    {
+      "number": 30,
+      "title": "33",
+      "lines": [
+        "33",
+        "Lecture 1: Course Introduction",
+        "“Sorry America, your airwaves are full*”",
+        "33",
+        "On the Horizon: “The Internet of Things”",
+        "50 billion devices by 2020",
+        "Exponential Mobile Data GrowthLeading to massive spectrum deficit",
+        "Source: FCC*CNN MoneyTech – Feb. 2012"
+      ],
+      "text": "33\nLecture 1: Course Introduction\n“Sorry America, your airwaves are full*”\n33\nOn the Horizon: “The Internet of Things”\n50 billion devices by 2020 \nExponential Mobile Data GrowthLeading to massive spectrum deficit\nSource: FCC*CNN MoneyTech – Feb. 2012"
+    },
+    {
+      "number": 31,
+      "title": "34",
+      "lines": [
+        "34",
+        "Lecture 1: Course Introduction",
+        "•Effectively unlimited” capacity possible via personal cells (pcells). S. Perlman, Artemis. “The wireless industry has reached the theoretical limit of how fast networks can go” K. Fitcher,  Connected Planet “There is no theoretical maximum to the amount of data that can be carried by a radio channel” M. Gass, 802.11 Wireless Networks: The Definitive Guide“We’re 99% of the way” to the “barrier known as Shannon’s limit,” D. Warren, GSM Association Sr. Dir. of Tech. Shannon was wrong, there is no limitWe are at the Shannon LimitAre we at the Shannon limit of the Physical Layer?"
+      ],
+      "text": "34\nLecture 1: Course Introduction\n•Effectively unlimited” capacity possible via personal cells (pcells). S. Perlman, Artemis. “The wireless industry has reached the theoretical limit of how fast networks can go” K. Fitcher,  Connected Planet “There is no theoretical maximum to the amount of data that can be carried by a radio channel” M. Gass, 802.11 Wireless Networks: The Definitive Guide“We’re 99% of the way” to the “barrier known as Shannon’s limit,” D. Warren, GSM Association Sr. Dir. of Tech. Shannon was wrong, there is no limitWe are at the Shannon LimitAre we at the Shannon limit of the Physical Layer?"
+    },
+    {
+      "number": 32,
+      "title": "35",
+      "lines": [
+        "35",
+        "Lecture 1: Course Introduction",
+        "What would Shannon say?•Time-varying channelsWe don’t know the Shannon capacity of most wireless channelsChannels with interference or relaysCellular systemsChannels with delay/energy/$$$ constraintsAd-hoc and sensor networksShannon theory provides design insights and system performance upper bounds"
+      ],
+      "text": "35\nLecture 1: Course Introduction\nWhat would Shannon say?•Time-varying channelsWe don’t know the Shannon capacity of most wireless channelsChannels with interference or relaysCellular systemsChannels with delay/energy/$$$ constraintsAd-hoc and sensor networksShannon theory provides design insights and system performance upper bounds"
+    },
+    {
+      "number": 33,
+      "title": "36",
+      "lines": [
+        "36",
+        "Lecture 1: Course Introduction",
+        "Current/Next-Gen Wireless Systems•Current:•5G/4G Cellular Systems (LTE-Advanced)•4G Wireless LANs/WiFi (802.11ac)•mmWave massive MIMO systems•Satellite Systems  •Bluetooth•Zigbee •Emerging•6G Cellular and Advanced WiFi Systems•Ad/hoc and Cognitive Radio Networks•Energy-Harvesting Systems•Chemical/MolecularMuch roomFor innovation"
+      ],
+      "text": "36\nLecture 1: Course Introduction\nCurrent/Next-Gen Wireless Systems•Current:•5G/4G Cellular Systems (LTE-Advanced)•4G Wireless LANs/WiFi (802.11ac)•mmWave massive MIMO systems•Satellite Systems  •Bluetooth•Zigbee •Emerging•6G Cellular and Advanced WiFi Systems•Ad/hoc and Cognitive Radio Networks•Energy-Harvesting Systems•Chemical/MolecularMuch roomFor innovation"
+    },
+    {
+      "number": 34,
+      "title": "37",
+      "lines": [
+        "37",
+        "Lecture 1: Course Introduction",
+        "Spectral ReuseDue to its scarcity, spectrum is reused",
+        "BSIn licensed bandsCellularWifi, BT, UWB,…and unlicensed bands",
+        "Reuse introduces interference"
+      ],
+      "text": "37\nLecture 1: Course Introduction\nSpectral ReuseDue to its scarcity, spectrum is reused\nBSIn licensed bandsCellularWifi, BT, UWB,…and unlicensed bands\nReuse introduces interference"
+    },
+    {
+      "number": 35,
+      "title": "38",
+      "lines": [
+        "38",
+        "Lecture 1: Course Introduction",
+        "Cellular Systems: Reuse channels to maximize capacity•Geographic region divided into cells•Freq./timeslots/codes/space reused in different cells (reuse 1 common).•Interference between cells using same channel: interference mitigation key•Base stations coordinate handoff and control functions•Shrinking cell size increases capacity, as well as complexity, handoff, …BASESTATION"
+      ],
+      "text": "38\nLecture 1: Course Introduction\nCellular Systems: Reuse channels to maximize capacity•Geographic region divided into cells•Freq./timeslots/codes/space reused in different cells (reuse 1 common).•Interference between cells using same channel: interference mitigation key•Base stations coordinate handoff and control functions•Shrinking cell size increases capacity, as well as complexity, handoff, …BASESTATION"
+    },
+    {
+      "number": 36,
+      "title": "39",
+      "lines": [
+        "39",
+        "Lecture 1: Course Introduction",
+        "5G Cellular •Much higher data rates than 4G/LTE (peak 1.3 Gbps)•4G systems has 100 Mbps peak rates•Greater spectral efficiency (bits/s/Hz)•Massive MIMO, Device to Device, Internet of Things•Introducing new spectrum for communication•mmWave band for faster communication•Low packet latency (<1ms)•Cloud and edge computing for networking based on SDN/NFV•Feasible to support real-time and live-streaming applications"
+      ],
+      "text": "39\nLecture 1: Course Introduction\n5G Cellular •Much higher data rates than 4G/LTE (peak 1.3 Gbps)•4G systems has 100 Mbps peak rates•Greater spectral efficiency (bits/s/Hz)•Massive MIMO, Device to Device, Internet of Things•Introducing new spectrum for communication•mmWave band for faster communication•Low packet latency (<1ms)•Cloud and edge computing for networking based on SDN/NFV•Feasible to support real-time and live-streaming applications"
+    },
+    {
+      "number": 37,
+      "title": "40",
+      "lines": [
+        "40",
+        "Lecture 1: Course Introduction",
+        "Future Cellular Phones",
+        "Much better performance and reliability than today- 10Gbps rates, low latency, 99% coverage indoors and out BSBSPhoneSystemBSSan FranciscoParisNth-GenCellularNth-GenCellularInternet",
+        "LTE backbone is  the InternetEverything wireless in one deviceBurden for this performance is on the backbone network"
+      ],
+      "text": "40\nLecture 1: Course Introduction\nFuture Cellular Phones\nMuch better performance and reliability than today- 10Gbps rates, low latency, 99% coverage indoors and out BSBSPhoneSystemBSSan FranciscoParisNth-GenCellularNth-GenCellularInternet\nLTE backbone is  the InternetEverything wireless in one deviceBurden for this performance is on the backbone network"
+    },
+    {
+      "number": 38,
+      "title": "41",
+      "lines": [
+        "41",
+        "Lecture 1: Course Introduction",
+        "WiFi NetworksMultimedia Everywhere, Without Wires",
+        "802.11ac",
+        "Wireless HDTVand Gaming•Streaming video•    Gbps data rates•    High reliability•    Coverage inside and out"
+      ],
+      "text": "41\nLecture 1: Course Introduction\nWiFi NetworksMultimedia Everywhere, Without Wires\n802.11ac\nWireless HDTVand Gaming•Streaming video•    Gbps data rates•    High reliability•    Coverage inside and out"
+    },
+    {
+      "number": 39,
+      "title": "42",
+      "lines": [
+        "42",
+        "Lecture 1: Course Introduction",
+        "Wireless LAN Standards•802.11b (Old – 1990s)•Standard for 2.4GHz ISM band (80 MHz)•Direct sequence spread spectrum (DSSS)•Speeds of 11 Mbps, approx. 500 ft range•802.11a/g (Middle Age– mid-late 1990s)•Standard for 5GHz band (300 MHz)/also 2.4GHz•OFDM in 20 MHz with adaptive rate/codes•Speeds of 54 Mbps, approx. 100-200 ft range•802.11n/ac [WiFi4/5] (Still Under Use)•Standard in 2.4 GHz and 5 GHz band•Adaptive OFDM /MIMO in 20/40/80/160 MHz  •Antennas: 2-4, up to 8•Speeds up to 600Mbps/6.9 Gbps, approx. 200 ft range•Other advances in packetization, antenna use, MU-MIMO(only download links)Many WLAN cards have (a/b/g/n)"
+      ],
+      "text": "42\nLecture 1: Course Introduction\nWireless LAN Standards•802.11b (Old – 1990s)•Standard for 2.4GHz ISM band (80 MHz)•Direct sequence spread spectrum (DSSS)•Speeds of 11 Mbps, approx. 500 ft range•802.11a/g (Middle Age– mid-late 1990s)•Standard for 5GHz band (300 MHz)/also 2.4GHz•OFDM in 20 MHz with adaptive rate/codes•Speeds of 54 Mbps, approx. 100-200 ft range•802.11n/ac [WiFi4/5] (Still Under Use)•Standard in 2.4 GHz and 5 GHz band•Adaptive OFDM /MIMO in 20/40/80/160 MHz  •Antennas: 2-4, up to 8•Speeds up to 600Mbps/6.9 Gbps, approx. 200 ft range•Other advances in packetization, antenna use, MU-MIMO(only download links)Many WLAN cards have (a/b/g/n)"
+    },
+    {
+      "number": 40,
+      "title": "43",
+      "lines": [
+        "43",
+        "Lecture 1: Course Introduction",
+        "Wireless LAN Standards•802.11ax [WiFi 6](Current)•Standard in 2.4 GHz and 5 GHz band•Most characteristics are similar to WiFi 5 •Speeds up to 9.6 Gbps, approx. 200 ft range•Other advances: MU-MIMO in both upload and download links, OFDMA•802.11be [WiFi 7] (Latest)•Standard in 2.4 GHz, 5 GHz and 6 GHz band•Introduce CMU-MIMO, to support 16 data stream•Introduce 4096QAM, to support 30 Gbps•Introduce Multi-Link Operation, supporting higher throughput and lower latency"
+      ],
+      "text": "43\nLecture 1: Course Introduction\nWireless LAN Standards•802.11ax [WiFi 6](Current)•Standard in 2.4 GHz and 5 GHz band•Most characteristics are similar to WiFi 5 •Speeds up to 9.6 Gbps, approx. 200 ft range•Other advances: MU-MIMO in both upload and download links, OFDMA•802.11be [WiFi 7] (Latest)•Standard in 2.4 GHz, 5 GHz and 6 GHz band•Introduce CMU-MIMO, to support 16 data stream•Introduce 4096QAM, to support 30 Gbps•Introduce Multi-Link Operation, supporting higher throughput and lower latency"
+    },
+    {
+      "number": 41,
+      "title": "44",
+      "lines": [
+        "44",
+        "Lecture 1: Course Introduction",
+        "•The WiFi standard lacks good mechanisms to mitigate interference, especially in dense AP deployments•Multiple access protocol (CSMA/CD) from 1970s•Static channel assignment, power levels, and carrier sensing thresholds•In such deployments WiFi systems exhibit poor spectrum reuse and significant contention among APs and clients•Result is low throughput and a poor user experience•MU-MIMO will help each AP, but not interfering APsWhy does WiFi performance suck?",
+        "Carrier Sense Multiple Access: if another WiFi signal detected, random backoff Collision Detection: if collisiondetected, resend"
+      ],
+      "text": "44\nLecture 1: Course Introduction\n•The WiFi standard lacks good mechanisms to mitigate interference, especially in dense AP deployments•Multiple access protocol (CSMA/CD) from 1970s•Static channel assignment, power levels, and carrier sensing thresholds•In such deployments WiFi systems exhibit poor spectrum reuse and significant contention among APs and clients•Result is low throughput and a poor user experience•MU-MIMO will help each AP, but not interfering APsWhy does WiFi performance suck?\nCarrier Sense Multiple Access: if another WiFi signal detected, random backoff Collision Detection: if collisiondetected, resend"
+    },
+    {
+      "number": 42,
+      "title": "45",
+      "lines": [
+        "45",
+        "Lecture 1: Course Introduction",
+        "mmWave Massive MIMO•mmWaves have large non-monotonic path loss•Channel model poorly understood•mmWave antennas are small: perfect for massive MIMO•Bottlenecks: channel estimation and system complexity•Non-coherent design holds significant promiseHundredsof antennasDozens of devices",
+        "ç10s of GHz of Spectrumè"
+      ],
+      "text": "45\nLecture 1: Course Introduction\nmmWave Massive MIMO•mmWaves have large non-monotonic path loss•Channel model poorly understood•mmWave antennas are small: perfect for massive MIMO•Bottlenecks: channel estimation and system complexity•Non-coherent design holds significant promiseHundredsof antennasDozens of devices\nç10s of GHz of Spectrumè"
+    },
+    {
+      "number": 43,
+      "title": "46",
+      "lines": [
+        "46",
+        "Lecture 1: Course Introduction",
+        "Satellite Systems•Cover very large areas•Different orbit heights•GEOs (39000 Km) versus LEOs (2000 Km)•Optimized for one-way transmission•Radio (XM, Sirius) and movie (SatTV, DVB/S) broadcasts•Most two-way systems went bankrupt•Global Positioning System (GPS) ubiquitous•Satellite signals used to pinpoint location•Popular  in cell phones, PDAs, and navigation devices•More recently,  smartphone for Satellite Communications"
+      ],
+      "text": "46\nLecture 1: Course Introduction\nSatellite Systems•Cover very large areas•Different orbit heights•GEOs (39000 Km) versus LEOs (2000 Km)•Optimized for one-way transmission•Radio (XM, Sirius) and movie (SatTV, DVB/S) broadcasts•Most two-way systems went bankrupt•Global Positioning System (GPS) ubiquitous•Satellite signals used to pinpoint location•Popular  in cell phones, PDAs, and navigation devices•More recently,  smartphone for Satellite Communications"
+    },
+    {
+      "number": 44,
+      "title": "47",
+      "lines": [
+        "47",
+        "Lecture 1: Course Introduction",
+        "8C32810.61-Cimini-7/98Bluetooth•Cable replacement RF technology (low cost)•Short range (10m, extendable to 100m)•2.4 GHz band (crowded)•1 Data (700 Kbps) and 3 voice channels, up to 3 Mbps•Widely supported by telecommunications, PC, and consumer electronics companies•Few applications beyond cable replacement"
+      ],
+      "text": "47\nLecture 1: Course Introduction\n8C32810.61-Cimini-7/98Bluetooth•Cable replacement RF technology (low cost)•Short range (10m, extendable to 100m)•2.4 GHz band (crowded)•1 Data (700 Kbps) and 3 voice channels, up to 3 Mbps•Widely supported by telecommunications, PC, and consumer electronics companies•Few applications beyond cable replacement"
+    },
+    {
+      "number": 45,
+      "title": "48",
+      "lines": [
+        "48",
+        "Lecture 1: Course Introduction",
+        "IEEE 802.15.4/ZigBee Radios•Low-rate low-power low-cost secure radio •Complementary to WiFi and Bluetooth•Frequency bands: 784, 868, 915 MHz, 2.4 GHz•Data rates: 20Kbps, 40Kbps, 250 Kbps •Range: 10-100m line-of-sight•Support for large mesh networking or star clusters•Support for low latency devices•CSMA-CA channel access•Applications: light switches, electricity meters, traffic management, and other low-power sensors."
+      ],
+      "text": "48\nLecture 1: Course Introduction\nIEEE 802.15.4/ZigBee Radios•Low-rate low-power low-cost secure radio •Complementary to WiFi and Bluetooth•Frequency bands: 784, 868, 915 MHz, 2.4 GHz•Data rates: 20Kbps, 40Kbps, 250 Kbps •Range: 10-100m line-of-sight•Support for large mesh networking or star clusters•Support for low latency devices•CSMA-CA channel access•Applications: light switches, electricity meters, traffic management, and other low-power sensors."
+    },
+    {
+      "number": 46,
+      "title": "49",
+      "lines": [
+        "49",
+        "Lecture 1: Course Introduction",
+        "Wireless Sensor Networks",
+        "§Energy (transmit and processing) is the driving constraint§Data flows to centralized location (joint compression)§Low per-node rates but tens to thousands of nodes§Intelligence is in the network rather than in the devices•Smart homes/buildings•Smart structures•Search and rescue•Homeland security•Event detection•Battlefield surveillance"
+      ],
+      "text": "49\nLecture 1: Course Introduction\nWireless Sensor Networks\n§Energy (transmit and processing) is the driving constraint§Data flows to centralized location (joint compression)§Low per-node rates but tens to thousands of nodes§Intelligence is in the network rather than in the devices•Smart homes/buildings•Smart structures•Search and rescue•Homeland security•Event detection•Battlefield surveillance"
+    },
+    {
+      "number": 47,
+      "title": "50",
+      "lines": [
+        "50",
+        "Lecture 1: Course Introduction",
+        "Software-Defined Network ArchitectureFreq.Allocation PowerControlSelfHealingICICQoSOpt.CSThresholdUNIFIED CONTROL PLANENetwork OptimizationApp layerVideoSecurityVehicularNetworksHealthM2M",
+        "WiFiCellularmmWaveAd-Hoc NetworksHW layer…",
+        "Distributed AntennasCloud Computing"
+      ],
+      "text": "50\nLecture 1: Course Introduction\nSoftware-Defined Network ArchitectureFreq.Allocation PowerControlSelfHealingICICQoSOpt.CSThresholdUNIFIED CONTROL PLANENetwork OptimizationApp layerVideoSecurityVehicularNetworksHealthM2M\nWiFiCellularmmWaveAd-Hoc NetworksHW layer…\nDistributed AntennasCloud Computing"
+    },
+    {
+      "number": 48,
+      "title": "51",
+      "lines": [
+        "51",
+        "Lecture 1: Course Introduction",
+        "Spectrum Regulation•Spectrum a scarce public resource, hence allocated•Spectral allocation in US controlled by FCC (commercial) or OSM (defense)•FCC auctions spectral blocks for set applications.•Some spectrum set aside for universal use•Worldwide spectrum controlled by ITU-R•Regulation is a necessary evil.Innovations in regulation being considered worldwide in multiple cognitive radio paradigms"
+      ],
+      "text": "51\nLecture 1: Course Introduction\nSpectrum Regulation•Spectrum a scarce public resource, hence allocated•Spectral allocation in US controlled by FCC (commercial) or OSM (defense)•FCC auctions spectral blocks for set applications.•Some spectrum set aside for universal use•Worldwide spectrum controlled by ITU-R•Regulation is a necessary evil.Innovations in regulation being considered worldwide in multiple cognitive radio paradigms"
+    },
+    {
+      "number": 49,
+      "title": "52",
+      "lines": [
+        "52",
+        "Lecture 1: Course Introduction",
+        "Emerging Systems•Ad hoc/mesh wireless networks•Cognitive radio networks•Energy-constrained radios•Distributed control networks•Applications of Communications in Health, Bio-medicine, and Neuroscience"
+      ],
+      "text": "52\nLecture 1: Course Introduction\nEmerging Systems•Ad hoc/mesh wireless networks•Cognitive radio networks•Energy-constrained radios•Distributed control networks•Applications of Communications in Health, Bio-medicine, and Neuroscience"
+    },
+    {
+      "number": 50,
+      "title": "53",
+      "lines": [
+        "53",
+        "Lecture 1: Course Introduction",
+        "Ad-Hoc Networks•Peer-to-peer communications•No backbone infrastructure or centralized control•Routing can be multihop•Topology is dynamic•Fully connected with different link SINRs•Open questions•Fundamental capacity region•Resource allocation (power, rate, spectrum, etc.) •Routing"
+      ],
+      "text": "53\nLecture 1: Course Introduction\nAd-Hoc Networks•Peer-to-peer communications•No backbone infrastructure or centralized control•Routing can be multihop•Topology is dynamic•Fully connected with different link SINRs•Open questions•Fundamental capacity region•Resource allocation (power, rate, spectrum, etc.) •Routing"
+    },
+    {
+      "number": 51,
+      "title": "54",
+      "lines": [
+        "54",
+        "Lecture 1: Course Introduction",
+        "Cognitive Radios•Cognitive radios support new users in existing crowded spectrum without degrading licensed users•Utilize advanced communication and DSP techniques•Coupled with novel spectrum allocation policies•Multiple paradigms•(MIMO) Underlay (interference below a threshold)•Interweave finds/uses unused time/freq/space slots•Overlay (overhears/relays primary message while cancelling interference it causes to cognitive receiver)NCRIPNCRCRCRCRRxNCRRxNCRTxCRTxMIMO Cognitive UnderlayCognitive Overlay"
+      ],
+      "text": "54\nLecture 1: Course Introduction\nCognitive Radios•Cognitive radios support new users in existing crowded spectrum without degrading licensed users•Utilize advanced communication and DSP techniques•Coupled with novel spectrum allocation policies•Multiple paradigms•(MIMO) Underlay (interference below a threshold)•Interweave finds/uses unused time/freq/space slots•Overlay (overhears/relays primary message while cancelling interference it causes to cognitive receiver)NCRIPNCRCRCRCRRxNCRRxNCRTxCRTxMIMO Cognitive UnderlayCognitive Overlay"
+    },
+    {
+      "number": 52,
+      "title": "55",
+      "lines": [
+        "55",
+        "Lecture 1: Course Introduction",
+        "Energy-Constrained Radios•Transmit energy minimized by sending bits slowly•Leads to increased circuit energy consumption•Short-range networks must consider both transmit and processing/circuit energy•Sophisticated encoding/decoding not always energy-efficient.•MIMO techniques not necessarily energy-efficient •Long transmission times not necessarily optimal•Multihop routing not necessarily optimal•Sub-Nyquist sampling can decrease energy and is sometimes optimal!"
+      ],
+      "text": "55\nLecture 1: Course Introduction\nEnergy-Constrained Radios•Transmit energy minimized by sending bits slowly•Leads to increased circuit energy consumption•Short-range networks must consider both transmit and processing/circuit energy•Sophisticated encoding/decoding not always energy-efficient.•MIMO techniques not necessarily energy-efficient •Long transmission times not necessarily optimal•Multihop routing not necessarily optimal•Sub-Nyquist sampling can decrease energy and is sometimes optimal!"
+    },
+    {
+      "number": 53,
+      "title": "56",
+      "lines": [
+        "56",
+        "Lecture 1: Course Introduction",
+        "Where should energy come from? •Batteries and traditional charging mechanisms•Well-understood devices and systems•Wireless-power transfer•Poorly understood, especially at large distances and with high efficiency•Communication with Energy Harvesting Radios•Intermittent and random energy arrivals•Communication becomes energy-dependent•Can combine information and energy transmission•New principles for radio and network design needed"
+      ],
+      "text": "56\nLecture 1: Course Introduction\nWhere should energy come from? •Batteries and traditional charging mechanisms•Well-understood devices and systems•Wireless-power transfer•Poorly understood, especially at large distances and with high efficiency•Communication with Energy Harvesting Radios•Intermittent and random energy arrivals•Communication becomes energy-dependent•Can combine information and energy transmission•New principles for radio and network design needed"
+    },
+    {
+      "number": 54,
+      "title": "57",
+      "lines": [
+        "57",
+        "Lecture 1: Course Introduction",
+        "Distributed Control over Wireless",
+        "Interdisciplinary design approach•Control requires fast, accurate, and reliable feedback.•Wireless networks introduce delay and loss •Need reliable networks and robust controllers •Mostly open problemsAutomated Vehicles  - Cars  - Airplanes/UAVs  - Insect flyers",
+        ": Many design challenges"
+      ],
+      "text": "57\nLecture 1: Course Introduction\nDistributed Control over Wireless \nInterdisciplinary design approach•Control requires fast, accurate, and reliable feedback.•Wireless networks introduce delay and loss •Need reliable networks and robust controllers •Mostly open problemsAutomated Vehicles  - Cars  - Airplanes/UAVs  - Insect flyers\n: Many design challenges"
+    },
+    {
+      "number": 55,
+      "title": "58",
+      "lines": [
+        "58",
+        "Lecture 1: Course Introduction",
+        "Applications in Health, Biomedicine and Neuroscience",
+        "Recovery from Nerve DamageNeuroscience-Nerve network (re)configuration-EEG/ECoG signal processing- Signal processing/control for deep brain stimulation- SP/Comm applied to bioscience",
+        "Body-Area NetworksECoG Epileptic Seizure Localization",
+        "EEG",
+        "ECoG"
+      ],
+      "text": "58\nLecture 1: Course Introduction\nApplications in Health, Biomedicine and Neuroscience\nRecovery from Nerve DamageNeuroscience-Nerve network (re)configuration-EEG/ECoG signal processing- Signal processing/control for deep brain stimulation- SP/Comm applied to bioscience\nBody-Area NetworksECoG Epileptic Seizure Localization\nEEG\nECoG"
+    },
+    {
+      "number": 56,
+      "title": "59",
+      "lines": [
+        "59",
+        "Lecture 1: Course Introduction",
+        "Main Points•The wireless vision encompasses many exciting applications•Technical challenges transcend all system design layers•5G networks must support higher performance for some users and extreme energy efficiency for others•Cloud-based software to dynamically control and optimize wireless networks needed (SDWN)•Innovative wireless design needed for 5G cellular/WiFi, mmWave systems, massive MIMO, and IoT connectivity"
+      ],
+      "text": "59\nLecture 1: Course Introduction\nMain Points•The wireless vision encompasses many exciting applications•Technical challenges transcend all system design layers•5G networks must support higher performance for some users and extreme energy efficiency for others•Cloud-based software to dynamically control and optimize wireless networks needed (SDWN)•Innovative wireless design needed for 5G cellular/WiFi, mmWave systems, massive MIMO, and IoT connectivity"
+    },
+    {
+      "number": 57,
+      "title": "60",
+      "lines": [
+        "60",
+        "Lecture 1: Course Introduction",
+        "Lecture 3: Overview of Internet of ThingsInstructor: Kui RenWIRELESS NETWORK AND IOT SECURITY"
+      ],
+      "text": "60\nLecture 1: Course Introduction\nLecture 3: Overview of Internet of ThingsInstructor: Kui RenWIRELESS NETWORK AND IOT SECURITY"
+    },
+    {
+      "number": 58,
+      "title": "61",
+      "lines": [
+        "61",
+        "Lecture 1: Course Introduction",
+        "E Pluribus Unum: Out of Many, OneSmart CityIndustry 4.0The Industrial InternetInternet of EverythingSmarter PlanetMachine to Machine(M2M)TSensors(Trillion Sensors)The FogWhat is the Internet of Things:"
+      ],
+      "text": "61\nLecture 1: Course Introduction\nE Pluribus Unum: Out of Many, OneSmart CityIndustry 4.0The Industrial InternetInternet of EverythingSmarter PlanetMachine to Machine(M2M)TSensors(Trillion Sensors)The FogWhat is the Internet of Things:"
+    },
+    {
+      "number": 59,
+      "title": "62",
+      "lines": [
+        "62",
+        "Lecture 1: Course Introduction",
+        "The challenges of working in a multidisciplinary area"
+      ],
+      "text": "62\nLecture 1: Course Introduction\nThe challenges of working in a multidisciplinary area"
+    },
+    {
+      "number": 60,
+      "title": "63",
+      "lines": [
+        "63",
+        "Lecture 1: Course Introduction",
+        "•x",
+        "NetworkSmall ComputerSensing SystemConnected Industrial System",
+        "Advanced ManufacturingRobotThe challenges of working in a multidisciplinary area"
+      ],
+      "text": "63\nLecture 1: Course Introduction\n•x\nNetworkSmall ComputerSensing SystemConnected Industrial System\nAdvanced ManufacturingRobotThe challenges of working in a multidisciplinary area"
+    },
+    {
+      "number": 61,
+      "title": "64",
+      "lines": [
+        "64",
+        "Lecture 1: Course Introduction",
+        "•RFID•In 1999，Auto-IDcenter in MIT propose electronic product code (EPC) system and the concept of IoT.•Pervasive Computing•Sensing and Interconnection•Embedded System•In late 1990，wireless sensor network emerges.•In 2006，NSF workshop on Cyber-Physical Systems (CPS)Origination and History:"
+      ],
+      "text": "64\nLecture 1: Course Introduction\n•RFID•In 1999，Auto-IDcenter in MIT propose electronic product code (EPC) system and the concept of IoT.•Pervasive Computing•Sensing and Interconnection•Embedded System•In late 1990，wireless sensor network emerges.•In 2006，NSF workshop on Cyber-Physical Systems (CPS)Origination and History:"
+    },
+    {
+      "number": 62,
+      "title": "65",
+      "lines": [
+        "65",
+        "Lecture 1: Course Introduction",
+        "Exponential IoT Growth",
+        "Source: Gartner IoT, PC and Mobile device forecast 2015",
+        "PC’s & Mobile DevicesIoT Devices",
+        "Took25 years to get to10 Billion devices* Will take only5 years to getto 30 Billion devices*"
+      ],
+      "text": "65\nLecture 1: Course Introduction\nExponential IoT Growth\nSource: Gartner IoT, PC and Mobile device forecast 2015\nPC’s & Mobile DevicesIoT Devices\nTook25 years to get to10 Billion devices* Will take only5 years to getto 30 Billion devices*"
+    },
+    {
+      "number": 63,
+      "title": "66",
+      "lines": [
+        "66",
+        "Lecture 1: Course Introduction",
+        "It’s not just information technology anymore: •Cyber + Physical•Computation + Dynamics•Security + SafetyContradictions:•Adaptability vs. Repeatability•High connectivity vs. Security and Privacy•High performance vs. Low Energy•Asynchrony vs. Coordination/Cooperation•Scalability vs. Reliability and Predictability•Laws and Regulations vs. Technical Possibilities•Economies of scale (cloud) vs. Locality (fog)•Open vs. Proprietary•Algorithms vs. DynamicsInnovation:Internet of Things systems require new engineering methods and models to address these contradictions",
+        "Automotive",
+        "Biomedical",
+        "Military",
+        "Energy",
+        "Manufacturing",
+        "Avionics",
+        "Buildings"
+      ],
+      "text": "66\nLecture 1: Course Introduction\nIt’s not just information technology anymore: •Cyber + Physical•Computation + Dynamics•Security + SafetyContradictions:•Adaptability vs. Repeatability•High connectivity vs. Security and Privacy•High performance vs. Low Energy•Asynchrony vs. Coordination/Cooperation•Scalability vs. Reliability and Predictability•Laws and Regulations vs. Technical Possibilities•Economies of scale (cloud) vs. Locality (fog)•Open vs. Proprietary•Algorithms vs. DynamicsInnovation:Internet of Things systems require new engineering methods and models to address these contradictions\nAutomotive\nBiomedical\nMilitary\nEnergy\nManufacturing\nAvionics\nBuildings"
+    },
+    {
+      "number": 64,
+      "title": "67",
+      "lines": [
+        "67",
+        "Lecture 1: Course Introduction",
+        "The Hype AroundThe Internet of ThingsUsing Internet technology to connect physical devices (“things”)",
+        "http://www.gartner.com/technology/research/hype-cycles/",
+        "Internet of ThingsPeak ofInflatedExpectations"
+      ],
+      "text": "67\nLecture 1: Course Introduction\nThe Hype AroundThe Internet of ThingsUsing Internet technology to connect physical devices (“things”)\nhttp://www.gartner.com/technology/research/hype-cycles/\nInternet of ThingsPeak ofInflatedExpectations"
+    },
+    {
+      "number": 65,
+      "title": "68",
+      "lines": [
+        "68",
+        "Lecture 1: Course Introduction",
+        "The Hype AroundThe Internet of ThingsIn2020Internet of ThingsAnd in 2021, the IoT has been removed from the cycle, indicating it becoming a mature technique that relies onthe operation for its development",
+        "Trough of Disillusionment"
+      ],
+      "text": "68\nLecture 1: Course Introduction\nThe Hype AroundThe Internet of ThingsIn2020Internet of ThingsAnd in 2021, the IoT has been removed from the cycle, indicating it becoming a mature technique that relies onthe operation for its development \nTrough of Disillusionment"
+    },
+    {
+      "number": 66,
+      "title": "69",
+      "lines": [
+        "69",
+        "Lecture 1: Course Introduction",
+        "IoT is the use of Internet technology for Cyber-Physical SystemsIndustrial automation example from 2008: Bosch-Rexroth printing pressThe term “IoT” includes the technical solution “Internet technology” in the problem statement “connect things”69",
+        "This Bosch Rexroth printing press is a cyber-physical factory using Ethernet and TCP/IP with high-precision clock synchronization (IEEE 1588) on an isolated LAN"
+      ],
+      "text": "69\nLecture 1: Course Introduction\nIoT is the use of Internet technology for Cyber-Physical SystemsIndustrial automation example from 2008: Bosch-Rexroth printing pressThe term “IoT” includes the technical solution “Internet technology” in the problem statement “connect things”69\nThis Bosch Rexroth printing press is a cyber-physical factory using Ethernet and TCP/IP with high-precision clock synchronization (IEEE 1588) on an isolated LAN"
+    },
+    {
+      "number": 67,
+      "title": "70",
+      "lines": [
+        "70",
+        "Lecture 1: Course Introduction",
+        "FOUR LAYER MODEL",
+        "ApplicationsManagement and ServiceNetwork StructureSensing and Recognition"
+      ],
+      "text": "70\nLecture 1: Course Introduction\nFOUR LAYER MODEL\nApplicationsManagement and ServiceNetwork StructureSensing and Recognition"
+    },
+    {
+      "number": 68,
+      "title": "71",
+      "lines": [
+        "71",
+        "Lecture 1: Course Introduction",
+        "Core - Sensing and Recognition",
+        "RFID",
+        "Wireless Sensor",
+        "Smart Phones/Devices"
+      ],
+      "text": "71\nLecture 1: Course Introduction\nCore - Sensing and Recognition\nRFID\nWireless Sensor\nSmart Phones/Devices"
+    },
+    {
+      "number": 69,
+      "title": "72",
+      "lines": [
+        "72",
+        "Lecture 1: Course Introduction",
+        "Core - Network Structure",
+        "InternetIPv4，IPv6",
+        "Low speedAccessBluetoothZigBee",
+        "Emerging wirelessVisible LightNB-IoT",
+        "Mobile Network3G/4G",
+        "Wireless broadbandWi-FiWiMAX"
+      ],
+      "text": "72\nLecture 1: Course Introduction\nCore - Network Structure\nInternetIPv4，IPv6\nLow speedAccessBluetoothZigBee\nEmerging wirelessVisible LightNB-IoT\nMobile Network3G/4G\nWireless broadbandWi-FiWiMAX"
+    },
+    {
+      "number": 70,
+      "title": "73",
+      "lines": [
+        "73",
+        "Lecture 1: Course Introduction",
+        "•Management and service layer solves the following data problems:•Storage•Search and retrieval•Utilization•Safety and privacy•Abuse prevention•The corner stone for the so call “Smart XX” technology.Core – Management and Service",
+        "Server in Data CenterCooling System Data Center"
+      ],
+      "text": "73\nLecture 1: Course Introduction\n•Management and service layer solves the following data problems:•Storage•Search and retrieval•Utilization•Safety and privacy•Abuse prevention•The corner stone for the so call “Smart XX” technology.Core – Management and Service\nServer in Data CenterCooling System Data Center"
+    },
+    {
+      "number": 71,
+      "title": "74",
+      "lines": [
+        "74",
+        "Lecture 1: Course Introduction",
+        "Different requirements than smartphones: low rates/energy consumption•Enabling every electronic device to be connected to each other and the Internet•Includes smartphones, consumer electronics, cars, lights, clothes, sensors, medical devices,…•Value in IoT is data processing in the cloud",
+        "Core – Applications"
+      ],
+      "text": "74\nLecture 1: Course Introduction\nDifferent requirements than smartphones: low rates/energy consumption•Enabling every electronic device to be connected to each other and the Internet•Includes smartphones, consumer electronics, cars, lights, clothes, sensors, medical devices,…•Value in IoT is data processing in the cloud\nCore – Applications"
+    },
+    {
+      "number": 72,
+      "title": "75",
+      "lines": [
+        "75",
+        "Lecture 1: Course Introduction",
+        "Example: Automotive IoT and Societal Challenges•Safer Transportation•Reduced Emissions•Smart Transportation•Energy Efficiency•Climate Change•Human-Robot Collaboration"
+      ],
+      "text": "75\nLecture 1: Course Introduction\nExample: Automotive IoT and Societal Challenges•Safer Transportation•Reduced Emissions•Smart Transportation•Energy Efficiency•Climate Change•Human-Robot Collaboration"
+    },
+    {
+      "number": 73,
+      "title": "76",
+      "lines": [
+        "76",
+        "Lecture 1: Course Introduction",
+        "IoT Application: Autonomous Driving"
+      ],
+      "text": "76\nLecture 1: Course Introduction\nIoT Application: Autonomous Driving"
+    },
+    {
+      "number": 74,
+      "title": "77",
+      "lines": [
+        "77",
+        "Lecture 1: Course Introduction",
+        "•Smart logistics: Using information generated by RFID, camera, sensors, or GPS to enable optimized and efficient logistic managementExample:SmartLogistics"
+      ],
+      "text": "77\nLecture 1: Course Introduction\n•Smart logistics: Using information generated by RFID, camera, sensors, or GPS to enable optimized and efficient logistic managementExample:SmartLogistics"
+    },
+    {
+      "number": 75,
+      "title": "78",
+      "lines": [
+        "78",
+        "Lecture 1: Course Introduction",
+        "Example:Environmental Monitoring•Environmental Monitoring: Using distributed IoT devices to monitor the environmental status and the change of environment quality for the better environment governance"
+      ],
+      "text": "78\nLecture 1: Course Introduction\nExample:Environmental Monitoring•Environmental Monitoring: Using distributed IoT devices to monitor the environmental status and the change of environment quality for the better environment governance"
+    },
+    {
+      "number": 76,
+      "title": "79",
+      "lines": [
+        "79",
+        "Lecture 1: Course Introduction",
+        "Example: Air-Fuel ratio control to reduce emissions•Catalytic converters reduce CH4, CO2, and NOx emissions•Conversion efficiency optimal at stoichiometric value",
+        "See:Jin. Kapinski. Deshmukh, Ueda, Butts, “Powertrain Control Verification Benchmark,” HSCC 2014[Slide from J. Deshmukh, Toyota]"
+      ],
+      "text": "79\nLecture 1: Course Introduction\nExample: Air-Fuel ratio control to reduce emissions•Catalytic converters reduce CH4, CO2, and NOx emissions•Conversion efficiency optimal at stoichiometric value \nSee:Jin. Kapinski. Deshmukh, Ueda, Butts, “Powertrain Control Verification Benchmark,” HSCC 2014[Slide from J. Deshmukh, Toyota]"
+    },
+    {
+      "number": 77,
+      "title": "81",
+      "lines": [
+        "81",
+        "Lecture 1: Course Introduction",
+        "Economic Potential"
+      ],
+      "text": "81\nLecture 1: Course Introduction\nEconomic Potential"
+    },
+    {
+      "number": 78,
+      "title": "82",
+      "lines": [
+        "82",
+        "Lecture 1: Course Introduction",
+        "Google's robotic cars have about $150,000 in equipment including a $70,000LIDAR(laser radar) system.The range finder mounted on the top is aVelodyne64-beam laser. This laser allows the vehicle to generate a detailed 3D map of its environment. The car then takes these generated maps and combines them with high-resolution maps of the world, producing different types of data models that allow it to drive itself. Technical Giant’s Strategy"
+      ],
+      "text": "82\nLecture 1: Course Introduction\nGoogle's robotic cars have about $150,000 in equipment including a $70,000LIDAR(laser radar) system.The range finder mounted on the top is aVelodyne64-beam laser. This laser allows the vehicle to generate a detailed 3D map of its environment. The car then takes these generated maps and combines them with high-resolution maps of the world, producing different types of data models that allow it to drive itself. Technical Giant’s Strategy"
+    },
+    {
+      "number": 79,
+      "title": "83",
+      "lines": [
+        "83",
+        "Lecture 1: Course Introduction",
+        "Google and FacebookWall Street Journal:By Alistair Barr and  Reed Albergotti April 14, 2014Google Inc.on Monday acquired a maker of solar-powered drones—a startup that Facebook Inc.had also considered acquiring—as the technology giants battle to extend their influence and find new users in the far corners of the earth.",
+        "Artist's rendering of Titan's Solara 50, which in theory at least, can stay aloft for years."
+      ],
+      "text": "83\nLecture 1: Course Introduction\nGoogle and FacebookWall Street Journal:By Alistair Barr and  Reed Albergotti April 14, 2014Google Inc.on Monday acquired a maker of solar-powered drones—a startup that Facebook Inc.had also considered acquiring—as the technology giants battle to extend their influence and find new users in the far corners of the earth.\nArtist's rendering of Titan's Solara 50, which in theory at least, can stay aloft for years."
+    },
+    {
+      "number": 80,
+      "title": "84",
+      "lines": [
+        "84",
+        "Lecture 1: Course Introduction",
+        "Tesla Gigafactory",
+        "Artists conception of battery factory under construction in Nevada.From: https://www.tesla.com/gigafactory"
+      ],
+      "text": "84\nLecture 1: Course Introduction\nTesla Gigafactory\nArtists conception of battery factory under construction in Nevada.From: https://www.tesla.com/gigafactory"
+    },
+    {
+      "number": 81,
+      "title": "85",
+      "lines": [
+        "85",
+        "Lecture 1: Course Introduction",
+        "Apple iCar?",
+        "Macworld, Aug. 10, 2016:Reports suggest that Apple is developing an electric iCar to rival Tesla. With reports that Apple is negotiating with BMW, and poaching Samsung employees (especially battery specialists) and reassigning large numbers of staff for its Project Titan, is Apple manufacturing an iCar, and when will the iCar be launched?",
+        "Now cancelled…"
+      ],
+      "text": "85\nLecture 1: Course Introduction\nApple iCar?\nMacworld, Aug. 10, 2016:Reports suggest that Apple is developing an electric iCar to rival Tesla. With reports that Apple is negotiating with BMW, and poaching Samsung employees (especially battery specialists) and reassigning large numbers of staff for its Project Titan, is Apple manufacturing an iCar, and when will the iCar be launched?\nNow cancelled…"
+    },
+    {
+      "number": 82,
+      "title": "86",
+      "lines": [
+        "86",
+        "Lecture 1: Course Introduction",
+        "Instead?XiaomiSU7comes！"
+      ],
+      "text": "86\nLecture 1: Course Introduction\nInstead?XiaomiSU7comes！"
+    },
+    {
+      "number": 83,
+      "title": "87",
+      "lines": [
+        "87",
+        "Lecture 1: Course Introduction",
+        "IoTInnovationinChina",
+        "ApolloofBaidu",
+        "XNGPofXiaopeng",
+        "Greentrafficlight of AMap",
+        "Smart HomeofXiaomi"
+      ],
+      "text": "87\nLecture 1: Course Introduction\nIoTInnovationinChina\nApolloofBaidu\nXNGPofXiaopeng\nGreentrafficlight of AMap\nSmart HomeofXiaomi"
+    },
+    {
+      "number": 84,
+      "title": "88",
+      "lines": [
+        "88",
+        "Lecture 1: Course Introduction",
+        "Taking ICV as ExampleØAdvanced on-board sensors, controllers, and actuators",
+        "ØIntegration of modern communication and network technologiesØIntelligent information exchange between vehicles, roads, people and clouds"
+      ],
+      "text": "88\nLecture 1: Course Introduction\nTaking ICV as ExampleØAdvanced on-board sensors, controllers, and actuators\nØIntegration of modern communication and network technologiesØIntelligent information exchange between vehicles, roads, people and clouds"
+    },
+    {
+      "number": 85,
+      "title": "89",
+      "lines": [
+        "89",
+        "Lecture 1: Course Introduction",
+        "Rapid Development of ICV in China",
+        "89"
+      ],
+      "text": "89\nLecture 1: Course Introduction\nRapid Development of ICV in China\n89"
+    },
+    {
+      "number": 86,
+      "title": "90",
+      "lines": [
+        "90",
+        "Lecture 1: Course Introduction",
+        "pIntelligent Connected Vehicle",
+        "Autonomous DrivingAutomotive NetworkingIntelligent Vehicle Cockpit"
+      ],
+      "text": "90\nLecture 1: Course Introduction\npIntelligent Connected Vehicle\nAutonomous DrivingAutomotive NetworkingIntelligent Vehicle Cockpit"
+    },
+    {
+      "number": 87,
+      "title": "91",
+      "lines": [
+        "91",
+        "Lecture 1: Course Introduction",
+        "pAutonomous Driving",
+        "— Perception   Sensing the external world—Prediction    Algorithmic understanding of the external environment and self-vehicle state— Planning   Finding the right path to get to the destination"
+      ],
+      "text": "91\nLecture 1: Course Introduction\npAutonomous Driving\n— Perception   Sensing the external world—Prediction    Algorithmic understanding of the external environment and self-vehicle state— Planning   Finding the right path to get to the destination"
+    },
+    {
+      "number": 88,
+      "title": "92",
+      "lines": [
+        "92",
+        "Lecture 1: Course Introduction",
+        "pAutomotive NetworkingØVehicles to cloud, vehicles tovehicles, vehicles toroads, vehicles topeople, and in-vehicle networks"
+      ],
+      "text": "92\nLecture 1: Course Introduction\npAutomotive NetworkingØVehicles to cloud, vehicles tovehicles, vehicles toroads, vehicles topeople, and in-vehicle networks"
+    },
+    {
+      "number": 89,
+      "title": "93",
+      "lines": [
+        "93",
+        "Lecture 1: Course Introduction",
+        "pIntelligent Vehicle Cockpit",
+        "Current PhaseIntegration of electronic information systems into \"e-cockpit domain\"The software truly embodies the functionality of the Smart Cockpit.Smart cockpits are starting to evolve into a personal third living space as autonomous driving becomes commonplace."
+      ],
+      "text": "93\nLecture 1: Course Introduction\npIntelligent Vehicle Cockpit\nCurrent PhaseIntegration of electronic information systems into \"e-cockpit domain\"The software truly embodies the functionality of the Smart Cockpit.Smart cockpits are starting to evolve into a personal third living space as autonomous driving becomes commonplace."
+    },
+    {
+      "number": 90,
+      "title": "94",
+      "lines": [
+        "94",
+        "Lecture 1: Course Introduction",
+        "Bosch and Intel developed the CAN bus system",
+        "In-vehicle operating systemThe increasing variety of in-vehicle embedded electronic products, platform, modular development needsModel S •with a 17-inch embedded screen•eliminated physical buttons",
+        "HUD manufacturer Navdy product that combines navigation display, voice interaction, gesture control, etc.Android Auto and Apple Carplay were releasedAudifull LCD instrument clustersVisteon SmartCore•a smart cockpit system •integrates cockpit components (in-vehicle center controls and instrument clusters)Advanced smart cockpit solutionsintegrating cutting-edge technologies such as artificial intelligence and VR",
+        "1980",
+        "19",
+        "9",
+        "0",
+        "2012",
+        "2015",
+        "2018",
+        "2014",
+        "2017",
+        "2019pIntelligent Vehicle Cockpit"
+      ],
+      "text": "94\nLecture 1: Course Introduction\nBosch and Intel developed the CAN bus system\nIn-vehicle operating systemThe increasing variety of in-vehicle embedded electronic products, platform, modular development needsModel S •with a 17-inch embedded screen•eliminated physical buttons\nHUD manufacturer Navdy product that combines navigation display, voice interaction, gesture control, etc.Android Auto and Apple Carplay were releasedAudifull LCD instrument clustersVisteon SmartCore•a smart cockpit system •integrates cockpit components (in-vehicle center controls and instrument clusters)Advanced smart cockpit solutionsintegrating cutting-edge technologies such as artificial intelligence and VR\n1980\n19\n9\n0\n2012\n2015\n2018\n2014\n2017\n2019pIntelligent Vehicle Cockpit"
+    },
+    {
+      "number": 91,
+      "title": "95",
+      "lines": [
+        "95",
+        "Lecture 1: Course Introduction",
+        "pAutomotive revolution – perspective towards 2030"
+      ],
+      "text": "95\nLecture 1: Course Introduction\npAutomotive revolution – perspective towards 2030"
+    },
+    {
+      "number": 92,
+      "title": "96",
+      "lines": [
+        "96",
+        "Lecture 1: Course Introduction",
+        "pAutomotive revolution – perspective towards 2030"
+      ],
+      "text": "96\nLecture 1: Course Introduction\npAutomotive revolution – perspective towards 2030"
+    },
+    {
+      "number": 93,
+      "title": "97",
+      "lines": [
+        "97",
+        "Lecture 1: Course Introduction",
+        "Future IT Scene",
+        "InfrastructuralcoreSensory swarmMobileaccess",
+        "97",
+        "The Cloud!",
+        "Courtesy: J. RabaeyBridge of the physical world and the digital worldMore InterconnectionMore Pervasive SensingSmarter Operation"
+      ],
+      "text": "97\nLecture 1: Course Introduction\nFuture IT Scene\nInfrastructuralcoreSensory swarmMobileaccess\n97\nThe Cloud!\nCourtesy: J. RabaeyBridge of the physical world and the digital worldMore InterconnectionMore Pervasive SensingSmarter Operation"
+    },
+    {
+      "number": 94,
+      "title": "98",
+      "lines": [
+        "98",
+        "Lecture 1: Course Introduction",
+        "The future is here!"
+      ],
+      "text": "98\nLecture 1: Course Introduction\nThe future is here!"
+    }
+  ],
+  "full_text": "1\nLecture 1: Course Introduction\nLecture 1: Course IntroductionInstructor: KuiRenWIRELESS NETWORK AND IOT SECURITY\n\n2\nLecture 1: Course Introduction\n•Kui Ren(任奎)•Professor, School of Cyber Science and Technology, Zhejiang University•Professor, College of Computer Science and Technology, Zhejiang University•Email: kuiren@zju.edu.cn•Office: Room 205, KeGongBuilding, Yuquan campus of Zhejiang University•Homepage: https://person.zju.edu.cn/kuirenInstructor\n\n4\nLecture 1: Course Introduction\n•Course: Fundamentalof Wireless Network and IoT Security•Time: 13:25–15:50(Lecture, Thursday), 16:15–17:50(Lab, Thursday)•Classroom: 7thTeaching Building –Room 104(Lecture)West CaoguangbiaoBuilding –Room 501 (Lab)•Prerequisite: None•Teaching Assistant: JianwenZhou(周建文), jianwenz@zju.edu.cnCourse Overview\n\n5\nLecture 1: Course Introduction\n•Major in Information Security,•Major in Computer Science and Technology, •and•are familiar with basic computer networks and discrete mathematics,•are preparing to obtain fundamentals and recent developments in the wireless and Internet of Things (IoT) security.Target Students\n\n6\nLecture 1: Course Introduction\n•Textbook:•1. Security and Cooperation in Wireless Networks, by LeventeButtyanand Jean-Pierre Hubaux, Cambridge University Press, ISBN 9780521873710, 2007•2. Cryptography and Network Security: Principles and Practice, Seventh Edition, by William Stallings, Pearson Education, 2017•and also many recently published papers (will be delivered)Resources\n\n7\nLecture 1: Course Introduction\n•Lectures•Labs (Total 3)•One Lab for Two Weeks, except the first and last week•One Final ExamTeaching\n\n9\nLecture 1: Course Introduction\n•Academic integrity: lifeline in academia•Your labsand exams must be your own -we have a zero tolerance policy towards cheating of any kind and any student who cheats will get•Zerofor the project/exam for the course •Both the cheater and the person(s) who aided the cheater will be held responsible for the cheatingAcademic Integrity Policy\n\n10\nLecture 1: Course Introduction\n•Lectures do not cover everything•Not all questions in exam are from lectures•But many of them are J•Your responsibility•Always attend lectures •Carefully readtextbook, lecture notes, assigned papers •Actively ask questions•Well prepare for the examsLecture Format\n\n11\nLecture 1: Course Introduction\n•Fundamentals of Wireless Communication and IoT•Wireless Network Security (WiFi/ Cellular Mobile Network)•Near Field Sensing and Security (RFID, NFC)•Bluetooth Security and Localization Security (GPS, UWB)•IoT Security (Fundamentals, Accessibility, System Security)•Other Related Topics (Side channel/ Anonymous communication)•Due to the time limits, we will try to cover most of the major topics without going into too much detail.Table of Contents\n\n12\nLecture 1: Course Introduction\nNow Let’s Start from Security!\n\n13\nLecture 1: Course Introduction\n•Security (failures) are constantly on the news•Malware Infections•Ransomware•Data Breaches•Espionage•Cyberwar•Everyone is affected•Individuals•Corporations•GovernmentsWhat is Security?\n\n14\nLecture 1: Course Introduction\n•Some scary numbers•1 in 13 web requests lead to malware•Spam accounts for 55% of email•An average user receives dozens of viruses in email per year•Credit card numbers are sold for $0.5 -$25•Hacked gmailaccounts sell for $0.1 -$5•Malware can be as cheap a $1•Identity (name, SSN, DOB) goes for $0.1 -$1.5Data Breaches are Increasingly Common\n\n15\nLecture 1: Course Introduction\n•The NIST Computer Security Handbook defines the term Computer Security as: “The protection afforded to an automated information system in order to attain the applicable objectives of preserving the integrity, availabilityand confidentialityof information system resources”  (includes hardware, software, firmware, information/data, and telecommunications)What is Security on Earth?\n\n16\nLecture 1: Course Introduction\n•Confidentiality covers•Data confidentiality: sensitive information is available to authorized parties only•Privacy: individuals can control what information about them can be collected and stored and to whom it is made available•Integrity covers•Data integrity: information and software can be modified only in a predetermined and authorized manner•System integrity: a system performs its intended functions in an expected manner and has not be manipulated in an unauthorized way•Availability: Assures that systems work promptly and service is not denied to authorized usersSecurity Objectives\n\n17\nLecture 1: Course Introduction\n•Authenticity: the property of being genuine and being able to be verified and trusted•entity authentication: the entity is who it claims it is•data authentication: the data is coming from a trusted source•Access control: only authorized parties can use specific resources incompliance with their privileges•Non-repudiability(repudiability): inability (ability) to deny communication or actions•Accountability: the requirement that all actions of an entity are traced uniquely to that entity•covers non-repudiability, intrusion detection, fault isolation, and etc.More on Security Objectives\n\n18\nLecture 1: Course Introduction\n•The means of achieving these objectives greatly differ•Cryptographic techniques•Access control policies•Software checking tools•Spam filters, etc.•Each system must be evaluated uniquelyin terms of its requirements•Security mechanisms must be adequately chosen in accordance with those requirementsHow do We Achieve These Goals?\n\n19\nLecture 1: Course Introduction\n•Potential attacks on the security features need to be considered•Procedures used to provide particular services are often counter-intuitive•It is necessary to decide where to use the various security mechanisms•Requires constantmonitoring•Attackers only need to find a single weakness, the developer needs to find all weaknesses•Users and system managers tend to NOT see the benefits of security until a failure occurs•…Security is not Simple\n\n20\nLecture 1: Course Introduction\n•Assets can have different security grades depending on the impact of a security breach that can range from low to high•By building more secure systems, we make it harder for an attacker to breach security•The more resources we can invest in a system, the more secure we can make it•There is a trade-off between security and resources (money, equipment, personnel, training)•Training must cover all users, as security can often be easiest breached by exploiting human errorSecurity is not Absolute\n\n21\nLecture 1: Course Introduction\n•Adversary•Attack•Countermeasure•Risk•Security Policy•System Resource•Threat•VulnerabilityComputer Security Terminology\n\n22\nLecture 1: Course Introduction\n•Passive: observes information without intervention•e.g., passively monitoring a communication link•Active: alters system resources or affects their operation•e.g., changing messages, replaying old messages on the network, corrupting users, etc.•Insider: is legitimately a part of the system with access to internal data or is inside the security perimeter•Outsider: is outside of the security perimeter or is not a legitimate userTypes of Adversaries\n\n23\nLecture 1: Course Introduction\n•Policy defines “security” for the site, system, etc.•composition of policies is non-trivial•if policies conflict, discrepancies can create security vulnerabilities•Mechanismsenforce policies•Security goals w.r.t. policies•Prevention: prevent attackers from violating security policy•Detection: detect attacks’ violation of security policy•Recovery: stop attack, assess and repair damage; continue to function even if attack succeedsPolicies and Mechanisms\n\n25\nLecture 1: Course Introduction\n•Economy of Mechanism•Open Design •Modularity, Layering•Fail-safe Defaults•Separation ofPrivilege, Least Privilege•Least Common Mechanism•Psychological Acceptability, Least Astonishment•Isolation, EncapsulationSecurity Design Principles\n\n26\nLecture 1: Course Introduction\n•Security is a broad field•Building and maintaining a secure system is a complex task•security requirements are determined at early stages of product development•the design should be guided by security specifications•maintaining secure operation is also non-trivial•Security threat trends are constantly changingSummary\n\n27\nLecture 1: Course Introduction\n•Lecture slides from LawrieBrown•Lecture slides from MhmetHadiGunes•Lecture slides from Marina BlantonResources Used\n\n28\nLecture 1: Course Introduction\nLecture 2: Overview of Wireless NetworkingInstructor: KuiRenWIRELESS NETWORK AND IOT SECURITY\n\n29\nLecture 1: Course Introduction\nWireless HistorylRadio invented in the 1880s by MarconilMany sophisticated military radio systems were developed during and after WW2\nlWifi also enjoying tremendous success and growthlBluetooth pervasive, satellites also widespreadlAncient Systems: Smoke Signals, Carrier Pigeons, …lExponential growth in cellular use since 1988: approx. 8B worldwide users todaylIgnited the wireless revolutionlVoice, data, and multimedia ubiquitouslUse in 3rd world countries growing rapidly\n\n30\nLecture 1: Course Introduction\nFuture Wireless NetworksUbiquitous Communication Among People and Devices\nNext-generation CellularWireless Internet AccessWireless MultimediaSensor Networks Smart Homes/SpacesAutomated HighwaysIn-Body NetworksAll this and more …\n\n31\nLecture 1: Course Introduction\nChallenges\nCellularMemBTCPU\nGPSWiFimmW\nCog\nRadiolNetwork/Radio ChallengeslGbps data rates with “no” errorslEnergy efficiencylScarce/bifurcated spectrumlReliability and coveragelHeterogeneous networkslSeamless internetwork handoff\nAdHocShort-Range5GlDevice/SoC ChallengeslPerformance lComplexitylSize, Power, CostlHigh frequencies/mmWavelMultiple AntennaslMultiradio Integration lCoexistance\n\n32\nLecture 1: Course Introduction\nSoftware-Defined (SD) Radio: \nWideband antennas and A/Ds span BW of desired signalsDSP programmed to process desired signal: no specialized HW\nCellularAppsProcessorBTMediaProcessor\nGPSWLANWimax\nDVB-H\nFM/XMA/DA/DDSPA/DA/DIs this the solution to the device challenges?Is this the solution to the device challenges?\n\n33\nLecture 1: Course Introduction\n“Sorry America, your airwaves are full*”\n33\nOn the Horizon: “The Internet of Things”\n50 billion devices by 2020 \nExponential Mobile Data GrowthLeading to massive spectrum deficit\nSource: FCC*CNN MoneyTech – Feb. 2012\n\n34\nLecture 1: Course Introduction\n•Effectively unlimited” capacity possible via personal cells (pcells). S. Perlman, Artemis. “The wireless industry has reached the theoretical limit of how fast networks can go” K. Fitcher,  Connected Planet “There is no theoretical maximum to the amount of data that can be carried by a radio channel” M. Gass, 802.11 Wireless Networks: The Definitive Guide“We’re 99% of the way” to the “barrier known as Shannon’s limit,” D. Warren, GSM Association Sr. Dir. of Tech. Shannon was wrong, there is no limitWe are at the Shannon LimitAre we at the Shannon limit of the Physical Layer?\n\n35\nLecture 1: Course Introduction\nWhat would Shannon say?•Time-varying channelsWe don’t know the Shannon capacity of most wireless channelsChannels with interference or relaysCellular systemsChannels with delay/energy/$$$ constraintsAd-hoc and sensor networksShannon theory provides design insights and system performance upper bounds\n\n36\nLecture 1: Course Introduction\nCurrent/Next-Gen Wireless Systems•Current:•5G/4G Cellular Systems (LTE-Advanced)•4G Wireless LANs/WiFi (802.11ac)•mmWave massive MIMO systems•Satellite Systems  •Bluetooth•Zigbee •Emerging•6G Cellular and Advanced WiFi Systems•Ad/hoc and Cognitive Radio Networks•Energy-Harvesting Systems•Chemical/MolecularMuch roomFor innovation\n\n37\nLecture 1: Course Introduction\nSpectral ReuseDue to its scarcity, spectrum is reused\nBSIn licensed bandsCellularWifi, BT, UWB,…and unlicensed bands\nReuse introduces interference\n\n38\nLecture 1: Course Introduction\nCellular Systems: Reuse channels to maximize capacity•Geographic region divided into cells•Freq./timeslots/codes/space reused in different cells (reuse 1 common).•Interference between cells using same channel: interference mitigation key•Base stations coordinate handoff and control functions•Shrinking cell size increases capacity, as well as complexity, handoff, …BASESTATION\n\n39\nLecture 1: Course Introduction\n5G Cellular •Much higher data rates than 4G/LTE (peak 1.3 Gbps)•4G systems has 100 Mbps peak rates•Greater spectral efficiency (bits/s/Hz)•Massive MIMO, Device to Device, Internet of Things•Introducing new spectrum for communication•mmWave band for faster communication•Low packet latency (<1ms)•Cloud and edge computing for networking based on SDN/NFV•Feasible to support real-time and live-streaming applications\n\n40\nLecture 1: Course Introduction\nFuture Cellular Phones\nMuch better performance and reliability than today- 10Gbps rates, low latency, 99% coverage indoors and out BSBSPhoneSystemBSSan FranciscoParisNth-GenCellularNth-GenCellularInternet\nLTE backbone is  the InternetEverything wireless in one deviceBurden for this performance is on the backbone network\n\n41\nLecture 1: Course Introduction\nWiFi NetworksMultimedia Everywhere, Without Wires\n802.11ac\nWireless HDTVand Gaming•Streaming video•    Gbps data rates•    High reliability•    Coverage inside and out\n\n42\nLecture 1: Course Introduction\nWireless LAN Standards•802.11b (Old – 1990s)•Standard for 2.4GHz ISM band (80 MHz)•Direct sequence spread spectrum (DSSS)•Speeds of 11 Mbps, approx. 500 ft range•802.11a/g (Middle Age– mid-late 1990s)•Standard for 5GHz band (300 MHz)/also 2.4GHz•OFDM in 20 MHz with adaptive rate/codes•Speeds of 54 Mbps, approx. 100-200 ft range•802.11n/ac [WiFi4/5] (Still Under Use)•Standard in 2.4 GHz and 5 GHz band•Adaptive OFDM /MIMO in 20/40/80/160 MHz  •Antennas: 2-4, up to 8•Speeds up to 600Mbps/6.9 Gbps, approx. 200 ft range•Other advances in packetization, antenna use, MU-MIMO(only download links)Many WLAN cards have (a/b/g/n)\n\n43\nLecture 1: Course Introduction\nWireless LAN Standards•802.11ax [WiFi 6](Current)•Standard in 2.4 GHz and 5 GHz band•Most characteristics are similar to WiFi 5 •Speeds up to 9.6 Gbps, approx. 200 ft range•Other advances: MU-MIMO in both upload and download links, OFDMA•802.11be [WiFi 7] (Latest)•Standard in 2.4 GHz, 5 GHz and 6 GHz band•Introduce CMU-MIMO, to support 16 data stream•Introduce 4096QAM, to support 30 Gbps•Introduce Multi-Link Operation, supporting higher throughput and lower latency\n\n44\nLecture 1: Course Introduction\n•The WiFi standard lacks good mechanisms to mitigate interference, especially in dense AP deployments•Multiple access protocol (CSMA/CD) from 1970s•Static channel assignment, power levels, and carrier sensing thresholds•In such deployments WiFi systems exhibit poor spectrum reuse and significant contention among APs and clients•Result is low throughput and a poor user experience•MU-MIMO will help each AP, but not interfering APsWhy does WiFi performance suck?\nCarrier Sense Multiple Access: if another WiFi signal detected, random backoff Collision Detection: if collisiondetected, resend\n\n45\nLecture 1: Course Introduction\nmmWave Massive MIMO•mmWaves have large non-monotonic path loss•Channel model poorly understood•mmWave antennas are small: perfect for massive MIMO•Bottlenecks: channel estimation and system complexity•Non-coherent design holds significant promiseHundredsof antennasDozens of devices\nç10s of GHz of Spectrumè\n\n46\nLecture 1: Course Introduction\nSatellite Systems•Cover very large areas•Different orbit heights•GEOs (39000 Km) versus LEOs (2000 Km)•Optimized for one-way transmission•Radio (XM, Sirius) and movie (SatTV, DVB/S) broadcasts•Most two-way systems went bankrupt•Global Positioning System (GPS) ubiquitous•Satellite signals used to pinpoint location•Popular  in cell phones, PDAs, and navigation devices•More recently,  smartphone for Satellite Communications\n\n47\nLecture 1: Course Introduction\n8C32810.61-Cimini-7/98Bluetooth•Cable replacement RF technology (low cost)•Short range (10m, extendable to 100m)•2.4 GHz band (crowded)•1 Data (700 Kbps) and 3 voice channels, up to 3 Mbps•Widely supported by telecommunications, PC, and consumer electronics companies•Few applications beyond cable replacement\n\n48\nLecture 1: Course Introduction\nIEEE 802.15.4/ZigBee Radios•Low-rate low-power low-cost secure radio •Complementary to WiFi and Bluetooth•Frequency bands: 784, 868, 915 MHz, 2.4 GHz•Data rates: 20Kbps, 40Kbps, 250 Kbps •Range: 10-100m line-of-sight•Support for large mesh networking or star clusters•Support for low latency devices•CSMA-CA channel access•Applications: light switches, electricity meters, traffic management, and other low-power sensors.\n\n49\nLecture 1: Course Introduction\nWireless Sensor Networks\n§Energy (transmit and processing) is the driving constraint§Data flows to centralized location (joint compression)§Low per-node rates but tens to thousands of nodes§Intelligence is in the network rather than in the devices•Smart homes/buildings•Smart structures•Search and rescue•Homeland security•Event detection•Battlefield surveillance\n\n50\nLecture 1: Course Introduction\nSoftware-Defined Network ArchitectureFreq.Allocation PowerControlSelfHealingICICQoSOpt.CSThresholdUNIFIED CONTROL PLANENetwork OptimizationApp layerVideoSecurityVehicularNetworksHealthM2M\nWiFiCellularmmWaveAd-Hoc NetworksHW layer…\nDistributed AntennasCloud Computing\n\n51\nLecture 1: Course Introduction\nSpectrum Regulation•Spectrum a scarce public resource, hence allocated•Spectral allocation in US controlled by FCC (commercial) or OSM (defense)•FCC auctions spectral blocks for set applications.•Some spectrum set aside for universal use•Worldwide spectrum controlled by ITU-R•Regulation is a necessary evil.Innovations in regulation being considered worldwide in multiple cognitive radio paradigms\n\n52\nLecture 1: Course Introduction\nEmerging Systems•Ad hoc/mesh wireless networks•Cognitive radio networks•Energy-constrained radios•Distributed control networks•Applications of Communications in Health, Bio-medicine, and Neuroscience\n\n53\nLecture 1: Course Introduction\nAd-Hoc Networks•Peer-to-peer communications•No backbone infrastructure or centralized control•Routing can be multihop•Topology is dynamic•Fully connected with different link SINRs•Open questions•Fundamental capacity region•Resource allocation (power, rate, spectrum, etc.) •Routing\n\n54\nLecture 1: Course Introduction\nCognitive Radios•Cognitive radios support new users in existing crowded spectrum without degrading licensed users•Utilize advanced communication and DSP techniques•Coupled with novel spectrum allocation policies•Multiple paradigms•(MIMO) Underlay (interference below a threshold)•Interweave finds/uses unused time/freq/space slots•Overlay (overhears/relays primary message while cancelling interference it causes to cognitive receiver)NCRIPNCRCRCRCRRxNCRRxNCRTxCRTxMIMO Cognitive UnderlayCognitive Overlay\n\n55\nLecture 1: Course Introduction\nEnergy-Constrained Radios•Transmit energy minimized by sending bits slowly•Leads to increased circuit energy consumption•Short-range networks must consider both transmit and processing/circuit energy•Sophisticated encoding/decoding not always energy-efficient.•MIMO techniques not necessarily energy-efficient •Long transmission times not necessarily optimal•Multihop routing not necessarily optimal•Sub-Nyquist sampling can decrease energy and is sometimes optimal!\n\n56\nLecture 1: Course Introduction\nWhere should energy come from? •Batteries and traditional charging mechanisms•Well-understood devices and systems•Wireless-power transfer•Poorly understood, especially at large distances and with high efficiency•Communication with Energy Harvesting Radios•Intermittent and random energy arrivals•Communication becomes energy-dependent•Can combine information and energy transmission•New principles for radio and network design needed\n\n57\nLecture 1: Course Introduction\nDistributed Control over Wireless \nInterdisciplinary design approach•Control requires fast, accurate, and reliable feedback.•Wireless networks introduce delay and loss •Need reliable networks and robust controllers •Mostly open problemsAutomated Vehicles  - Cars  - Airplanes/UAVs  - Insect flyers\n: Many design challenges\n\n58\nLecture 1: Course Introduction\nApplications in Health, Biomedicine and Neuroscience\nRecovery from Nerve DamageNeuroscience-Nerve network (re)configuration-EEG/ECoG signal processing- Signal processing/control for deep brain stimulation- SP/Comm applied to bioscience\nBody-Area NetworksECoG Epileptic Seizure Localization\nEEG\nECoG\n\n59\nLecture 1: Course Introduction\nMain Points•The wireless vision encompasses many exciting applications•Technical challenges transcend all system design layers•5G networks must support higher performance for some users and extreme energy efficiency for others•Cloud-based software to dynamically control and optimize wireless networks needed (SDWN)•Innovative wireless design needed for 5G cellular/WiFi, mmWave systems, massive MIMO, and IoT connectivity\n\n60\nLecture 1: Course Introduction\nLecture 3: Overview of Internet of ThingsInstructor: Kui RenWIRELESS NETWORK AND IOT SECURITY\n\n61\nLecture 1: Course Introduction\nE Pluribus Unum: Out of Many, OneSmart CityIndustry 4.0The Industrial InternetInternet of EverythingSmarter PlanetMachine to Machine(M2M)TSensors(Trillion Sensors)The FogWhat is the Internet of Things:\n\n62\nLecture 1: Course Introduction\nThe challenges of working in a multidisciplinary area\n\n63\nLecture 1: Course Introduction\n•x\nNetworkSmall ComputerSensing SystemConnected Industrial System\nAdvanced ManufacturingRobotThe challenges of working in a multidisciplinary area\n\n64\nLecture 1: Course Introduction\n•RFID•In 1999，Auto-IDcenter in MIT propose electronic product code (EPC) system and the concept of IoT.•Pervasive Computing•Sensing and Interconnection•Embedded System•In late 1990，wireless sensor network emerges.•In 2006，NSF workshop on Cyber-Physical Systems (CPS)Origination and History:\n\n65\nLecture 1: Course Introduction\nExponential IoT Growth\nSource: Gartner IoT, PC and Mobile device forecast 2015\nPC’s & Mobile DevicesIoT Devices\nTook25 years to get to10 Billion devices* Will take only5 years to getto 30 Billion devices*\n\n66\nLecture 1: Course Introduction\nIt’s not just information technology anymore: •Cyber + Physical•Computation + Dynamics•Security + SafetyContradictions:•Adaptability vs. Repeatability•High connectivity vs. Security and Privacy•High performance vs. Low Energy•Asynchrony vs. Coordination/Cooperation•Scalability vs. Reliability and Predictability•Laws and Regulations vs. Technical Possibilities•Economies of scale (cloud) vs. Locality (fog)•Open vs. Proprietary•Algorithms vs. DynamicsInnovation:Internet of Things systems require new engineering methods and models to address these contradictions\nAutomotive\nBiomedical\nMilitary\nEnergy\nManufacturing\nAvionics\nBuildings\n\n67\nLecture 1: Course Introduction\nThe Hype AroundThe Internet of ThingsUsing Internet technology to connect physical devices (“things”)\nhttp://www.gartner.com/technology/research/hype-cycles/\nInternet of ThingsPeak ofInflatedExpectations\n\n68\nLecture 1: Course Introduction\nThe Hype AroundThe Internet of ThingsIn2020Internet of ThingsAnd in 2021, the IoT has been removed from the cycle, indicating it becoming a mature technique that relies onthe operation for its development \nTrough of Disillusionment\n\n69\nLecture 1: Course Introduction\nIoT is the use of Internet technology for Cyber-Physical SystemsIndustrial automation example from 2008: Bosch-Rexroth printing pressThe term “IoT” includes the technical solution “Internet technology” in the problem statement “connect things”69\nThis Bosch Rexroth printing press is a cyber-physical factory using Ethernet and TCP/IP with high-precision clock synchronization (IEEE 1588) on an isolated LAN\n\n70\nLecture 1: Course Introduction\nFOUR LAYER MODEL\nApplicationsManagement and ServiceNetwork StructureSensing and Recognition\n\n71\nLecture 1: Course Introduction\nCore - Sensing and Recognition\nRFID\nWireless Sensor\nSmart Phones/Devices\n\n72\nLecture 1: Course Introduction\nCore - Network Structure\nInternetIPv4，IPv6\nLow speedAccessBluetoothZigBee\nEmerging wirelessVisible LightNB-IoT\nMobile Network3G/4G\nWireless broadbandWi-FiWiMAX\n\n73\nLecture 1: Course Introduction\n•Management and service layer solves the following data problems:•Storage•Search and retrieval•Utilization•Safety and privacy•Abuse prevention•The corner stone for the so call “Smart XX” technology.Core – Management and Service\nServer in Data CenterCooling System Data Center\n\n74\nLecture 1: Course Introduction\nDifferent requirements than smartphones: low rates/energy consumption•Enabling every electronic device to be connected to each other and the Internet•Includes smartphones, consumer electronics, cars, lights, clothes, sensors, medical devices,…•Value in IoT is data processing in the cloud\nCore – Applications\n\n75\nLecture 1: Course Introduction\nExample: Automotive IoT and Societal Challenges•Safer Transportation•Reduced Emissions•Smart Transportation•Energy Efficiency•Climate Change•Human-Robot Collaboration\n\n76\nLecture 1: Course Introduction\nIoT Application: Autonomous Driving\n\n77\nLecture 1: Course Introduction\n•Smart logistics: Using information generated by RFID, camera, sensors, or GPS to enable optimized and efficient logistic managementExample:SmartLogistics\n\n78\nLecture 1: Course Introduction\nExample:Environmental Monitoring•Environmental Monitoring: Using distributed IoT devices to monitor the environmental status and the change of environment quality for the better environment governance\n\n79\nLecture 1: Course Introduction\nExample: Air-Fuel ratio control to reduce emissions•Catalytic converters reduce CH4, CO2, and NOx emissions•Conversion efficiency optimal at stoichiometric value \nSee:Jin. Kapinski. Deshmukh, Ueda, Butts, “Powertrain Control Verification Benchmark,” HSCC 2014[Slide from J. Deshmukh, Toyota]\n\n81\nLecture 1: Course Introduction\nEconomic Potential\n\n82\nLecture 1: Course Introduction\nGoogle's robotic cars have about $150,000 in equipment including a $70,000LIDAR(laser radar) system.The range finder mounted on the top is aVelodyne64-beam laser. This laser allows the vehicle to generate a detailed 3D map of its environment. The car then takes these generated maps and combines them with high-resolution maps of the world, producing different types of data models that allow it to drive itself. Technical Giant’s Strategy\n\n83\nLecture 1: Course Introduction\nGoogle and FacebookWall Street Journal:By Alistair Barr and  Reed Albergotti April 14, 2014Google Inc.on Monday acquired a maker of solar-powered drones—a startup that Facebook Inc.had also considered acquiring—as the technology giants battle to extend their influence and find new users in the far corners of the earth.\nArtist's rendering of Titan's Solara 50, which in theory at least, can stay aloft for years.\n\n84\nLecture 1: Course Introduction\nTesla Gigafactory\nArtists conception of battery factory under construction in Nevada.From: https://www.tesla.com/gigafactory\n\n85\nLecture 1: Course Introduction\nApple iCar?\nMacworld, Aug. 10, 2016:Reports suggest that Apple is developing an electric iCar to rival Tesla. With reports that Apple is negotiating with BMW, and poaching Samsung employees (especially battery specialists) and reassigning large numbers of staff for its Project Titan, is Apple manufacturing an iCar, and when will the iCar be launched?\nNow cancelled…\n\n86\nLecture 1: Course Introduction\nInstead?XiaomiSU7comes！\n\n87\nLecture 1: Course Introduction\nIoTInnovationinChina\nApolloofBaidu\nXNGPofXiaopeng\nGreentrafficlight of AMap\nSmart HomeofXiaomi\n\n88\nLecture 1: Course Introduction\nTaking ICV as ExampleØAdvanced on-board sensors, controllers, and actuators\nØIntegration of modern communication and network technologiesØIntelligent information exchange between vehicles, roads, people and clouds\n\n89\nLecture 1: Course Introduction\nRapid Development of ICV in China\n89\n\n90\nLecture 1: Course Introduction\npIntelligent Connected Vehicle\nAutonomous DrivingAutomotive NetworkingIntelligent Vehicle Cockpit\n\n91\nLecture 1: Course Introduction\npAutonomous Driving\n— Perception   Sensing the external world—Prediction    Algorithmic understanding of the external environment and self-vehicle state— Planning   Finding the right path to get to the destination\n\n92\nLecture 1: Course Introduction\npAutomotive NetworkingØVehicles to cloud, vehicles tovehicles, vehicles toroads, vehicles topeople, and in-vehicle networks\n\n93\nLecture 1: Course Introduction\npIntelligent Vehicle Cockpit\nCurrent PhaseIntegration of electronic information systems into \"e-cockpit domain\"The software truly embodies the functionality of the Smart Cockpit.Smart cockpits are starting to evolve into a personal third living space as autonomous driving becomes commonplace.\n\n94\nLecture 1: Course Introduction\nBosch and Intel developed the CAN bus system\nIn-vehicle operating systemThe increasing variety of in-vehicle embedded electronic products, platform, modular development needsModel S •with a 17-inch embedded screen•eliminated physical buttons\nHUD manufacturer Navdy product that combines navigation display, voice interaction, gesture control, etc.Android Auto and Apple Carplay were releasedAudifull LCD instrument clustersVisteon SmartCore•a smart cockpit system •integrates cockpit components (in-vehicle center controls and instrument clusters)Advanced smart cockpit solutionsintegrating cutting-edge technologies such as artificial intelligence and VR\n1980\n19\n9\n0\n2012\n2015\n2018\n2014\n2017\n2019pIntelligent Vehicle Cockpit\n\n95\nLecture 1: Course Introduction\npAutomotive revolution – perspective towards 2030\n\n96\nLecture 1: Course Introduction\npAutomotive revolution – perspective towards 2030\n\n97\nLecture 1: Course Introduction\nFuture IT Scene\nInfrastructuralcoreSensory swarmMobileaccess\n97\nThe Cloud!\nCourtesy: J. RabaeyBridge of the physical world and the digital worldMore InterconnectionMore Pervasive SensingSmarter Operation\n\n98\nLecture 1: Course Introduction\nThe future is here!"
+}

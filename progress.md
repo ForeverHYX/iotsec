@@ -1,0 +1,114 @@
+# 进度日志
+
+## 会话：2026-06-24
+
+### 阶段 1：需求与发现
+- **状态：** complete
+- **开始时间：** 2026-06-24 Asia/Shanghai
+- 执行的操作：
+  - 读取规划技能说明。
+  - 盘点当前目录，发现 11 份课程资料。
+  - 检查 git 状态，确认当前目录不是 git 仓库。
+  - 创建项目规划文件。
+  - 检查可用工具和 GitHub CLI 登录状态。
+- 创建/修改的文件：
+  - `task_plan.md`
+  - `findings.md`
+  - `progress.md`
+
+### 阶段 2：资料抽取与内容规划
+- **状态：** complete
+- 执行的操作：
+  - 发现缺少 LibreOffice/pandoc/poppler 等转换工具，决定用 Python 抽取文本。
+  - 编写 `tools/extract_materials.py`，用标准库解析 PPTX、用 PyPDF2 解析 PDF。
+  - 编写并运行 `tests/test_extract_materials.py`，验证 PPTX 排序、slug、JSON 输出。
+  - 将 11 份课件移动到 `materials/` 并运行抽取脚本。
+  - 用户要求 GitHub 仓库默认设为 public，已记录为部署约束。
+- 创建/修改的文件：
+  - `tools/extract_materials.py`
+  - `tests/test_extract_materials.py`
+  - `materials/*`
+  - `content/extracted/*.json`
+  - `content/materials.json`
+
+### 阶段 3：复习笔记生成
+- **状态：** complete
+- 执行的操作：
+  - 为 11 份课件分别生成中文复习笔记。
+  - 生成 `notes/index.md` 总复习索引。
+  - 每篇笔记包含速览、核心概念、考试重点、易混点和自测题。
+- 创建/修改的文件：
+  - `notes/*.md`
+
+### 阶段 4：静态阅读网站
+- **状态：** complete
+- 执行的操作：
+  - 编写 `tools/build_site_data.py` 和测试，生成 `content/notes.json`。
+  - 创建 `index.html`、`assets/styles.css`、`assets/app.js`。
+  - 实现章节目录、搜索、笔记渲染、课件下载和 PDF/PPTX 预览入口。
+  - 运行完整测试套件，确认通过。
+  - 启动本地 HTTP 服务 `http://localhost:4173/`。
+  - 用 agent-browser 验证章节列表、搜索过滤、章节切换、课件面板、hash 路由。
+  - 发现 hash 路由在旧模块中不响应，补充 `hashchange` 监听后验证通过。
+  - 截图检查桌面和移动布局；PPTX 本地 Office viewer 预览因 localhost 不可公开访问而报错，已在页面提示，部署到公开 Pages 后会使用公开 URL。
+  - 添加 `.gitignore` 和 `.nojekyll`。
+- 创建/修改的文件：
+  - `tools/build_site_data.py`
+  - `tests/test_build_site_data.py`
+  - `tests/test_app_utils.mjs`
+  - `content/notes.json`
+  - `package.json`
+  - `index.html`
+  - `assets/styles.css`
+  - `assets/app.js`
+  - `.gitignore`
+  - `.nojekyll`
+
+### 阶段 5：GitHub 与 Pages 部署
+- **状态：** pending
+- 执行的操作：
+  - 待开始。
+- 创建/修改的文件：
+  - 待记录。
+
+### 阶段 6：交付验证
+- **状态：** pending
+- 执行的操作：
+  - 待开始。
+- 创建/修改的文件：
+  - 待记录。
+
+## 测试结果
+| 测试 | 输入 | 预期结果 | 实际结果 | 状态 |
+|------|------|---------|---------|------|
+| git 仓库检查 | `git status --short --branch` | 了解仓库状态 | `fatal: not a git repository` | 已记录 |
+| GitHub CLI 登录检查 | `gh auth status` | 确认可推送/创建仓库 | 已登录 `ForeverHYX`，有 `repo` 权限 | 通过 |
+| 文档转换工具检查 | `command -v ...` | 了解可用抽取工具 | Python/Node/npm/gh/git 可用，LibreOffice/pandoc/poppler 不可用 | 已记录 |
+| Python 包检查 | `importlib.util.find_spec(...)` | 了解可用 Python 解析库 | `PyPDF2` 可用，PPTX 需标准库解析 | 已记录 |
+| 抽取脚本单元测试 | `python3 -m unittest tests/test_extract_materials.py -v` | 3 个测试通过 | 3 个测试通过 | 通过 |
+| 课件文本抽取 | `python3 tools/extract_materials.py ...` | 生成 11 份抽取 JSON | `Extracted 11 materials to content/extracted` | 通过 |
+| 网站数据脚本测试 | `python3 -m unittest tests/test_build_site_data.py -v` | 2 个测试通过 | 2 个测试通过 | 通过 |
+| 前端工具测试 | `node --test tests/test_app_utils.mjs` | 2 个测试通过 | 2 个测试通过 | 通过 |
+| 完整测试套件 | `npm test` | Python 和 Node 测试全部通过 | 5 个 Python 测试、2 个 Node 测试通过 | 通过 |
+| 课件-笔记覆盖检查 | 对比 `content/materials.json` 与 `content/notes.json` | 11 份课件均有笔记 | `missing_notes []` | 通过 |
+| 本地页面加载 | `agent-browser open http://localhost:4173/` | 章节列表和笔记显示 | 总复习索引、12 个笔记入口显示 | 通过 |
+| 搜索与章节切换 | 搜索 WEP 并打开章节 | 只显示 WEP 条目且笔记更新 | WEP 笔记标题和 10 个小节显示 | 通过 |
+| 课件面板 | 点击 WEP 的课件 Tab | 显示课件标题、打开链接、iframe | 显示 PPTX 课件面板；本地 Office viewer 因 localhost 限制报错 | 部分通过 |
+| Hash 路由 | 打开 `#lecture-14-nfc-application-security-1` | 显示 NFC 笔记 | NFC 笔记标题和 13 个小节显示 | 通过 |
+
+## 错误日志
+| 时间戳 | 错误 | 尝试次数 | 解决方案 |
+|--------|------|---------|---------|
+| 2026-06-24 | 当前目录不是 git 仓库 | 1 | 后续初始化仓库 |
+
+## 五问重启检查
+| 问题 | 答案 |
+|------|------|
+| 我在哪里？ | 阶段 5：GitHub 与 Pages 部署 |
+| 我要去哪里？ | 初始化仓库、推送 GitHub、启用 Pages 并验证线上地址 |
+| 目标是什么？ | 让用户能在线阅读当前课件和按章节整理的中文复习笔记 |
+| 我学到了什么？ | 见 findings.md |
+| 我做了什么？ | 见上方记录 |
+
+---
+*每个阶段完成后或遇到错误时更新此文件*

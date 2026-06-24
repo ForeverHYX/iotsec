@@ -1,0 +1,2905 @@
+{
+  "slug": "lecture-12-rfid-security-and-privacy",
+  "title": "Lecture 12 RFID Security and Privacy",
+  "filename": "Lecture 12 RFID Security and Privacy.pptx",
+  "extension": "pptx",
+  "kind": "pptx",
+  "slide_count": 151,
+  "page_count": null,
+  "slides": [
+    {
+      "number": 1,
+      "title": "RFID Security and Privacy",
+      "lines": [
+        "RFID Security and Privacy",
+        "Wireless network and IoT security"
+      ],
+      "text": "RFID Security and Privacy\nWireless network and IoT security"
+    },
+    {
+      "number": 2,
+      "title": "RFID",
+      "lines": [
+        "RFID",
+        "Cow Jewelry – or – Revolution"
+      ],
+      "text": "RFID\nCow Jewelry – or – Revolution"
+    },
+    {
+      "number": 3,
+      "title": "In terms of appearance…",
+      "lines": [
+        "In terms of appearance…",
+        "What is a",
+        "R",
+        "adio-",
+        "F",
+        "requency",
+        "Id",
+        "entification (RFID) Tag?",
+        "Chip (IC)",
+        "Antenna"
+      ],
+      "text": "In terms of appearance…\nWhat is a\nR\nadio-\nF\nrequency\nId\nentification (RFID) Tag?\nChip (IC)\nAntenna"
+    },
+    {
+      "number": 4,
+      "title": "In terms of usage",
+      "lines": [
+        "In terms of usage",
+        "The use of radio frequency tags to identify real objects.",
+        "What is RFID?",
+        "What does it mean to identify something?"
+      ],
+      "text": "In terms of usage\nThe use of radio frequency tags to identify real objects.\nWhat is RFID?\nWhat does it mean to identify something?"
+    },
+    {
+      "number": 5,
+      "title": "Assign IDs to objects",
+      "lines": [
+        "Assign IDs to objects",
+        "Link the ID to additional information about the object",
+        "Link the ID to complementary info",
+        "Find similar objects",
+        "Identification"
+      ],
+      "text": "Assign IDs to objects\nLink the ID to additional information about the object\nLink the ID to complementary info\nFind similar objects\nIdentification"
+    },
+    {
+      "number": 6,
+      "title": "Bar Codes",
+      "lines": [
+        "Bar Codes",
+        "License Plates",
+        "Social Security Numbers",
+        "Student ID",
+        "Serial Numbers",
+        "Car Keys",
+        "Database Keys",
+        "Identification Examples"
+      ],
+      "text": "Bar Codes\nLicense Plates\nSocial Security Numbers\nStudent ID\nSerial Numbers\nCar Keys\nDatabase Keys\nIdentification Examples"
+    },
+    {
+      "number": 7,
+      "title": "Better supply-chain visibility -- #1 compelling application",
+      "lines": [
+        "Better supply-chain visibility -- #1 compelling application",
+        "U.S. DHS: Passports",
+        "U.S. FDA: Pharmaceuticals, anti-counterfeiting",
+        "Libraries",
+        "House Pets – approx. 50 million",
+        "RFID Identification Applications"
+      ],
+      "text": "Better supply-chain visibility -- #1 compelling application\nU.S. DHS: Passports\nU.S. FDA: Pharmaceuticals, anti-counterfeiting\nLibraries\nHouse Pets – approx. 50 million\nRFID Identification Applications"
+    },
+    {
+      "number": 8,
+      "title": "The Grand Vision: RFID as Next-generation Barcode",
+      "lines": [
+        "The Grand Vision: RFID as Next-generation Barcode",
+        "Barcode",
+        "RFID tag",
+        "Line-of-sight",
+        "Radio contact",
+        "Specifies object type",
+        "Uniquely specifies object",
+        "Fast, automated",
+        "scanning",
+        "Provides pointer",
+        "to database entry",
+        "for every object,",
+        "i.e., unique,",
+        "detailed history"
+      ],
+      "text": "The Grand Vision: RFID as Next-generation Barcode\nBarcode\nRFID tag\nLine-of-sight\nRadio contact\nSpecifies object type\nUniquely specifies object\nFast, automated\nscanning\nProvides pointer\nto database entry\nfor every object,\ni.e., unique,\ndetailed history"
+    },
+    {
+      "number": 9,
+      "title": "You may own a few RFID tags…",
+      "lines": [
+        "You may own a few RFID tags…",
+        "Proximity cards (contactless physical-access cards)",
+        "ExxonMobil",
+        "Speedpass",
+        "EZ Pass",
+        "RFID in fact denotes a spectrum of devices:",
+        "Example RFID Tags In Daily Lives",
+        "SpeedPass",
+        "Mobile phone",
+        "EZ Pass",
+        "Basic",
+        "RFID Tag"
+      ],
+      "text": "You may own a few RFID tags…\nProximity cards (contactless physical-access cards)\nExxonMobil\nSpeedpass\nEZ Pass\nRFID in fact denotes a spectrum of devices:\nExample RFID Tags In Daily Lives\nSpeedPass\nMobile phone\nEZ Pass\nBasic\nRFID Tag"
+    },
+    {
+      "number": 10,
+      "title": "3 Components",
+      "lines": [
+        "3 Components",
+        "Transceiver – Tag Reader",
+        "Transponder – RFID tag",
+        "Antenna",
+        "How Does RFID Work?"
+      ],
+      "text": "3 Components\nTransceiver – Tag Reader\nTransponder – RFID tag\nAntenna\nHow Does RFID Work?"
+    },
+    {
+      "number": 11,
+      "title": "Readers (interrogators) can be at a fixed point such as",
+      "lines": [
+        "Readers (interrogators) can be at a fixed point such as",
+        "Entrance/exit",
+        "Point of sale",
+        "Warehouse",
+        "Readers can also be mobile -- tethered,",
+        "hand-held, or wireless",
+        "RFID Readers"
+      ],
+      "text": "Readers (interrogators) can be at a fixed point such as\nEntrance/exit\nPoint of sale\nWarehouse\nReaders can also be mobile -- tethered,\nhand-held, or wireless\nRFID Readers"
+    },
+    {
+      "number": 12,
+      "title": "阅读器为射频标签工作",
+      "lines": [
+        "阅读器为射频标签工作",
+        "提供能量",
+        "供能",
+        "通信",
+        "阅读器和射频标签之间的",
+        "通信",
+        "阅读器和应用层（中间件）之间的",
+        "通信",
+        "安全保证",
+        "阅读器的通信",
+        "安全性保证",
+        "功能，如使用加密、解密技术",
+        "自组网",
+        "能力",
+        "多天线",
+        "管理",
+        "中间件",
+        "接口",
+        "…",
+        "2.1.1",
+        "阅读器功能",
+        "阅读器作为连接应用层（中间件）和射频标签的桥梁，占据着十分重要的位置。一般来说，阅读器在",
+        "RFID",
+        "系统中可能提供的功能可以总结如下。",
+        "连接",
+        "外设"
+      ],
+      "text": "阅读器为射频标签工作\n提供能量\n供能\n通信\n阅读器和射频标签之间的\n通信\n阅读器和应用层（中间件）之间的\n通信\n安全保证\n阅读器的通信\n安全性保证\n功能，如使用加密、解密技术\n自组网\n能力\n多天线\n管理\n中间件\n接口\n…\n2.1.1\n阅读器功能\n阅读器作为连接应用层（中间件）和射频标签的桥梁，占据着十分重要的位置。一般来说，阅读器在\nRFID\n系统中可能提供的功能可以总结如下。\n连接\n外设"
+    },
+    {
+      "number": 13,
+      "title": "2.1.2",
+      "lines": [
+        "2.1.2",
+        "阅读器分类",
+        "RFID",
+        "系统的工作原理与其所使用的射频信号频率有关。",
+        "工作频率越高，识别距离越远，数据传输速率越高，信号衰减越厉害，对障碍物越敏感。",
+        "按工作频率",
+        "低频",
+        "和",
+        "高频",
+        "阅读器，工作频率一般小于",
+        "1m",
+        "，典型工作频率",
+        "125kHz",
+        "、",
+        "135kHz",
+        "、",
+        "6.78MHz",
+        "、",
+        "13.56MHz",
+        "和",
+        "27.125MHz",
+        "超高频",
+        "和",
+        "特高频",
+        "阅读器，工作频率一般大于",
+        "1m",
+        "，典型工作频率有",
+        "433MHz",
+        "、",
+        "860MHz~960MHz",
+        "、",
+        "2.45GHz",
+        "和",
+        "5.8GHz"
+      ],
+      "text": "2.1.2\n阅读器分类\nRFID\n系统的工作原理与其所使用的射频信号频率有关。\n工作频率越高，识别距离越远，数据传输速率越高，信号衰减越厉害，对障碍物越敏感。\n按工作频率\n低频\n和\n高频\n阅读器，工作频率一般小于\n1m\n，典型工作频率\n125kHz\n、\n135kHz\n、\n6.78MHz\n、\n13.56MHz\n和\n27.125MHz\n超高频\n和\n特高频\n阅读器，工作频率一般大于\n1m\n，典型工作频率有\n433MHz\n、\n860MHz~960MHz\n、\n2.45GHz\n和\n5.8GHz"
+    },
+    {
+      "number": 14,
+      "title": "2.1.2",
+      "lines": [
+        "2.1.2",
+        "阅读器分类",
+        "按结构外观",
+        "在实际应用中，由于需要综合考虑阅读器成本、便携性等方面因素，因此阅读器在外观结构上有很大不同，可分为以下三类：",
+        "固定式",
+        "便携式",
+        "工业读写器",
+        "有线",
+        "供电",
+        "集成度",
+        "高",
+        "搭建",
+        "快速",
+        "体积",
+        "较小",
+        "电池",
+        "供电",
+        "移动",
+        "方便",
+        "行业相关",
+        "可",
+        "集成",
+        "其他",
+        "传感器"
+      ],
+      "text": "2.1.2\n阅读器分类\n按结构外观\n在实际应用中，由于需要综合考虑阅读器成本、便携性等方面因素，因此阅读器在外观结构上有很大不同，可分为以下三类：\n固定式\n便携式\n工业读写器\n有线\n供电\n集成度\n高\n搭建\n快速\n体积\n较小\n电池\n供电\n移动\n方便\n行业相关\n可\n集成\n其他\n传感器"
+    },
+    {
+      "number": 15,
+      "title": "2.1.3",
+      "lines": [
+        "2.1.3",
+        "阅读器操作规范",
+        "为保证阅读器的性能满足应用需求，在阅读器的使用过程中通常要遵循相应的操作规范。",
+        "在操作规范中，下面几点是选择使用阅读器时需要重点考虑的方面："
+      ],
+      "text": "2.1.3\n阅读器操作规范\n为保证阅读器的性能满足应用需求，在阅读器的使用过程中通常要遵循相应的操作规范。\n在操作规范中，下面几点是选择使用阅读器时需要重点考虑的方面："
+    },
+    {
+      "number": 16,
+      "title": "2.1.4",
+      "lines": [
+        "2.1.4",
+        "阅读器组成",
+        "又称",
+        "基带控制",
+        "模块",
+        "包含：",
+        "微处理器",
+        "以执行计算任务",
+        "数字信号处理芯片",
+        "以完成数字信号的编码、解码",
+        "又称",
+        "高频接口",
+        "模块",
+        "包含分隔的信道：",
+        "发射器",
+        "信号通道",
+        "接收器",
+        "信号通道"
+      ],
+      "text": "2.1.4\n阅读器组成\n又称\n基带控制\n模块\n包含：\n微处理器\n以执行计算任务\n数字信号处理芯片\n以完成数字信号的编码、解码\n又称\n高频接口\n模块\n包含分隔的信道：\n发射器\n信号通道\n接收器\n信号通道"
+    },
+    {
+      "number": 17,
+      "title": "2.1.5",
+      "lines": [
+        "2.1.5",
+        "信号处理与控制模块",
+        "与上位机进行",
+        "通信",
+        "，并",
+        "执行",
+        "从上位机发来的命令",
+        "控制",
+        "与射频标签的通信过程",
+        "信号的",
+        "编码",
+        "和",
+        "解码",
+        "执行",
+        "防碰撞",
+        "算法",
+        "对阅读器和射频标签之间传送的数据进行",
+        "加密",
+        "和",
+        "解密",
+        "进行阅读器和标签之间的",
+        "身份验证"
+      ],
+      "text": "2.1.5\n信号处理与控制模块\n与上位机进行\n通信\n，并\n执行\n从上位机发来的命令\n控制\n与射频标签的通信过程\n信号的\n编码\n和\n解码\n执行\n防碰撞\n算法\n对阅读器和射频标签之间传送的数据进行\n加密\n和\n解密\n进行阅读器和标签之间的\n身份验证"
+    },
+    {
+      "number": 18,
+      "title": "RFID Hardware",
+      "lines": [
+        "RFID Hardware",
+        "Magnetic / Inductive Coupling",
+        "Transceiver",
+        "Tag Reader",
+        "antenna",
+        "RFID",
+        "Tag",
+        "IC or microprocessor",
+        "antenna"
+      ],
+      "text": "RFID Hardware\nMagnetic / Inductive Coupling\nTransceiver\nTag Reader\nantenna\nRFID\nTag\nIC or microprocessor\nantenna"
+    },
+    {
+      "number": 19,
+      "title": "2.1.6",
+      "lines": [
+        "2.1.6",
+        "射频模块",
+        "电感耦合型射频模块",
+        "低频",
+        "、",
+        "高频",
+        "RFID",
+        "系统通过阅读器和射频标签之间的",
+        "电感耦合",
+        "工作。该工作方式的射频标签一般是",
+        "无源",
+        "的，通过电感耦合给标签提",
+        "供能",
+        "量。",
+        "阅读器",
+        "向射频标签发送数据时，可以采用多种",
+        "数字调制",
+        "技术对数据进行调制。",
+        "射频标签",
+        "向阅读器发送数据时，通常采用",
+        "负载调制",
+        "技术，将射频标签天线线圈中的电压变化传到阅读器天线。"
+      ],
+      "text": "2.1.6\n射频模块\n电感耦合型射频模块\n低频\n、\n高频\nRFID\n系统通过阅读器和射频标签之间的\n电感耦合\n工作。该工作方式的射频标签一般是\n无源\n的，通过电感耦合给标签提\n供能\n量。\n阅读器\n向射频标签发送数据时，可以采用多种\n数字调制\n技术对数据进行调制。\n射频标签\n向阅读器发送数据时，通常采用\n负载调制\n技术，将射频标签天线线圈中的电压变化传到阅读器天线。"
+    },
+    {
+      "number": 20,
+      "title": "RFID Hardware (Cont’d)",
+      "lines": [
+        "RFID Hardware (Cont’d)",
+        "Propagation Coupling",
+        "Transceiver",
+        "Tag Reader",
+        "antenna",
+        "RFID",
+        "Tag",
+        "IC or microprocessor",
+        "antenna"
+      ],
+      "text": "RFID Hardware (Cont’d)\nPropagation Coupling\nTransceiver\nTag Reader\nantenna\nRFID\nTag\nIC or microprocessor\nantenna"
+    },
+    {
+      "number": 21,
+      "title": "2.1.6",
+      "lines": [
+        "2.1.6",
+        "射频模块",
+        "电磁反向散射耦合型射频模块",
+        "远",
+        "距离",
+        "超高频",
+        "RFID",
+        "系统利用阅读器与射频标签之间的",
+        "电磁反向散耦合",
+        "原理工作的，类似于雷达的工作原理。",
+        "该系统中，为了给射频标签提供工作能量，阅读器必须",
+        "不断地发送",
+        "射频信号。",
+        "阅读器发送信号和标签返回信号",
+        "频率相同",
+        "、",
+        "强度不同",
+        "。",
+        "为了区分，超高频的射频模块可分为：",
+        "源",
+        "模块、",
+        "发送",
+        "模块和",
+        "接受",
+        "模块。"
+      ],
+      "text": "2.1.6\n射频模块\n电磁反向散射耦合型射频模块\n远\n距离\n超高频\nRFID\n系统利用阅读器与射频标签之间的\n电磁反向散耦合\n原理工作的，类似于雷达的工作原理。\n该系统中，为了给射频标签提供工作能量，阅读器必须\n不断地发送\n射频信号。\n阅读器发送信号和标签返回信号\n频率相同\n、\n强度不同\n。\n为了区分，超高频的射频模块可分为：\n源\n模块、\n发送\n模块和\n接受\n模块。"
+    },
+    {
+      "number": 22,
+      "title": "2.1.6",
+      "lines": [
+        "2.1.6",
+        "射频模块",
+        "电磁反向散射耦合型射频模块",
+        "源模块的作用是为发送通道和接受通道提供",
+        "本地振荡器",
+        "（",
+        "Local Oscillator",
+        "）。",
+        "放大之后的载波信号经过功分器分成两路，一路",
+        "送往发送",
+        "模块，一路",
+        "送往接受",
+        "模块。"
+      ],
+      "text": "2.1.6\n射频模块\n电磁反向散射耦合型射频模块\n源模块的作用是为发送通道和接受通道提供\n本地振荡器\n（\nLocal Oscillator\n）。\n放大之后的载波信号经过功分器分成两路，一路\n送往发送\n模块，一路\n送往接受\n模块。"
+    },
+    {
+      "number": 23,
+      "title": "2.1.6",
+      "lines": [
+        "2.1.6",
+        "射频模块",
+        "电磁反向散射耦合型射频模块",
+        "发送模块由",
+        "混频器",
+        "、",
+        "线性放大器",
+        "、",
+        "前置放大器",
+        "、",
+        "功率放大器",
+        "和",
+        "阻抗变换网络",
+        "组成。",
+        "线性放大器",
+        "信号放大",
+        "混频器",
+        "载波、基带信号混合调制",
+        "功率放大器",
+        "阻抗变换网",
+        "阻抗匹配",
+        "低通滤波器和谐波抑制器",
+        "环形器"
+      ],
+      "text": "2.1.6\n射频模块\n电磁反向散射耦合型射频模块\n发送模块由\n混频器\n、\n线性放大器\n、\n前置放大器\n、\n功率放大器\n和\n阻抗变换网络\n组成。\n线性放大器\n信号放大\n混频器\n载波、基带信号混合调制\n功率放大器\n阻抗变换网\n阻抗匹配\n低通滤波器和谐波抑制器\n环形器"
+    },
+    {
+      "number": 24,
+      "title": "2.1.6",
+      "lines": [
+        "2.1.6",
+        "射频模块",
+        "电磁反向散射耦合型射频模块",
+        "接受模块由",
+        "线性放大器",
+        "、两个",
+        "功分器",
+        "和两个",
+        "混频器",
+        "组成。",
+        "射频标签返回",
+        "微弱信号",
+        "天线",
+        "环形器",
+        "（三端口微波器件）",
+        "带通滤波器",
+        "功分器",
+        "混频器",
+        "I",
+        "路基带信号输出",
+        "混频器",
+        "Q",
+        "路基带信号输出"
+      ],
+      "text": "2.1.6\n射频模块\n电磁反向散射耦合型射频模块\n接受模块由\n线性放大器\n、两个\n功分器\n和两个\n混频器\n组成。\n射频标签返回\n微弱信号\n天线\n环形器\n（三端口微波器件）\n带通滤波器\n功分器\n混频器\nI\n路基带信号输出\n混频器\nQ\n路基带信号输出"
+    },
+    {
+      "number": 25,
+      "title": "2.1.6",
+      "lines": [
+        "2.1.6",
+        "射频模块",
+        "电磁反向散射耦合型射频模块",
+        "射频模块主要功能",
+        "产生高频发送能量，",
+        "激活",
+        "射频标签并为其提",
+        "供能",
+        "量（无源射频标签）",
+        "对发送信号进行",
+        "调制",
+        "，用于将数据传输给射频标签。",
+        "接受并",
+        "解调",
+        "来自射频标签的射频信号。"
+      ],
+      "text": "2.1.6\n射频模块\n电磁反向散射耦合型射频模块\n射频模块主要功能\n产生高频发送能量，\n激活\n射频标签并为其提\n供能\n量（无源射频标签）\n对发送信号进行\n调制\n，用于将数据传输给射频标签。\n接受并\n解调\n来自射频标签的射频信号。"
+    },
+    {
+      "number": 26,
+      "title": "Characteristics:",
+      "lines": [
+        "Characteristics:",
+        "Passive device – receives power from reader",
+        "Range of up to several meters",
+        "In effect a “smart label”: simply calls out its (unique) name and/or static data",
+        "Basic RFID Tag Characteristics",
+        "“74AB8”",
+        "“5F8KJ3”",
+        "“",
+        "Plastic #3”"
+      ],
+      "text": "Characteristics:\nPassive device – receives power from reader\nRange of up to several meters\nIn effect a “smart label”: simply calls out its (unique) name and/or static data\nBasic RFID Tag Characteristics\n“74AB8”\n“5F8KJ3”\n“\nPlastic #3”"
+    },
+    {
+      "number": 27,
+      "title": "Little memory",
+      "lines": [
+        "Little memory",
+        "Static 64-to-128-bit identifier in current ultra-cheap generation (five cents / unit)",
+        "Hundreds of bits soon",
+        "Maybe writeable under good conditions",
+        "Little computational power",
+        "A few thousand gates",
+        "Static keys for read/write permission",
+        "No",
+        "real cryptographic functions available",
+        "The Capabilities of a Basic RFID Tag"
+      ],
+      "text": "Little memory\nStatic 64-to-128-bit identifier in current ultra-cheap generation (five cents / unit)\nHundreds of bits soon\nMaybe writeable under good conditions\nLittle computational power\nA few thousand gates\nStatic keys for read/write permission\nNo\nreal cryptographic functions available\nThe Capabilities of a Basic RFID Tag"
+    },
+    {
+      "number": 28,
+      "title": "Read Only",
+      "lines": [
+        "Read Only",
+        "factory programmed",
+        "usually",
+        "chipless",
+        "Read / Write",
+        "on-board memory",
+        "can save data",
+        "can change ID",
+        "higher cost",
+        "Types of Tags"
+      ],
+      "text": "Read Only\nfactory programmed\nusually\nchipless\nRead / Write\non-board memory\ncan save data\ncan change ID\nhigher cost\nTypes of Tags"
+    },
+    {
+      "number": 29,
+      "title": "Amplitude Modulation (AM)",
+      "lines": [
+        "Amplitude Modulation (AM)",
+        "Frequency Shift Keying (FSK)",
+        "Phase Shift Keying (PSK)",
+        "Data Transfer: Modulation Techniques"
+      ],
+      "text": "Amplitude Modulation (AM)\nFrequency Shift Keying (FSK)\nPhase Shift Keying (PSK)\nData Transfer: Modulation Techniques"
+    },
+    {
+      "number": 30,
+      "title": "One frequency",
+      "lines": [
+        "One frequency",
+        "Change the phase on the transition between a 0 to 1 or 1 to 0",
+        "Faster data rate than FSK",
+        "Noise immunity",
+        "Slightly more difficult to build a reader than FSK",
+        "Phase Shift Keying"
+      ],
+      "text": "One frequency\nChange the phase on the transition between a 0 to 1 or 1 to 0\nFaster data rate than FSK\nNoise immunity\nSlightly more difficult to build a reader than FSK\nPhase Shift Keying"
+    },
+    {
+      "number": 31,
+      "title": "Data Encoding",
+      "lines": [
+        "Data Encoding"
+      ],
+      "text": "Data Encoding"
+    },
+    {
+      "number": 32,
+      "title": "4.1",
+      "lines": [
+        "4.1",
+        "RFID",
+        "的标签识别协议",
+        "与其他无线传输系统一样，",
+        "RFID",
+        "系统也存在",
+        "信号干扰",
+        "问题。",
+        "RFID",
+        "系统中，主要存在以下两种类型的信号干扰：",
+        "阅读器之间的冲突干扰",
+        "（多个阅读器同时发送信号",
+        "）",
+        "标签之间的冲突干扰",
+        "（多个阅读器同时响应阅读器）",
+        "因此，需要降低阅读器之间以及标签之间的冲突来提高对标签的识别效率。"
+      ],
+      "text": "4.1\nRFID\n的标签识别协议\n与其他无线传输系统一样，\nRFID\n系统也存在\n信号干扰\n问题。\nRFID\n系统中，主要存在以下两种类型的信号干扰：\n阅读器之间的冲突干扰\n（多个阅读器同时发送信号\n）\n标签之间的冲突干扰\n（多个阅读器同时响应阅读器）\n因此，需要降低阅读器之间以及标签之间的冲突来提高对标签的识别效率。"
+    },
+    {
+      "number": 33,
+      "title": "4.1",
+      "lines": [
+        "4.1",
+        "RFID",
+        "的标签识别协议",
+        "针对阅读器之间的冲突问题，存在三种典型的防冲突协议："
+      ],
+      "text": "4.1\nRFID\n的标签识别协议\n针对阅读器之间的冲突问题，存在三种典型的防冲突协议："
+    },
+    {
+      "number": 34,
+      "title": "CSMA",
+      "lines": [
+        "CSMA"
+      ],
+      "text": "CSMA"
+    },
+    {
+      "number": 35,
+      "title": "4.1",
+      "lines": [
+        "4.1",
+        "RFID",
+        "的标签识别协议",
+        "与阅读器相比，标签受硬件资源限制，存储能力和计算能力很有限。这使得标签没有冲突检测功能，标签之间不能相互的通信，所有的冲突检测都需要借助于阅读器完成。从系统的复杂度以及成本方面考虑，",
+        "TDMA",
+        "可用于检测",
+        "RFID",
+        "标签之间的冲突。"
+      ],
+      "text": "4.1\nRFID\n的标签识别协议\n与阅读器相比，标签受硬件资源限制，存储能力和计算能力很有限。这使得标签没有冲突检测功能，标签之间不能相互的通信，所有的冲突检测都需要借助于阅读器完成。从系统的复杂度以及成本方面考虑，\nTDMA\n可用于检测\nRFID\n标签之间的冲突。"
+    },
+    {
+      "number": 36,
+      "title": "4",
+      "lines": [
+        "4",
+        ".1",
+        "基于",
+        "ALOHA",
+        "的防冲突算法",
+        "基于",
+        "ALOHA",
+        "的防冲突算法采用了",
+        "回退",
+        "的机制，标签以概率的方法参与识别过程。",
+        "三种基于",
+        "ALOHA",
+        "的防冲突算法：",
+        "纯",
+        "ALOHA",
+        "算法",
+        "时隙",
+        "ALOHA",
+        "算法",
+        "基于帧的时隙",
+        "ALOHA",
+        "算法",
+        "基于",
+        "ALOHA",
+        "的协议的特点：",
+        "简单",
+        "且",
+        "公平"
+      ],
+      "text": "4\n.1\n基于\nALOHA\n的防冲突算法\n基于\nALOHA\n的防冲突算法采用了\n回退\n的机制，标签以概率的方法参与识别过程。\n三种基于\nALOHA\n的防冲突算法：\n纯\nALOHA\n算法\n时隙\nALOHA\n算法\n基于帧的时隙\nALOHA\n算法\n基于\nALOHA\n的协议的特点：\n简单\n且\n公平"
+    },
+    {
+      "number": 37,
+      "title": "4.1.1",
+      "lines": [
+        "4.1.1",
+        "纯",
+        "ALOHA",
+        "算法",
+        "tag1",
+        "tag2",
+        "tag3",
+        "1",
+        "2",
+        "多标签信号冲突",
+        "3",
+        "成功",
+        "确认",
+        "冲突",
+        "确认",
+        "若标签收到成功识别确认信息，则不再继续发送标识符。否则其等待一段时间后将重新发送直至发送成功为止。"
+      ],
+      "text": "4.1.1\n纯\nALOHA\n算法\ntag1\ntag2\ntag3\n1\n2\n多标签信号冲突\n3\n成功\n确认\n冲突\n确认\n若标签收到成功识别确认信息，则不再继续发送标识符。否则其等待一段时间后将重新发送直至发送成功为止。"
+    },
+    {
+      "number": 38,
+      "title": "4.1.1",
+      "lines": [
+        "4.1.1",
+        "纯",
+        "ALOHA",
+        "算法",
+        "算法",
+        "简单",
+        "，易于实现，但信道利用率仅为",
+        "18.4%",
+        "，",
+        "性能差",
+        "。"
+      ],
+      "text": "4.1.1\n纯\nALOHA\n算法\n算法\n简单\n，易于实现，但信道利用率仅为\n18.4%\n，\n性能差\n。"
+    },
+    {
+      "number": 39,
+      "title": "4.1.2",
+      "lines": [
+        "4.1.2",
+        "时隙",
+        "ALOHA",
+        "算法",
+        "S-ALOHA",
+        "算法将纯",
+        "ALOHA",
+        "算法的时间分为若干",
+        "时隙",
+        "，每个时隙大于或等于标签标识符发送的时间长度，并且每个标签只能在时隙开始时刻发送标识符。由于系统进行了时间同步，",
+        "S‐ALOHA",
+        "协议的信道利用率达到",
+        "36.8%",
+        "，是纯",
+        "ALOHA",
+        "的",
+        "两倍",
+        "。"
+      ],
+      "text": "4.1.2\n时隙\nALOHA\n算法\nS-ALOHA\n算法将纯\nALOHA\n算法的时间分为若干\n时隙\n，每个时隙大于或等于标签标识符发送的时间长度，并且每个标签只能在时隙开始时刻发送标识符。由于系统进行了时间同步，\nS‐ALOHA\n协议的信道利用率达到\n36.8%\n，是纯\nALOHA\n的\n两倍\n。"
+    },
+    {
+      "number": 40,
+      "title": "4.1.3",
+      "lines": [
+        "4.1.3",
+        "基于帧的时隙",
+        "ALOHA",
+        "算法",
+        "tag1",
+        "tag2",
+        "tag3",
+        "帧长度",
+        "f",
+        "阅读器广播帧长度（",
+        "f",
+        "）",
+        "标签在接收",
+        "f",
+        "以后随机在",
+        "0~(f-1)",
+        "中选择一个整数作为其时隙序号，并存于寄存器（",
+        "SN)",
+        "在下一帧的每个时隙中，阅读器通过时隙开始命令启动一个新时隙，若标签",
+        "SN",
+        "为",
+        "0",
+        "则立即发送标识符号，否则",
+        "SN-1.",
+        "1",
+        "0",
+        "…",
+        "f-1",
+        "SN",
+        "2",
+        "3",
+        "若标识符发送成功，则标签休眠，否则等待在下一帧中重新选择时隙发送标识符。",
+        "在",
+        "S-ALOHA",
+        "基础上，将若干个时隙组织为一",
+        "帧",
+        "，阅读器按照帧为单元进行识别。"
+      ],
+      "text": "4.1.3\n基于帧的时隙\nALOHA\n算法\ntag1\ntag2\ntag3\n帧长度\nf\n阅读器广播帧长度（\nf\n）\n标签在接收\nf\n以后随机在\n0~(f-1)\n中选择一个整数作为其时隙序号，并存于寄存器（\nSN)\n在下一帧的每个时隙中，阅读器通过时隙开始命令启动一个新时隙，若标签\nSN\n为\n0\n则立即发送标识符号，否则\nSN-1.\n1\n0\n…\nf-1\nSN\n2\n3\n若标识符发送成功，则标签休眠，否则等待在下一帧中重新选择时隙发送标识符。\n在\nS-ALOHA\n基础上，将若干个时隙组织为一\n帧\n，阅读器按照帧为单元进行识别。"
+    },
+    {
+      "number": 41,
+      "title": "4.1.3",
+      "lines": [
+        "4.1.3",
+        "基于帧的时隙",
+        "ALOHA",
+        "算法",
+        "冲突时隙：不止一个标签响应",
+        "单  时  隙：只有一个标签响应",
+        "空  时  隙：没有标签响应"
+      ],
+      "text": "4.1.3\n基于帧的时隙\nALOHA\n算法\n冲突时隙：不止一个标签响应\n单  时  隙：只有一个标签响应\n空  时  隙：没有标签响应"
+    },
+    {
+      "number": 42,
+      "title": "4.1.3",
+      "lines": [
+        "4.1.3",
+        "基于帧的时隙",
+        "ALOHA",
+        "算法",
+        "FSA",
+        "算法的",
+        "优点",
+        "在于逻辑简单，电路设计简单，所需内存少，且在帧内只随机发送一次能够更进一步降低了冲突的概率。",
+        "FSA",
+        "成为",
+        "RFID",
+        "系统中最",
+        "常用",
+        "的一种基于",
+        "ALOHA",
+        "的防冲突算法"
+      ],
+      "text": "4.1.3\n基于帧的时隙\nALOHA\n算法\nFSA\n算法的\n优点\n在于逻辑简单，电路设计简单，所需内存少，且在帧内只随机发送一次能够更进一步降低了冲突的概率。\nFSA\n成为\nRFID\n系统中最\n常用\n的一种基于\nALOHA\n的防冲突算法"
+    },
+    {
+      "number": 43,
+      "title": "4.1.3",
+      "lines": [
+        "4.1.3",
+        "基于帧的时隙",
+        "ALOHA",
+        "算法",
+        "FSA",
+        "算法",
+        "局限性",
+        "：帧的长度固定",
+        "当标签数远大于帧长度",
+        "标签冲突概率增大，识别标签的时间会极",
+        "大地增加",
+        "当标签数远小于帧长度",
+        "时隙会巨大浪费，识别时间也会增加",
+        "当帧的长度等于阅读器场内标签的数目",
+        "时，",
+        "FSA",
+        "才能获得最佳的识别性能，信道",
+        "利用率最大为",
+        "36.8%",
+        "。",
+        "信道利用率与帧长、标签数量之间的关系"
+      ],
+      "text": "4.1.3\n基于帧的时隙\nALOHA\n算法\nFSA\n算法\n局限性\n：帧的长度固定\n当标签数远大于帧长度\n标签冲突概率增大，识别标签的时间会极\n大地增加\n当标签数远小于帧长度\n时隙会巨大浪费，识别时间也会增加\n当帧的长度等于阅读器场内标签的数目\n时，\nFSA\n才能获得最佳的识别性能，信道\n利用率最大为\n36.8%\n。\n信道利用率与帧长、标签数量之间的关系"
+    },
+    {
+      "number": 44,
+      "title": "4.1.3",
+      "lines": [
+        "4.1.3",
+        "基于帧的时隙",
+        "ALOHA",
+        "算法",
+        "实际应用中，标签数量往往是动态变化的。",
+        "动态自适应设置帧长度的算法可以解决",
+        "FSA",
+        "的局限性。",
+        "常见的帧长调整方法：",
+        "根据前一帧通信获取的空的时隙数目，发生碰撞的时隙数目和成功识别标签的时隙数目的数量估计当前的标签数并设置下一帧的",
+        "最优",
+        "的",
+        "长度",
+        "；",
+        "根据前一时隙的反馈动态调整帧长为",
+        "2",
+        "的",
+        "整数倍",
+        "，这种方法最具代表性的是",
+        "EPCglobalGen2",
+        "标准中设计的",
+        "Q",
+        "算法"
+      ],
+      "text": "4.1.3\n基于帧的时隙\nALOHA\n算法\n实际应用中，标签数量往往是动态变化的。\n动态自适应设置帧长度的算法可以解决\nFSA\n的局限性。\n常见的帧长调整方法：\n根据前一帧通信获取的空的时隙数目，发生碰撞的时隙数目和成功识别标签的时隙数目的数量估计当前的标签数并设置下一帧的\n最优\n的\n长度\n；\n根据前一时隙的反馈动态调整帧长为\n2\n的\n整数倍\n，这种方法最具代表性的是\nEPCglobalGen2\n标准中设计的\nQ\n算法"
+    },
+    {
+      "number": 45,
+      "title": "4.1.3",
+      "lines": [
+        "4.1.3",
+        "基于帧的时隙",
+        "ALOHA",
+        "算法",
+        "Q",
+        "算法",
+        "：",
+        "当一帧出现过多的冲突时隙时，阅读器会提前结束该帧并重新发送一个更大的帧；",
+        "当一个帧出现过多的空闲时隙时，阅读器也会提前结束该帧，重新启动一个更小的帧",
+        "Q",
+        "fp",
+        "：帧参数",
+        "C",
+        "：常量（",
+        "0.1~0.5",
+        "）",
+        "Query:",
+        "帧开始命令",
+        "Q",
+        "算法能够自适应地调整帧长，识别效率高，在超高频识别系统中得到了广泛的应用。"
+      ],
+      "text": "4.1.3\n基于帧的时隙\nALOHA\n算法\nQ\n算法\n：\n当一帧出现过多的冲突时隙时，阅读器会提前结束该帧并重新发送一个更大的帧；\n当一个帧出现过多的空闲时隙时，阅读器也会提前结束该帧，重新启动一个更小的帧\nQ\nfp\n：帧参数\nC\n：常量（\n0.1~0.5\n）\nQuery:\n帧开始命令\nQ\n算法能够自适应地调整帧长，识别效率高，在超高频识别系统中得到了广泛的应用。"
+    },
+    {
+      "number": 46,
+      "title": "4.1.3",
+      "lines": [
+        "4.1.3",
+        "基于帧的时隙",
+        "ALOHA",
+        "算法",
+        "基于",
+        "ALOHA",
+        "的防冲突算法",
+        "简单",
+        "，并且兼顾了",
+        "公平性",
+        "。",
+        "但是，标签存在",
+        "饿死",
+        "的问题。当一个标签选择的时隙总是冲突时隙，则该标签可能永远无法被识别。"
+      ],
+      "text": "4.1.3\n基于帧的时隙\nALOHA\n算法\n基于\nALOHA\n的防冲突算法\n简单\n，并且兼顾了\n公平性\n。\n但是，标签存在\n饿死\n的问题。当一个标签选择的时隙总是冲突时隙，则该标签可能永远无法被识别。"
+    },
+    {
+      "number": 47,
+      "title": "4.2",
+      "lines": [
+        "4.2",
+        "基于二进制树的防冲突算法",
+        "基于二进制树的防冲突算法的",
+        "基本思想",
+        "：",
+        "按照递归的方式将冲突的标签集合划分为两个子集，直到集合中只剩下一个标签为止。",
+        "划分子集的算法：",
+        "查询二进制树算法：按照标签的标示符划分子集",
+        "随机二进制树算法：让标签随机选择所属的集合"
+      ],
+      "text": "4.2\n基于二进制树的防冲突算法\n基于二进制树的防冲突算法的\n基本思想\n：\n按照递归的方式将冲突的标签集合划分为两个子集，直到集合中只剩下一个标签为止。\n划分子集的算法：\n查询二进制树算法：按照标签的标示符划分子集\n随机二进制树算法：让标签随机选择所属的集合"
+    },
+    {
+      "number": 48,
+      "title": "4.2.1",
+      "lines": [
+        "4.2.1",
+        "基于查询二进制树的防冲突算法",
+        "查询二进制树算法",
+        "是一个无状态协议，标签只需要根据阅读器广播的标示符前缀作比较。",
+        "阅读器维持一个二进制前缀（初始值为",
+        "0",
+        "）。每个间隙开始时，阅读器广播该二进制前缀，标签将自己的标签标识符前几位与此二进制前缀进行比对，若相同则该标签发送标识符号。",
+        "整个识别过程就像根据标签的表示符号建立一棵查询二叉树。",
+        "可用于无可写存储区的标签，不存在标签饿死。受",
+        "ID",
+        "长度以及分布的影响。"
+      ],
+      "text": "4.2.1\n基于查询二进制树的防冲突算法\n查询二进制树算法\n是一个无状态协议，标签只需要根据阅读器广播的标示符前缀作比较。\n阅读器维持一个二进制前缀（初始值为\n0\n）。每个间隙开始时，阅读器广播该二进制前缀，标签将自己的标签标识符前几位与此二进制前缀进行比对，若相同则该标签发送标识符号。\n整个识别过程就像根据标签的表示符号建立一棵查询二叉树。\n可用于无可写存储区的标签，不存在标签饿死。受\nID\n长度以及分布的影响。"
+    },
+    {
+      "number": 49,
+      "title": "4.2.1",
+      "lines": [
+        "4.2.1",
+        "基于查询二进制树的防冲突算法",
+        "查询二进制树算法实例：",
+        "步骤",
+        "请求比特串",
+        "S",
+        "标签的响应",
+        "1",
+        "0",
+        "冲突",
+        "2",
+        "00",
+        "冲突",
+        "3",
+        "000",
+        "空闲",
+        "4",
+        "001",
+        "冲突",
+        "5",
+        "0010",
+        "0010",
+        "6",
+        "0011",
+        "0011",
+        "7",
+        "01",
+        "空闲",
+        "8",
+        "1",
+        "冲突",
+        "9",
+        "10",
+        "1001",
+        "10",
+        "11",
+        "冲突",
+        "11",
+        "110",
+        "冲突",
+        "12",
+        "1100",
+        "1100",
+        "13",
+        "1101",
+        "1101",
+        "14",
+        "111",
+        "1110"
+      ],
+      "text": "4.2.1\n基于查询二进制树的防冲突算法\n查询二进制树算法实例：\n步骤\n请求比特串\nS\n标签的响应\n1\n0\n冲突\n2\n00\n冲突\n3\n000\n空闲\n4\n001\n冲突\n5\n0010\n0010\n6\n0011\n0011\n7\n01\n空闲\n8\n1\n冲突\n9\n10\n1001\n10\n11\n冲突\n11\n110\n冲突\n12\n1100\n1100\n13\n1101\n1101\n14\n111\n1110"
+    },
+    {
+      "number": 50,
+      "title": "4.2.2",
+      "lines": [
+        "4.2.2",
+        "基于随机二进制树的防冲突算法",
+        "随机二进制树算法",
+        "需要每个标签维持一个计数器（初始值为",
+        "0",
+        "）。在每一个时隙开始时，",
+        "如果标签的计数器为",
+        "0",
+        "则立即发送自己的标识符号，否则该时隙不响应",
+        "。一般，标签被成功识别后将进入沉默状态，对以后时隙的阅读器命令均不响应。",
+        "场内标签调整计数器规则：若该时隙为冲突时隙，参与响应的标签会从",
+        "0",
+        "或",
+        "1",
+        "中随机选择一个，将其加到自己的计数器上。没有参与响应的标签直接将自己的计数器加",
+        "1",
+        "。",
+        "整个识别过程就像对二叉树进行中序遍历。",
+        "不存在标签饿死的问题，但需要维护计数器。它通过不断地将产生冲突的标签集合划分为两个子集合，直到某一个集合中只有一个标签存在时，成功识别该标签。"
+      ],
+      "text": "4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法\n需要每个标签维持一个计数器（初始值为\n0\n）。在每一个时隙开始时，\n如果标签的计数器为\n0\n则立即发送自己的标识符号，否则该时隙不响应\n。一般，标签被成功识别后将进入沉默状态，对以后时隙的阅读器命令均不响应。\n场内标签调整计数器规则：若该时隙为冲突时隙，参与响应的标签会从\n0\n或\n1\n中随机选择一个，将其加到自己的计数器上。没有参与响应的标签直接将自己的计数器加\n1\n。\n整个识别过程就像对二叉树进行中序遍历。\n不存在标签饿死的问题，但需要维护计数器。它通过不断地将产生冲突的标签集合划分为两个子集合，直到某一个集合中只有一个标签存在时，成功识别该标签。"
+    },
+    {
+      "number": 51,
+      "title": "4.2.2",
+      "lines": [
+        "4.2.2",
+        "基于随机二进制树的防冲突算法",
+        "随机二进制树算法实例：",
+        "0010",
+        "0110",
+        "1001",
+        "1110",
+        "ID",
+        "tag1",
+        "tag2",
+        "tag3",
+        "tag4"
+      ],
+      "text": "4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4"
+    },
+    {
+      "number": 52,
+      "title": "4.2.2",
+      "lines": [
+        "4.2.2",
+        "基于随机二进制树的防冲突算法",
+        "随机二进制树算法实例：",
+        "0010",
+        "0110",
+        "1001",
+        "1110",
+        "ID",
+        "tag1",
+        "tag2",
+        "tag3",
+        "tag4",
+        "REQUEST",
+        "0",
+        "0",
+        "0",
+        "0",
+        "SN",
+        "响应",
+        "(1,2,3,4)"
+      ],
+      "text": "4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\nREQUEST\n0\n0\n0\n0\nSN\n响应\n(1,2,3,4)"
+    },
+    {
+      "number": 53,
+      "title": "4.2.2",
+      "lines": [
+        "4.2.2",
+        "基于随机二进制树的防冲突算法",
+        "随机二进制树算法实例：",
+        "0010",
+        "0110",
+        "1001",
+        "1110",
+        "ID",
+        "tag1",
+        "tag2",
+        "tag3",
+        "tag4",
+        "冲突",
+        "0",
+        "0",
+        "1",
+        "0",
+        "SN",
+        "响应",
+        "(1,2,4)"
+      ],
+      "text": "4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n冲突\n0\n0\n1\n0\nSN\n响应\n(1,2,4)"
+    },
+    {
+      "number": 54,
+      "title": "4.2.2",
+      "lines": [
+        "4.2.2",
+        "基于随机二进制树的防冲突算法",
+        "随机二进制树算法实例：",
+        "0010",
+        "0110",
+        "1001",
+        "1110",
+        "ID",
+        "tag1",
+        "tag2",
+        "tag3",
+        "tag4",
+        "冲突",
+        "1",
+        "0",
+        "2",
+        "1",
+        "SN",
+        "响应",
+        "(2)"
+      ],
+      "text": "4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n冲突\n1\n0\n2\n1\nSN\n响应\n(2)"
+    },
+    {
+      "number": 55,
+      "title": "4.2.2",
+      "lines": [
+        "4.2.2",
+        "基于随机二进制树的防冲突算法",
+        "随机二进制树算法实例：",
+        "0010",
+        "0110",
+        "1001",
+        "1110",
+        "ID",
+        "tag1",
+        "tag2",
+        "tag3",
+        "tag4",
+        "成功",
+        "0",
+        "0",
+        "1",
+        "0",
+        "SN",
+        "响应",
+        "(1,4)",
+        "标签",
+        "2",
+        "成功识别，沉默"
+      ],
+      "text": "4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n成功\n0\n0\n1\n0\nSN\n响应\n(1,4)\n标签\n2\n成功识别，沉默"
+    },
+    {
+      "number": 56,
+      "title": "4.2.2",
+      "lines": [
+        "4.2.2",
+        "基于随机二进制树的防冲突算法",
+        "随机二进制树算法实例：",
+        "0010",
+        "0110",
+        "1001",
+        "1110",
+        "ID",
+        "tag1",
+        "tag2",
+        "tag3",
+        "tag4",
+        "冲突",
+        "0",
+        "0",
+        "2",
+        "1",
+        "SN",
+        "响应",
+        "(1)"
+      ],
+      "text": "4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n冲突\n0\n0\n2\n1\nSN\n响应\n(1)"
+    },
+    {
+      "number": 57,
+      "title": "4.2.2",
+      "lines": [
+        "4.2.2",
+        "基于随机二进制树的防冲突算法",
+        "随机二进制树算法实例：",
+        "0010",
+        "0110",
+        "1001",
+        "1110",
+        "ID",
+        "tag1",
+        "tag2",
+        "tag3",
+        "tag4",
+        "成功",
+        "0",
+        "0",
+        "1",
+        "0",
+        "SN",
+        "响应",
+        "(4)"
+      ],
+      "text": "4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n成功\n0\n0\n1\n0\nSN\n响应\n(4)"
+    },
+    {
+      "number": 58,
+      "title": "4.2.2",
+      "lines": [
+        "4.2.2",
+        "基于随机二进制树的防冲突算法",
+        "随机二进制树算法实例：",
+        "0010",
+        "0110",
+        "1001",
+        "1110",
+        "ID",
+        "tag1",
+        "tag2",
+        "tag3",
+        "tag4",
+        "成功",
+        "0",
+        "0",
+        "1",
+        "0",
+        "SN",
+        "响应",
+        "(4)"
+      ],
+      "text": "4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n成功\n0\n0\n1\n0\nSN\n响应\n(4)"
+    },
+    {
+      "number": 59,
+      "title": "4.2.2",
+      "lines": [
+        "4.2.2",
+        "基于随机二进制树的防冲突算法",
+        "随机二进制树算法实例：",
+        "0010",
+        "0110",
+        "1001",
+        "1110",
+        "ID",
+        "tag1",
+        "tag2",
+        "tag3",
+        "tag4",
+        "成功",
+        "0",
+        "0",
+        "0",
+        "0",
+        "SN",
+        "响应",
+        "(3)"
+      ],
+      "text": "4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n成功\n0\n0\n0\n0\nSN\n响应\n(3)"
+    },
+    {
+      "number": 60,
+      "title": "4.2.2",
+      "lines": [
+        "4.2.2",
+        "基于随机二进制树的防冲突算法",
+        "随机二进制树算法实例：",
+        "0010",
+        "0110",
+        "1001",
+        "1110",
+        "ID",
+        "tag1",
+        "tag2",
+        "tag3",
+        "tag4",
+        "成功",
+        "0",
+        "0",
+        "0",
+        "0",
+        "SN"
+      ],
+      "text": "4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n成功\n0\n0\n0\n0\nSN"
+    },
+    {
+      "number": 61,
+      "title": "4.3",
+      "lines": [
+        "4.3",
+        "防冲突算法的性能分析",
+        "基于",
+        "ALOHA",
+        "的防冲突算法与基于二进制树的防冲突算法各有利弊。",
+        "同时，不同算法的性能也不同。"
+      ],
+      "text": "4.3\n防冲突算法的性能分析\n基于\nALOHA\n的防冲突算法与基于二进制树的防冲突算法各有利弊。\n同时，不同算法的性能也不同。"
+    },
+    {
+      "number": 62,
+      "title": "4.3",
+      "lines": [
+        "4.3",
+        "防冲突算法的性能分析",
+        "基于",
+        "ALOHA",
+        "的防冲突算法的",
+        "优缺点"
+      ],
+      "text": "4.3\n防冲突算法的性能分析\n基于\nALOHA\n的防冲突算法的\n优缺点"
+    },
+    {
+      "number": 63,
+      "title": "4.3",
+      "lines": [
+        "4.3",
+        "防冲突算法的性能分析",
+        "基于",
+        "二进制树",
+        "的防冲突算法的",
+        "优缺点"
+      ],
+      "text": "4.3\n防冲突算法的性能分析\n基于\n二进制树\n的防冲突算法的\n优缺点"
+    },
+    {
+      "number": 64,
+      "title": "4.3",
+      "lines": [
+        "4.3",
+        "防冲突算法的性能分析",
+        "防冲突算法",
+        "时间复杂度",
+        "传输复杂度",
+        "是否需要标签可写",
+        "基于帧的时隙",
+        "ALOHA",
+        "算法",
+        "(FSA)",
+        "上界：",
+        "𝑡",
+        "×",
+        "𝑠",
+        "+",
+        "估算标签数目的时间",
+        "上界：",
+        "𝑛",
+        "×",
+        "𝑠",
+        "是",
+        "(8",
+        "比特或者",
+        "16",
+        "比特的内存，用来计数，指示标签响应的时隙",
+        ")",
+        "随机二进制树算法",
+        "𝑂",
+        "(",
+        "𝑛",
+        ")",
+        "最坏情况：",
+        "(1) n",
+        "未知，",
+        "𝜃",
+        "(",
+        "𝑛𝑙𝑜𝑔𝑛",
+        ")",
+        "(2) n",
+        "已知，",
+        "𝜃",
+        "(",
+        "𝑛",
+        ")",
+        "是",
+        "(8",
+        "比特或",
+        "16",
+        "比特的内存，用来存储计数器的值，指示标签的响应序列和响应时间",
+        ")",
+        "查询二进制树算法",
+        "平均情况：",
+        "𝑂",
+        "(",
+        "𝑛",
+        ")",
+        "最坏情况：",
+        "n",
+        "×",
+        "(",
+        "𝑘",
+        "+2−",
+        "𝑙𝑜𝑔𝑛",
+        ")",
+        "最坏情况：",
+        "k",
+        "×",
+        "(2.21",
+        "𝑙𝑜𝑔𝑛",
+        "+4.19)",
+        "否",
+        "防冲突算法",
+        "时间复杂度",
+        "传输复杂度",
+        "是否需要标签可写",
+        "基于帧的时隙",
+        "ALOHA",
+        "算法",
+        "(FSA)",
+        "是",
+        "(8",
+        "比特或者",
+        "16",
+        "比特的内存，用来计数，指示标签响应的时隙",
+        ")",
+        "随机二进制树算法",
+        "是",
+        "(8",
+        "比特或",
+        "16",
+        "比特的内存，用来存储计数器的值，指示标签的响应序列和响应时间",
+        ")",
+        "查询二进制树算法",
+        "否",
+        "三种典型防冲突算法的性能比较",
+        "n:",
+        "识别区域的标签数目，",
+        "k:",
+        "标签",
+        "ID",
+        "的长度，",
+        "t",
+        "是一帧的时间，",
+        "s",
+        "是帧的数目，",
+        "N",
+        "是对标签数目",
+        "n",
+        "的估计值。"
+      ],
+      "text": "4.3\n防冲突算法的性能分析\n防冲突算法\n时间复杂度\n传输复杂度\n是否需要标签可写\n基于帧的时隙\nALOHA\n算法\n(FSA)\n上界：\n𝑡\n×\n𝑠\n+\n估算标签数目的时间\n上界：\n𝑛\n×\n𝑠\n是\n(8\n比特或者\n16\n比特的内存，用来计数，指示标签响应的时隙\n)\n随机二进制树算法\n𝑂\n(\n𝑛\n)\n最坏情况：\n(1) n\n未知，\n𝜃\n(\n𝑛𝑙𝑜𝑔𝑛\n)\n(2) n\n已知，\n𝜃\n(\n𝑛\n)\n是\n(8\n比特或\n16\n比特的内存，用来存储计数器的值，指示标签的响应序列和响应时间\n)\n查询二进制树算法\n平均情况：\n𝑂\n(\n𝑛\n)\n最坏情况：\nn\n×\n(\n𝑘\n+2−\n𝑙𝑜𝑔𝑛\n)\n最坏情况：\nk\n×\n(2.21\n𝑙𝑜𝑔𝑛\n+4.19)\n否\n防冲突算法\n时间复杂度\n传输复杂度\n是否需要标签可写\n基于帧的时隙\nALOHA\n算法\n(FSA)\n是\n(8\n比特或者\n16\n比特的内存，用来计数，指示标签响应的时隙\n)\n随机二进制树算法\n是\n(8\n比特或\n16\n比特的内存，用来存储计数器的值，指示标签的响应序列和响应时间\n)\n查询二进制树算法\n否\n三种典型防冲突算法的性能比较\nn:\n识别区域的标签数目，\nk:\n标签\nID\n的长度，\nt\n是一帧的时间，\ns\n是帧的数目，\nN\n是对标签数目\nn\n的估计值。"
+    },
+    {
+      "number": 65,
+      "title": "Who’s got an RFID tag with them right now?",
+      "lines": [
+        "Who’s got an RFID tag with them right now?"
+      ],
+      "text": "Who’s got an RFID tag with them right now?"
+    },
+    {
+      "number": 66,
+      "title": "Livestock Tagging",
+      "lines": [
+        "Livestock Tagging",
+        "Wild Animal Tracking",
+        "Automated Toll Collection",
+        "Vehicle Anti-Theft",
+        "Passive / Secure Entry",
+        "Airline Baggage Tracking",
+        "Postal Package Tracking",
+        "Time and Attendance",
+        "Current Applications"
+      ],
+      "text": "Livestock Tagging\nWild Animal Tracking\nAutomated Toll Collection\nVehicle Anti-Theft\nPassive / Secure Entry\nAirline Baggage Tracking\nPostal Package Tracking\nTime and Attendance\nCurrent Applications"
+    },
+    {
+      "number": 67,
+      "title": "RFID: Security and Privacy",
+      "lines": [
+        "RFID: Security and Privacy",
+        "for “Five-Cent Computers”",
+        "5",
+        "¢"
+      ],
+      "text": "RFID: Security and Privacy\nfor “Five-Cent Computers”\n5\n¢"
+    },
+    {
+      "number": 68,
+      "title": "Another Hippie",
+      "lines": [
+        "Another Hippie"
+      ],
+      "text": "Another Hippie"
+    },
+    {
+      "number": 69,
+      "title": "Highly mobile",
+      "lines": [
+        "Highly mobile",
+        "Contain personal information",
+        "Subject to surreptitious scanning",
+        "Again, no cryptography…",
+        "Access control difficult to achieve",
+        "Data privacy difficult to protect",
+        "RFID means a world with billions of ant-sized, five-cent computers"
+      ],
+      "text": "Highly mobile\nContain personal information\nSubject to surreptitious scanning\nAgain, no cryptography…\nAccess control difficult to achieve\nData privacy difficult to protect\nRFID means a world with billions of ant-sized, five-cent computers"
+    },
+    {
+      "number": 70,
+      "title": "The Consumer Privacy Problem",
+      "lines": [
+        "The Consumer Privacy Problem",
+        "1500 Euros",
+        "in wallet",
+        "Serial numbers:",
+        "597387,389473…",
+        "Wig",
+        "model #4456",
+        "(cheap polyester)",
+        "30 items",
+        "of lingerie",
+        "Das Kapital",
+        "and",
+        "Communist-party handbook",
+        "Replacement hip",
+        "medical part #459382",
+        "Here’s",
+        "Mr. Jones",
+        "in 2020…"
+      ],
+      "text": "The Consumer Privacy Problem\n1500 Euros\nin wallet\nSerial numbers:\n597387,389473…\nWig\nmodel #4456\n(cheap polyester)\n30 items\nof lingerie\nDas Kapital\nand\nCommunist-party handbook\nReplacement hip\nmedical part #459382\nHere’s\nMr. Jones\nin 2020…"
+    },
+    {
+      "number": 71,
+      "title": "Mr. Jones pays with a credit card; his RFID tags now linked to his identity; determines level of customer service",
+      "lines": [
+        "Mr. Jones pays with a credit card; his RFID tags now linked to his identity; determines level of customer service",
+        "think of car dealerships using drivers’ licenses to run credit checks…",
+        "Mr. Jones attends a political rally;",
+        "law enforcement scans his RFID tags",
+        "Mr. Jones wins the Oscar Award;",
+        "physically tracked by paparazzi via RFID",
+        "…and the Tracking Problem",
+        "Wig",
+        "serial #A817TS8"
+      ],
+      "text": "Mr. Jones pays with a credit card; his RFID tags now linked to his identity; determines level of customer service\nthink of car dealerships using drivers’ licenses to run credit checks…\nMr. Jones attends a political rally;\nlaw enforcement scans his RFID tags\nMr. Jones wins the Oscar Award;\nphysically tracked by paparazzi via RFID\n…and the Tracking Problem\nWig\nserial #A817TS8"
+    },
+    {
+      "number": 72,
+      "title": "42% of Google results on “RFID” include word “privacy”",
+      "lines": [
+        "42% of Google results on “RFID” include word “privacy”",
+        "CASPIAN (Consumers Against Supermarket Privacy Invasion and Numbering)",
+        "Criticizes RFID at",
+        "Spychips.com",
+        "BoycottGillette.com",
+        "BoycottBenetton.com",
+        "National news coverage:",
+        "NY Times",
+        ",",
+        "Time",
+        ", etc.",
+        "Wal-Mart “smart-shelf project” cancelled",
+        "Early Examples of Consumer Backlash"
+      ],
+      "text": "42% of Google results on “RFID” include word “privacy”\nCASPIAN (Consumers Against Supermarket Privacy Invasion and Numbering)\nCriticizes RFID at\nSpychips.com\nBoycottGillette.com\nBoycottBenetton.com\nNational news coverage:\nNY Times\n,\nTime\n, etc.\nWal-Mart “smart-shelf project” cancelled\nEarly Examples of Consumer Backlash"
+    },
+    {
+      "number": 73,
+      "title": "Privacy:",
+      "lines": [
+        "Privacy:",
+        "Misbehaving readers harvesting information from well-behaving tags",
+        "Authentication:",
+        "Well-behaving readers harvesting information from misbehaving tags, particularly counterfeit ones",
+        "…and the",
+        "A",
+        "uthentication Problem",
+        "Wig",
+        "serial #A817TS8"
+      ],
+      "text": "Privacy:\nMisbehaving readers harvesting information from well-behaving tags\nAuthentication:\nWell-behaving readers harvesting information from misbehaving tags, particularly counterfeit ones\n…and the\nA\nuthentication Problem\nWig\nserial #A817TS8"
+    },
+    {
+      "number": 74,
+      "title": "Some Proposed Solutions to the Privacy Problem",
+      "lines": [
+        "Some Proposed Solutions to the Privacy Problem"
+      ],
+      "text": "Some Proposed Solutions to the Privacy Problem"
+    },
+    {
+      "number": 75,
+      "title": "EPC tags have a “kill” function",
+      "lines": [
+        "EPC tags have a “kill” function",
+        "On receiving password, tag self-destructs",
+        "Tag is permanently inoperative",
+        "No post-purchase benefits",
+        "Developed for EPC to protect consumers after point of sale",
+        "“Dead tags tell no tales”",
+        "Privacy is preserve",
+        "Approach 1: “Kill” RFID tags"
+      ],
+      "text": "EPC tags have a “kill” function\nOn receiving password, tag self-destructs\nTag is permanently inoperative\nNo post-purchase benefits\nDeveloped for EPC to protect consumers after point of sale\n“Dead tags tell no tales”\nPrivacy is preserve\nApproach 1: “Kill” RFID tags"
+    },
+    {
+      "number": 76,
+      "title": "Even if the tag has no intrinsic meaning it can still enable tracking (Solution: Change over time)",
+      "lines": [
+        "Even if the tag has no intrinsic meaning it can still enable tracking (Solution: Change over time)",
+        "Consumer are equipped to re-label tags with new identifier, but able to reactive old information",
+        "Approach 2: Re-naming Tags"
+      ],
+      "text": "Even if the tag has no intrinsic meaning it can still enable tracking (Solution: Change over time)\nConsumer are equipped to re-label tags with new identifier, but able to reactive old information\nApproach 2: Re-naming Tags"
+    },
+    {
+      "number": 77,
+      "title": "Distance as a measure of trust",
+      "lines": [
+        "Distance as a measure of trust",
+        "A tag might release general information “I’m attached to a bottle of water” when scanned at a distance, but release more specific information, like unique identifier at a close range.",
+        "Approach 3: Distance Measurement"
+      ],
+      "text": "Distance as a measure of trust\nA tag might release general information “I’m attached to a bottle of water” when scanned at a distance, but release more specific information, like unique identifier at a close range.\nApproach 3: Distance Measurement"
+    },
+    {
+      "number": 78,
+      "title": "Undoubtedly helpful if thought through well, but…",
+      "lines": [
+        "Undoubtedly helpful if thought through well, but…",
+        "“Good Housekeeping” seal",
+        "Retailer’s guarantee means little since tags may be read by anyone!",
+        "Approach 4: Policy and Legislation"
+      ],
+      "text": "Undoubtedly helpful if thought through well, but…\n“Good Housekeeping” seal\nRetailer’s guarantee means little since tags may be read by anyone!\nApproach 4: Policy and Legislation"
+    },
+    {
+      "number": 79,
+      "title": "More efficient mugging",
+      "lines": [
+        "More efficient mugging",
+        "Another Possible “Use” of RFID",
+        "“Just in case you",
+        "want to know, she’s",
+        "got 700 Euro and",
+        "a Rolex…”",
+        "Who should be prosecuted now?"
+      ],
+      "text": "More efficient mugging\nAnother Possible “Use” of RFID\n“Just in case you\nwant to know, she’s\ngot 700 Euro and\na Rolex…”\nWho should be prosecuted now?"
+    },
+    {
+      "number": 80,
+      "title": "Corporate espionage: privacy is not just a consumer issue",
+      "lines": [
+        "Corporate espionage: privacy is not just a consumer issue",
+        "Eavesdropping on warehouse transmissions",
+        "Scanning of shelves for turnover rates",
+        "Tag counterfeiting",
+        "Think about RFID-enabled stores; replace original tags with fake ones (with lower prices)",
+        "Special demands of U.S. Department of Defense",
+        "“DoD would be like Wal-Mart… if Christmas were a random event every five years, and a",
+        "stockout",
+        "meant that everyone in the store could die…”",
+        "Nicholas",
+        "Tsougas",
+        ", DoD",
+        "Other Less Known Issues"
+      ],
+      "text": "Corporate espionage: privacy is not just a consumer issue\nEavesdropping on warehouse transmissions\nScanning of shelves for turnover rates\nTag counterfeiting\nThink about RFID-enabled stores; replace original tags with fake ones (with lower prices)\nSpecial demands of U.S. Department of Defense\n“DoD would be like Wal-Mart… if Christmas were a random event every five years, and a\nstockout\nmeant that everyone in the store could die…”\nNicholas\nTsougas\n, DoD\nOther Less Known Issues"
+    },
+    {
+      "number": 81,
+      "title": "HB Protocol",
+      "lines": [
+        "HB Protocol",
+        "Reader",
+        "RFID tag",
+        "Goal",
+        ": authenticate RFID tag to the reader",
+        "k-bit random value",
+        "a",
+        "(a",
+        "",
+        "x)",
+        "",
+        "v",
+        "Response correct if",
+        "it is equal to (a",
+        "",
+        "x)",
+        "Generate random v:",
+        "1 with prob.",
+        ", else 0",
+        "[Juels and Weis, based on Hopper and Blum]",
+        "Knows secret x;",
+        "parameter",
+        "",
+        "Knows secret x;",
+        "parameter",
+        "",
+        " chance that",
+        "response is incorrect",
+        "repeat r times",
+        "RFID tag is authenticated",
+        "if fewer than r responses",
+        "are incorrect",
+        "Juels",
+        ", Ari, and Stephen A. Weis. \"Authenticating pervasive devices with human protocols.\" Annual international cryptology conference. Springer, Berlin, Heidelberg, 2005."
+      ],
+      "text": "HB Protocol\nReader\nRFID tag\nGoal\n: authenticate RFID tag to the reader\nk-bit random value\na\n(a\n\nx)\n\nv\nResponse correct if\nit is equal to (a\n\nx)\nGenerate random v:\n1 with prob.\n, else 0\n[Juels and Weis, based on Hopper and Blum]\nKnows secret x;\nparameter\n\nKnows secret x;\nparameter\n\n chance that\nresponse is incorrect\nrepeat r times\nRFID tag is authenticated\nif fewer than r responses\nare incorrect\nJuels\n, Ari, and Stephen A. Weis. \"Authenticating pervasive devices with human protocols.\" Annual international cryptology conference. Springer, Berlin, Heidelberg, 2005."
+    },
+    {
+      "number": 82,
+      "title": "HB Protocol-LPN",
+      "lines": [
+        "HB Protocol-LPN",
+        "The security of the protocol is based on the hardness of the",
+        "LPN problem",
+        ".",
+        "LPN: Learning Parity with Noise",
+        "In computer science, the",
+        "parity",
+        "of a bit string is determined as follows:",
+        "{",
+        "1  Odd number of 1",
+        "’",
+        "s in bit string",
+        "0  Even number of 1",
+        "’",
+        "s in bit string"
+      ],
+      "text": "HB Protocol-LPN\nThe security of the protocol is based on the hardness of the\nLPN problem\n.\nLPN: Learning Parity with Noise\nIn computer science, the\nparity\nof a bit string is determined as follows:\n{\n1  Odd number of 1\n’\ns in bit string\n0  Even number of 1\n’\ns in bit string"
+    },
+    {
+      "number": 83,
+      "title": "1011 =",
+      "lines": [
+        "1011 =",
+        "r",
+        "The",
+        "parity",
+        "is 1",
+        "because there are an odd number of 1",
+        "’",
+        "s in the string.",
+        "You can determine the parity by",
+        "XOR",
+        "’",
+        "ing the individual bits in",
+        "r",
+        "as follows:",
+        "1 + 0 + 1 + 1 = 1",
+        "*Remember the",
+        "XOR",
+        "table looks like:",
+        "+",
+        "0",
+        "1",
+        "0",
+        "0",
+        "1",
+        "1",
+        "1",
+        "0",
+        "HB Protocol-LPN",
+        "Example:"
+      ],
+      "text": "1011 =\nr\nThe\nparity\nis 1\nbecause there are an odd number of 1\n’\ns in the string.\nYou can determine the parity by\nXOR\n’\ning the individual bits in\nr\nas follows:\n1 + 0 + 1 + 1 = 1\n*Remember the\nXOR\ntable looks like:\n+\n0\n1\n0\n0\n1\n1\n1\n0\nHB Protocol-LPN\nExample:"
+    },
+    {
+      "number": 84,
+      "title": "HB Protocol-LPN",
+      "lines": [
+        "HB Protocol-LPN",
+        "The HB Protocol uses an inner dot product which will bit-wise",
+        "AND",
+        "two strings together and then find the parity of the result.",
+        "Example:",
+        "1011",
+        "1010",
+        "&",
+        "1010",
+        "0",
+        "=",
+        "x",
+        "=",
+        "q",
+        "=",
+        "r"
+      ],
+      "text": "HB Protocol-LPN\nThe HB Protocol uses an inner dot product which will bit-wise\nAND\ntwo strings together and then find the parity of the result.\nExample:\n1011\n1010\n&\n1010\n0\n=\nx\n=\nq\n=\nr"
+    },
+    {
+      "number": 85,
+      "title": "If we",
+      "lines": [
+        "If we",
+        "’",
+        "re given several values of",
+        "q",
+        "and",
+        "r",
+        "then we can determine the value of",
+        "x",
+        "using linear algebra.",
+        "* The columns of the",
+        "q",
+        "matrix must be linearly independent.",
+        "HB Protocol-LPN",
+        "q",
+        "1",
+        "q",
+        "2",
+        "q",
+        "3",
+        "x =",
+        "r",
+        "1",
+        "r",
+        "2",
+        "r",
+        "3"
+      ],
+      "text": "If we\n’\nre given several values of\nq\nand\nr\nthen we can determine the value of\nx\nusing linear algebra.\n* The columns of the\nq\nmatrix must be linearly independent.\nHB Protocol-LPN\nq\n1\nq\n2\nq\n3\nx =\nr\n1\nr\n2\nr\n3"
+    },
+    {
+      "number": 86,
+      "title": "Adding “noise” to the previous problem makes it difficult.",
+      "lines": [
+        "Adding “noise” to the previous problem makes it difficult.",
+        "“Noise” is added by flipping the value of",
+        "𝑟",
+        "randomly.  (with probability of ε)",
+        "The HB protocol is based on this problem because it is NP-hard.",
+        "HB Protocol-LPN"
+      ],
+      "text": "Adding “noise” to the previous problem makes it difficult.\n“Noise” is added by flipping the value of\n𝑟\nrandomly.  (with probability of ε)\nThe HB protocol is based on this problem because it is NP-hard.\nHB Protocol-LPN"
+    },
+    {
+      "number": 87,
+      "title": "HB Protocol",
+      "lines": [
+        "HB Protocol",
+        "Reader",
+        "RFID tag",
+        "Goal",
+        ": authenticate RFID tag to the reader",
+        "k-bit random value",
+        "a",
+        "(a",
+        "",
+        "x)",
+        "",
+        "v",
+        "Response correct if",
+        "it is equal to (a",
+        "",
+        "x)",
+        "Generate random v:",
+        "1 with prob.",
+        ", else 0",
+        "[Juels and Weis, based on Hopper and Blum]",
+        "Knows secret x;",
+        "parameter",
+        "",
+        "Knows secret x;",
+        "parameter",
+        "",
+        " chance that",
+        "response is incorrect",
+        "repeat r times",
+        "RFID tag is authenticated",
+        "if fewer than r responses",
+        "are incorrect"
+      ],
+      "text": "HB Protocol\nReader\nRFID tag\nGoal\n: authenticate RFID tag to the reader\nk-bit random value\na\n(a\n\nx)\n\nv\nResponse correct if\nit is equal to (a\n\nx)\nGenerate random v:\n1 with prob.\n, else 0\n[Juels and Weis, based on Hopper and Blum]\nKnows secret x;\nparameter\n\nKnows secret x;\nparameter\n\n chance that\nresponse is incorrect\nrepeat r times\nRFID tag is authenticated\nif fewer than r responses\nare incorrect"
+    },
+    {
+      "number": 88,
+      "title": "Active Adversary",
+      "lines": [
+        "Active Adversary",
+        "RFID tag",
+        "non-random value a",
+        "(a",
+        "",
+        "x)",
+        "",
+        "v",
+        "Generate random v:",
+        "1 with prob.",
+        ", else 0",
+        "Knows secret x;",
+        "parameter",
+        "",
+        "non-random value a",
+        "(a",
+        "",
+        "x)",
+        "",
+        "v",
+        "Generate random v:",
+        "1 with prob.",
+        ", else 0",
+        "non-random value a",
+        "…",
+        "What does",
+        "attacker learn?"
+      ],
+      "text": "Active Adversary\nRFID tag\nnon-random value a\n(a\n\nx)\n\nv\nGenerate random v:\n1 with prob.\n, else 0\nKnows secret x;\nparameter\n\nnon-random value a\n(a\n\nx)\n\nv\nGenerate random v:\n1 with prob.\n, else 0\nnon-random value a\n…\nWhat does\nattacker learn?"
+    },
+    {
+      "number": 89,
+      "title": "HB Protocol-Weaknesses",
+      "lines": [
+        "HB Protocol-Weaknesses",
+        "If there is an active attack, then the HB Protocol will prove to be insecure!",
+        "Please answer the following query:",
+        "Secret • 1000",
+        "…And answer it 1000 times",
+        "0, 1, 0, 1, 1, 1, ...",
+        "The majority of his responses were 1!"
+      ],
+      "text": "HB Protocol-Weaknesses\nIf there is an active attack, then the HB Protocol will prove to be insecure!\nPlease answer the following query:\nSecret • 1000\n…And answer it 1000 times\n0, 1, 0, 1, 1, 1, ...\nThe majority of his responses were 1!"
+    },
+    {
+      "number": 90,
+      "title": "HB Protocol-Weaknesses",
+      "lines": [
+        "HB Protocol-Weaknesses",
+        "Please answer the following query:",
+        "Secret • 0100",
+        "…And answer it 1000 times",
+        "0, 1, 0, 0, 0, 1, ...",
+        "The majority of his responses were 0!",
+        "1 0 0 0",
+        "0 1 0 0",
+        "q",
+        "3",
+        "q",
+        "4",
+        "x =",
+        "1",
+        "0",
+        "r",
+        "3",
+        "r",
+        "4"
+      ],
+      "text": "HB Protocol-Weaknesses\nPlease answer the following query:\nSecret • 0100\n…And answer it 1000 times\n0, 1, 0, 0, 0, 1, ...\nThe majority of his responses were 0!\n1 0 0 0\n0 1 0 0\nq\n3\nq\n4\nx =\n1\n0\nr\n3\nr\n4"
+    },
+    {
+      "number": 91,
+      "title": "HB Protocol-Weaknesses",
+      "lines": [
+        "HB Protocol-Weaknesses",
+        "Please answer the following query:",
+        "Secret • 1101",
+        "0",
+        "You have been verified!",
+        "1 0 0 0",
+        "0 1 0 0",
+        "0 0 1 0",
+        "0 0 0 1",
+        "x =",
+        "1",
+        "0",
+        "1",
+        "1"
+      ],
+      "text": "HB Protocol-Weaknesses\nPlease answer the following query:\nSecret • 1101\n0\nYou have been verified!\n1 0 0 0\n0 1 0 0\n0 0 1 0\n0 0 0 1\nx =\n1\n0\n1\n1"
+    },
+    {
+      "number": 92,
+      "title": "HB+ Protocol",
+      "lines": [
+        "HB+ Protocol",
+        "Reader",
+        "RFID tag",
+        "Goal",
+        ": authenticate RFID tag to the reader",
+        "k-bit random value",
+        "a",
+        "(a",
+        "",
+        "x)",
+        "(b",
+        "y",
+        ")",
+        "v",
+        "Generate random v:",
+        "1 with prob.",
+        ", else 0",
+        "[Juels and Weis]",
+        "Knows secrets x,",
+        "y",
+        ";",
+        "parameter",
+        "",
+        "Knows secrets x,",
+        "y",
+        ";",
+        "parameter",
+        "",
+        "repeat r times",
+        "RFID tag is authenticated",
+        "if fewer than r responses",
+        "are incorrect",
+        "Response correct if",
+        "it is equal to (a",
+        "",
+        "x)",
+        "",
+        "(b",
+        "",
+        "y)",
+        "blinding value",
+        "b"
+      ],
+      "text": "HB+ Protocol\nReader\nRFID tag\nGoal\n: authenticate RFID tag to the reader\nk-bit random value\na\n(a\n\nx)\n(b\ny\n)\nv\nGenerate random v:\n1 with prob.\n, else 0\n[Juels and Weis]\nKnows secrets x,\ny\n;\nparameter\n\nKnows secrets x,\ny\n;\nparameter\n\nrepeat r times\nRFID tag is authenticated\nif fewer than r responses\nare incorrect\nResponse correct if\nit is equal to (a\n\nx)\n\n(b\n\ny)\nblinding value\nb"
+    },
+    {
+      "number": 93,
+      "title": "Passive",
+      "lines": [
+        "Passive",
+        "wireless",
+        "Store data on a tag",
+        "Can be hidden",
+        "Work in harsh environments",
+        "Low cost",
+        "Summary: RFID’s Advantages"
+      ],
+      "text": "Passive\nwireless\nStore data on a tag\nCan be hidden\nWork in harsh environments\nLow cost\nSummary: RFID’s Advantages"
+    },
+    {
+      "number": 94,
+      "title": "Roadmap of RFID Authentication",
+      "lines": [
+        "Roadmap of RFID Authentication"
+      ],
+      "text": "Roadmap of RFID Authentication"
+    },
+    {
+      "number": 95,
+      "title": "ID based Identification",
+      "lines": [
+        "ID based Identification",
+        "",
+        "Device Fingerprint based Authentication"
+      ],
+      "text": "ID based Identification\n\nDevice Fingerprint based Authentication"
+    },
+    {
+      "number": 96,
+      "title": "Requirements:",
+      "lines": [
+        "Requirements:",
+        "Compatible with existing protocols",
+        "For off-the-shelf RFID tags",
+        "No customized devices",
+        "High accuracy",
+        "GenePrint",
+        ": Generic and Accurate Physical-layer Identification for UHF RFID Tags",
+        "GenePrint",
+        "J. Han, et al., “",
+        "GenePrint",
+        ": Generic and Accurate Physical-Layer Identification for UHF RFID Tags”, IEEE/ACM Transactions on Networking (TON), Vol. 24, No.2, Pages 846-858, 2016."
+      ],
+      "text": "Requirements:\nCompatible with existing protocols\nFor off-the-shelf RFID tags\nNo customized devices\nHigh accuracy\nGenePrint\n: Generic and Accurate Physical-layer Identification for UHF RFID Tags\nGenePrint\nJ. Han, et al., “\nGenePrint\n: Generic and Accurate Physical-Layer Identification for UHF RFID Tags”, IEEE/ACM Transactions on Networking (TON), Vol. 24, No.2, Pages 846-858, 2016."
+    },
+    {
+      "number": 97,
+      "title": "The State of  the Art",
+      "lines": [
+        "The State of  the Art",
+        "Physical-layer identification of wireless devices",
+        "minor variations in analog hardware",
+        "“Physical-layer Identification of UHF RFID Tags” D.",
+        "Zanetti",
+        "et al.",
+        "MobiCom",
+        "2010",
+        "TX: Arbitrary Waveform",
+        "Generator",
+        "RX: Two ADCs with 1GS/s",
+        "Purpose-built reader",
+        "High sampling rate: 1GS/s",
+        "7",
+        "High accuracy with",
+        "70 passive tags",
+        "Existing",
+        "works: costly and expensive devices required"
+      ],
+      "text": "The State of  the Art\nPhysical-layer identification of wireless devices\nminor variations in analog hardware\n“Physical-layer Identification of UHF RFID Tags” D.\nZanetti\net al.\nMobiCom\n2010\nTX: Arbitrary Waveform\nGenerator\nRX: Two ADCs with 1GS/s\nPurpose-built reader\nHigh sampling rate: 1GS/s\n7\nHigh accuracy with\n70 passive tags\nExisting\nworks: costly and expensive devices required"
+    },
+    {
+      "number": 98,
+      "title": "RN16 packet:",
+      "lines": [
+        "RN16 packet:",
+        "id-independent",
+        "GenePrint",
+        ": Signal Preprocessing"
+      ],
+      "text": "RN16 packet:\nid-independent\nGenePrint\n: Signal Preprocessing"
+    },
+    {
+      "number": 99,
+      "title": "RN16 packet:",
+      "lines": [
+        "RN16 packet:",
+        "id-independent",
+        "GenePrint",
+        ": Signal Preprocessing"
+      ],
+      "text": "RN16 packet:\nid-independent\nGenePrint\n: Signal Preprocessing"
+    },
+    {
+      "number": 100,
+      "title": "Cov",
+      "lines": [
+        "Cov",
+        "-based feature",
+        "C: a constant vector of the standard square wave",
+        "f: a value representing the tag’s inherent hardware feature",
+        "n: a series of random gauss white noise",
+        "GenePrint",
+        ": Feature Extraction"
+      ],
+      "text": "Cov\n-based feature\nC: a constant vector of the standard square wave\nf: a value representing the tag’s inherent hardware feature\nn: a series of random gauss white noise\nGenePrint\n: Feature Extraction"
+    },
+    {
+      "number": 101,
+      "title": "Cov",
+      "lines": [
+        "Cov",
+        "-based feature",
+        "Theorem: for the",
+        "i",
+        "th",
+        "pulse and",
+        "j",
+        "th",
+        "pulse",
+        "GenePrint",
+        ": Feature Extraction",
+        "Source",
+        "Target",
+        "?",
+        "Covariance",
+        "Internal",
+        "Similarity"
+      ],
+      "text": "Cov\n-based feature\nTheorem: for the\ni\nth\npulse and\nj\nth\npulse\nGenePrint\n: Feature Extraction\nSource\nTarget\n?\nCovariance\nInternal\nSimilarity"
+    },
+    {
+      "number": 102,
+      "title": "Let A = C + f",
+      "lines": [
+        "Let A = C + f",
+        "We will prove (for the",
+        "i",
+        "th",
+        "pulse and",
+        "j",
+        "th",
+        "pulse)",
+        "GenePrint",
+        ": Noise cancellation"
+      ],
+      "text": "Let A = C + f\nWe will prove (for the\ni\nth\npulse and\nj\nth\npulse)\nGenePrint\n: Noise cancellation"
+    },
+    {
+      "number": 103,
+      "title": "GenePrint",
+      "lines": [
+        "GenePrint",
+        ": Noise cancellation"
+      ],
+      "text": "GenePrint\n: Noise cancellation"
+    },
+    {
+      "number": 104,
+      "title": "Note that the                                 and                 are independent",
+      "lines": [
+        "Note that the                                 and                 are independent",
+        "GenePrint",
+        ": Noise cancellation"
+      ],
+      "text": "Note that the                                 and                 are independent\nGenePrint\n: Noise cancellation"
+    },
+    {
+      "number": 105,
+      "title": "Cov",
+      "lines": [
+        "Cov",
+        "-based feature",
+        "Noise cancellation",
+        "Feature extraction",
+        "GenePrint",
+        ": Feature Extraction"
+      ],
+      "text": "Cov\n-based feature\nNoise cancellation\nFeature extraction\nGenePrint\n: Feature Extraction"
+    },
+    {
+      "number": 106,
+      "title": "Cov",
+      "lines": [
+        "Cov",
+        "-based feature",
+        "For 64 pulses",
+        "Signal feature establishment:  the distribution of",
+        "F",
+        "GenePrint",
+        ": Feature Extraction"
+      ],
+      "text": "Cov\n-based feature\nFor 64 pulses\nSignal feature establishment:  the distribution of\nF\nGenePrint\n: Feature Extraction"
+    },
+    {
+      "number": 107,
+      "title": "Cov",
+      "lines": [
+        "Cov",
+        "-based feature",
+        "Signal feature establishment",
+        "Equi",
+        "-width histogram method",
+        "to estimate the F’s distribution",
+        "GenePrint",
+        ": Fingerprint"
+      ],
+      "text": "Cov\n-based feature\nSignal feature establishment\nEqui\n-width histogram method\nto estimate the F’s distribution\nGenePrint\n: Fingerprint"
+    },
+    {
+      "number": 108,
+      "title": "Identification",
+      "lines": [
+        "Identification",
+        "Sample combination",
+        "N preambles generate one fingerprint",
+        "Performance: Accuracy",
+        "* Physical-layer Identification of  UHF RFID Tags,",
+        "MobiCom",
+        "2010",
+        "When N>=5,",
+        "GenePrint",
+        "achieves an accuracy of 99%+"
+      ],
+      "text": "Identification\nSample combination\nN preambles generate one fingerprint\nPerformance: Accuracy\n* Physical-layer Identification of  UHF RFID Tags,\nMobiCom\n2010\nWhen N>=5,\nGenePrint\nachieves an accuracy of 99%+"
+    },
+    {
+      "number": 109,
+      "title": "Motivation: Authentication is a crucial task for nowadays RFID applications!",
+      "lines": [
+        "Motivation: Authentication is a crucial task for nowadays RFID applications!",
+        "Hu-Fu: Towards Replay-resilient RFID Authentication",
+        "G. Wang, et al., Towards Replay-resilient RFID Authentication,",
+        "MobiCom",
+        "2018"
+      ],
+      "text": "Motivation: Authentication is a crucial task for nowadays RFID applications!\nHu-Fu: Towards Replay-resilient RFID Authentication\nG. Wang, et al., Towards Replay-resilient RFID Authentication,\nMobiCom\n2018"
+    },
+    {
+      "number": 110,
+      "title": "Compared with existing works",
+      "lines": [
+        "Compared with existing works",
+        "Modification-free",
+        "Tag counterfeiting",
+        "Signal replay",
+        "E1G2 Protocol",
+        "Cryptology method",
+        "Physical-layer",
+        "Hu-Fu"
+      ],
+      "text": "Compared with existing works\nModification-free\nTag counterfeiting\nSignal replay\nE1G2 Protocol\nCryptology method\nPhysical-layer\nHu-Fu"
+    },
+    {
+      "number": 111,
+      "title": "Inductive coupling of two tags",
+      "lines": [
+        "Inductive coupling of two tags",
+        "U",
+        "L",
+        "U",
+        "R",
+        "T",
+        "L",
+        "T",
+        "R",
+        "Reader"
+      ],
+      "text": "Inductive coupling of two tags\nU\nL\nU\nR\nT\nL\nT\nR\nReader"
+    },
+    {
+      "number": 112,
+      "title": "Inductive coupling of two tags",
+      "lines": [
+        "Inductive coupling of two tags",
+        "T",
+        "L",
+        "T",
+        "R",
+        "C",
+        "L",
+        "C",
+        "R",
+        "Reader"
+      ],
+      "text": "Inductive coupling of two tags\nT\nL\nT\nR\nC\nL\nC\nR\nReader"
+    },
+    {
+      "number": 113,
+      "title": "Signal randomization",
+      "lines": [
+        "Signal randomization",
+        "T",
+        "L",
+        "T",
+        "R",
+        "Add random signal s",
+        "C",
+        "L",
+        "·s",
+        "C",
+        "R",
+        "·s"
+      ],
+      "text": "Signal randomization\nT\nL\nT\nR\nAdd random signal s\nC\nL\n·s\nC\nR\n·s"
+    },
+    {
+      "number": 114,
+      "title": "Detect tag counterfeiting attack:",
+      "lines": [
+        "Detect tag counterfeiting attack:",
+        "T",
+        "L",
+        "T’",
+        "C",
+        "C’",
+        "L",
+        "·s",
+        "C’",
+        "C",
+        "·s",
+        "Add random signal s",
+        "Reader"
+      ],
+      "text": "Detect tag counterfeiting attack:\nT\nL\nT’\nC\nC’\nL\n·s\nC’\nC\n·s\nAdd random signal s\nReader"
+    },
+    {
+      "number": 115,
+      "title": "Detect  signal reply attack",
+      "lines": [
+        "Detect  signal reply attack",
+        "T",
+        "L",
+        "T",
+        "R",
+        "C",
+        "L",
+        "·s",
+        "C",
+        "L",
+        "·s",
+        "Add random signal s",
+        "Reader"
+      ],
+      "text": "Detect  signal reply attack\nT\nL\nT\nR\nC\nL\n·s\nC\nL\n·s\nAdd random signal s\nReader"
+    },
+    {
+      "number": 116,
+      "title": "Detect  signal reply attack",
+      "lines": [
+        "Detect  signal reply attack",
+        "T",
+        "L",
+        "C",
+        "L",
+        "·s ·s’",
+        "C",
+        "L",
+        "·s ·s’",
+        "Add random signal s",
+        "Reader",
+        "U",
+        "L",
+        "·s’"
+      ],
+      "text": "Detect  signal reply attack\nT\nL\nC\nL\n·s ·s’\nC\nL\n·s ·s’\nAdd random signal s\nReader\nU\nL\n·s’"
+    },
+    {
+      "number": 117,
+      "title": "Detect signal compensation attack",
+      "lines": [
+        "Detect signal compensation attack",
+        "T",
+        "L",
+        "T’",
+        "C",
+        "C’",
+        "L",
+        "·s",
+        "C’",
+        "C",
+        "·s",
+        "Add random signal s",
+        "Reader"
+      ],
+      "text": "Detect signal compensation attack\nT\nL\nT’\nC\nC’\nL\n·s\nC’\nC\n·s\nAdd random signal s\nReader"
+    },
+    {
+      "number": 118,
+      "title": "Detect signal compensation attack",
+      "lines": [
+        "Detect signal compensation attack",
+        "T",
+        "L",
+        "Add random signal s",
+        "C",
+        "L",
+        "·s",
+        "C",
+        "R",
+        "·s",
+        "Reader",
+        "T’",
+        "C",
+        "However, signal compensation to",
+        "HuFu",
+        "is difficult!"
+      ],
+      "text": "Detect signal compensation attack\nT\nL\nAdd random signal s\nC\nL\n·s\nC\nR\n·s\nReader\nT’\nC\nHowever, signal compensation to\nHuFu\nis difficult!"
+    },
+    {
+      "number": 119,
+      "title": "Reason 1: In Hu-Fu, C",
+      "lines": [
+        "Reason 1: In Hu-Fu, C",
+        "L",
+        "and C",
+        "R",
+        "are protected by the one-time random signal s(t). The attacker can only get C",
+        "L",
+        "·s and C",
+        "R",
+        "·s.",
+        "Reason 2: According to the protocol, tags will randomly select one slot to respond.",
+        "Detect signal compensation attack",
+        "Success rate<20%"
+      ],
+      "text": "Reason 1: In Hu-Fu, C\nL\nand C\nR\nare protected by the one-time random signal s(t). The attacker can only get C\nL\n·s and C\nR\n·s.\nReason 2: According to the protocol, tags will randomly select one slot to respond.\nDetect signal compensation attack\nSuccess rate<20%"
+    },
+    {
+      "number": 120,
+      "title": "Hence the attacker",
+      "lines": [
+        "Hence the attacker",
+        "does not know the valid features",
+        ", even if the attacker knows the feature extraction algorithms, it is impossible to find an unknown feature from the tags owned by the attacker.",
+        "Brute-force feature replay attack"
+      ],
+      "text": "Hence the attacker\ndoes not know the valid features\n, even if the attacker knows the feature extraction algorithms, it is impossible to find an unknown feature from the tags owned by the attacker.\nBrute-force feature replay attack"
+    },
+    {
+      "number": 121,
+      "title": "Implementation",
+      "lines": [
+        "Implementation",
+        "Hardware:",
+        "An USRP N210 equipped with SBX draught-board",
+        "Two Laird S9028-PCL directional antennas",
+        "150 tag pairs",
+        "Dell desktop equips Intel Core i7-7700 CPU"
+      ],
+      "text": "Implementation\nHardware:\nAn USRP N210 equipped with SBX draught-board\nTwo Laird S9028-PCL directional antennas\n150 tag pairs\nDell desktop equips Intel Core i7-7700 CPU"
+    },
+    {
+      "number": 122,
+      "title": "Evaluation",
+      "lines": [
+        "Evaluation",
+        "[1]",
+        "[2]",
+        "[3]",
+        "[1]",
+        "J. Han, C. Qian, P. Yang, D. Ma, Z. Jiang, W. Xi, and J. Zhao. 2016.",
+        "GenePrint",
+        ": Generic and accurate physical-layer",
+        "identifcation",
+        "for UHF RFID tags.",
+        "IEEE/ACM Transactions on Networking (TON)",
+        "(2016)",
+        "[2] Davide Zanetti, Boris",
+        "Danev",
+        ", et al. 2010. Physical-layer identification of UHF RFID tags. In",
+        "ACM",
+        "Mobicom",
+        "[3] Y. Zheng, M. Li, and C. Qian. 2011. PET: Probabilistic Estimating Tree for Large-Scale RFID Estimation. In",
+        "Proceedings of IEEE ICDCS"
+      ],
+      "text": "Evaluation\n[1]\n[2]\n[3]\n[1]\nJ. Han, C. Qian, P. Yang, D. Ma, Z. Jiang, W. Xi, and J. Zhao. 2016.\nGenePrint\n: Generic and accurate physical-layer\nidentifcation\nfor UHF RFID tags.\nIEEE/ACM Transactions on Networking (TON)\n(2016)\n[2] Davide Zanetti, Boris\nDanev\n, et al. 2010. Physical-layer identification of UHF RFID tags. In\nACM\nMobicom\n[3] Y. Zheng, M. Li, and C. Qian. 2011. PET: Probabilistic Estimating Tree for Large-Scale RFID Estimation. In\nProceedings of IEEE ICDCS"
+    },
+    {
+      "number": 123,
+      "title": "Motivation",
+      "lines": [
+        "Motivation",
+        "RF-Mehndi: A Fingertip Profiled RF Identifier",
+        "C. Zhao, et al., RF-Mehndi: A Fingertip Profiled RF Identifier, INFOCOM, 2019. (Best Paper Award)",
+        "Who are you?",
+        "Sth",
+        "you have?"
+      ],
+      "text": "Motivation\nRF-Mehndi: A Fingertip Profiled RF Identifier\nC. Zhao, et al., RF-Mehndi: A Fingertip Profiled RF Identifier, INFOCOM, 2019. (Best Paper Award)\nWho are you?\nSth\nyou have?"
+    },
+    {
+      "number": 124,
+      "title": "Why not combining the device features and user biometrics?",
+      "lines": [
+        "Why not combining the device features and user biometrics?",
+        "Device Authentication",
+        "User(Biometric) Authentication",
+        "124"
+      ],
+      "text": "Why not combining the device features and user biometrics?\nDevice Authentication\nUser(Biometric) Authentication\n124"
+    },
+    {
+      "number": 125,
+      "title": "Idea: fingertip touching on the tag array",
+      "lines": [
+        "Idea: fingertip touching on the tag array",
+        "User-dependent",
+        "&",
+        "Unique"
+      ],
+      "text": "Idea: fingertip touching on the tag array\nUser-dependent\n&\nUnique"
+    },
+    {
+      "number": 126,
+      "title": "Objective",
+      "lines": [
+        "Objective",
+        "Device Authentication",
+        "User Authentication",
+        "Replay",
+        "Impersonation",
+        "Counterfeiting",
+        "Universal",
+        "Light-weight",
+        "Low-cost"
+      ],
+      "text": "Objective\nDevice Authentication\nUser Authentication\nReplay\nImpersonation\nCounterfeiting\nUniversal\nLight-weight\nLow-cost"
+    },
+    {
+      "number": 127,
+      "title": "Radiative & Inductive coupling",
+      "lines": [
+        "Radiative & Inductive coupling"
+      ],
+      "text": "Radiative & Inductive coupling"
+    },
+    {
+      "number": 128,
+      "title": "What will happen if we collect their phases together?",
+      "lines": [
+        "What will happen if we collect their phases together?",
+        "Impact of tag coupling"
+      ],
+      "text": "What will happen if we collect their phases together?\nImpact of tag coupling"
+    },
+    {
+      "number": 129,
+      "title": "Why does the phase change due to coupling?",
+      "lines": [
+        "Why does the phase change due to coupling?"
+      ],
+      "text": "Why does the phase change due to coupling?"
+    },
+    {
+      "number": 130,
+      "title": "Observation: Impact of human impedance",
+      "lines": [
+        "Observation: Impact of human impedance"
+      ],
+      "text": "Observation: Impact of human impedance"
+    },
+    {
+      "number": 131,
+      "title": "Why does phase change with fingertip touch?",
+      "lines": [
+        "Why does phase change with fingertip touch?"
+      ],
+      "text": "Why does phase change with fingertip touch?"
+    },
+    {
+      "number": 132,
+      "title": "Phase Difference of Tags (",
+      "lines": [
+        "Phase Difference of Tags (",
+        "PDoT",
+        ")",
+        "User-dependent & Unique",
+        "Phase Fingerprint"
+      ],
+      "text": "Phase Difference of Tags (\nPDoT\n)\nUser-dependent & Unique\nPhase Fingerprint"
+    },
+    {
+      "number": 133,
+      "title": "Challenge 1: The impact of touching is unstable.",
+      "lines": [
+        "Challenge 1: The impact of touching is unstable.",
+        "Complexity of",
+        "coupling",
+        "&",
+        "Size",
+        "of array"
+      ],
+      "text": "Challenge 1: The impact of touching is unstable.\nComplexity of\ncoupling\n&\nSize\nof array"
+    },
+    {
+      "number": 134,
+      "title": "Challenge 2: Phases change with distance",
+      "lines": [
+        "Challenge 2: Phases change with distance"
+      ],
+      "text": "Challenge 2: Phases change with distance"
+    },
+    {
+      "number": 135,
+      "title": "Challenge 2: Phase shifting algorithm",
+      "lines": [
+        "Challenge 2: Phase shifting algorithm"
+      ],
+      "text": "Challenge 2: Phase shifting algorithm"
+    },
+    {
+      "number": 136,
+      "title": "Max",
+      "lines": [
+        "Max",
+        "PDoT",
+        "1",
+        "2",
+        "Max",
+        "PDoT",
+        "1",
+        "2",
+        "Max",
+        "PDoT",
+        "Get phase fingerprint at this status",
+        "Phase shifting algorithm"
+      ],
+      "text": "Max\nPDoT\n1\n2\nMax\nPDoT\n1\n2\nMax\nPDoT\nGet phase fingerprint at this status\nPhase shifting algorithm"
+    },
+    {
+      "number": 137,
+      "title": "Slide 137",
+      "lines": [],
+      "text": ""
+    },
+    {
+      "number": 138,
+      "title": "Challenge 3: Impact of accessories",
+      "lines": [
+        "Challenge 3: Impact of accessories",
+        "r=ring  w=watch  n=necklace"
+      ],
+      "text": "Challenge 3: Impact of accessories\nr=ring  w=watch  n=necklace"
+    },
+    {
+      "number": 139,
+      "title": "1.",
+      "lines": [
+        "1.",
+        "Impinj",
+        "R420 reader",
+        "2.",
+        "Larid",
+        "antenna A9028",
+        "3. Alien-9629 tag",
+        "Implementation"
+      ],
+      "text": "1.\nImpinj\nR420 reader\n2.\nLarid\nantenna A9028\n3. Alien-9629 tag\nImplementation"
+    },
+    {
+      "number": 140,
+      "title": "7 females + 8 males",
+      "lines": [
+        "7 females + 8 males",
+        "15 representative tag array layouts",
+        "Overall accuracy vs. Human diversity",
+        "Accuracy > 99%"
+      ],
+      "text": "7 females + 8 males\n15 representative tag array layouts\nOverall accuracy vs. Human diversity\nAccuracy > 99%"
+    },
+    {
+      "number": 141,
+      "title": "RF-Cloak",
+      "lines": [
+        "RF-Cloak",
+        "：",
+        "System that protects RFIDs against eavesdropping attacks",
+        "Goal",
+        "：",
+        "Does not require any modification to the RFID cards",
+        "Protects against a wide range of attackers including multi-antenna",
+        "MIMO eavesdroppers",
+        "Theoretically proven the security guarantee",
+        "Implemented the system and empirically demonstrated its benefits",
+        "Haitham H., et al, Securing RFIDs by randomizing the modulation and channel, NSDI 2015"
+      ],
+      "text": "RF-Cloak\n：\nSystem that protects RFIDs against eavesdropping attacks\nGoal\n：\nDoes not require any modification to the RFID cards\nProtects against a wide range of attackers including multi-antenna\nMIMO eavesdroppers\nTheoretically proven the security guarantee\nImplemented the system and empirically demonstrated its benefits\nHaitham H., et al, Securing RFIDs by randomizing the modulation and channel, NSDI 2015"
+    },
+    {
+      "number": 142,
+      "title": "RFID Communication",
+      "lines": [
+        "RFID Communication",
+        "Replace constant waveform",
+        "C",
+        "with a random",
+        "waveform",
+        "R(t)"
+      ],
+      "text": "RFID Communication\nReplace constant waveform\nC\nwith a random\nwaveform\nR(t)"
+    },
+    {
+      "number": 143,
+      "title": "Solution:",
+      "lines": [
+        "Solution:",
+        "Randomizing the Reader's Signal",
+        "Random waveform acts like a",
+        "one-time pad",
+        "on the air",
+        "->",
+        "Naive solution: Multiply each bit with random number",
+        "Random waveform must destroy internal",
+        "signal patterns of the bits"
+      ],
+      "text": "Solution:\nRandomizing the Reader's Signal\nRandom waveform acts like a\none-time pad\non the air\n->\nNaive solution: Multiply each bit with random number\nRandom waveform must destroy internal\nsignal patterns of the bits"
+    },
+    {
+      "number": 144,
+      "title": "RF-Cloak: Randomizing the Reader's Signal",
+      "lines": [
+        "RF-Cloak: Randomizing the Reader's Signal",
+        "Random waveform:",
+        "•    Must change as fast as any transition in the RFID signal",
+        "^ has same bandwidth as RFID signal",
+        "•    Must be indistinguishable from white noise i.e. flat frequency profile",
+        "-> samples taken from complex Gaussians"
+      ],
+      "text": "RF-Cloak: Randomizing the Reader's Signal\nRandom waveform:\n•    Must change as fast as any transition in the RFID signal\n^ has same bandwidth as RFID signal\n•    Must be indistinguishable from white noise i.e. flat frequency profile\n-> samples taken from complex Gaussians"
+    },
+    {
+      "number": 145,
+      "title": "Theorem 1: Using RF-Cloak's random signal R(t), an eavesdropper will not be able to distinguish a 0 bit from a 1 bit whi",
+      "lines": [
+        "Theorem 1: Using RF-Cloak's random signal R(t), an eavesdropper will not be able to distinguish a 0 bit from a 1 bit which is no better than a random guess",
+        "What if the attacker has multi-antenna, i.e., MIMO capability?",
+        "Threat Model",
+        "MIMO Eavesdropper can eliminate the random waveform and decode the RFID bits."
+      ],
+      "text": "Theorem 1: Using RF-Cloak's random signal R(t), an eavesdropper will not be able to distinguish a 0 bit from a 1 bit which is no better than a random guess\nWhat if the attacker has multi-antenna, i.e., MIMO capability?\nThreat Model\nMIMO Eavesdropper can eliminate the random waveform and decode the RFID bits."
+    },
+    {
+      "number": 146,
+      "title": "RF-Cloak",
+      "lines": [
+        "RF-Cloak",
+        "vs",
+        "MIMO Eavesdropper",
+        "Antenna War!",
+        "RF-Cloak combines antenna motion and rapid antenna switching",
+        "-> Emulate a very large number of fast changing antennas",
+        "^ Eavesdropper cannot decode"
+      ],
+      "text": "RF-Cloak\nvs\nMIMO Eavesdropper\nAntenna War!\nRF-Cloak combines antenna motion and rapid antenna switching\n-> Emulate a very large number of fast changing antennas\n^ Eavesdropper cannot decode"
+    },
+    {
+      "number": 147,
+      "title": "Evaluation",
+      "lines": [
+        "Evaluation",
+        "Implemented RF-",
+        "Cloakon",
+        "USRP N210 software radios and combined it with a",
+        "1725",
+        "rpm motor and ADG904R RF switches.",
+        "• Evaluated it against different types of commercial RFID cards",
+        "• Evaluation metric : Bit error rate (BER)"
+      ],
+      "text": "Evaluation\nImplemented RF-\nCloakon\nUSRP N210 software radios and combined it with a\n1725\nrpm motor and ADG904R RF switches.\n• Evaluated it against different types of commercial RFID cards\n• Evaluation metric : Bit error rate (BER)"
+    },
+    {
+      "number": 148,
+      "title": "RF-Cloak Random Waveform",
+      "lines": [
+        "RF-Cloak Random Waveform",
+        "vs",
+        "Single Antenna Eavesdropper",
+        "RF-Cloak Random Waveform",
+        "vs",
+        "Two Antenna MIMO Eavesdropper",
+        "RF-Cloak Channel Randomization",
+        "vs",
+        "MIMO Eavesdropper",
+        "Evaluation result",
+        "Eavesdropper has mean BER of 0.498 with std. dev. 0.008 ^ Very close to a random guess",
+        "A two-antenna MIMO eavesdropper can correctly decode the RFID bits",
+        "RF-Cloak can prevent a MIMO eavesdropper from decoding the RFID's data"
+      ],
+      "text": "RF-Cloak Random Waveform\nvs\nSingle Antenna Eavesdropper\nRF-Cloak Random Waveform\nvs\nTwo Antenna MIMO Eavesdropper\nRF-Cloak Channel Randomization\nvs\nMIMO Eavesdropper\nEvaluation result\nEavesdropper has mean BER of 0.498 with std. dev. 0.008 ^ Very close to a random guess\nA two-antenna MIMO eavesdropper can correctly decode the RFID bits\nRF-Cloak can prevent a MIMO eavesdropper from decoding the RFID's data"
+    },
+    {
+      "number": 149,
+      "title": "Lack of standards!",
+      "lines": [
+        "Lack of standards!",
+        "Short range",
+        "Security",
+        "Deployed naïvely, embedding of RFID tags in consumer items can present a serious danger to privacy and security of consumers and enterprises alike in the future.",
+        "Summary: RFID’s Disadvantages"
+      ],
+      "text": "Lack of standards!\nShort range\nSecurity\nDeployed naïvely, embedding of RFID tags in consumer items can present a serious danger to privacy and security of consumers and enterprises alike in the future.\nSummary: RFID’s Disadvantages"
+    },
+    {
+      "number": 150,
+      "title": "Deployers",
+      "lines": [
+        "Deployers",
+        "can scarcely get RFID working at all!",
+        "UHF tags hard to read near liquids, like water",
+        "You are salt water so…",
+        "If you’re worried about your sweater being scanned, wear it!",
+        "And even when range is good…",
+        "In some automated point-of-sale trials, participants paid for groceries of people behind them…",
+        "Consumer goods manufacturers and retailers don’t want to drive customers away",
+        "RFID Realities"
+      ],
+      "text": "Deployers\ncan scarcely get RFID working at all!\nUHF tags hard to read near liquids, like water\nYou are salt water so…\nIf you’re worried about your sweater being scanned, wear it!\nAnd even when range is good…\nIn some automated point-of-sale trials, participants paid for groceries of people behind them…\nConsumer goods manufacturers and retailers don’t want to drive customers away\nRFID Realities"
+    },
+    {
+      "number": 151,
+      "title": "[1]",
+      "lines": [
+        "[1]",
+        "Juels",
+        ", Ari. \"RFID security and privacy: A research survey.\" IEEE journal on selected areas in communications 24.2 (2006): 381-394.",
+        "[2]",
+        "Juels",
+        ", Ari, and Stephen A. Weis. \"Authenticating pervasive devices with human protocols.\" Annual international cryptology conference. Springer, Berlin, Heidelberg, 2005.",
+        "[3]\tRFID Chef",
+        "http://www.inf.ethz.ch/vs/res/proj/rfidchef/",
+        "[4]\tTexas Instruments RFID Solutions",
+        "http://www.ti.com/tiris/default.htm",
+        "References"
+      ],
+      "text": "[1]\nJuels\n, Ari. \"RFID security and privacy: A research survey.\" IEEE journal on selected areas in communications 24.2 (2006): 381-394.\n[2]\nJuels\n, Ari, and Stephen A. Weis. \"Authenticating pervasive devices with human protocols.\" Annual international cryptology conference. Springer, Berlin, Heidelberg, 2005.\n[3]\tRFID Chef\nhttp://www.inf.ethz.ch/vs/res/proj/rfidchef/\n[4]\tTexas Instruments RFID Solutions\nhttp://www.ti.com/tiris/default.htm\nReferences"
+    }
+  ],
+  "full_text": "RFID Security and Privacy\nWireless network and IoT security\n\nRFID\nCow Jewelry – or – Revolution\n\nIn terms of appearance…\nWhat is a\nR\nadio-\nF\nrequency\nId\nentification (RFID) Tag?\nChip (IC)\nAntenna\n\nIn terms of usage\nThe use of radio frequency tags to identify real objects.\nWhat is RFID?\nWhat does it mean to identify something?\n\nAssign IDs to objects\nLink the ID to additional information about the object\nLink the ID to complementary info\nFind similar objects\nIdentification\n\nBar Codes\nLicense Plates\nSocial Security Numbers\nStudent ID\nSerial Numbers\nCar Keys\nDatabase Keys\nIdentification Examples\n\nBetter supply-chain visibility -- #1 compelling application\nU.S. DHS: Passports\nU.S. FDA: Pharmaceuticals, anti-counterfeiting\nLibraries\nHouse Pets – approx. 50 million\nRFID Identification Applications\n\nThe Grand Vision: RFID as Next-generation Barcode\nBarcode\nRFID tag\nLine-of-sight\nRadio contact\nSpecifies object type\nUniquely specifies object\nFast, automated\nscanning\nProvides pointer\nto database entry\nfor every object,\ni.e., unique,\ndetailed history\n\nYou may own a few RFID tags…\nProximity cards (contactless physical-access cards)\nExxonMobil\nSpeedpass\nEZ Pass\nRFID in fact denotes a spectrum of devices:\nExample RFID Tags In Daily Lives\nSpeedPass\nMobile phone\nEZ Pass\nBasic\nRFID Tag\n\n3 Components\nTransceiver – Tag Reader\nTransponder – RFID tag\nAntenna\nHow Does RFID Work?\n\nReaders (interrogators) can be at a fixed point such as\nEntrance/exit\nPoint of sale\nWarehouse\nReaders can also be mobile -- tethered,\nhand-held, or wireless\nRFID Readers\n\n阅读器为射频标签工作\n提供能量\n供能\n通信\n阅读器和射频标签之间的\n通信\n阅读器和应用层（中间件）之间的\n通信\n安全保证\n阅读器的通信\n安全性保证\n功能，如使用加密、解密技术\n自组网\n能力\n多天线\n管理\n中间件\n接口\n…\n2.1.1\n阅读器功能\n阅读器作为连接应用层（中间件）和射频标签的桥梁，占据着十分重要的位置。一般来说，阅读器在\nRFID\n系统中可能提供的功能可以总结如下。\n连接\n外设\n\n2.1.2\n阅读器分类\nRFID\n系统的工作原理与其所使用的射频信号频率有关。\n工作频率越高，识别距离越远，数据传输速率越高，信号衰减越厉害，对障碍物越敏感。\n按工作频率\n低频\n和\n高频\n阅读器，工作频率一般小于\n1m\n，典型工作频率\n125kHz\n、\n135kHz\n、\n6.78MHz\n、\n13.56MHz\n和\n27.125MHz\n超高频\n和\n特高频\n阅读器，工作频率一般大于\n1m\n，典型工作频率有\n433MHz\n、\n860MHz~960MHz\n、\n2.45GHz\n和\n5.8GHz\n\n2.1.2\n阅读器分类\n按结构外观\n在实际应用中，由于需要综合考虑阅读器成本、便携性等方面因素，因此阅读器在外观结构上有很大不同，可分为以下三类：\n固定式\n便携式\n工业读写器\n有线\n供电\n集成度\n高\n搭建\n快速\n体积\n较小\n电池\n供电\n移动\n方便\n行业相关\n可\n集成\n其他\n传感器\n\n2.1.3\n阅读器操作规范\n为保证阅读器的性能满足应用需求，在阅读器的使用过程中通常要遵循相应的操作规范。\n在操作规范中，下面几点是选择使用阅读器时需要重点考虑的方面：\n\n2.1.4\n阅读器组成\n又称\n基带控制\n模块\n包含：\n微处理器\n以执行计算任务\n数字信号处理芯片\n以完成数字信号的编码、解码\n又称\n高频接口\n模块\n包含分隔的信道：\n发射器\n信号通道\n接收器\n信号通道\n\n2.1.5\n信号处理与控制模块\n与上位机进行\n通信\n，并\n执行\n从上位机发来的命令\n控制\n与射频标签的通信过程\n信号的\n编码\n和\n解码\n执行\n防碰撞\n算法\n对阅读器和射频标签之间传送的数据进行\n加密\n和\n解密\n进行阅读器和标签之间的\n身份验证\n\nRFID Hardware\nMagnetic / Inductive Coupling\nTransceiver\nTag Reader\nantenna\nRFID\nTag\nIC or microprocessor\nantenna\n\n2.1.6\n射频模块\n电感耦合型射频模块\n低频\n、\n高频\nRFID\n系统通过阅读器和射频标签之间的\n电感耦合\n工作。该工作方式的射频标签一般是\n无源\n的，通过电感耦合给标签提\n供能\n量。\n阅读器\n向射频标签发送数据时，可以采用多种\n数字调制\n技术对数据进行调制。\n射频标签\n向阅读器发送数据时，通常采用\n负载调制\n技术，将射频标签天线线圈中的电压变化传到阅读器天线。\n\nRFID Hardware (Cont’d)\nPropagation Coupling\nTransceiver\nTag Reader\nantenna\nRFID\nTag\nIC or microprocessor\nantenna\n\n2.1.6\n射频模块\n电磁反向散射耦合型射频模块\n远\n距离\n超高频\nRFID\n系统利用阅读器与射频标签之间的\n电磁反向散耦合\n原理工作的，类似于雷达的工作原理。\n该系统中，为了给射频标签提供工作能量，阅读器必须\n不断地发送\n射频信号。\n阅读器发送信号和标签返回信号\n频率相同\n、\n强度不同\n。\n为了区分，超高频的射频模块可分为：\n源\n模块、\n发送\n模块和\n接受\n模块。\n\n2.1.6\n射频模块\n电磁反向散射耦合型射频模块\n源模块的作用是为发送通道和接受通道提供\n本地振荡器\n（\nLocal Oscillator\n）。\n放大之后的载波信号经过功分器分成两路，一路\n送往发送\n模块，一路\n送往接受\n模块。\n\n2.1.6\n射频模块\n电磁反向散射耦合型射频模块\n发送模块由\n混频器\n、\n线性放大器\n、\n前置放大器\n、\n功率放大器\n和\n阻抗变换网络\n组成。\n线性放大器\n信号放大\n混频器\n载波、基带信号混合调制\n功率放大器\n阻抗变换网\n阻抗匹配\n低通滤波器和谐波抑制器\n环形器\n\n2.1.6\n射频模块\n电磁反向散射耦合型射频模块\n接受模块由\n线性放大器\n、两个\n功分器\n和两个\n混频器\n组成。\n射频标签返回\n微弱信号\n天线\n环形器\n（三端口微波器件）\n带通滤波器\n功分器\n混频器\nI\n路基带信号输出\n混频器\nQ\n路基带信号输出\n\n2.1.6\n射频模块\n电磁反向散射耦合型射频模块\n射频模块主要功能\n产生高频发送能量，\n激活\n射频标签并为其提\n供能\n量（无源射频标签）\n对发送信号进行\n调制\n，用于将数据传输给射频标签。\n接受并\n解调\n来自射频标签的射频信号。\n\nCharacteristics:\nPassive device – receives power from reader\nRange of up to several meters\nIn effect a “smart label”: simply calls out its (unique) name and/or static data\nBasic RFID Tag Characteristics\n“74AB8”\n“5F8KJ3”\n“\nPlastic #3”\n\nLittle memory\nStatic 64-to-128-bit identifier in current ultra-cheap generation (five cents / unit)\nHundreds of bits soon\nMaybe writeable under good conditions\nLittle computational power\nA few thousand gates\nStatic keys for read/write permission\nNo\nreal cryptographic functions available\nThe Capabilities of a Basic RFID Tag\n\nRead Only\nfactory programmed\nusually\nchipless\nRead / Write\non-board memory\ncan save data\ncan change ID\nhigher cost\nTypes of Tags\n\nAmplitude Modulation (AM)\nFrequency Shift Keying (FSK)\nPhase Shift Keying (PSK)\nData Transfer: Modulation Techniques\n\nOne frequency\nChange the phase on the transition between a 0 to 1 or 1 to 0\nFaster data rate than FSK\nNoise immunity\nSlightly more difficult to build a reader than FSK\nPhase Shift Keying\n\nData Encoding\n\n4.1\nRFID\n的标签识别协议\n与其他无线传输系统一样，\nRFID\n系统也存在\n信号干扰\n问题。\nRFID\n系统中，主要存在以下两种类型的信号干扰：\n阅读器之间的冲突干扰\n（多个阅读器同时发送信号\n）\n标签之间的冲突干扰\n（多个阅读器同时响应阅读器）\n因此，需要降低阅读器之间以及标签之间的冲突来提高对标签的识别效率。\n\n4.1\nRFID\n的标签识别协议\n针对阅读器之间的冲突问题，存在三种典型的防冲突协议：\n\nCSMA\n\n4.1\nRFID\n的标签识别协议\n与阅读器相比，标签受硬件资源限制，存储能力和计算能力很有限。这使得标签没有冲突检测功能，标签之间不能相互的通信，所有的冲突检测都需要借助于阅读器完成。从系统的复杂度以及成本方面考虑，\nTDMA\n可用于检测\nRFID\n标签之间的冲突。\n\n4\n.1\n基于\nALOHA\n的防冲突算法\n基于\nALOHA\n的防冲突算法采用了\n回退\n的机制，标签以概率的方法参与识别过程。\n三种基于\nALOHA\n的防冲突算法：\n纯\nALOHA\n算法\n时隙\nALOHA\n算法\n基于帧的时隙\nALOHA\n算法\n基于\nALOHA\n的协议的特点：\n简单\n且\n公平\n\n4.1.1\n纯\nALOHA\n算法\ntag1\ntag2\ntag3\n1\n2\n多标签信号冲突\n3\n成功\n确认\n冲突\n确认\n若标签收到成功识别确认信息，则不再继续发送标识符。否则其等待一段时间后将重新发送直至发送成功为止。\n\n4.1.1\n纯\nALOHA\n算法\n算法\n简单\n，易于实现，但信道利用率仅为\n18.4%\n，\n性能差\n。\n\n4.1.2\n时隙\nALOHA\n算法\nS-ALOHA\n算法将纯\nALOHA\n算法的时间分为若干\n时隙\n，每个时隙大于或等于标签标识符发送的时间长度，并且每个标签只能在时隙开始时刻发送标识符。由于系统进行了时间同步，\nS‐ALOHA\n协议的信道利用率达到\n36.8%\n，是纯\nALOHA\n的\n两倍\n。\n\n4.1.3\n基于帧的时隙\nALOHA\n算法\ntag1\ntag2\ntag3\n帧长度\nf\n阅读器广播帧长度（\nf\n）\n标签在接收\nf\n以后随机在\n0~(f-1)\n中选择一个整数作为其时隙序号，并存于寄存器（\nSN)\n在下一帧的每个时隙中，阅读器通过时隙开始命令启动一个新时隙，若标签\nSN\n为\n0\n则立即发送标识符号，否则\nSN-1.\n1\n0\n…\nf-1\nSN\n2\n3\n若标识符发送成功，则标签休眠，否则等待在下一帧中重新选择时隙发送标识符。\n在\nS-ALOHA\n基础上，将若干个时隙组织为一\n帧\n，阅读器按照帧为单元进行识别。\n\n4.1.3\n基于帧的时隙\nALOHA\n算法\n冲突时隙：不止一个标签响应\n单  时  隙：只有一个标签响应\n空  时  隙：没有标签响应\n\n4.1.3\n基于帧的时隙\nALOHA\n算法\nFSA\n算法的\n优点\n在于逻辑简单，电路设计简单，所需内存少，且在帧内只随机发送一次能够更进一步降低了冲突的概率。\nFSA\n成为\nRFID\n系统中最\n常用\n的一种基于\nALOHA\n的防冲突算法\n\n4.1.3\n基于帧的时隙\nALOHA\n算法\nFSA\n算法\n局限性\n：帧的长度固定\n当标签数远大于帧长度\n标签冲突概率增大，识别标签的时间会极\n大地增加\n当标签数远小于帧长度\n时隙会巨大浪费，识别时间也会增加\n当帧的长度等于阅读器场内标签的数目\n时，\nFSA\n才能获得最佳的识别性能，信道\n利用率最大为\n36.8%\n。\n信道利用率与帧长、标签数量之间的关系\n\n4.1.3\n基于帧的时隙\nALOHA\n算法\n实际应用中，标签数量往往是动态变化的。\n动态自适应设置帧长度的算法可以解决\nFSA\n的局限性。\n常见的帧长调整方法：\n根据前一帧通信获取的空的时隙数目，发生碰撞的时隙数目和成功识别标签的时隙数目的数量估计当前的标签数并设置下一帧的\n最优\n的\n长度\n；\n根据前一时隙的反馈动态调整帧长为\n2\n的\n整数倍\n，这种方法最具代表性的是\nEPCglobalGen2\n标准中设计的\nQ\n算法\n\n4.1.3\n基于帧的时隙\nALOHA\n算法\nQ\n算法\n：\n当一帧出现过多的冲突时隙时，阅读器会提前结束该帧并重新发送一个更大的帧；\n当一个帧出现过多的空闲时隙时，阅读器也会提前结束该帧，重新启动一个更小的帧\nQ\nfp\n：帧参数\nC\n：常量（\n0.1~0.5\n）\nQuery:\n帧开始命令\nQ\n算法能够自适应地调整帧长，识别效率高，在超高频识别系统中得到了广泛的应用。\n\n4.1.3\n基于帧的时隙\nALOHA\n算法\n基于\nALOHA\n的防冲突算法\n简单\n，并且兼顾了\n公平性\n。\n但是，标签存在\n饿死\n的问题。当一个标签选择的时隙总是冲突时隙，则该标签可能永远无法被识别。\n\n4.2\n基于二进制树的防冲突算法\n基于二进制树的防冲突算法的\n基本思想\n：\n按照递归的方式将冲突的标签集合划分为两个子集，直到集合中只剩下一个标签为止。\n划分子集的算法：\n查询二进制树算法：按照标签的标示符划分子集\n随机二进制树算法：让标签随机选择所属的集合\n\n4.2.1\n基于查询二进制树的防冲突算法\n查询二进制树算法\n是一个无状态协议，标签只需要根据阅读器广播的标示符前缀作比较。\n阅读器维持一个二进制前缀（初始值为\n0\n）。每个间隙开始时，阅读器广播该二进制前缀，标签将自己的标签标识符前几位与此二进制前缀进行比对，若相同则该标签发送标识符号。\n整个识别过程就像根据标签的表示符号建立一棵查询二叉树。\n可用于无可写存储区的标签，不存在标签饿死。受\nID\n长度以及分布的影响。\n\n4.2.1\n基于查询二进制树的防冲突算法\n查询二进制树算法实例：\n步骤\n请求比特串\nS\n标签的响应\n1\n0\n冲突\n2\n00\n冲突\n3\n000\n空闲\n4\n001\n冲突\n5\n0010\n0010\n6\n0011\n0011\n7\n01\n空闲\n8\n1\n冲突\n9\n10\n1001\n10\n11\n冲突\n11\n110\n冲突\n12\n1100\n1100\n13\n1101\n1101\n14\n111\n1110\n\n4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法\n需要每个标签维持一个计数器（初始值为\n0\n）。在每一个时隙开始时，\n如果标签的计数器为\n0\n则立即发送自己的标识符号，否则该时隙不响应\n。一般，标签被成功识别后将进入沉默状态，对以后时隙的阅读器命令均不响应。\n场内标签调整计数器规则：若该时隙为冲突时隙，参与响应的标签会从\n0\n或\n1\n中随机选择一个，将其加到自己的计数器上。没有参与响应的标签直接将自己的计数器加\n1\n。\n整个识别过程就像对二叉树进行中序遍历。\n不存在标签饿死的问题，但需要维护计数器。它通过不断地将产生冲突的标签集合划分为两个子集合，直到某一个集合中只有一个标签存在时，成功识别该标签。\n\n4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n\n4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\nREQUEST\n0\n0\n0\n0\nSN\n响应\n(1,2,3,4)\n\n4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n冲突\n0\n0\n1\n0\nSN\n响应\n(1,2,4)\n\n4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n冲突\n1\n0\n2\n1\nSN\n响应\n(2)\n\n4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n成功\n0\n0\n1\n0\nSN\n响应\n(1,4)\n标签\n2\n成功识别，沉默\n\n4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n冲突\n0\n0\n2\n1\nSN\n响应\n(1)\n\n4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n成功\n0\n0\n1\n0\nSN\n响应\n(4)\n\n4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n成功\n0\n0\n1\n0\nSN\n响应\n(4)\n\n4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n成功\n0\n0\n0\n0\nSN\n响应\n(3)\n\n4.2.2\n基于随机二进制树的防冲突算法\n随机二进制树算法实例：\n0010\n0110\n1001\n1110\nID\ntag1\ntag2\ntag3\ntag4\n成功\n0\n0\n0\n0\nSN\n\n4.3\n防冲突算法的性能分析\n基于\nALOHA\n的防冲突算法与基于二进制树的防冲突算法各有利弊。\n同时，不同算法的性能也不同。\n\n4.3\n防冲突算法的性能分析\n基于\nALOHA\n的防冲突算法的\n优缺点\n\n4.3\n防冲突算法的性能分析\n基于\n二进制树\n的防冲突算法的\n优缺点\n\n4.3\n防冲突算法的性能分析\n防冲突算法\n时间复杂度\n传输复杂度\n是否需要标签可写\n基于帧的时隙\nALOHA\n算法\n(FSA)\n上界：\n𝑡\n×\n𝑠\n+\n估算标签数目的时间\n上界：\n𝑛\n×\n𝑠\n是\n(8\n比特或者\n16\n比特的内存，用来计数，指示标签响应的时隙\n)\n随机二进制树算法\n𝑂\n(\n𝑛\n)\n最坏情况：\n(1) n\n未知，\n𝜃\n(\n𝑛𝑙𝑜𝑔𝑛\n)\n(2) n\n已知，\n𝜃\n(\n𝑛\n)\n是\n(8\n比特或\n16\n比特的内存，用来存储计数器的值，指示标签的响应序列和响应时间\n)\n查询二进制树算法\n平均情况：\n𝑂\n(\n𝑛\n)\n最坏情况：\nn\n×\n(\n𝑘\n+2−\n𝑙𝑜𝑔𝑛\n)\n最坏情况：\nk\n×\n(2.21\n𝑙𝑜𝑔𝑛\n+4.19)\n否\n防冲突算法\n时间复杂度\n传输复杂度\n是否需要标签可写\n基于帧的时隙\nALOHA\n算法\n(FSA)\n是\n(8\n比特或者\n16\n比特的内存，用来计数，指示标签响应的时隙\n)\n随机二进制树算法\n是\n(8\n比特或\n16\n比特的内存，用来存储计数器的值，指示标签的响应序列和响应时间\n)\n查询二进制树算法\n否\n三种典型防冲突算法的性能比较\nn:\n识别区域的标签数目，\nk:\n标签\nID\n的长度，\nt\n是一帧的时间，\ns\n是帧的数目，\nN\n是对标签数目\nn\n的估计值。\n\nWho’s got an RFID tag with them right now?\n\nLivestock Tagging\nWild Animal Tracking\nAutomated Toll Collection\nVehicle Anti-Theft\nPassive / Secure Entry\nAirline Baggage Tracking\nPostal Package Tracking\nTime and Attendance\nCurrent Applications\n\nRFID: Security and Privacy\nfor “Five-Cent Computers”\n5\n¢\n\nAnother Hippie\n\nHighly mobile\nContain personal information\nSubject to surreptitious scanning\nAgain, no cryptography…\nAccess control difficult to achieve\nData privacy difficult to protect\nRFID means a world with billions of ant-sized, five-cent computers\n\nThe Consumer Privacy Problem\n1500 Euros\nin wallet\nSerial numbers:\n597387,389473…\nWig\nmodel #4456\n(cheap polyester)\n30 items\nof lingerie\nDas Kapital\nand\nCommunist-party handbook\nReplacement hip\nmedical part #459382\nHere’s\nMr. Jones\nin 2020…\n\nMr. Jones pays with a credit card; his RFID tags now linked to his identity; determines level of customer service\nthink of car dealerships using drivers’ licenses to run credit checks…\nMr. Jones attends a political rally;\nlaw enforcement scans his RFID tags\nMr. Jones wins the Oscar Award;\nphysically tracked by paparazzi via RFID\n…and the Tracking Problem\nWig\nserial #A817TS8\n\n42% of Google results on “RFID” include word “privacy”\nCASPIAN (Consumers Against Supermarket Privacy Invasion and Numbering)\nCriticizes RFID at\nSpychips.com\nBoycottGillette.com\nBoycottBenetton.com\nNational news coverage:\nNY Times\n,\nTime\n, etc.\nWal-Mart “smart-shelf project” cancelled\nEarly Examples of Consumer Backlash\n\nPrivacy:\nMisbehaving readers harvesting information from well-behaving tags\nAuthentication:\nWell-behaving readers harvesting information from misbehaving tags, particularly counterfeit ones\n…and the\nA\nuthentication Problem\nWig\nserial #A817TS8\n\nSome Proposed Solutions to the Privacy Problem\n\nEPC tags have a “kill” function\nOn receiving password, tag self-destructs\nTag is permanently inoperative\nNo post-purchase benefits\nDeveloped for EPC to protect consumers after point of sale\n“Dead tags tell no tales”\nPrivacy is preserve\nApproach 1: “Kill” RFID tags\n\nEven if the tag has no intrinsic meaning it can still enable tracking (Solution: Change over time)\nConsumer are equipped to re-label tags with new identifier, but able to reactive old information\nApproach 2: Re-naming Tags\n\nDistance as a measure of trust\nA tag might release general information “I’m attached to a bottle of water” when scanned at a distance, but release more specific information, like unique identifier at a close range.\nApproach 3: Distance Measurement\n\nUndoubtedly helpful if thought through well, but…\n“Good Housekeeping” seal\nRetailer’s guarantee means little since tags may be read by anyone!\nApproach 4: Policy and Legislation\n\nMore efficient mugging\nAnother Possible “Use” of RFID\n“Just in case you\nwant to know, she’s\ngot 700 Euro and\na Rolex…”\nWho should be prosecuted now?\n\nCorporate espionage: privacy is not just a consumer issue\nEavesdropping on warehouse transmissions\nScanning of shelves for turnover rates\nTag counterfeiting\nThink about RFID-enabled stores; replace original tags with fake ones (with lower prices)\nSpecial demands of U.S. Department of Defense\n“DoD would be like Wal-Mart… if Christmas were a random event every five years, and a\nstockout\nmeant that everyone in the store could die…”\nNicholas\nTsougas\n, DoD\nOther Less Known Issues\n\nHB Protocol\nReader\nRFID tag\nGoal\n: authenticate RFID tag to the reader\nk-bit random value\na\n(a\n\nx)\n\nv\nResponse correct if\nit is equal to (a\n\nx)\nGenerate random v:\n1 with prob.\n, else 0\n[Juels and Weis, based on Hopper and Blum]\nKnows secret x;\nparameter\n\nKnows secret x;\nparameter\n\n chance that\nresponse is incorrect\nrepeat r times\nRFID tag is authenticated\nif fewer than r responses\nare incorrect\nJuels\n, Ari, and Stephen A. Weis. \"Authenticating pervasive devices with human protocols.\" Annual international cryptology conference. Springer, Berlin, Heidelberg, 2005.\n\nHB Protocol-LPN\nThe security of the protocol is based on the hardness of the\nLPN problem\n.\nLPN: Learning Parity with Noise\nIn computer science, the\nparity\nof a bit string is determined as follows:\n{\n1  Odd number of 1\n’\ns in bit string\n0  Even number of 1\n’\ns in bit string\n\n1011 =\nr\nThe\nparity\nis 1\nbecause there are an odd number of 1\n’\ns in the string.\nYou can determine the parity by\nXOR\n’\ning the individual bits in\nr\nas follows:\n1 + 0 + 1 + 1 = 1\n*Remember the\nXOR\ntable looks like:\n+\n0\n1\n0\n0\n1\n1\n1\n0\nHB Protocol-LPN\nExample:\n\nHB Protocol-LPN\nThe HB Protocol uses an inner dot product which will bit-wise\nAND\ntwo strings together and then find the parity of the result.\nExample:\n1011\n1010\n&\n1010\n0\n=\nx\n=\nq\n=\nr\n\nIf we\n’\nre given several values of\nq\nand\nr\nthen we can determine the value of\nx\nusing linear algebra.\n* The columns of the\nq\nmatrix must be linearly independent.\nHB Protocol-LPN\nq\n1\nq\n2\nq\n3\nx =\nr\n1\nr\n2\nr\n3\n\nAdding “noise” to the previous problem makes it difficult.\n“Noise” is added by flipping the value of\n𝑟\nrandomly.  (with probability of ε)\nThe HB protocol is based on this problem because it is NP-hard.\nHB Protocol-LPN\n\nHB Protocol\nReader\nRFID tag\nGoal\n: authenticate RFID tag to the reader\nk-bit random value\na\n(a\n\nx)\n\nv\nResponse correct if\nit is equal to (a\n\nx)\nGenerate random v:\n1 with prob.\n, else 0\n[Juels and Weis, based on Hopper and Blum]\nKnows secret x;\nparameter\n\nKnows secret x;\nparameter\n\n chance that\nresponse is incorrect\nrepeat r times\nRFID tag is authenticated\nif fewer than r responses\nare incorrect\n\nActive Adversary\nRFID tag\nnon-random value a\n(a\n\nx)\n\nv\nGenerate random v:\n1 with prob.\n, else 0\nKnows secret x;\nparameter\n\nnon-random value a\n(a\n\nx)\n\nv\nGenerate random v:\n1 with prob.\n, else 0\nnon-random value a\n…\nWhat does\nattacker learn?\n\nHB Protocol-Weaknesses\nIf there is an active attack, then the HB Protocol will prove to be insecure!\nPlease answer the following query:\nSecret • 1000\n…And answer it 1000 times\n0, 1, 0, 1, 1, 1, ...\nThe majority of his responses were 1!\n\nHB Protocol-Weaknesses\nPlease answer the following query:\nSecret • 0100\n…And answer it 1000 times\n0, 1, 0, 0, 0, 1, ...\nThe majority of his responses were 0!\n1 0 0 0\n0 1 0 0\nq\n3\nq\n4\nx =\n1\n0\nr\n3\nr\n4\n\nHB Protocol-Weaknesses\nPlease answer the following query:\nSecret • 1101\n0\nYou have been verified!\n1 0 0 0\n0 1 0 0\n0 0 1 0\n0 0 0 1\nx =\n1\n0\n1\n1\n\nHB+ Protocol\nReader\nRFID tag\nGoal\n: authenticate RFID tag to the reader\nk-bit random value\na\n(a\n\nx)\n(b\ny\n)\nv\nGenerate random v:\n1 with prob.\n, else 0\n[Juels and Weis]\nKnows secrets x,\ny\n;\nparameter\n\nKnows secrets x,\ny\n;\nparameter\n\nrepeat r times\nRFID tag is authenticated\nif fewer than r responses\nare incorrect\nResponse correct if\nit is equal to (a\n\nx)\n\n(b\n\ny)\nblinding value\nb\n\nPassive\nwireless\nStore data on a tag\nCan be hidden\nWork in harsh environments\nLow cost\nSummary: RFID’s Advantages\n\nRoadmap of RFID Authentication\n\nID based Identification\n\nDevice Fingerprint based Authentication\n\nRequirements:\nCompatible with existing protocols\nFor off-the-shelf RFID tags\nNo customized devices\nHigh accuracy\nGenePrint\n: Generic and Accurate Physical-layer Identification for UHF RFID Tags\nGenePrint\nJ. Han, et al., “\nGenePrint\n: Generic and Accurate Physical-Layer Identification for UHF RFID Tags”, IEEE/ACM Transactions on Networking (TON), Vol. 24, No.2, Pages 846-858, 2016.\n\nThe State of  the Art\nPhysical-layer identification of wireless devices\nminor variations in analog hardware\n“Physical-layer Identification of UHF RFID Tags” D.\nZanetti\net al.\nMobiCom\n2010\nTX: Arbitrary Waveform\nGenerator\nRX: Two ADCs with 1GS/s\nPurpose-built reader\nHigh sampling rate: 1GS/s\n7\nHigh accuracy with\n70 passive tags\nExisting\nworks: costly and expensive devices required\n\nRN16 packet:\nid-independent\nGenePrint\n: Signal Preprocessing\n\nRN16 packet:\nid-independent\nGenePrint\n: Signal Preprocessing\n\nCov\n-based feature\nC: a constant vector of the standard square wave\nf: a value representing the tag’s inherent hardware feature\nn: a series of random gauss white noise\nGenePrint\n: Feature Extraction\n\nCov\n-based feature\nTheorem: for the\ni\nth\npulse and\nj\nth\npulse\nGenePrint\n: Feature Extraction\nSource\nTarget\n?\nCovariance\nInternal\nSimilarity\n\nLet A = C + f\nWe will prove (for the\ni\nth\npulse and\nj\nth\npulse)\nGenePrint\n: Noise cancellation\n\nGenePrint\n: Noise cancellation\n\nNote that the                                 and                 are independent\nGenePrint\n: Noise cancellation\n\nCov\n-based feature\nNoise cancellation\nFeature extraction\nGenePrint\n: Feature Extraction\n\nCov\n-based feature\nFor 64 pulses\nSignal feature establishment:  the distribution of\nF\nGenePrint\n: Feature Extraction\n\nCov\n-based feature\nSignal feature establishment\nEqui\n-width histogram method\nto estimate the F’s distribution\nGenePrint\n: Fingerprint\n\nIdentification\nSample combination\nN preambles generate one fingerprint\nPerformance: Accuracy\n* Physical-layer Identification of  UHF RFID Tags,\nMobiCom\n2010\nWhen N>=5,\nGenePrint\nachieves an accuracy of 99%+\n\nMotivation: Authentication is a crucial task for nowadays RFID applications!\nHu-Fu: Towards Replay-resilient RFID Authentication\nG. Wang, et al., Towards Replay-resilient RFID Authentication,\nMobiCom\n2018\n\nCompared with existing works\nModification-free\nTag counterfeiting\nSignal replay\nE1G2 Protocol\nCryptology method\nPhysical-layer\nHu-Fu\n\nInductive coupling of two tags\nU\nL\nU\nR\nT\nL\nT\nR\nReader\n\nInductive coupling of two tags\nT\nL\nT\nR\nC\nL\nC\nR\nReader\n\nSignal randomization\nT\nL\nT\nR\nAdd random signal s\nC\nL\n·s\nC\nR\n·s\n\nDetect tag counterfeiting attack:\nT\nL\nT’\nC\nC’\nL\n·s\nC’\nC\n·s\nAdd random signal s\nReader\n\nDetect  signal reply attack\nT\nL\nT\nR\nC\nL\n·s\nC\nL\n·s\nAdd random signal s\nReader\n\nDetect  signal reply attack\nT\nL\nC\nL\n·s ·s’\nC\nL\n·s ·s’\nAdd random signal s\nReader\nU\nL\n·s’\n\nDetect signal compensation attack\nT\nL\nT’\nC\nC’\nL\n·s\nC’\nC\n·s\nAdd random signal s\nReader\n\nDetect signal compensation attack\nT\nL\nAdd random signal s\nC\nL\n·s\nC\nR\n·s\nReader\nT’\nC\nHowever, signal compensation to\nHuFu\nis difficult!\n\nReason 1: In Hu-Fu, C\nL\nand C\nR\nare protected by the one-time random signal s(t). The attacker can only get C\nL\n·s and C\nR\n·s.\nReason 2: According to the protocol, tags will randomly select one slot to respond.\nDetect signal compensation attack\nSuccess rate<20%\n\nHence the attacker\ndoes not know the valid features\n, even if the attacker knows the feature extraction algorithms, it is impossible to find an unknown feature from the tags owned by the attacker.\nBrute-force feature replay attack\n\nImplementation\nHardware:\nAn USRP N210 equipped with SBX draught-board\nTwo Laird S9028-PCL directional antennas\n150 tag pairs\nDell desktop equips Intel Core i7-7700 CPU\n\nEvaluation\n[1]\n[2]\n[3]\n[1]\nJ. Han, C. Qian, P. Yang, D. Ma, Z. Jiang, W. Xi, and J. Zhao. 2016.\nGenePrint\n: Generic and accurate physical-layer\nidentifcation\nfor UHF RFID tags.\nIEEE/ACM Transactions on Networking (TON)\n(2016)\n[2] Davide Zanetti, Boris\nDanev\n, et al. 2010. Physical-layer identification of UHF RFID tags. In\nACM\nMobicom\n[3] Y. Zheng, M. Li, and C. Qian. 2011. PET: Probabilistic Estimating Tree for Large-Scale RFID Estimation. In\nProceedings of IEEE ICDCS\n\nMotivation\nRF-Mehndi: A Fingertip Profiled RF Identifier\nC. Zhao, et al., RF-Mehndi: A Fingertip Profiled RF Identifier, INFOCOM, 2019. (Best Paper Award)\nWho are you?\nSth\nyou have?\n\nWhy not combining the device features and user biometrics?\nDevice Authentication\nUser(Biometric) Authentication\n124\n\nIdea: fingertip touching on the tag array\nUser-dependent\n&\nUnique\n\nObjective\nDevice Authentication\nUser Authentication\nReplay\nImpersonation\nCounterfeiting\nUniversal\nLight-weight\nLow-cost\n\nRadiative & Inductive coupling\n\nWhat will happen if we collect their phases together?\nImpact of tag coupling\n\nWhy does the phase change due to coupling?\n\nObservation: Impact of human impedance\n\nWhy does phase change with fingertip touch?\n\nPhase Difference of Tags (\nPDoT\n)\nUser-dependent & Unique\nPhase Fingerprint\n\nChallenge 1: The impact of touching is unstable.\nComplexity of\ncoupling\n&\nSize\nof array\n\nChallenge 2: Phases change with distance\n\nChallenge 2: Phase shifting algorithm\n\nMax\nPDoT\n1\n2\nMax\nPDoT\n1\n2\nMax\nPDoT\nGet phase fingerprint at this status\nPhase shifting algorithm\n\nChallenge 3: Impact of accessories\nr=ring  w=watch  n=necklace\n\n1.\nImpinj\nR420 reader\n2.\nLarid\nantenna A9028\n3. Alien-9629 tag\nImplementation\n\n7 females + 8 males\n15 representative tag array layouts\nOverall accuracy vs. Human diversity\nAccuracy > 99%\n\nRF-Cloak\n：\nSystem that protects RFIDs against eavesdropping attacks\nGoal\n：\nDoes not require any modification to the RFID cards\nProtects against a wide range of attackers including multi-antenna\nMIMO eavesdroppers\nTheoretically proven the security guarantee\nImplemented the system and empirically demonstrated its benefits\nHaitham H., et al, Securing RFIDs by randomizing the modulation and channel, NSDI 2015\n\nRFID Communication\nReplace constant waveform\nC\nwith a random\nwaveform\nR(t)\n\nSolution:\nRandomizing the Reader's Signal\nRandom waveform acts like a\none-time pad\non the air\n->\nNaive solution: Multiply each bit with random number\nRandom waveform must destroy internal\nsignal patterns of the bits\n\nRF-Cloak: Randomizing the Reader's Signal\nRandom waveform:\n•    Must change as fast as any transition in the RFID signal\n^ has same bandwidth as RFID signal\n•    Must be indistinguishable from white noise i.e. flat frequency profile\n-> samples taken from complex Gaussians\n\nTheorem 1: Using RF-Cloak's random signal R(t), an eavesdropper will not be able to distinguish a 0 bit from a 1 bit which is no better than a random guess\nWhat if the attacker has multi-antenna, i.e., MIMO capability?\nThreat Model\nMIMO Eavesdropper can eliminate the random waveform and decode the RFID bits.\n\nRF-Cloak\nvs\nMIMO Eavesdropper\nAntenna War!\nRF-Cloak combines antenna motion and rapid antenna switching\n-> Emulate a very large number of fast changing antennas\n^ Eavesdropper cannot decode\n\nEvaluation\nImplemented RF-\nCloakon\nUSRP N210 software radios and combined it with a\n1725\nrpm motor and ADG904R RF switches.\n• Evaluated it against different types of commercial RFID cards\n• Evaluation metric : Bit error rate (BER)\n\nRF-Cloak Random Waveform\nvs\nSingle Antenna Eavesdropper\nRF-Cloak Random Waveform\nvs\nTwo Antenna MIMO Eavesdropper\nRF-Cloak Channel Randomization\nvs\nMIMO Eavesdropper\nEvaluation result\nEavesdropper has mean BER of 0.498 with std. dev. 0.008 ^ Very close to a random guess\nA two-antenna MIMO eavesdropper can correctly decode the RFID bits\nRF-Cloak can prevent a MIMO eavesdropper from decoding the RFID's data\n\nLack of standards!\nShort range\nSecurity\nDeployed naïvely, embedding of RFID tags in consumer items can present a serious danger to privacy and security of consumers and enterprises alike in the future.\nSummary: RFID’s Disadvantages\n\nDeployers\ncan scarcely get RFID working at all!\nUHF tags hard to read near liquids, like water\nYou are salt water so…\nIf you’re worried about your sweater being scanned, wear it!\nAnd even when range is good…\nIn some automated point-of-sale trials, participants paid for groceries of people behind them…\nConsumer goods manufacturers and retailers don’t want to drive customers away\nRFID Realities\n\n[1]\nJuels\n, Ari. \"RFID security and privacy: A research survey.\" IEEE journal on selected areas in communications 24.2 (2006): 381-394.\n[2]\nJuels\n, Ari, and Stephen A. Weis. \"Authenticating pervasive devices with human protocols.\" Annual international cryptology conference. Springer, Berlin, Heidelberg, 2005.\n[3]\tRFID Chef\nhttp://www.inf.ethz.ch/vs/res/proj/rfidchef/\n[4]\tTexas Instruments RFID Solutions\nhttp://www.ti.com/tiris/default.htm\nReferences"
+}

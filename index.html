@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IoT Security 复习笔记</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="章节导航">
+        <div class="brand">
+          <span class="brand-mark">IS</span>
+          <div>
+            <h1>IoT Security</h1>
+            <p>复习笔记与课件</p>
+          </div>
+        </div>
+        <label class="search-box">
+          <span>搜索</span>
+          <input id="searchInput" type="search" placeholder="章节、协议、攻击" autocomplete="off" />
+        </label>
+        <nav id="chapterList" class="chapter-list"></nav>
+      </aside>
+
+      <main class="reader">
+        <header class="reader-top">
+          <div>
+            <p id="chapterKicker" class="kicker">Review</p>
+            <h2 id="chapterTitle">加载中</h2>
+          </div>
+          <div class="reader-actions">
+            <a id="noteDownload" class="icon-button" href="#" download title="下载笔记" aria-label="下载笔记">↓</a>
+            <a id="materialDownload" class="primary-button" href="#" download>课件</a>
+          </div>
+        </header>
+
+        <div class="tabs" role="tablist" aria-label="阅读视图">
+          <button id="noteTab" class="tab active" type="button" role="tab" aria-selected="true">笔记</button>
+          <button id="materialTab" class="tab" type="button" role="tab" aria-selected="false">课件</button>
+        </div>
+
+        <section id="notePanel" class="panel active" aria-labelledby="noteTab">
+          <article id="noteContent" class="note-content"></article>
+        </section>
+
+        <section id="materialPanel" class="panel material-panel" aria-labelledby="materialTab">
+          <div class="material-toolbar">
+            <div>
+              <p class="kicker">Material</p>
+              <h3 id="materialTitle">课件</h3>
+            </div>
+            <a id="openMaterial" class="primary-button" href="#" target="_blank" rel="noreferrer">打开</a>
+          </div>
+          <p id="materialHint" class="material-hint"></p>
+          <iframe id="materialFrame" title="课件预览"></iframe>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="assets/app.js"></script>
+  </body>
+</html>

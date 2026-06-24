@@ -1,0 +1,123 @@
+[
+  {
+    "slug": "week-1-2026",
+    "title": "Week 1-2026",
+    "filename": "Week 1-2026.pdf",
+    "extension": "pdf",
+    "order": 1.0,
+    "extraction": "content/extracted/week-1-2026.json",
+    "slide_count": null,
+    "page_count": 94,
+    "text_chars": 30109
+  },
+  {
+    "slug": "2023-pdf",
+    "title": "第二周 无线基础2023 pdf",
+    "filename": "第二周 无线基础2023 pdf.pdf",
+    "extension": "pdf",
+    "order": 2.0,
+    "extraction": "content/extracted/2023-pdf.json",
+    "slide_count": null,
+    "page_count": 111,
+    "text_chars": 11258
+  },
+  {
+    "slug": "part1-mac",
+    "title": "第三周-part1-无线通信MAC层",
+    "filename": "第三周-part1-无线通信MAC层.pptx",
+    "extension": "pptx",
+    "order": 3.1,
+    "extraction": "content/extracted/part1-mac.json",
+    "slide_count": 33,
+    "page_count": null,
+    "text_chars": 4276
+  },
+  {
+    "slug": "part2",
+    "title": "第三周-part2-蜂窝网络安全",
+    "filename": "第三周-part2-蜂窝网络安全.pptx",
+    "extension": "pptx",
+    "order": 3.2,
+    "extraction": "content/extracted/part2.json",
+    "slide_count": 33,
+    "page_count": null,
+    "text_chars": 4041
+  },
+  {
+    "slug": "wired-equivalent-privacy-wep",
+    "title": "第四周Wired Equivalent Privacy (WEP)",
+    "filename": "第四周Wired Equivalent Privacy (WEP).pptx",
+    "extension": "pptx",
+    "order": 4.1,
+    "extraction": "content/extracted/wired-equivalent-privacy-wep.json",
+    "slide_count": 43,
+    "page_count": null,
+    "text_chars": 12395
+  },
+  {
+    "slug": "wifi-protected-access-wpa",
+    "title": "第四周WiFi Protected Access (WPA)",
+    "filename": "第四周WiFi Protected Access (WPA).pptx",
+    "extension": "pptx",
+    "order": 4.2,
+    "extraction": "content/extracted/wifi-protected-access-wpa.json",
+    "slide_count": 36,
+    "page_count": null,
+    "text_chars": 10736
+  },
+  {
+    "slug": "protected-access-2-wpa2",
+    "title": "第四周Protected Access 2 (WPA2)",
+    "filename": "第四周Protected Access 2 (WPA2).pptx",
+    "extension": "pptx",
+    "order": 4.3,
+    "extraction": "content/extracted/protected-access-2-wpa2.json",
+    "slide_count": 40,
+    "page_count": null,
+    "text_chars": 8537
+  },
+  {
+    "slug": "week-7-iot-and-its-security-1",
+    "title": "Week 7 IoT and Its Security(1)",
+    "filename": "Week 7 IoT and Its Security(1).pptx",
+    "extension": "pptx",
+    "order": 7.0,
+    "extraction": "content/extracted/week-7-iot-and-its-security-1.json",
+    "slide_count": 119,
+    "page_count": null,
+    "text_chars": 54137
+  },
+  {
+    "slug": "lecture-12-rfid-security-and-privacy",
+    "title": "Lecture 12 RFID Security and Privacy",
+    "filename": "Lecture 12 RFID Security and Privacy.pptx",
+    "extension": "pptx",
+    "order": 12.0,
+    "extraction": "content/extracted/lecture-12-rfid-security-and-privacy.json",
+    "slide_count": 151,
+    "page_count": null,
+    "text_chars": 24582
+  },
+  {
+    "slug": "lecture-13-bluetooth-security-and-privacy",
+    "title": "Lecture 13 Bluetooth Security and Privacy",
+    "filename": "Lecture 13 Bluetooth Security and Privacy.pptx",
+    "extension": "pptx",
+    "order": 13.0,
+    "extraction": "content/extracted/lecture-13-bluetooth-security-and-privacy.json",
+    "slide_count": 57,
+    "page_count": null,
+    "text_chars": 16226
+  },
+  {
+    "slug": "lecture-14-nfc-application-security-1",
+    "title": "Lecture 14 NFC Application Security(1)",
+    "filename": "Lecture 14 NFC Application Security(1).pptx",
+    "extension": "pptx",
+    "order": 14.0,
+    "extraction": "content/extracted/lecture-14-nfc-application-security-1.json",
+    "slide_count": 48,
+    "page_count": null,
+    "text_chars": 16812
+  }
+]

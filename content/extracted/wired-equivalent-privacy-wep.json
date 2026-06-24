@@ -1,0 +1,714 @@
+{
+  "slug": "wired-equivalent-privacy-wep",
+  "title": "第四周Wired Equivalent Privacy (WEP)",
+  "filename": "第四周Wired Equivalent Privacy (WEP).pptx",
+  "extension": "pptx",
+  "kind": "pptx",
+  "slide_count": 43,
+  "page_count": null,
+  "slides": [
+    {
+      "number": 1,
+      "title": "Lecture 9:",
+      "lines": [
+        "Lecture 9:",
+        "Wired Equivalent Privacy (WEP)",
+        "Instructor:",
+        "Kui",
+        "Ren",
+        "Wireless network and",
+        "ioT",
+        "security"
+      ],
+      "text": "Lecture 9:\nWired Equivalent Privacy (WEP)\nInstructor:\nKui\nRen\nWireless network and\nioT\nsecurity"
+    },
+    {
+      "number": 2,
+      "title": "Wi-Fi is a wireless networking technology used across the globe.",
+      "lines": [
+        "Wi-Fi is a wireless networking technology used across the globe.",
+        "Wi-Fi refers to any system that uses the 802.11 standard, which was developed by the Institute of Electrical and Electronics Engineers (IEEE) and released in 1997.",
+        "The term Wi-Fi, which is alternatively spelled",
+        "WiFi",
+        ",",
+        "Wi-fi",
+        ",",
+        "Wifi",
+        ", or",
+        "wifi",
+        ", was pushed by the",
+        "Wi-Fi Alliance",
+        ", a trade group that pioneered commercialization of the technology.",
+        "Wi-Fi"
+      ],
+      "text": "Wi-Fi is a wireless networking technology used across the globe.\nWi-Fi refers to any system that uses the 802.11 standard, which was developed by the Institute of Electrical and Electronics Engineers (IEEE) and released in 1997.\nThe term Wi-Fi, which is alternatively spelled\nWiFi\n,\nWi-fi\n,\nWifi\n, or\nwifi\n, was pushed by the\nWi-Fi Alliance\n, a trade group that pioneered commercialization of the technology.\nWi-Fi"
+    },
+    {
+      "number": 3,
+      "title": "802.11 is a set of standards for  wireless local area network (WLAN)  computer communication,  developed by the IEEE LAN",
+      "lines": [
+        "802.11 is a set of standards for  wireless local area network (WLAN)  computer communication,  developed by the IEEE LAN/MAN  Standards Committee (IEEE 802) in  the 5 GHz and 2.4 GHz public  spectrum bands.",
+        "802.11"
+      ],
+      "text": "802.11 is a set of standards for  wireless local area network (WLAN)  computer communication,  developed by the IEEE LAN/MAN  Standards Committee (IEEE 802) in  the 5 GHz and 2.4 GHz public  spectrum bands.\n802.11"
+    },
+    {
+      "number": 4,
+      "title": "Sensitive Information over Wi-Fi",
+      "lines": [
+        "Sensitive Information over Wi-Fi"
+      ],
+      "text": "Sensitive Information over Wi-Fi"
+    },
+    {
+      "number": 5,
+      "title": "No inherent physical protection",
+      "lines": [
+        "No inherent physical protection",
+        "Physical connections between devices are replaced by logical associations ",
+        "Sending and receiving messages do not need physical access to the network infrastructure (cables, hubs, routers, etc.)",
+        "Why security is more of a concern in wireless?"
+      ],
+      "text": "No inherent physical protection\nPhysical connections between devices are replaced by logical associations \nSending and receiving messages do not need physical access to the network infrastructure (cables, hubs, routers, etc.)\nWhy security is more of a concern in wireless?"
+    },
+    {
+      "number": 6,
+      "title": "Broadcast communications ",
+      "lines": [
+        "Broadcast communications ",
+        "Wireless usually means radio, which has a broadcast nature",
+        "Transmissions can be overheard by anyone in range – anyone can generate transmissions,",
+        "which will be received by other devices in range",
+        "which will interfere with other nearby transmissions and may prevent their correct reception (jamming)",
+        "Why security is more of a concern in wireless?"
+      ],
+      "text": "Broadcast communications \nWireless usually means radio, which has a broadcast nature\nTransmissions can be overheard by anyone in range – anyone can generate transmissions,\nwhich will be received by other devices in range\nwhich will interfere with other nearby transmissions and may prevent their correct reception (jamming)\nWhy security is more of a concern in wireless?"
+    },
+    {
+      "number": 7,
+      "title": "Eavesdropping is easy",
+      "lines": [
+        "Eavesdropping is easy",
+        "Injecting bogus messages into the network is easy",
+        "Replaying previously recorded messages is easy",
+        "Illegitimate access to the network and its services is easy",
+        "Denial of service is easily achieved by jamming",
+        "Why security is more of a concern in wireless?"
+      ],
+      "text": "Eavesdropping is easy\nInjecting bogus messages into the network is easy\nReplaying previously recorded messages is easy\nIllegitimate access to the network and its services is easy\nDenial of service is easily achieved by jamming\nWhy security is more of a concern in wireless?"
+    },
+    {
+      "number": 8,
+      "title": "Wireless technology doesn’t remove any old security issue",
+      "lines": [
+        "Wireless technology doesn’t remove any old security issue",
+        "Eavesdropping",
+        "Man-in-the-middle attacks",
+        "Denial of Service",
+        "Threats"
+      ],
+      "text": "Wireless technology doesn’t remove any old security issue\nEavesdropping\nMan-in-the-middle attacks\nDenial of Service\nThreats"
+    },
+    {
+      "number": 9,
+      "title": "Easy to perform, most impossible to detect",
+      "lines": [
+        "Easy to perform, most impossible to detect",
+        "By default , everything is transmitted in clear text",
+        "Username, passwords, content...",
+        "No security offered by the transmission medium",
+        "Different tools available on the internet",
+        "Network sniffers, protocol analyzers",
+        "Password collectors",
+        "With the right equipment, it’s possible to eavesdrop traffic from few kilometers away",
+        "Eavesdropping"
+      ],
+      "text": "Easy to perform, most impossible to detect\nBy default , everything is transmitted in clear text\nUsername, passwords, content...\nNo security offered by the transmission medium\nDifferent tools available on the internet\nNetwork sniffers, protocol analyzers\nPassword collectors\nWith the right equipment, it’s possible to eavesdrop traffic from few kilometers away\nEavesdropping"
+    },
+    {
+      "number": 10,
+      "title": "Attacker spoofs a disassociate message from the victim",
+      "lines": [
+        "Attacker spoofs a disassociate message from the victim",
+        "The victim starts to look for a new AP, and the attacker advertises his own AP on a different channel, using the real AP’s MAC address",
+        "The attacker connects to the real AP using victim’s MAC address",
+        "Man In The Middle Attack"
+      ],
+      "text": "Attacker spoofs a disassociate message from the victim\nThe victim starts to look for a new AP, and the attacker advertises his own AP on a different channel, using the real AP’s MAC address\nThe attacker connects to the real AP using victim’s MAC address\nMan In The Middle Attack"
+    },
+    {
+      "number": 11,
+      "title": "Attack on transmission regency used",
+      "lines": [
+        "Attack on transmission regency used",
+        "Frequency jamming",
+        "Not very technical, but works",
+        "Attack on MAC layer",
+        "Spoofed disassociation messages",
+        "Can target on specific user",
+        "Attacks on higher layer protocol (TCP/IP protocol)",
+        "SYN Flooding",
+        "Denial of Service"
+      ],
+      "text": "Attack on transmission regency used\nFrequency jamming\nNot very technical, but works\nAttack on MAC layer\nSpoofed disassociation messages\nCan target on specific user\nAttacks on higher layer protocol (TCP/IP protocol)\nSYN Flooding\nDenial of Service"
+    },
+    {
+      "number": 12,
+      "title": "Confidentiality",
+      "lines": [
+        "Confidentiality",
+        "Authenticity",
+        "Replay detection",
+        "Integrity",
+        "Access control",
+        "Protection against jamming",
+        "Wireless Communication Security Requirements"
+      ],
+      "text": "Confidentiality\nAuthenticity\nReplay detection\nIntegrity\nAccess control\nProtection against jamming\nWireless Communication Security Requirements"
+    },
+    {
+      "number": 13,
+      "title": "Wired Equivalent Privacy (WEP)",
+      "lines": [
+        "Wired Equivalent Privacy (WEP)",
+        "Wi-Fi Protected Access (WPA)",
+        "Wi-Fi Protected Access II (WPA2)",
+        "Wi-Fi Security Protocols"
+      ],
+      "text": "Wired Equivalent Privacy (WEP)\nWi-Fi Protected Access (WPA)\nWi-Fi Protected Access II (WPA2)\nWi-Fi Security Protocols"
+    },
+    {
+      "number": 14,
+      "title": "WEP is Wired Equivalent Privacy",
+      "lines": [
+        "WEP is Wired Equivalent Privacy",
+        "Link-layer encryption",
+        "Defined in the IEEE 802.11 standard",
+        "Goals of WEP",
+        "Confidentiality",
+        "Access control",
+        "Data integrity",
+        "Yet, WEP",
+        "failed",
+        "to achieve any of the above goals",
+        "So what is WEP?"
+      ],
+      "text": "WEP is Wired Equivalent Privacy\nLink-layer encryption\nDefined in the IEEE 802.11 standard\nGoals of WEP\nConfidentiality\nAccess control\nData integrity\nYet, WEP\nfailed\nto achieve any of the above goals\nSo what is WEP?"
+    },
+    {
+      "number": 15,
+      "title": "Uses RC4 (stream cipher) for encryption",
+      "lines": [
+        "Uses RC4 (stream cipher) for encryption",
+        "A compromise of hardware costs, speed, and security",
+        "Originally (1999) 64 bit (40 +24):",
+        "40 bit key",
+        "24 bit Initialization Vector (IV)",
+        "128 bit (104 + 14):",
+        "104 bit (13 ASCII characters, 26 Hex-Characters) key. 104 = 13*8.",
+        "24 bit Initialization Vector (IV)",
+        "256 bit:",
+        "232 bit key",
+        "Available, but not common",
+        "WEP Flavors"
+      ],
+      "text": "Uses RC4 (stream cipher) for encryption\nA compromise of hardware costs, speed, and security\nOriginally (1999) 64 bit (40 +24):\n40 bit key\n24 bit Initialization Vector (IV)\n128 bit (104 + 14):\n104 bit (13 ASCII characters, 26 Hex-Characters) key. 104 = 13*8.\n24 bit Initialization Vector (IV)\n256 bit:\n232 bit key\nAvailable, but not common\nWEP Flavors"
+    },
+    {
+      "number": 16,
+      "title": "WEP",
+      "lines": [
+        "WEP",
+        "Encryption: Players",
+        "Message: What you’re encrypting",
+        "CRC: To verify the integrity of the message",
+        "Plaintext: The message + CRC",
+        "Initialization vector (IV): A 24-bit number which plays two roles that we’ll meet in a moment",
+        "Key: A 40 or 104-bit number which is used to build the keystream",
+        "Keystream: What is used to encrypt the plaintext",
+        "Ciphertext",
+        ": What we end up post-encryption",
+        "Message",
+        "CRC",
+        "IV",
+        "Key",
+        "Keystream",
+        "Ciphertext"
+      ],
+      "text": "WEP\nEncryption: Players\nMessage: What you’re encrypting\nCRC: To verify the integrity of the message\nPlaintext: The message + CRC\nInitialization vector (IV): A 24-bit number which plays two roles that we’ll meet in a moment\nKey: A 40 or 104-bit number which is used to build the keystream\nKeystream: What is used to encrypt the plaintext\nCiphertext\n: What we end up post-encryption\nMessage\nCRC\nIV\nKey\nKeystream\nCiphertext"
+    },
+    {
+      "number": 17,
+      "title": "WEP",
+      "lines": [
+        "WEP",
+        "Encryption: Step by Step",
+        "Step 1: Compute CRC for the message",
+        "CRC-32 polynomial is used",
+        "Message",
+        "CRC"
+      ],
+      "text": "WEP\nEncryption: Step by Step\nStep 1: Compute CRC for the message\nCRC-32 polynomial is used\nMessage\nCRC"
+    },
+    {
+      "number": 18,
+      "title": "WEP",
+      "lines": [
+        "WEP",
+        "Encryption: Step by Step",
+        "Key",
+        "IV",
+        "Step 2: Compute the keystream",
+        "IV is concatenated with the key",
+        "RC4 encryption algorithm is used on the 64 or 128 bit concatenation",
+        "Keystream"
+      ],
+      "text": "WEP\nEncryption: Step by Step\nKey\nIV\nStep 2: Compute the keystream\nIV is concatenated with the key\nRC4 encryption algorithm is used on the 64 or 128 bit concatenation\nKeystream"
+    },
+    {
+      "number": 19,
+      "title": "WEP",
+      "lines": [
+        "WEP",
+        "Encryption: Step by Step",
+        "Step 3: Encrypt the plaintext",
+        "The plaintext is",
+        "XORed",
+        "with the keystream to form the",
+        "ciphertext",
+        "The IV is prepended to the",
+        "ciphertext",
+        "Message",
+        "CRC",
+        "Keystream",
+        "Ciphertext",
+        "IV"
+      ],
+      "text": "WEP\nEncryption: Step by Step\nStep 3: Encrypt the plaintext\nThe plaintext is\nXORed\nwith the keystream to form the\nciphertext\nThe IV is prepended to the\nciphertext\nMessage\nCRC\nKeystream\nCiphertext\nIV"
+    },
+    {
+      "number": 20,
+      "title": "WEP",
+      "lines": [
+        "WEP",
+        "Decryption: Step by Step",
+        "Step 1: Build the keystream",
+        "Extract the IV from the incoming frame",
+        "Prepend the IV to the key",
+        "Use RC4 to build the keystream",
+        "Keystream",
+        "Ciphertext",
+        "IV",
+        "Key"
+      ],
+      "text": "WEP\nDecryption: Step by Step\nStep 1: Build the keystream\nExtract the IV from the incoming frame\nPrepend the IV to the key\nUse RC4 to build the keystream\nKeystream\nCiphertext\nIV\nKey"
+    },
+    {
+      "number": 21,
+      "title": "WEP",
+      "lines": [
+        "WEP",
+        "Decryption: Step by Step",
+        "Step 2: Decrypt the plaintext and verify",
+        "XOR the keystream with the",
+        "ciphertext",
+        "Verify the extracted message with the CRC",
+        "Keystream",
+        "Ciphertext",
+        "Message",
+        "CRC"
+      ],
+      "text": "WEP\nDecryption: Step by Step\nStep 2: Decrypt the plaintext and verify\nXOR the keystream with the\nciphertext\nVerify the extracted message with the CRC\nKeystream\nCiphertext\nMessage\nCRC"
+    },
+    {
+      "number": 22,
+      "title": "Borisov",
+      "lines": [
+        "Borisov",
+        ", et al. [1] :",
+        "Keystream (IV) reuse",
+        "Key management/distribution",
+        "Weak message authentication (ICV)",
+        "Arbaugh",
+        ", et al. [2]:",
+        "Shared key authentication",
+        "C",
+        "an authenticate with AP without knowing the WEP key",
+        "But still don’t know the WEP key, i.e. cannot access the network further",
+        "Major Problems with WEP",
+        "[1]",
+        "Borisov",
+        ", Nikita, Ian Goldberg, and David Wagner. \"Intercepting mobile communications: the insecurity of 802.11.\"",
+        "Proceedings of the 7th annual international conference on Mobile computing and networking",
+        ". ACM, 2001.",
+        "[2]",
+        "Arbaugh",
+        ", W. A., Shankar, N., Wan, Y. J., & Zhang, K. (2002). Your 80211 wireless network has no clothes. IEEE Wireless Communications, 9(6), 44-51."
+      ],
+      "text": "Borisov\n, et al. [1] :\nKeystream (IV) reuse\nKey management/distribution\nWeak message authentication (ICV)\nArbaugh\n, et al. [2]:\nShared key authentication\nC\nan authenticate with AP without knowing the WEP key\nBut still don’t know the WEP key, i.e. cannot access the network further\nMajor Problems with WEP\n[1]\nBorisov\n, Nikita, Ian Goldberg, and David Wagner. \"Intercepting mobile communications: the insecurity of 802.11.\"\nProceedings of the 7th annual international conference on Mobile computing and networking\n. ACM, 2001.\n[2]\nArbaugh\n, W. A., Shankar, N., Wan, Y. J., & Zhang, K. (2002). Your 80211 wireless network has no clothes. IEEE Wireless Communications, 9(6), 44-51."
+    },
+    {
+      "number": 23,
+      "title": "The WEP seed is feed into PRNG to generate a keystream",
+      "lines": [
+        "The WEP seed is feed into PRNG to generate a keystream",
+        "WEP seed = 24-bit IV +",
+        "fixed",
+        "key",
+        "Then, the keystream is",
+        "XOR’ed",
+        "with the plaintext and checksum to produce the",
+        "ciphertext",
+        ".",
+        "Whenever the",
+        "same IV",
+        "is used with the same master key,",
+        "the keystream will be the same",
+        "as well.",
+        "Keystreams",
+        "A Stream-Cipher should never use the same key twice!"
+      ],
+      "text": "The WEP seed is feed into PRNG to generate a keystream\nWEP seed = 24-bit IV +\nfixed\nkey\nThen, the keystream is\nXOR’ed\nwith the plaintext and checksum to produce the\nciphertext\n.\nWhenever the\nsame IV\nis used with the same master key,\nthe keystream will be the same\nas well.\nKeystreams\nA Stream-Cipher should never use the same key twice!"
+    },
+    {
+      "number": 24,
+      "title": "E(P1) = P1",
+      "lines": [
+        "E(P1) = P1",
+        "xor",
+        "C \t[C is the key]",
+        "E(P2) = P2",
+        "xor",
+        "C  [C is the same key]",
+        "Since",
+        "xor",
+        "is commutative:",
+        "E(P1)",
+        "xor",
+        "E(P2) = P1",
+        "xor",
+        "C",
+        "xor",
+        "P2",
+        "xor",
+        "C",
+        "= P1",
+        "xor",
+        "P2",
+        "xor",
+        "C",
+        "xor",
+        "C",
+        "= P1",
+        "xor",
+        "P2",
+        "The Stream-Cipher-Breakdown"
+      ],
+      "text": "E(P1) = P1\nxor\nC \t[C is the key]\nE(P2) = P2\nxor\nC  [C is the same key]\nSince\nxor\nis commutative:\nE(P1)\nxor\nE(P2) = P1\nxor\nC\nxor\nP2\nxor\nC\n= P1\nxor\nP2\nxor\nC\nxor\nC\n= P1\nxor\nP2\nThe Stream-Cipher-Breakdown"
+    },
+    {
+      "number": 25,
+      "title": "Master keys are unlikely to be changed due to key management issues (more on this later…)",
+      "lines": [
+        "Master keys are unlikely to be changed due to key management issues (more on this later…)",
+        "24 bits of IV are not sufficient to avoid collisions",
+        "Assuming 1500-byte packets at 11 Mbps, 2^24 possible IVs will be exhausted in about 5 hours",
+        "If IVs are assigned randomly, collisions can be expected (50% probability) after 5000 packets (Birthday paradox).",
+        "If IVs are assigned sequentially, collisions are inevitable if cards are re-initialized (e.g., always start from zero)",
+        "Keystream Reuse/Collision"
+      ],
+      "text": "Master keys are unlikely to be changed due to key management issues (more on this later…)\n24 bits of IV are not sufficient to avoid collisions\nAssuming 1500-byte packets at 11 Mbps, 2^24 possible IVs will be exhausted in about 5 hours\nIf IVs are assigned randomly, collisions can be expected (50% probability) after 5000 packets (Birthday paradox).\nIf IVs are assigned sequentially, collisions are inevitable if cards are re-initialized (e.g., always start from zero)\nKeystream Reuse/Collision"
+    },
+    {
+      "number": 26,
+      "title": "It’s carried in plaintext in the “encrypted” message!",
+      "lines": [
+        "It’s carried in plaintext in the “encrypted” message!",
+        "It’s only 24 bits!",
+        "There are no restrictions on IV reuse!",
+        "The IV forms a significant portion of the “seed” for the RC4 algorithm!",
+        "It was discovered that it is easy to decrypt RC4",
+        "ciphertext",
+        "if part of the key is known.",
+        "Initialization vector (IV)"
+      ],
+      "text": "It’s carried in plaintext in the “encrypted” message!\nIt’s only 24 bits!\nThere are no restrictions on IV reuse!\nThe IV forms a significant portion of the “seed” for the RC4 algorithm!\nIt was discovered that it is easy to decrypt RC4\nciphertext\nif part of the key is known.\nInitialization vector (IV)"
+    },
+    {
+      "number": 27,
+      "title": "It has been known for a while that RC4 has weak keys",
+      "lines": [
+        "It has been known for a while that RC4 has weak keys",
+        "Weak keys are more susceptible to showing the relationship between plaintext and",
+        "ciphertext",
+        "Weak IVs correspond to weak Keys.",
+        "Weak IVs have the following patterns:",
+        "First byte: range from 3 to 7",
+        "Second byte: 255",
+        "Third byte: anything",
+        "There are approx. 9000 weak IVs out of the 40 bit WEP secret keys. It is about 5% of total number IVs.",
+        "Weak IVs and Weak Keys in RC4"
+      ],
+      "text": "It has been known for a while that RC4 has weak keys\nWeak keys are more susceptible to showing the relationship between plaintext and\nciphertext\nWeak IVs correspond to weak Keys.\nWeak IVs have the following patterns:\nFirst byte: range from 3 to 7\nSecond byte: 255\nThird byte: anything\nThere are approx. 9000 weak IVs out of the 40 bit WEP secret keys. It is about 5% of total number IVs.\nWeak IVs and Weak Keys in RC4"
+    },
+    {
+      "number": 28,
+      "title": "The ICV is generated from a cyclic redundancy check (CRC-32)",
+      "lines": [
+        "The ICV is generated from a cyclic redundancy check (CRC-32)",
+        "Only a simple arithmetic computation.",
+        "Can be done easily by anyone.",
+        "Not cryptographically secure.",
+        "Easy for an attacker to change a packet and then change ICV to get response from AP.",
+        "E.g., replay attacks or injection attacks",
+        "Weak Message Integrity (ICV)"
+      ],
+      "text": "The ICV is generated from a cyclic redundancy check (CRC-32)\nOnly a simple arithmetic computation.\nCan be done easily by anyone.\nNot cryptographically secure.\nEasy for an attacker to change a packet and then change ICV to get response from AP.\nE.g., replay attacks or injection attacks\nWeak Message Integrity (ICV)"
+    },
+    {
+      "number": 29,
+      "title": "WEP does",
+      "lines": [
+        "WEP does",
+        "NOT",
+        "include any key management protocols!",
+        "Master keys could be one of four globally shared keys",
+        "Key must be updated manually",
+        "Often, one key is relied on",
+        "Key Management"
+      ],
+      "text": "WEP does\nNOT\ninclude any key management protocols!\nMaster keys could be one of four globally shared keys\nKey must be updated manually\nOften, one key is relied on\nKey Management"
+    },
+    {
+      "number": 30,
+      "title": "Keys are manually distributed",
+      "lines": [
+        "Keys are manually distributed",
+        "Keys are statically configured",
+        "Implications: often infrequently changed and easy to remember!",
+        "Key values can be directly set as hex data",
+        "Key generators provided for convenience",
+        "ASCII string is converted into keying material",
+        "Non-standard but in wide use",
+        "WEP (Re)Keying in Practice"
+      ],
+      "text": "Keys are manually distributed\nKeys are statically configured\nImplications: often infrequently changed and easy to remember!\nKey values can be directly set as hex data\nKey generators provided for convenience\nASCII string is converted into keying material\nNon-standard but in wide use\nWEP (Re)Keying in Practice"
+    },
+    {
+      "number": 31,
+      "title": "Authentication is optional",
+      "lines": [
+        "Authentication is optional",
+        "WEP uses a “Shared Key Authentication” protocol to authenticate stations",
+        "Initiator requests shared key authentication",
+        "Responder sends initiator random challenge text",
+        "Initiator sends responder encrypted challenge text",
+        "Responder signals successful completion of protocol",
+        "This is supposed to prove that the initiator knows the correct key",
+        "However, if a keystream is known, no key is necessary, so anybody can authenticate!",
+        "User Authentication"
+      ],
+      "text": "Authentication is optional\nWEP uses a “Shared Key Authentication” protocol to authenticate stations\nInitiator requests shared key authentication\nResponder sends initiator random challenge text\nInitiator sends responder encrypted challenge text\nResponder signals successful completion of protocol\nThis is supposed to prove that the initiator knows the correct key\nHowever, if a keystream is known, no key is necessary, so anybody can authenticate!\nUser Authentication"
+    },
+    {
+      "number": 32,
+      "title": "IV (key) reuse due to limited IV space",
+      "lines": [
+        "IV (key) reuse due to limited IV space",
+        "Known plaintext  attack",
+        "Lots of known plaintext in IP, ICMP, ARP, and etc.",
+        "Partial known plaintext attack",
+        "e.g., the IP header",
+        "Possible to recover some portion of the keystream",
+        "Can extend partially recovered keystream to the entire keystream via repeated probing/trying",
+        "Weak Integrity check (ICV)",
+        "Lack of IV replay protection (ARP replay attacks)",
+        "Possible to flip bits in real time, which is enabled by linearity of CRC32 (weak integrity check)",
+        "WEP Weakness Summary"
+      ],
+      "text": "IV (key) reuse due to limited IV space\nKnown plaintext  attack\nLots of known plaintext in IP, ICMP, ARP, and etc.\nPartial known plaintext attack\ne.g., the IP header\nPossible to recover some portion of the keystream\nCan extend partially recovered keystream to the entire keystream via repeated probing/trying\nWeak Integrity check (ICV)\nLack of IV replay protection (ARP replay attacks)\nPossible to flip bits in real time, which is enabled by linearity of CRC32 (weak integrity check)\nWEP Weakness Summary"
+    },
+    {
+      "number": 33,
+      "title": "No key management or exchange framework defined",
+      "lines": [
+        "No key management or exchange framework defined",
+        "Loose authentication",
+        "Beacon messages are not authenticated",
+        "Enables station to roam to a rogue AP",
+        "Disassociate (also De-",
+        "auth",
+        "), re-associate messages not authenticated",
+        "Enables",
+        "DoS",
+        "attacks",
+        "WEP Weakness Summary (Cont’d)"
+      ],
+      "text": "No key management or exchange framework defined\nLoose authentication\nBeacon messages are not authenticated\nEnables station to roam to a rogue AP\nDisassociate (also De-\nauth\n), re-associate messages not authenticated\nEnables\nDoS\nattacks\nWEP Weakness Summary (Cont’d)"
+    },
+    {
+      "number": 34,
+      "title": "The Brute Force / Dictionary Attack",
+      "lines": [
+        "The Brute Force / Dictionary Attack",
+        "The FMS Attack",
+        "The",
+        "C",
+        "hopchop",
+        "Attack",
+        "The Fragmentation Attack",
+        "Common Attacks on WEP"
+      ],
+      "text": "The Brute Force / Dictionary Attack\nThe FMS Attack\nThe\nC\nhopchop\nAttack\nThe Fragmentation Attack\nCommon Attacks on WEP"
+    },
+    {
+      "number": 35,
+      "title": "“Power” of the WEP relies in the difficulty of discovery of the secret key through a brute-force attack",
+      "lines": [
+        "“Power” of the WEP relies in the difficulty of discovery of the secret key through a brute-force attack",
+        "“Dictionary attack” uses dictionary of keys, not all possible keys",
+        "Such attack requires less then a month for all keys",
+        "Common Attacks: The Brute Force / Dictionary Attack"
+      ],
+      "text": "“Power” of the WEP relies in the difficulty of discovery of the secret key through a brute-force attack\n“Dictionary attack” uses dictionary of keys, not all possible keys\nSuch attack requires less then a month for all keys\nCommon Attacks: The Brute Force / Dictionary Attack"
+    },
+    {
+      "number": 36,
+      "title": "Capture 2 WEP encrypted packets",
+      "lines": [
+        "Capture 2 WEP encrypted packets",
+        "Try to decrypt it using the captured IV and a potential key",
+        "Verify decrypted ICV (the CRC)",
+        "Verify the key on the 2nd packet (optional)",
+        "The Brute Force / Dictionary Attack:",
+        "Steps"
+      ],
+      "text": "Capture 2 WEP encrypted packets\nTry to decrypt it using the captured IV and a potential key\nVerify decrypted ICV (the CRC)\nVerify the key on the 2nd packet (optional)\nThe Brute Force / Dictionary Attack:\nSteps"
+    },
+    {
+      "number": 37,
+      "title": "2001 –",
+      "lines": [
+        "2001 –",
+        "Fluhrer",
+        ", Martin and Shamir found a class of RC4 keys called “weak keys”",
+        "If the first 2 bytes of enough key stream are known -> The RC4 key is discovered",
+        "The first 8 bytes of WEP packet is a known SNAP-SAP header",
+        "AirSnort",
+        "implements this attack",
+        "Recovers key after 20,000 packets = 11 seconds",
+        "Common Attacks: The FMS Attack"
+      ],
+      "text": "2001 –\nFluhrer\n, Martin and Shamir found a class of RC4 keys called “weak keys”\nIf the first 2 bytes of enough key stream are known -> The RC4 key is discovered\nThe first 8 bytes of WEP packet is a known SNAP-SAP header\nAirSnort\nimplements this attack\nRecovers key after 20,000 packets = 11 seconds\nCommon Attacks: The FMS Attack"
+    },
+    {
+      "number": 38,
+      "title": "Does not recover the key, it just reveals the message",
+      "lines": [
+        "Does not recover the key, it just reveals the message",
+        "Exploits an ICV vulnerability",
+        "Steps:",
+        "Capture one packet",
+        "Truncate the last byte and try to guess one “value” for plaintext",
+        "Correct the checksum and send packet to AP",
+        "If guess is correct the AP will reply",
+        "Repeat until all bytes are decrypted",
+        "Common Attacks: The",
+        "C",
+        "hopchop",
+        "Attack"
+      ],
+      "text": "Does not recover the key, it just reveals the message\nExploits an ICV vulnerability\nSteps:\nCapture one packet\nTruncate the last byte and try to guess one “value” for plaintext\nCorrect the checksum and send packet to AP\nIf guess is correct the AP will reply\nRepeat until all bytes are decrypted\nCommon Attacks: The\nC\nhopchop\nAttack"
+    },
+    {
+      "number": 39,
+      "title": "KoreK",
+      "lines": [
+        "KoreK",
+        "C",
+        "hopchop",
+        "Attack Illustrated",
+        "Encrypted Data",
+        "ENC. ICV",
+        "Encrypted Data",
+        "?",
+        "Guess the value of the deleted byte and calculate new ICV",
+        "FA"
+      ],
+      "text": "KoreK\nC\nhopchop\nAttack Illustrated\nEncrypted Data\nENC. ICV\nEncrypted Data\n?\nGuess the value of the deleted byte and calculate new ICV\nFA"
+    },
+    {
+      "number": 40,
+      "title": "Fragmentation means chopping a packet into smaller packets",
+      "lines": [
+        "Fragmentation means chopping a packet into smaller packets",
+        "Increases the traffic but improves performance in the presence of noise",
+        "802.11 and IP protocol allow fragmentation",
+        "802.11 allows for at most 16 fragments",
+        "This feature can be used for breaking WEP!",
+        "Common Attacks: The Fragmentation Attack"
+      ],
+      "text": "Fragmentation means chopping a packet into smaller packets\nIncreases the traffic but improves performance in the presence of noise\n802.11 and IP protocol allow fragmentation\n802.11 allows for at most 16 fragments\nThis feature can be used for breaking WEP!\nCommon Attacks: The Fragmentation Attack"
+    },
+    {
+      "number": 41,
+      "title": "During fragmentation, WEP encryption is performed independently on each individual fragment using the same IV.",
+      "lines": [
+        "During fragmentation, WEP encryption is performed independently on each individual fragment using the same IV.",
+        "Possible to send multiple fragments (16) using the same key stream",
+        "Y",
+        "ou know more about the plaintext than you think you know.",
+        "Almost all encrypted data packets have a LLC/SNAP header, 8 bytes",
+        "XOR gives 8 bytes of the key stream",
+        "At this point, arbitrary data of (8 − 4) · 16 = 64 bytes (4 byte CRC tag) may be sent",
+        "Fragmentation Attacks, Basics",
+        "AA",
+        "AA",
+        "03",
+        "00",
+        "00",
+        "00",
+        "08",
+        "??",
+        "DSAP",
+        "Ether type",
+        "ORG Code",
+        "CTRL",
+        "SSAP",
+        "Can be either",
+        "IP or ARP"
+      ],
+      "text": "During fragmentation, WEP encryption is performed independently on each individual fragment using the same IV.\nPossible to send multiple fragments (16) using the same key stream\nY\nou know more about the plaintext than you think you know.\nAlmost all encrypted data packets have a LLC/SNAP header, 8 bytes\nXOR gives 8 bytes of the key stream\nAt this point, arbitrary data of (8 − 4) · 16 = 64 bytes (4 byte CRC tag) may be sent\nFragmentation Attacks, Basics\nAA\nAA\n03\n00\n00\n00\n08\n??\nDSAP\nEther type\nORG Code\nCTRL\nSSAP\nCan be either\nIP or ARP"
+    },
+    {
+      "number": 42,
+      "title": "Increase the number of bytes used for encryption (“protects” against FMS attack)",
+      "lines": [
+        "Increase the number of bytes used for encryption (“protects” against FMS attack)",
+        "Remove the weak IV - keystream re-use vulnerabilities",
+        "Prevent key re-use",
+        "Extensible Authentication Protocol (EAP) – change often the WEP-key",
+        "Deploy Intrusion Detection Systems (IDS) to protect against injected traffic",
+        "Companies sell hardware using modified versions of the WEP protocol claiming to be secure",
+        "Protecting WEP"
+      ],
+      "text": "Increase the number of bytes used for encryption (“protects” against FMS attack)\nRemove the weak IV - keystream re-use vulnerabilities\nPrevent key re-use\nExtensible Authentication Protocol (EAP) – change often the WEP-key\nDeploy Intrusion Detection Systems (IDS) to protect against injected traffic\nCompanies sell hardware using modified versions of the WEP protocol claiming to be secure\nProtecting WEP"
+    },
+    {
+      "number": 43,
+      "title": "WEP has a long history of vulnerabilities and “fixes”",
+      "lines": [
+        "WEP has a long history of vulnerabilities and “fixes”",
+        "WEP is a good example of how attacks evolve and mature over time",
+        "Attacks that a few years ago took days, now take minutes if the right tools are used",
+        "2005 WEP is officially declared deprecated by IEEE 802.11 committee",
+        "2008 WEP used by 30% of users in a US university",
+        "Today – too many old networks, some using WEP",
+        "WEP must be abandoned once and for all, rather than patch it yet again !!!",
+        "Conclusions"
+      ],
+      "text": "WEP has a long history of vulnerabilities and “fixes”\nWEP is a good example of how attacks evolve and mature over time\nAttacks that a few years ago took days, now take minutes if the right tools are used\n2005 WEP is officially declared deprecated by IEEE 802.11 committee\n2008 WEP used by 30% of users in a US university\nToday – too many old networks, some using WEP\nWEP must be abandoned once and for all, rather than patch it yet again !!!\nConclusions"
+    }
+  ],
+  "full_text": "Lecture 9:\nWired Equivalent Privacy (WEP)\nInstructor:\nKui\nRen\nWireless network and\nioT\nsecurity\n\nWi-Fi is a wireless networking technology used across the globe.\nWi-Fi refers to any system that uses the 802.11 standard, which was developed by the Institute of Electrical and Electronics Engineers (IEEE) and released in 1997.\nThe term Wi-Fi, which is alternatively spelled\nWiFi\n,\nWi-fi\n,\nWifi\n, or\nwifi\n, was pushed by the\nWi-Fi Alliance\n, a trade group that pioneered commercialization of the technology.\nWi-Fi\n\n802.11 is a set of standards for  wireless local area network (WLAN)  computer communication,  developed by the IEEE LAN/MAN  Standards Committee (IEEE 802) in  the 5 GHz and 2.4 GHz public  spectrum bands.\n802.11\n\nSensitive Information over Wi-Fi\n\nNo inherent physical protection\nPhysical connections between devices are replaced by logical associations \nSending and receiving messages do not need physical access to the network infrastructure (cables, hubs, routers, etc.)\nWhy security is more of a concern in wireless?\n\nBroadcast communications \nWireless usually means radio, which has a broadcast nature\nTransmissions can be overheard by anyone in range – anyone can generate transmissions,\nwhich will be received by other devices in range\nwhich will interfere with other nearby transmissions and may prevent their correct reception (jamming)\nWhy security is more of a concern in wireless?\n\nEavesdropping is easy\nInjecting bogus messages into the network is easy\nReplaying previously recorded messages is easy\nIllegitimate access to the network and its services is easy\nDenial of service is easily achieved by jamming\nWhy security is more of a concern in wireless?\n\nWireless technology doesn’t remove any old security issue\nEavesdropping\nMan-in-the-middle attacks\nDenial of Service\nThreats\n\nEasy to perform, most impossible to detect\nBy default , everything is transmitted in clear text\nUsername, passwords, content...\nNo security offered by the transmission medium\nDifferent tools available on the internet\nNetwork sniffers, protocol analyzers\nPassword collectors\nWith the right equipment, it’s possible to eavesdrop traffic from few kilometers away\nEavesdropping\n\nAttacker spoofs a disassociate message from the victim\nThe victim starts to look for a new AP, and the attacker advertises his own AP on a different channel, using the real AP’s MAC address\nThe attacker connects to the real AP using victim’s MAC address\nMan In The Middle Attack\n\nAttack on transmission regency used\nFrequency jamming\nNot very technical, but works\nAttack on MAC layer\nSpoofed disassociation messages\nCan target on specific user\nAttacks on higher layer protocol (TCP/IP protocol)\nSYN Flooding\nDenial of Service\n\nConfidentiality\nAuthenticity\nReplay detection\nIntegrity\nAccess control\nProtection against jamming\nWireless Communication Security Requirements\n\nWired Equivalent Privacy (WEP)\nWi-Fi Protected Access (WPA)\nWi-Fi Protected Access II (WPA2)\nWi-Fi Security Protocols\n\nWEP is Wired Equivalent Privacy\nLink-layer encryption\nDefined in the IEEE 802.11 standard\nGoals of WEP\nConfidentiality\nAccess control\nData integrity\nYet, WEP\nfailed\nto achieve any of the above goals\nSo what is WEP?\n\nUses RC4 (stream cipher) for encryption\nA compromise of hardware costs, speed, and security\nOriginally (1999) 64 bit (40 +24):\n40 bit key\n24 bit Initialization Vector (IV)\n128 bit (104 + 14):\n104 bit (13 ASCII characters, 26 Hex-Characters) key. 104 = 13*8.\n24 bit Initialization Vector (IV)\n256 bit:\n232 bit key\nAvailable, but not common\nWEP Flavors\n\nWEP\nEncryption: Players\nMessage: What you’re encrypting\nCRC: To verify the integrity of the message\nPlaintext: The message + CRC\nInitialization vector (IV): A 24-bit number which plays two roles that we’ll meet in a moment\nKey: A 40 or 104-bit number which is used to build the keystream\nKeystream: What is used to encrypt the plaintext\nCiphertext\n: What we end up post-encryption\nMessage\nCRC\nIV\nKey\nKeystream\nCiphertext\n\nWEP\nEncryption: Step by Step\nStep 1: Compute CRC for the message\nCRC-32 polynomial is used\nMessage\nCRC\n\nWEP\nEncryption: Step by Step\nKey\nIV\nStep 2: Compute the keystream\nIV is concatenated with the key\nRC4 encryption algorithm is used on the 64 or 128 bit concatenation\nKeystream\n\nWEP\nEncryption: Step by Step\nStep 3: Encrypt the plaintext\nThe plaintext is\nXORed\nwith the keystream to form the\nciphertext\nThe IV is prepended to the\nciphertext\nMessage\nCRC\nKeystream\nCiphertext\nIV\n\nWEP\nDecryption: Step by Step\nStep 1: Build the keystream\nExtract the IV from the incoming frame\nPrepend the IV to the key\nUse RC4 to build the keystream\nKeystream\nCiphertext\nIV\nKey\n\nWEP\nDecryption: Step by Step\nStep 2: Decrypt the plaintext and verify\nXOR the keystream with the\nciphertext\nVerify the extracted message with the CRC\nKeystream\nCiphertext\nMessage\nCRC\n\nBorisov\n, et al. [1] :\nKeystream (IV) reuse\nKey management/distribution\nWeak message authentication (ICV)\nArbaugh\n, et al. [2]:\nShared key authentication\nC\nan authenticate with AP without knowing the WEP key\nBut still don’t know the WEP key, i.e. cannot access the network further\nMajor Problems with WEP\n[1]\nBorisov\n, Nikita, Ian Goldberg, and David Wagner. \"Intercepting mobile communications: the insecurity of 802.11.\"\nProceedings of the 7th annual international conference on Mobile computing and networking\n. ACM, 2001.\n[2]\nArbaugh\n, W. A., Shankar, N., Wan, Y. J., & Zhang, K. (2002). Your 80211 wireless network has no clothes. IEEE Wireless Communications, 9(6), 44-51.\n\nThe WEP seed is feed into PRNG to generate a keystream\nWEP seed = 24-bit IV +\nfixed\nkey\nThen, the keystream is\nXOR’ed\nwith the plaintext and checksum to produce the\nciphertext\n.\nWhenever the\nsame IV\nis used with the same master key,\nthe keystream will be the same\nas well.\nKeystreams\nA Stream-Cipher should never use the same key twice!\n\nE(P1) = P1\nxor\nC \t[C is the key]\nE(P2) = P2\nxor\nC  [C is the same key]\nSince\nxor\nis commutative:\nE(P1)\nxor\nE(P2) = P1\nxor\nC\nxor\nP2\nxor\nC\n= P1\nxor\nP2\nxor\nC\nxor\nC\n= P1\nxor\nP2\nThe Stream-Cipher-Breakdown\n\nMaster keys are unlikely to be changed due to key management issues (more on this later…)\n24 bits of IV are not sufficient to avoid collisions\nAssuming 1500-byte packets at 11 Mbps, 2^24 possible IVs will be exhausted in about 5 hours\nIf IVs are assigned randomly, collisions can be expected (50% probability) after 5000 packets (Birthday paradox).\nIf IVs are assigned sequentially, collisions are inevitable if cards are re-initialized (e.g., always start from zero)\nKeystream Reuse/Collision\n\nIt’s carried in plaintext in the “encrypted” message!\nIt’s only 24 bits!\nThere are no restrictions on IV reuse!\nThe IV forms a significant portion of the “seed” for the RC4 algorithm!\nIt was discovered that it is easy to decrypt RC4\nciphertext\nif part of the key is known.\nInitialization vector (IV)\n\nIt has been known for a while that RC4 has weak keys\nWeak keys are more susceptible to showing the relationship between plaintext and\nciphertext\nWeak IVs correspond to weak Keys.\nWeak IVs have the following patterns:\nFirst byte: range from 3 to 7\nSecond byte: 255\nThird byte: anything\nThere are approx. 9000 weak IVs out of the 40 bit WEP secret keys. It is about 5% of total number IVs.\nWeak IVs and Weak Keys in RC4\n\nThe ICV is generated from a cyclic redundancy check (CRC-32)\nOnly a simple arithmetic computation.\nCan be done easily by anyone.\nNot cryptographically secure.\nEasy for an attacker to change a packet and then change ICV to get response from AP.\nE.g., replay attacks or injection attacks\nWeak Message Integrity (ICV)\n\nWEP does\nNOT\ninclude any key management protocols!\nMaster keys could be one of four globally shared keys\nKey must be updated manually\nOften, one key is relied on\nKey Management\n\nKeys are manually distributed\nKeys are statically configured\nImplications: often infrequently changed and easy to remember!\nKey values can be directly set as hex data\nKey generators provided for convenience\nASCII string is converted into keying material\nNon-standard but in wide use\nWEP (Re)Keying in Practice\n\nAuthentication is optional\nWEP uses a “Shared Key Authentication” protocol to authenticate stations\nInitiator requests shared key authentication\nResponder sends initiator random challenge text\nInitiator sends responder encrypted challenge text\nResponder signals successful completion of protocol\nThis is supposed to prove that the initiator knows the correct key\nHowever, if a keystream is known, no key is necessary, so anybody can authenticate!\nUser Authentication\n\nIV (key) reuse due to limited IV space\nKnown plaintext  attack\nLots of known plaintext in IP, ICMP, ARP, and etc.\nPartial known plaintext attack\ne.g., the IP header\nPossible to recover some portion of the keystream\nCan extend partially recovered keystream to the entire keystream via repeated probing/trying\nWeak Integrity check (ICV)\nLack of IV replay protection (ARP replay attacks)\nPossible to flip bits in real time, which is enabled by linearity of CRC32 (weak integrity check)\nWEP Weakness Summary\n\nNo key management or exchange framework defined\nLoose authentication\nBeacon messages are not authenticated\nEnables station to roam to a rogue AP\nDisassociate (also De-\nauth\n), re-associate messages not authenticated\nEnables\nDoS\nattacks\nWEP Weakness Summary (Cont’d)\n\nThe Brute Force / Dictionary Attack\nThe FMS Attack\nThe\nC\nhopchop\nAttack\nThe Fragmentation Attack\nCommon Attacks on WEP\n\n“Power” of the WEP relies in the difficulty of discovery of the secret key through a brute-force attack\n“Dictionary attack” uses dictionary of keys, not all possible keys\nSuch attack requires less then a month for all keys\nCommon Attacks: The Brute Force / Dictionary Attack\n\nCapture 2 WEP encrypted packets\nTry to decrypt it using the captured IV and a potential key\nVerify decrypted ICV (the CRC)\nVerify the key on the 2nd packet (optional)\nThe Brute Force / Dictionary Attack:\nSteps\n\n2001 –\nFluhrer\n, Martin and Shamir found a class of RC4 keys called “weak keys”\nIf the first 2 bytes of enough key stream are known -> The RC4 key is discovered\nThe first 8 bytes of WEP packet is a known SNAP-SAP header\nAirSnort\nimplements this attack\nRecovers key after 20,000 packets = 11 seconds\nCommon Attacks: The FMS Attack\n\nDoes not recover the key, it just reveals the message\nExploits an ICV vulnerability\nSteps:\nCapture one packet\nTruncate the last byte and try to guess one “value” for plaintext\nCorrect the checksum and send packet to AP\nIf guess is correct the AP will reply\nRepeat until all bytes are decrypted\nCommon Attacks: The\nC\nhopchop\nAttack\n\nKoreK\nC\nhopchop\nAttack Illustrated\nEncrypted Data\nENC. ICV\nEncrypted Data\n?\nGuess the value of the deleted byte and calculate new ICV\nFA\n\nFragmentation means chopping a packet into smaller packets\nIncreases the traffic but improves performance in the presence of noise\n802.11 and IP protocol allow fragmentation\n802.11 allows for at most 16 fragments\nThis feature can be used for breaking WEP!\nCommon Attacks: The Fragmentation Attack\n\nDuring fragmentation, WEP encryption is performed independently on each individual fragment using the same IV.\nPossible to send multiple fragments (16) using the same key stream\nY\nou know more about the plaintext than you think you know.\nAlmost all encrypted data packets have a LLC/SNAP header, 8 bytes\nXOR gives 8 bytes of the key stream\nAt this point, arbitrary data of (8 − 4) · 16 = 64 bytes (4 byte CRC tag) may be sent\nFragmentation Attacks, Basics\nAA\nAA\n03\n00\n00\n00\n08\n??\nDSAP\nEther type\nORG Code\nCTRL\nSSAP\nCan be either\nIP or ARP\n\nIncrease the number of bytes used for encryption (“protects” against FMS attack)\nRemove the weak IV - keystream re-use vulnerabilities\nPrevent key re-use\nExtensible Authentication Protocol (EAP) – change often the WEP-key\nDeploy Intrusion Detection Systems (IDS) to protect against injected traffic\nCompanies sell hardware using modified versions of the WEP protocol claiming to be secure\nProtecting WEP\n\nWEP has a long history of vulnerabilities and “fixes”\nWEP is a good example of how attacks evolve and mature over time\nAttacks that a few years ago took days, now take minutes if the right tools are used\n2005 WEP is officially declared deprecated by IEEE 802.11 committee\n2008 WEP used by 30% of users in a US university\nToday – too many old networks, some using WEP\nWEP must be abandoned once and for all, rather than patch it yet again !!!\nConclusions"
+}
