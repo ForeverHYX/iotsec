@@ -32,6 +32,9 @@
 - 已生成 11 篇章节复习笔记和 1 篇总复习索引，目录为 `notes/`。
 - 已生成前端笔记清单 `content/notes.json`，11 份课件均有对应笔记。
 - 已创建静态阅读网站：`index.html`、`assets/styles.css`、`assets/app.js`。
+- 已创建 public GitHub 仓库：`https://github.com/ForeverHYX/iotsec`
+- 已部署 GitHub Pages：`https://foreverhyx.github.io/iotsec/`
+- Pages 当前状态：`built`，`build_type=workflow`，HTTPS 已启用。
 
 ## 技术决策
 | 决策 | 理由 |
@@ -44,6 +47,7 @@
 | PPTX 使用 `zipfile` + XML 解析，PDF 使用 `PyPDF2` | 不引入额外安装依赖，适合直接在当前环境运行 |
 | GitHub 仓库创建为 public | 用户明确要求默认 public |
 | 网站直接使用原生 HTML/CSS/JS | GitHub Pages 可直接托管，不需要构建步骤 |
+| 使用 GitHub Actions Pages workflow 部署 | legacy Pages build 失败，workflow artifact 部署成功 |
 
 ## 遇到的问题
 | 问题 | 解决方案 |
@@ -51,6 +55,7 @@
 | 当前目录不是 git 仓库 | 后续初始化 git 并创建/连接 GitHub 仓库 |
 | 缺少文档转换命令 | 使用 Python 解析 pptx/pdf，网站直接链接原始课件 |
 | 缺少 `python-pptx` | 使用标准库解析 PPTX 内部 OOXML 文本 |
+| legacy Pages build failed | 切换到 GitHub Actions Pages workflow |
 
 ## 资源
 - 规划文件：`task_plan.md`、`findings.md`、`progress.md`
@@ -59,6 +64,8 @@
 - 资料清单：`content/materials.json`
 - 复习笔记目录：`notes/`
 - 网站入口：`index.html`
+- GitHub 仓库：`https://github.com/ForeverHYX/iotsec`
+- GitHub Pages：`https://foreverhyx.github.io/iotsec/`
 
 ## 视觉/浏览器发现
 <!-- 关键：每执行2次查看/浏览器操作后必须更新此部分 -->

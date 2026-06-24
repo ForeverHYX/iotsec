@@ -65,18 +65,31 @@
   - `.nojekyll`
 
 ### 阶段 5：GitHub 与 Pages 部署
-- **状态：** pending
+- **状态：** complete
 - 执行的操作：
-  - 待开始。
+  - 初始化 git 仓库，设置分支 `main`。
+  - 创建初始提交 `ac5cc81`。
+  - 使用 `gh repo create iotsec --public --source=. --remote=origin --push` 创建 public 仓库并推送。
+  - 通过 GitHub API 启用 Pages；legacy build 失败。
+  - 添加 `.github/workflows/pages.yml`，使用 Actions 上传 `_site` artifact 并部署 Pages。
+  - 提交 `108d117` 并推送 workflow。
+  - 使用 API 将 Pages 切换到 `build_type=workflow`。
+  - 验证 Actions run `28114202023` 成功，Pages 状态为 `built`。
 - 创建/修改的文件：
-  - 待记录。
+  - `.github/workflows/pages.yml`
 
 ### 阶段 6：交付验证
-- **状态：** pending
+- **状态：** complete
 - 执行的操作：
-  - 待开始。
+  - 验证线上首页 `https://foreverhyx.github.io/iotsec/` 返回 HTTP 200。
+  - 使用 agent-browser 验证线上首页、章节目录、总复习笔记加载。
+  - 验证线上 PDF 课件、PPTX 课件、`content/notes.json` 均返回 HTTP 200。
+  - 使用 agent-browser 验证 Week 1 PDF 课件 iframe 面板和 RFID PPTX 课件面板。
+  - 确认 GitHub 仓库为 public，默认分支 `main`。
 - 创建/修改的文件：
-  - 待记录。
+  - `task_plan.md`
+  - `findings.md`
+  - `progress.md`
 
 ## 测试结果
 | 测试 | 输入 | 预期结果 | 实际结果 | 状态 |
@@ -95,17 +108,27 @@
 | 搜索与章节切换 | 搜索 WEP 并打开章节 | 只显示 WEP 条目且笔记更新 | WEP 笔记标题和 10 个小节显示 | 通过 |
 | 课件面板 | 点击 WEP 的课件 Tab | 显示课件标题、打开链接、iframe | 显示 PPTX 课件面板；本地 Office viewer 因 localhost 限制报错 | 部分通过 |
 | Hash 路由 | 打开 `#lecture-14-nfc-application-security-1` | 显示 NFC 笔记 | NFC 笔记标题和 13 个小节显示 | 通过 |
+| GitHub 仓库可见性 | `gh repo view ForeverHYX/iotsec ...` | 仓库为 public | `visibility: PUBLIC`, defaultBranch `main` | 通过 |
+| Pages workflow | `gh run view 28114202023 ...` | 部署成功 | `status: completed`, `conclusion: success` | 通过 |
+| Pages 状态 | `gh api repos/ForeverHYX/iotsec/pages` | built/workflow/public | `status: built`, `build_type: workflow`, `public: true` | 通过 |
+| 线上首页 | `curl -I -L https://foreverhyx.github.io/iotsec/` | HTTP 200 | HTTP/2 200 | 通过 |
+| 线上 PDF 课件 | `curl -I -L .../materials/Week%201-2026.pdf` | HTTP 200 | HTTP/2 200, `application/pdf` | 通过 |
+| 线上 PPTX 课件 | `curl -I -L .../materials/Lecture%2012...pptx` | HTTP 200 | HTTP/2 200, PPTX content type | 通过 |
+| 线上数据清单 | `curl -I -L .../content/notes.json` | HTTP 200 | HTTP/2 200, `application/json` | 通过 |
+| 线上页面浏览器检查 | `agent-browser open https://foreverhyx.github.io/iotsec/` | 章节和笔记显示 | 总复习索引、12 个入口显示 | 通过 |
 
 ## 错误日志
 | 时间戳 | 错误 | 尝试次数 | 解决方案 |
 |--------|------|---------|---------|
 | 2026-06-24 | 当前目录不是 git 仓库 | 1 | 后续初始化仓库 |
+| 2026-06-24 | `gh api ... -f source[branch]=main` 被 zsh glob 拦截 | 1 | 使用引号：`-f 'source[branch]=main'` |
+| 2026-06-24 | legacy GitHub Pages build failed | 1 | 添加 GitHub Actions Pages workflow 并切换 `build_type=workflow` |
 
 ## 五问重启检查
 | 问题 | 答案 |
 |------|------|
-| 我在哪里？ | 阶段 5：GitHub 与 Pages 部署 |
-| 我要去哪里？ | 初始化仓库、推送 GitHub、启用 Pages 并验证线上地址 |
+| 我在哪里？ | 阶段 6：交付验证完成 |
+| 我要去哪里？ | 向用户交付仓库地址和 Pages 地址 |
 | 目标是什么？ | 让用户能在线阅读当前课件和按章节整理的中文复习笔记 |
 | 我学到了什么？ | 见 findings.md |
 | 我做了什么？ | 见上方记录 |

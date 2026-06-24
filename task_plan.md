@@ -4,7 +4,7 @@
 为当前目录的课程 PPT/PDF 按章节整理中文复习笔记，保留原始资料，并部署一个 GitHub Pages 在线阅读网站，支持查看课件和总结笔记。
 
 ## 当前阶段
-阶段 5
+阶段 6
 
 ## 各阶段
 
@@ -35,19 +35,19 @@
 - **状态：** complete
 
 ### 阶段 5：GitHub 与 Pages 部署
-- [ ] 初始化 git 仓库
-- [ ] 创建或连接 GitHub 仓库
-- [ ] 推送资料、笔记和站点源码
-- [ ] 配置 GitHub Pages
-- [ ] 验证 Pages 线上地址可访问
-- **状态：** in_progress
+- [x] 初始化 git 仓库
+- [x] 创建或连接 GitHub 仓库
+- [x] 推送资料、笔记和站点源码
+- [x] 配置 GitHub Pages
+- [x] 验证 Pages 线上地址可访问
+- **状态：** complete
 
 ### 阶段 6：交付验证
-- [ ] 验证所有课件都有对应笔记
-- [ ] 验证网站能访问课件和笔记
-- [ ] 记录测试结果到 progress.md
-- [ ] 向用户交付仓库地址和 Pages 地址
-- **状态：** pending
+- [x] 验证所有课件都有对应笔记
+- [x] 验证网站能访问课件和笔记
+- [x] 记录测试结果到 progress.md
+- [x] 向用户交付仓库地址和 Pages 地址
+- **状态：** complete
 
 ## 关键问题
 1. 本机是否已登录 GitHub CLI，是否有权限创建/推送仓库。
@@ -64,11 +64,14 @@
 | GitHub 仓库创建为 public | 用户明确要求“仓库默认设为public” |
 | 静态站点不使用构建依赖 | GitHub Pages 可直接发布仓库根目录，降低部署复杂度 |
 | 添加 `.nojekyll` | 防止 Pages 进入 Jekyll 处理流程，按原样托管静态文件 |
+| 使用 GitHub Actions 部署 Pages | legacy Pages build 失败且无详细错误；workflow artifact 部署已成功 |
 
 ## 遇到的错误
 | 错误 | 尝试次数 | 解决方案 |
 |------|---------|---------|
 | 当前目录不是 git 仓库 | 1 | 后续阶段初始化仓库并连接 GitHub |
+| zsh 将 `source[branch]` 当 glob 处理 | 1 | 使用引号重新运行 GitHub Pages API 命令 |
+| legacy GitHub Pages build failed | 1 | 添加 GitHub Actions Pages workflow 并切换 `build_type=workflow` |
 
 ## 备注
 - 不把外部网页内容写入本文件；网络/GitHub 发现记录到 findings.md。
