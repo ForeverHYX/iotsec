@@ -61,8 +61,8 @@
 - [x] 补充各章关键机制的更详细讲解
 - [x] 让 Markdown 渲染器支持受控 `<details>` 折叠块
 - [x] 重新生成站点数据并通过完整测试
-- [ ] 推送 GitHub 并验证 Pages 重新部署
-- **状态：** in_progress
+- [x] 推送 GitHub 并验证 Pages 重新部署
+- **状态：** complete
 
 ## 关键问题
 1. 本机是否已登录 GitHub CLI，是否有权限创建/推送仓库。

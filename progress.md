@@ -183,7 +183,7 @@
 | 线上正文搜索 | 搜索 `hidden` | 命中历年卷页 | 命中历年卷页和 MAC 章节 | 通过 |
 
 ### 阶段 8：自测答案与知识讲解优化
-- **状态：** in_progress
+- **状态：** complete
 - **开始时间：** 2026-06-25 Asia/Shanghai
 - 执行的操作：
   - 新增 `tests/test_self_test_answers.py`，验证所有章节末尾“快速自测”都有 `<details class="self-test-answer">` 折叠答案，且题目数与答案数一致。
@@ -193,6 +193,9 @@
   - 修改 `assets/styles.css`，为笔记中的折叠答案块增加边框、summary 高亮和正文间距。
   - 为 11 篇章节笔记补充更详细机制讲解，并在“快速自测”末尾加入可折叠参考答案。
   - 运行 `npm run build:data` 重新生成 `content/notes.json`。
+  - 提交 `aeb2a1a Add collapsible self-test answers` 并推送到 GitHub。
+  - 等待 Pages workflow `28174996973` 成功完成。
+  - 验证线上首页、`content/notes.json`、Week 1 笔记和线上 `assets/app.js` 均已更新。
 - 创建/修改的文件：
   - `assets/app.js`
   - `assets/styles.css`
@@ -213,3 +216,8 @@
 | 自测答案内容测试（绿灯） | `python3 -m unittest tests/test_self_test_answers.py -v` | 所有章节题目与答案数一致 | 1 个 Python 测试通过 | 通过 |
 | 站点数据重建 | `npm run build:data` | 生成最新 manifest | `Extracted 11 materials`; `Built 13 note records` | 通过 |
 | 全量测试 | `npm test` | Python 和 Node 全部通过 | Python 9 个、Node 4 个通过 | 通过 |
+| Pages workflow | `gh run view 28174996973 ...` | 部署成功 | `status: completed`, `conclusion: success`, `headSha: aeb2a1a` | 通过 |
+| Pages 状态 | `gh api repos/ForeverHYX/iotsec/pages` | built/workflow/public | `status: built`, `build_type: workflow`, `public: true` | 通过 |
+| 线上首页 | `curl -L .../?v=aeb2a1a` | HTTP 200 | 200 | 通过 |
+| 线上数据清单 | `curl -L .../content/notes.json?v=aeb2a1a` | HTTP 200 且 13 个入口 | 200，13 个入口 | 通过 |
+| 线上折叠答案内容 | `curl -L .../notes/week-1-2026.md?v=aeb2a1a` | 包含新增讲解和 `<details>` | 匹配到“安全保证链条”、`<details class="self-test-answer">`、`<summary>参考答案</summary>` | 通过 |
