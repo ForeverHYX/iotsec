@@ -181,3 +181,35 @@
 | 线上 manifest | 读取 `https://foreverhyx.github.io/iotsec/content/notes.json` | 13 个入口且含 `past-exams` | `count 13`, `['past-exams']` | 通过 |
 | 线上历年卷页面 | `agent-browser open https://foreverhyx.github.io/iotsec/?v=bf1757d#past-exams` | 页面渲染历年卷题目 | 显示 99 历年卷入口、20 道小题、简答题池和 2024-2025 大题 | 通过 |
 | 线上正文搜索 | 搜索 `hidden` | 命中历年卷页 | 命中历年卷页和 MAC 章节 | 通过 |
+
+### 阶段 8：自测答案与知识讲解优化
+- **状态：** in_progress
+- **开始时间：** 2026-06-25 Asia/Shanghai
+- 执行的操作：
+  - 新增 `tests/test_self_test_answers.py`，验证所有章节末尾“快速自测”都有 `<details class="self-test-answer">` 折叠答案，且题目数与答案数一致。
+  - 扩展 `tests/test_app_utils.mjs`，验证 Markdown 渲染器保留受控折叠答案块，并继续渲染块内 Markdown。
+  - 先运行新增测试确认红灯：前端 `<details>` 被转义，11 篇章节笔记缺少折叠答案。
+  - 修改 `assets/app.js`，只允许 self-test `details`、`summary`、闭合标签通过渲染器。
+  - 修改 `assets/styles.css`，为笔记中的折叠答案块增加边框、summary 高亮和正文间距。
+  - 为 11 篇章节笔记补充更详细机制讲解，并在“快速自测”末尾加入可折叠参考答案。
+  - 运行 `npm run build:data` 重新生成 `content/notes.json`。
+- 创建/修改的文件：
+  - `assets/app.js`
+  - `assets/styles.css`
+  - `notes/*.md`
+  - `content/notes.json`
+  - `tests/test_app_utils.mjs`
+  - `tests/test_self_test_answers.py`
+  - `task_plan.md`
+  - `findings.md`
+  - `progress.md`
+
+## 2026-06-25 阶段 8 测试结果
+| 测试 | 输入 | 预期结果 | 实际结果 | 状态 |
+|------|------|---------|---------|------|
+| 折叠答案渲染测试（红灯） | `node --test tests/test_app_utils.mjs` | 当前渲染器不支持 details 时失败 | `<details>` 被转义，新增测试失败 | 已验证失败 |
+| 自测答案内容测试（红灯） | `python3 -m unittest tests/test_self_test_answers.py -v` | 当前章节缺答案时失败 | 11 篇章节笔记均缺 `<details class="self-test-answer">` | 已验证失败 |
+| 折叠答案渲染测试（绿灯） | `node --test tests/test_app_utils.mjs` | 4 个 Node 测试通过 | 4 个通过 | 通过 |
+| 自测答案内容测试（绿灯） | `python3 -m unittest tests/test_self_test_answers.py -v` | 所有章节题目与答案数一致 | 1 个 Python 测试通过 | 通过 |
+| 站点数据重建 | `npm run build:data` | 生成最新 manifest | `Extracted 11 materials`; `Built 13 note records` | 通过 |
+| 全量测试 | `npm test` | Python 和 Node 全部通过 | Python 9 个、Node 4 个通过 | 通过 |

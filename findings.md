@@ -7,6 +7,7 @@
 - 使用 GitHub Pages 部署在线阅读网站，可查看 PPT/PDF 和总结笔记。
 - GitHub 仓库必须创建为公开仓库。
 - 新增用户提供的两份历年卷回忆，补全题干选项和参考答案，并加入网站。
+- 继续优化章节笔记：所有末尾快速自测要有可折叠参考答案，知识讲解要更详细，并重新 build/push 网站。
 
 ## 当前资料清单
 - `Week 1-2026.pdf`
@@ -40,6 +41,7 @@
 - 已新增 `notes/past-exams.md`，包含回忆卷 A 选择/填空、简答题池，以及 2024-2025 大题回忆。
 - 已扩展 `content/notes.json` 的 `search_text` 字段，支持正文关键词搜索。
 - 线上历年卷页面已验证：`https://foreverhyx.github.io/iotsec/#past-exams`
+- 已为 11 篇章节笔记的“快速自测”增加折叠参考答案，并补充无线基础、MAC、蜂窝、WEP/WPA/WPA2、IoT、RFID、Bluetooth、NFC 等关键机制说明。
 
 ## 技术决策
 | 决策 | 理由 |
@@ -55,6 +57,7 @@
 | 使用 GitHub Actions Pages workflow 部署 | legacy Pages build 失败，workflow artifact 部署成功 |
 | 历年卷做成独立 Markdown 笔记页 | 复用现有网站目录、搜索、Markdown 渲染和 GitHub Pages 部署流程 |
 | 为笔记 manifest 增加正文搜索索引 | 历年卷页面需要通过 hidden、WEP、RFID 等正文关键词被搜到 |
+| 仅允许受控 self-test `<details>`/`<summary>` HTML 通过 Markdown 渲染 | 满足折叠答案需求，同时继续转义其它正文内容，避免任意 HTML 注入 |
 
 ## 遇到的问题
 | 问题 | 解决方案 |

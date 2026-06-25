@@ -50,6 +50,13 @@ PTK 进一步拆分为：
 - **KEK**：加密 Key Data，如 GTK。
 - **TK**：加密/解密单播数据帧。
 
+四条消息可按“给 nonce、证明、发组密钥、确认安装”记忆：
+
+- Msg1：AP 发 ANonce 给 STA。
+- Msg2：STA 发 SNonce 和 MIC，证明自己能由 PMK 派生 PTK。
+- Msg3：AP 发带 MIC 的 Key Data，通常包含加密后的 GTK，并要求安装密钥。
+- Msg4：STA 确认安装完成。KRACK 正是利用 Msg3 重传和重复安装逻辑出错。
+
 ## 6. Phase 4：CCMP
 
 - **AES-CCMP** = Counter Mode + CBC-MAC Protocol。
@@ -57,6 +64,7 @@ PTK 进一步拆分为：
 - **CBC-MAC**：对数据块链式计算消息认证码，提供完整性。
 - **48-bit Packet Number PN**：用于重放保护，并参与构造 nonce，保证每包新鲜性。
 - CCMP 保护帧体和大部分 MAC 头，降低攻击者利用头部字段的能力。
+- CTR 和 CBC-MAC 必须使用同一套明确的 nonce/PN 规则：CTR 一旦 nonce 重复会重用密钥流，CBC-MAC 若输入上下文不绑定也可能被拼接或重放，所以 CCMP 把地址、优先级、PN 等字段纳入处理。
 
 ## 7. WPA/WPA2/WEP 对比
 
@@ -102,3 +110,14 @@ PTK 进一步拆分为：
 3. KCK、KEK、TK 各自用途是什么？
 4. CCMP 如何同时保护机密性和完整性？
 5. KRACK 为什么能绕过“算法本身安全”的保证？
+
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+1. Personal 使用共享 PSK，不需要认证服务器；Enterprise 使用 802.1X/EAP/RADIUS，可按用户认证并分发 PMK，更适合企业管理。
+2. 两个 nonce 提供双方贡献的新鲜随机性，防止不同会话派生相同 PTK，并让双方确认对方参与了本次握手。
+3. KCK 用于 EAPOL-Key MIC，KEK 用于加密 GTK 等 Key Data，TK 用于加密和解密单播数据帧。
+4. CCMP 用 AES-CTR 生成密钥流保护机密性，用 CBC-MAC 计算认证码保护完整性，并用 48-bit PN/nonce 防重放和密钥流重用。
+5. KRACK 不破解 AES，而是诱导客户端重复安装已安装的 PTK，导致 nonce/PN 重置；实现层破坏了算法安全所依赖的“nonce 不重复”条件。
+
+</details>

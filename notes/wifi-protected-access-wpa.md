@@ -41,6 +41,8 @@ WPA 是 WEP 到 WPA2 之间的过渡方案。它保留 RC4 以兼容旧硬件，
   - 协商新鲜 PTK。
   - 安装加密和完整性密钥。
   - 分发/安装 GTK 等组密钥。
+- **PTK 派生为什么要放入双方 nonce 和 MAC**：nonce 提供新鲜性，MAC 地址把密钥绑定到这对 AP/STA，避免不同会话或不同设备组合意外得到相同临时密钥。
+- **握手被抓包为什么足够离线攻击 PSK**：攻击者有 ANonce、SNonce、双方 MAC 和 MIC 后，可以在本地枚举 passphrase 派生 PMK/PTK，再验证 MIC 是否匹配，不需要继续和 AP 交互。
 
 ## 6. WPA-PSK
 
@@ -92,3 +94,14 @@ WPA 是 WEP 到 WPA2 之间的过渡方案。它保留 RC4 以兼容旧硬件，
 3. PSK 如何派生 PMK？
 4. 4-way handshake 需要哪些输入来派生 PTK？
 5. 为什么 WPA-PSK 的攻击可以离线进行？
+
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+1. WPA 是过渡方案，需要兼容大量只能硬件加速 RC4 的旧 AP 和网卡，因此用 TKIP 在 RC4 基础上修补 IV、完整性和密钥管理。
+2. 它避免像 WEP 那样简单使用 `IV || key`，而是为每个包混合出不同 key，降低 IV 与长期密钥关系泄露和密钥流重用风险。
+3. 在 PSK 模式中，passphrase、SSID、SSID 长度经过 4096 次 PBKDF2 派生出 256-bit PMK。
+4. 输入包括 PMK、ANonce、SNonce、AP MAC 地址和 STA MAC 地址，由此派生 PTK。
+5. 抓到 4-way handshake 后，攻击者可本地尝试候选口令并计算 MIC 验证是否正确，不需要在线登录，因此弱口令会被字典攻击。
+
+</details>

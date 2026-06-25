@@ -21,6 +21,26 @@ title: "Demo"
   assert.doesNotMatch(html, /title:/);
 });
 
+test("markdownToHtml preserves collapsible self-test answer blocks", () => {
+  const html = markdownToHtml(`## 快速自测
+
+1. Question?
+
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+1. **Answer** uses \`nonce\`.
+
+</details>
+`);
+
+  assert.match(html, /<details class="self-test-answer">/);
+  assert.match(html, /<summary>参考答案<\/summary>/);
+  assert.match(html, /<li><strong>Answer<\/strong> uses <code>nonce<\/code>\.<\/li>/);
+  assert.match(html, /<\/details>/);
+  assert.doesNotMatch(html, /&lt;details/);
+});
+
 test("viewerForMaterial uses direct PDF links and Office viewer for PPTX", () => {
   const pdf = viewerForMaterial({ filename: "Week 1-2026.pdf", extension: "pdf" }, "https://example.com/iotsec/");
   const pptx = viewerForMaterial(

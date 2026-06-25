@@ -29,6 +29,16 @@ function flushList(html, list) {
   return null;
 }
 
+function renderAllowedHtmlBlock(line) {
+  if (line === '<details class="self-test-answer">') return line;
+  if (line === "</details>") return line;
+  const summary = line.match(/^<summary>(.+)<\/summary>$/);
+  if (summary) {
+    return `<summary>${inlineMarkdown(summary[1])}</summary>`;
+  }
+  return null;
+}
+
 export function markdownToHtml(markdown) {
   const lines = stripFrontmatter(markdown).replace(/\r\n/g, "\n").split("\n");
   const html = [];
@@ -46,6 +56,14 @@ export function markdownToHtml(markdown) {
     if (!trimmed) {
       flushParagraph();
       list = flushList(html, list);
+      continue;
+    }
+
+    const htmlBlock = renderAllowedHtmlBlock(trimmed);
+    if (htmlBlock) {
+      flushParagraph();
+      list = flushList(html, list);
+      html.push(htmlBlock);
       continue;
     }
 
