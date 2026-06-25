@@ -6,6 +6,38 @@ order: 13
 
 # Lecture 13: Bluetooth Security and Privacy
 
+## 零基础导读
+
+Classic Bluetooth 可以先从 piconet 理解：一个 master 和最多 7 个 active slave 组成小网络，master 的 BD_ADDR 和 clock 决定跳频序列，所有 slave 跟着 master 的节奏走。物理信道按 625 微秒时隙组织，使用 TDD 交替发送，所以常被看成半双工。FHSS/AFH 能减少固定频点干扰，但跳频不是加密；真正的安全还要靠配对、link key、encryption key 和访问授权。
+
+Classic 和 BLE 的目标不同。Classic 适合耳机音频、持续连接和较高吞吐；BLE 更重视低功耗、短包、低延迟和低占空比传感。BLE 使用广播信道让设备先被发现，广播包如 ADV_IND、ADV_DIRECT_IND 会暴露地址、设备名、服务 UUID、manufacturer data、RSSI 和时间模式。即使地址随机化，payload 和行为模式仍可能让攻击者 tracking、profiling、harming。
+
+Bluetooth 安全的入门链条是：配对 pairing 让两个设备建立信任，bonding 把密钥保存下来以后复用。旧模式中 PIN、BD_ADDR、RAND 等输入生成 link key/encryption key；短 PIN、弱 RNG、可协商短密钥长度都会让攻击变容易。BLE 常用 AES-CCM 提供加密和 MIC，但前提是配对和密钥管理正确。BLE-Guardian 的思路是先学习目标设备广告序列，在目标广告时隙定向干扰隐藏设备，再通过 OOB 或连接参数放行授权客户端。
+
+做 BLE 安全题时，还要能把“攻击能力”说具体。TI sniffer、Ubertooth、libbtbb、Wireshark、kismet、crackle、LightBlue 这类工具分别覆盖抓包、解码、扫描、服务枚举和弱配对分析。攻击者可被动收集 ADV_IND 广播做 tracking，也可主动连接 GATT 枚举服务，或诱导设备使用 Just Works、短密钥、旧配对方式形成 downgrade attack。工具名本身不是答案重点，重点是说明它们把“短距离蓝牙”变成可批量扫描、记录和分析的无线攻击面。
+
+## 本章知识地图
+
+1. **Classic Bluetooth**：piconet、master/slave、scatternet、parked slave、625 微秒 slot、TDD、FHSS/AFH。
+2. **Classic vs BLE**：Classic 更适合连续音频和较高吞吐，BLE 更适合低功耗传感；BLE 使用 advertising/scanning/initiating/connection 状态。
+3. **安全目标**：Authentication、Confidentiality、Authorization；短距离和跳频都不能替代这些目标。
+4. **配对和密钥**：PIN/BD_ADDR/RAND -> link key/encryption key；短 PIN、downgrade attack、弱随机数和短密钥协商是风险。
+5. **BLE 隐私和攻击工具**：ADV_IND、RSSI、payload、GATT 服务、设备名和广播间隔可被 TI sniffer、Ubertooth、LightBlue 等设备或 App 收集；BLE-Guardian 用 hiding + access control 缓解。
+
+## 初学者常见疑问
+
+问：为什么 slave 不能直接和 slave 通信？
+
+答：piconet 的时间、跳频序列和调度由 master 控制。slave 同步到 master 的 clock 和 hopping sequence，在被分配的时隙里和 master 交换数据。两个 slave 没有共同的直接调度关系，因此经典 piconet 中不能绕过 master 直接通信。
+
+问：短 PIN 为什么危险？
+
+答：短 PIN 的搜索空间很小。旧配对中 PIN 参与生成 link key，如果攻击者抓到配对过程，可能离线枚举 PIN，恢复 link key 或 encryption key。可协商密钥长度也可能被降级，弱 RNG 会让 RAND 不够随机。这些问题说明“能配对”不等于“配对强”。
+
+问：BLE-Guardian 为什么要学习广告序列？
+
+答：BLE 广播不是连续发送，而是在 37/38/39 信道上按间隔和随机延迟出现。BLE-Guardian 要在目标广告出现时定向隐藏，必须预测设备什么时候在哪个信道发包；否则会干扰不准，既挡不住远处扫描者，也可能影响合法连接。
+
 ## 1. 本章速览
 
 Bluetooth 是短距离个人区域网络技术，工作在 2.4 GHz ISM 频段，广泛用于手机、耳机、键盘、车载、工业和 IoT 设备。本章重点是 Bluetooth Classic 的 piconet、跳频、主从结构和安全模式，以及 BLE 的广播、配对、地址随机化、隐私追踪和 BLE-Guardian 防护。
@@ -102,6 +134,15 @@ BLE 安全和隐私机制：
   1. Tracking User：用稳定标识追踪用户。
   2. Profiling User：根据设备和广告内容画像。
   3. Harming User：对敏感设备指纹识别、未授权访问或攻击。
+
+常见 BLE 攻击和工具可以按下表记忆：
+
+| 攻击/能力 | 常用工具或设备 | 初学者理解 |
+|---|---|---|
+| 广播抓包与监听 | TI sniffer、Ubertooth、kismet、Wireshark | 在 37/38/39 广播信道记录 ADV_IND、RSSI、地址和 payload，用于追踪或画像。 |
+| 协议解码与弱配对分析 | Ubertooth + libbtbb、crackle | 解码 BLE/Classic 流量，分析 Just Works、短 TK、弱 PIN 或未加密连接。 |
+| GATT 枚举与主动探测 | LightBlue、nRF Connect 等 App | 像客户端一样连接设备，枚举 service/characteristic，测试是否缺少授权。 |
+| downgrade attack | 攻击者干预协商或诱导旧模式 | 让设备从强配对/长密钥降到 Just Works、短密钥或旧安全模式，从而绕过预期安全强度。 |
 
 ## 10. BLE-Guardian
 

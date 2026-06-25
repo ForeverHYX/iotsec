@@ -6,6 +6,36 @@ order: 4.3
 
 # 第四周：WPA2、CCMP 与 KRACK
 
+## 零基础导读
+
+WPA2 是 Wi-Fi 安全从“修补旧硬件”走向“重新设计”的阶段，正式对应 IEEE 802.11i/RSN。你可以把连接过程分成四步：Discovery 阶段 AP 用 Beacon/Probe Response 发 RSN IE，告诉客户端支持哪些 AKM suite、pairwise cipher、group cipher；Association Request 中 STA 选择自己要用的组合；Authentication 阶段用 PSK 或 802.1X/EAP 得到 PMK；Key Management 阶段用 4-way handshake 派生并安装 PTK/GTK；最后 Phase 4 用 CCMP 保护数据帧。RSN IE 是 Robust Security Network Information Element，AKM 是 Authentication and Key Management。
+
+密钥层级是理解 WPA2 的核心。PMK 不直接加密数据，它只是主材料。4-way handshake 用 PMK、ANonce、SNonce、AP MAC、STA MAC 派生 PTK。PPT 中 PTK 64 bytes，可拆出 KCK/KEK/TK 各 16 bytes 等用途密钥：KCK 验证 EAPOL-Key MIC，KEK 加密 GTK 等 Key Data，TK 加密单播数据。GTK 是组密钥，用于广播/组播数据。这样设计的好处是主密钥不直接暴露在每个数据包上，不同用途的密钥也分开。
+
+CCMP 使用 128-bit AES-CCM，包含 CTR 和 CBC-MAC。AES 本来是 block cipher，一次处理固定大小的块；CTR 模式把 AES 变成 keystream 生成器，再和明文 XOR，提供机密性；CBC-MAC 对帧内容和相关头部计算认证标签，提供完整性。48-bit PN/nonce 防重放，也防 CTR keystream 重用。KRACK 时间线说明实现细节能破坏强算法：攻击者阻断 Msg4，AP 重传 Msg3，客户端重复安装同一 PTK，PN/nonce 归零，于是可能重用 keystream。攻击者不需要知道 Wi-Fi 密码，也不是破解 AES。
+
+## 本章知识地图
+
+1. **WPA2 四阶段**：Discovery/RSN IE -> Authentication/PMK -> 4-way handshake/PTK+GTK -> CCMP data protection。
+2. **安全能力协商**：RSN IE 发布能力，Association Request 选择 AKM、pairwise cipher、group cipher；Open System Authentication 本身不提供安全。
+3. **密钥层级图**：PMK -> PTK -> KCK/KEK/TK，同时 AP 分发 GTK；不同密钥服务不同任务。
+4. **CCMP 一帧流程**：构造 nonce/PN -> CTR 加密明文 -> CBC-MAC 算标签 -> 接收端检查 PN 和 MIC。
+5. **漫游优化**：PMK Caching 复用最近的 PMK，Pre-authentication 让 STA 在切换 AP 前先完成认证，减少漫游时延。
+
+## 初学者常见疑问
+
+问：RSN IE 和 Association Request 为什么重要？
+
+答：安全协议必须先协商“双方都支持什么”。AP 在 RSN IE 里发布支持的认证和密码套件，STA 在 Association Request 中选择一组。如果协商结果被降级或双方理解不一致，后面的认证和加密都可能建立在错误能力上。Open System Authentication 只是旧状态机步骤，不是真安全认证。
+
+问：CCMP 为什么比 TKIP 强？
+
+答：TKIP 仍基于 RC4 和 Michael MIC，是给旧硬件的补丁。CCMP 使用 AES-CCM，把机密性、完整性和重放保护设计在一起。CTR 负责加密，CBC-MAC 负责认证，PN/nonce 确保每包新鲜。只要 nonce 不重复，AES-CCMP 的安全基础远强于 WEP/WPA-TKIP。
+
+问：KRACK 时间线为什么不是“破解密码”？
+
+答：KRACK 利用的是密钥安装状态机。Msg3 可以重传，客户端如果重复安装已安装过的 PTK，就可能把 PN/nonce 重置。攻击者通过阻断/重放握手消息触发这个实现错误，并不需要知道 PMK 或 PSK。它说明“算法安全”和“实现按正确状态机使用算法”是两件事。
+
 ## 1. 本章速览
 
 WPA2 基于 IEEE 802.11i，正式形态是 RSN，核心提升是使用 AES-CCMP 替代 WPA/TKIP 的 RC4。考试重点是 WPA2 四个阶段、4-way handshake、PMK/PTK/KCK/KEK/TK 的层级、CCMP 如何同时提供机密性与完整性，以及 KRACK 为什么能在密码算法安全的情况下破坏实现安全。
@@ -77,6 +107,9 @@ PTK 进一步拆分为：
 - 无法防止纯物理层攻击，如 RF jamming。
 - 控制和管理帧历史上保护不足，可导致 DoS、MAC spoofing、大规模 deauthentication。
 - 安全证明通常针对抽象协议或单独密码组件，真实系统组合和实现仍可能出错。
+- **Pros**：相对 WEP/WPA-TKIP，WPA2 能抵抗 IV 碰撞导致的简单 keystream reuse、CRC 线性篡改、TKIP/Michael 弱完整性等攻击，并通过 RSN/CCMP 提供更强的机密性、完整性和重放保护。
+- **Cons**：WPA2 仍不能防 RF jamming、data flooding、AP failure 等可用性问题；AP 被打掉、资源被洪泛或管理帧保护不足时，AES-CCMP 本身也无法保证服务持续可用。
+- **快速漫游**：PMK Caching 让 STA 在短时间内回到同一 AP/网络时复用 PMK，Pre-authentication 允许 STA 在切换前先和目标 AP 完成认证，两者都减少漫游时重新认证的时延。
 
 ## 9. KRACK：Key Reinstallation Attack
 

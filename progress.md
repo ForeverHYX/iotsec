@@ -253,3 +253,45 @@
 | 线上首页 | `curl -L .../?v=0751c1a#past-exams` | HTTP 200 | 200 | 通过 |
 | 线上历年卷折叠答案 | `curl -L .../notes/past-exams.md?v=0751c1a` | 30 个折叠答案且无直出答案 | details 30，summary 30，行首 `参考答案` 0 | 通过 |
 | 线上 manifest | `curl -L .../content/notes.json?v=0751c1a` | 13 个入口且含 `past-exams` | 13，`['past-exams']` | 通过 |
+
+### 阶段 10：零基础可读性重写
+- **状态：** in_progress
+- **开始时间：** 2026-06-25 Asia/Shanghai
+- 执行的操作：
+  - 用户指出当前知识点更像“给看完的人检查”，要求假设读者零基础，读完复习笔记能理解所有 PPT 涵盖知识点。
+  - 启动 3 个 subagent 分别审查基础/无线、Wi-Fi 安全、IoT/RFID/Bluetooth/NFC 组的现有笔记和抽取材料。
+  - 检查抽取材料体量：11 份 extracted JSON 从 4009 到 54019 字符不等，现有 11 篇课程笔记约 84 到 149 行，确实偏压缩。
+  - 新增 `tests/test_beginner_notes.py`，要求每篇课程笔记包含“零基础导读”“本章知识地图”“初学者常见疑问”，并具备基本解释密度。
+  - 将 subagent 识别出的关键缺口加入 `tests/test_beginner_notes.py` 的关键词覆盖测试。
+  - 先运行 `python3 -m unittest tests/test_beginner_notes.py -v` 确认红灯：11 篇课程笔记缺少零基础结构，多个 subagent 指定关键词缺失。
+  - 为 11 篇课程笔记逐篇新增“零基础导读”“本章知识地图”“初学者常见疑问”，补充关键机制流程和术语首次解释。
+  - 运行 `npm run build:data` 重新生成 `content/notes.json`。
+  - 运行 `npm test`，当前 Python 13 个测试、Node 4 个测试通过。
+  - 启动 3 个 subagent 复审新增内容是否达到零基础可读目标。
+  - 根据复审反馈继续补齐缺口：IoT 云/存储模型，RFID reader 架构和物理层研究细节，Bluetooth BLE 攻击工具表，NFC Type 1/2/3/4、手机端威胁、secure execution、票务/门禁/open payment。
+  - 修正 SigOver 定量结果写法，明确 `45 vs 21600`、`675 vs 432000` 和 640 倍放大含义。
+  - 重新运行 `python3 -m unittest tests/test_beginner_notes.py -v`，确认零基础关键词门槛通过。
+  - 重新运行 `npm run build:data` 和 `npm test`，确认 manifest 与完整测试通过。
+  - 关闭上一轮旧 subagent 线程，启动 3 个新的只读 subagent 复审当前文件。
+  - 新一轮 subagent 复审结果：IoT/RFID/Bluetooth/NFC 组 PASS；Wi-Fi 组发现 WEP fragmentation 64 bytes 表述需修正；基础/蜂窝组发现 SigOver 数字应解释为每 UE 每小时请求率而非设备数量。
+  - 修正 WEP fragmentation 为“16 fragments 总共约 64 bytes”，补充 `(8 - 4) * 16 = 64` 推导。
+  - 修正 SigOver 数字含义：`45 vs 21600` 为正常 location-update/service requests 与 SigOver 诱导请求率，`675 vs 432000` 为正常 all signaling 与 SigOver 诱导请求率，约 640 倍；同时将 ReVoLTE 89% 表述为目标数据包。
+  - 返修后 Wi-Fi 组和基础/蜂窝组均确认 PASS。
+- 创建/修改的文件：
+  - `task_plan.md`
+  - `progress.md`
+  - `tests/test_beginner_notes.py`
+  - `notes/*.md`
+  - `content/notes.json`
+
+## 2026-06-25 阶段 10 测试结果
+| 测试 | 输入 | 预期结果 | 实际结果 | 状态 |
+|------|------|---------|---------|------|
+| 零基础结构测试（红灯） | `python3 -m unittest tests/test_beginner_notes.py -v` | 当前笔记缺结构时失败 | 11 篇课程笔记缺“零基础导读/知识地图/常见疑问”，关键词缺失 | 已验证失败 |
+| 零基础结构测试（绿灯） | `python3 -m unittest tests/test_beginner_notes.py -v` | 3 个测试通过 | 3 个通过 | 通过 |
+| 站点数据重建 | `npm run build:data` | 生成最新 manifest | `Extracted 11 materials`; `Built 13 note records` | 通过 |
+| 全量测试 | `npm test` | Python 和 Node 全部通过 | Python 13 个、Node 4 个通过 | 通过 |
+| 零基础返修测试 | `python3 -m unittest tests/test_beginner_notes.py -v` | 新增关键词均覆盖 | 3 个测试通过 | 通过 |
+| 返修后站点数据重建 | `npm run build:data` | 生成最新 manifest | `Extracted 11 materials`; `Built 13 note records` | 通过 |
+| 返修后全量测试 | `npm test` | Python 和 Node 全部通过 | Python 13 个、Node 4 个通过 | 通过 |
+| subagent 复审 | 3 个只读复审任务 | 无 must-fix | IoT 组 PASS；Wi-Fi/基础组返修后 PASS | 通过 |

@@ -6,6 +6,36 @@ order: 4.1
 
 # 第四周：WEP 安全机制与漏洞
 
+## 零基础导读
+
+WEP 解决的是 802.11 WLAN 早期最直接的问题：无线信号会从 AP 和 STA 的天线向外广播，楼外的人也可能收到，所以需要 link-layer encryption，让无线链路尽量像插网线一样不容易被旁人读懂。AP 是接入点，STA 是客户端，frame 是 802.11 发送的一帧数据，payload 是里面真正要保护的数据，IV 是每帧携带的初始化向量，ICV 是 WEP 用 CRC-32 算出的完整性检查值。WEP 把 `message || ICV` 和 RC4 生成的 keystream 做 XOR 得到密文，再把 IV 明文放在帧头附近一起发出。
+
+WEP 的核心漏洞来自“流密码不能重用密钥流”。RC4 是 stream cipher，同一个 seed 会生成同一个 keystream。WEP 的 seed 是 `IV || shared key`，shared key 长期不变，IV 又只有 24 bit，而且必须明文发给接收方。24-bit 看起来有 1677 万种，但在 11 Mbps 高流量环境中约数小时就会耗尽；如果 IV 随机选，大约 5000 个包就会有明显碰撞概率。相同 IV 加相同 key 意味着相同 keystream，于是攻击者能用 `C1 XOR C2 = P1 XOR P2` 做分析。
+
+WEP 的完整性也不安全。CRC-32 适合发现随机传输错误，但它没有密钥，而且线性；攻击者翻转密文的一位，就会翻转明文对应位，还能同步修正 ICV。已知明文也很多：LLC/SNAP 头、IP/ARP 格式、ARP replay 中可预测的字段都能帮助恢复 keystream。共享密钥认证四步更糟：AP 发明文 challenge，STA 用 WEP 加密后回传，旁观者把明文和密文异或，就得到该 IV 下的 keystream，可伪造认证但不一定知道长期 key。
+
+## 本章知识地图
+
+1. **从一帧看 WEP**：message -> CRC-32 得 ICV -> `IV || key` 输入 RC4 -> keystream -> XOR -> ciphertext，IV 明文随帧发送。
+2. **IV 的矛盾**：接收方需要 IV 生成同一 keystream，所以 IV 必须公开；但 IV 短且可重复，公开后攻击者能找出 keystream reuse。
+3. **CRC 与 MAC 的区别**：CRC-32 无密钥、线性，只防随机错误；HMAC/MAC 有密钥，目标是防恶意篡改。
+4. **典型攻击直觉**：known plaintext、LLC/SNAP、ARP replay、weak IV/FMS、Chopchop、Fragmentation 都在利用 IV、RC4 或 ICV 的弱点。
+5. **管理帧问题**：beacon、reassociation、deauthentication 等早期 802.11 管理帧缺少强认证，rogue AP 和断连攻击更容易发生。
+
+## 初学者常见疑问
+
+问：IV 公开为什么不是单独的问题？
+
+答：IV 本身不是秘密。很多安全协议都会公开 nonce/IV，因为接收方需要它来解密。真正的问题是 WEP 的 IV 太短、可重复，又和长期 shared key 简单拼接成 RC4 seed。公开 IV 让攻击者能快速识别“这两帧用了同一个 IV”，从而推断它们用了同一 keystream。
+
+问：共享密钥认证四步为什么会泄露 keystream？
+
+答：流程是 AP 发明文 challenge，STA 用 WEP 把 challenge 加密后发回，AP 解密验证。旁观者同时看到明文 challenge 和密文 challenge；两者 XOR 就是对应 IV 下的 RC4 keystream。攻击者之后可以用这段 keystream 加密自己的 challenge 响应，从而伪造认证。它泄露的是一段 keystream，不是直接泄露长期 WEP key。
+
+问：为什么加长 WEP key 仍然不够？
+
+答：104-bit key 比 40-bit key 更难暴力猜，但没有修复 24-bit IV、CRC-32 非 MAC、IV 明文且可重用、共享密钥人工配置、RC4 weak IV、管理帧缺少认证等协议设计问题。WEP 的漏洞不是单个参数太小，而是多个层面的设计都错了。
+
 ## 1. 本章速览
 
 WEP 是 Wi-Fi 早期安全协议，目标是为无线提供“等同有线”的隐私保护，但它在密钥管理、IV 设计、完整性校验和认证协议上都有根本缺陷。本章考试重点不是记攻击工具名字，而是能从 WEP 加密流程推导出为什么会出现密钥流重用、消息篡改、重放和认证绕过。
@@ -58,6 +88,9 @@ WEP 是 Wi-Fi 早期安全协议，目标是为无线提供“等同有线”的
 - **Chopchop 攻击**：不恢复密钥，而是利用 ICV 和 AP 响应逐字节恢复明文。
 - **Fragmentation 攻击**：802.11 碎片使用相同 IV 时，可利用已知 LLC/SNAP 头推导密钥流，构造可被接受的加密片段。
 - **重放/注入攻击**：ICV 弱且缺少可靠重放保护，使攻击者能重放或修改数据帧。
+- **FMS 细节**：PPT 中 weak IV 模式大约有 9000 个，FMS 会利用 RC4 key scheduling 的偏差和已知 LLC/SNAP/SAP 头部。早期实验常以约 20,000 packets 作为能观察到恢复趋势的量级，实际需要包数取决于流量和实现。
+- **Fragmentation 细节**：802.11 允许分片，PPT 强调最多 16 fragments、总共可构造约 64 bytes 任意数据。计算直觉是：每个 fragment 可从 8-byte LLC/SNAP 已知明文推出 8 bytes keystream，其中 4 bytes 要用于 CRC/ICV，因此每片约剩 4 bytes 可控数据，`(8 - 4) * 16 = 64`。攻击者可构造短加密片段让 AP 接受并产生更多可分析流量。
+- **废弃状态**：WEP 在 2005 年左右已被明确弃用。即使出现 256-bit/232-bit key variant，短 IV、CRC-32、RC4 weak IV 和密钥管理问题仍然存在。
 
 ## 7. “修补 WEP”为什么不够
 
@@ -93,7 +126,7 @@ WEP 是 Wi-Fi 早期安全协议，目标是为无线提供“等同有线”的
 1. 接收方需要 IV 与共享密钥拼接生成同一 RC4 密钥流，所以 IV 必须随帧发送；公开且短的 IV 让攻击者能识别重复 IV，进而识别重复密钥流。
 2. 两式异或得到 `C1 XOR C2 = P1 XOR K XOR P2 XOR K`，相同的 `K` 抵消，所以得到 `P1 XOR P2`，再结合已知明文可恢复内容。
 3. CRC-32 主要检测随机传输错误，不依赖秘密密钥且线性；HMAC 使用秘密密钥，目标是抵抗恶意篡改并提供消息认证。
-4. 攻击者能看到明文 challenge 和加密后的 challenge，两者异或可得到该 IV 下的 RC4 密钥流，从而伪造后续挑战响应或构造数据。
+4. 攻击者能看到明文 challenge 和加密后的 challenge，两者异或可得到该 IV 下的 RC4 密钥流，从而伪造后续挑战响应。注意这不等于拿到长期 WEP key，也不能进一步正常访问网络；它只是说明共享密钥认证本身泄露了可复用信息。
 5. WEP 同时存在短 IV、RC4 弱 IV、CRC 非 MAC、共享密钥长期不变、认证泄露密钥流等设计缺陷；单点补丁无法修复整体协议。
 
 </details>
