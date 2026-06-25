@@ -23,9 +23,14 @@ order: 99
 - C. 13.56 MHz 和 125 kHz
 - D. 60 GHz 和 77 GHz
 
-参考答案：B。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：B。
 
 解析：课件中 802.11 WLAN 工作在 2.4 GHz 和 5 GHz 公共频段。802.11b/g 常见于 2.4 GHz，802.11a/ac 常见于 5 GHz，802.11n/ax 可覆盖 2.4/5 GHz；WiFi 7 还可涉及 6 GHz，但本题按课件回忆选 2.4/5 GHz。
+
+</details>
 
 ### 2. DSSS 的优点
 
@@ -38,9 +43,14 @@ order: 99
 - C. 只能用于有线以太网
 - D. 比 FHSS 更容易避开任意窄带干扰
 
-参考答案：B。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：B。
 
 解析：DSSS 使用扩展码把信号扩展到更宽频带，可减少频率选择性衰落；在蜂窝场景中多个基站可使用相同频率范围，支持软切换。缺点是需要较精确的功率控制。
+
+</details>
 
 ### 3. 单工、半双工、全双工
 
@@ -53,12 +63,16 @@ order: 99
 - C. 移动手机通话
 - D. 现代交换式以太网
 
-参考答案：
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
 
 - 广播：单工 Simplex，只从广播站到接收者。
 - 蓝牙：半双工 Half-duplex，典型物理信道使用 TDMA-TDD，master/slave 交替发送。
 - 移动手机通话：全双工 Full-duplex，用户体验上可同时说和听；底层可用 FDD 或 TDD 实现。
 - 现代交换式以太网：全双工 Full-duplex。若题目特指早期共享介质/Hub Ethernet 或 CSMA/CD 以太网，则是半双工。
+
+</details>
 
 ### 4. Channel Interleave 的作用
 
@@ -71,9 +85,14 @@ order: 99
 - C. 把 2.4 GHz 信号转换成 5 GHz 信号
 - D. 替代所有加密算法
 
-参考答案：A。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：A。
 
 解析：无线衰落常造成 burst error。交织把连续错误打散，使纠错码看到更随机的错误，提高信道编码纠错效果。
+
+</details>
 
 ### 5. IoT 面临的 Contradictions
 
@@ -86,9 +105,14 @@ order: 99
 - C. Massive connectivity/heterogeneity vs. Manageability
 - D. 以上都是
 
-参考答案：D。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：D。
 
 可背答案：IoT 常见矛盾包括高性能与低能耗、强安全与资源受限、大规模异构连接与可管理性、开放互联与隔离控制、数据共享/智能化与隐私保护、实时可用性与网络拥塞/低带宽。
+
+</details>
 
 ### 6. 现有 WiFi 标准缺少什么
 
@@ -101,9 +125,14 @@ order: 99
 - C. 任何 MAC 层协议
 - D. 对 2.4 GHz 频段的支持
 
-参考答案：A。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：A。
 
 解析：课件原意是 WiFi 标准缺少良好的机制来缓解干扰，尤其是密集 AP 部署中；静态信道、功率、载波侦听阈值等会造成低频谱复用和严重竞争。
+
+</details>
 
 ### 7. WEP 保持数据完整性的算法
 
@@ -116,9 +145,14 @@ order: 99
 - C. CBC-MAC
 - D. RSA
 
-参考答案：B。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：B。
 
 解析：WEP 的 ICV 来自 CRC-32。CRC-32 只能检测随机错误，不是密码学 MAC，攻击者可以修改密文并同步修正 CRC。
+
+</details>
 
 ### 8. WEP 使用的加密算法
 
@@ -131,9 +165,14 @@ order: 99
 - C. DES
 - D. RSA
 
-参考答案：B。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：B。
 
 解析：WEP 使用 RC4 流密码，seed 为 `IV || shared key`。IV 太短且可重用是 WEP 的核心漏洞之一。
+
+</details>
 
 ### 9. WPA2 所用 IV/PN 长度
 
@@ -146,9 +185,14 @@ order: 99
 - C. 32 bit
 - D. 48 bit
 
-参考答案：D。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：D。
 
 解析：课件对比表中 WPA2 key life/IV 为 48 bit；CCMP 使用 48-bit Packet Number (PN) 防重放并构造新鲜 nonce。
+
+</details>
 
 ### 10. 三个基本 Security Objectives
 
@@ -161,9 +205,14 @@ order: 99
 - C. Encryption, Hashing, Signing
 - D. Routing, Forwarding, Switching
 
-参考答案：A。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：A。
 
 解析：CIA 三元组：机密性、完整性、可用性。
+
+</details>
 
 ### 11. Wireless LAN/WiFi 标准
 
@@ -176,9 +225,14 @@ order: 99
 - C. IEEE 802.15.4
 - D. IEEE 802.16
 
-参考答案：B。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：B。
 
 解析：WiFi 指使用 IEEE 802.11 标准的无线局域网。802.3 是以太网，802.15 相关 Bluetooth/ZigBee，802.16 是 WiMAX。
+
+</details>
 
 ### 12. WSN 的特点
 
@@ -191,9 +245,14 @@ order: 99
 - C. 网络智能只在单个终端设备中
 - D. 只用于有线骨干网
 
-参考答案：A。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：A。
 
 可背答案：WSN 节点多、低功耗、低速率、能量受限；数据通常流向中心汇聚节点；多跳、自组织、部署在物理环境中；网络智能往往在整体网络而不是单个设备中体现。
+
+</details>
 
 ### 13. IoT computing system security
 
@@ -206,9 +265,14 @@ order: 99
 - C. 只关注 WEP 的 CRC-32
 - D. 只关注 RFID 标签外观
 
-参考答案：A。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：A。
 
 解析：课件把 IoT computing system security 作为 Security Demands 之一，强调 IoT 应用已渗透现实场景，除传统网络认证、授权、审计外，还包含 IoT 特有隐私、安全和服务质量要求。
+
+</details>
 
 ### 14. RFID 适合的通信保护思路
 
@@ -221,9 +285,14 @@ order: 99
 - C. 永远不改变 reader 信号
 - D. 只依赖标签外壳颜色
 
-参考答案：A。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：A。
 
 解析：课件 RF-Cloak 中 “Random waveform acts like a one-time pad on the air”。注意这不是说所有廉价 RFID tag 都能直接运行传统 one-time pad，而是 reader 端随机化调制/信道来保护空中通信。
+
+</details>
 
 ### 15. RFID 在 IoT 哪一层
 
@@ -236,9 +305,14 @@ order: 99
 - C. Management Layer
 - D. Application Layer only
 
-参考答案：A。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：A。
 
 解析：RFID 是自动信息生成/对象识别技术，是感知层设备之一。
+
+</details>
 
 ### 16. RFID 系统功能
 
@@ -251,9 +325,14 @@ order: 99
 - C. reader/tag/antenna 间进行无线通信
 - D. 保证所有标签天然不可克隆且不可跟踪
 
-参考答案：D。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：D。
 
 解析：RFID 的功能是对象识别、读取/写入标签、供能、通信、连接后台应用。不可克隆、不可跟踪是安全目标，不是天然功能。
+
+</details>
 
 ### 17. RFID 隐私保护方法
 
@@ -266,9 +345,14 @@ order: 99
 - C. Distance measurement / policy and legislation
 - D. 以上都是
 
-参考答案：D。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：D。
 
 解析：Kill 保护售后隐私但牺牲后续功能；renaming 防长期跟踪；距离测量按距离释放不同信息；政策/法律可规范部署但不能单独阻止非法读取。
+
+</details>
 
 ### 18. Bluetooth 系统功能/安全目标
 
@@ -281,9 +365,14 @@ order: 99
 - C. Routing, Switching, Forwarding
 - D. Sensing, Storage, Printing
 
-参考答案：A。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：A。
 
 解析：Bluetooth 课件明确列出 Authentication、Confidentiality、Authorization。
+
+</details>
 
 ### 19. Bluetooth 使用的关键技术
 
@@ -296,9 +385,14 @@ order: 99
 - C. 只使用 13.56 MHz NFC
 - D. 只使用 WEP 的 RC4
 
-参考答案：A。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：A。
 
 解析：Bluetooth 工作在 2.4 GHz ISM，使用 TDMA-TDD slow frequency hopping；piconet 中一个 master、多个 slave，同步到共同 clock 和 hopping sequence。
+
+</details>
 
 ### 20. Bluetooth 保护方法
 
@@ -311,9 +405,14 @@ order: 99
 - C. BLE-Guardian 通过隐藏广告和授权连接保护 BLE 设备
 - D. 以上都是
 
-参考答案：D。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：D。
 
 解析：Bluetooth 保护包括认证、授权、加密、强 PIN/随机数、最小密钥长度、地址随机化、BLE-Guardian 等。
+
+</details>
 
 ## 2. 回忆卷 A：简答题池
 
@@ -321,7 +420,9 @@ order: 99
 
 题干：如下拓扑中，A 和 C 都能与 B 通信，但 A 与 C 彼此听不到。请画图解释 Hidden Terminal 问题，并说明 802.11 中的解决方法。
 
-参考答案：
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
 
 ```text
 A  --->  B  <---  C
@@ -338,11 +439,15 @@ A 听不到 C，C 听不到 A，但二者都能到达 B。
 - C 即使听不到 A，也能听到 B 的 CTS，于是设置 NAV 并退避，从而避免在 B 处碰撞。
 - RTS/CTS 适合较大数据帧，小包使用会增加控制开销。
 
+</details>
+
 ### 2. 阐述 WPA2 四次握手
 
 题干：请说明 WPA2 4-way handshake 的输入、四个消息的作用，以及握手后生成/安装哪些密钥。
 
-参考答案：
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
 
 - 目的：双方证明都持有 PMK，并协商新鲜的 PTK。
 - 输入：PMK、AP 生成的 ANonce、STA 生成的 SNonce、AP MAC、STA MAC。
@@ -355,11 +460,15 @@ A 听不到 C，C 听不到 A，但二者都能到达 B。
 - PTK 通常拆为 KCK、KEK、TK：KCK 算 EAPOL-Key MIC，KEK 加密 key data，TK 加密单播数据。
 - WPA2/CCMP 用 AES-CCMP，PN/IV 为 48 bit，用于防重放和构造 nonce。
 
+</details>
+
 ### 3. 智能门锁/智能家居监控系统：攻击与隐私
 
 题干：一个智能门锁产品使用屋内 WiFi 和蓝牙。另一个版本把场景换成智能家居监控系统。攻击者可采取什么措施攻击？可以获得什么隐私？
 
-参考答案：
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
 
 - WiFi 侧攻击：
   - 嗅探无线流量，抓取握手，若使用弱 WPA/WPA2-PSK，可离线字典攻击。
@@ -386,11 +495,15 @@ A 听不到 C，C 听不到 A，但二者都能到达 B。
   - BLE 使用安全配对、地址随机化、最小暴露 GATT 服务。
   - 固件签名更新、关闭默认口令、最小权限、端到端加密、日志审计、异常检测。
 
+</details>
+
 ### 4. 详细阐述 Security Demands
 
 题干：请详细阐述 IoT 的 Security Demands。
 
-参考答案：
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
 
 - **IoT access security**：
   - 感知节点、用户和系统接入前必须认证与授权。
@@ -407,11 +520,15 @@ A 听不到 C，C 听不到 A，但二者都能到达 B。
   - 需要认证、授权、审计、应用隔离、固件安全、可信更新、服务质量和故障恢复。
 - 总结句：IoT 安全需求不是单层安全，而是接入、通信、数据、计算和应用的跨层协同。
 
+</details>
+
 ### 5. 详细阐述 Security Architecture
 
 题干：请详细阐述 IoT Security Architecture。
 
-参考答案：
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
 
 - 按 IoT 系统结构，可把安全架构分为 sensing security、transmission security、data security、application security。
 - **IoT sensing security**：
@@ -428,11 +545,15 @@ A 听不到 C，C 听不到 A，但二者都能到达 B。
   - 重点是权限控制、业务逻辑安全、用户隐私、异常检测、日志审计和安全更新。
 - 课件还提到 security control、security audit、privacy/security：不可否认、审计追踪、隐私保护是 IoT 架构中不可缺少的横向能力。
 
+</details>
+
 ### 6. RFID tag 和 reader 之间传递敏感信息：被窃听怎么办
 
 题干：一个 RFID tag 和一个接收者/reader 之间传递敏感信息，通信被窃听了，有何措施？如果你作为 reader，应如何解决？
 
-参考答案：
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
 
 - 威胁：RFID 无线通信可被附近攻击者 eavesdrop；固定 ID 还会导致跟踪；攻击者可能重放、克隆或伪造标签。
 - 传统思路：
@@ -446,6 +567,8 @@ A 听不到 C，C 听不到 A，但二者都能到达 B。
   - 对抗 MIMO 窃听者时，可结合天线运动和快速天线切换，模拟大量快速变化信道，让攻击者难以消除随机波形。
   - 目标是不修改 RFID card/tag，也能让窃听者区分 0/1 的能力接近随机猜测。
 
+</details>
+
 ## 3. 2024-2025 回忆卷：大题
 
 据回忆，2024-2025 卷子与上一份基本一致，主要记住了大题。下面按 4 道 10 分题整理。
@@ -454,13 +577,20 @@ A 听不到 C，C 听不到 A，但二者都能到达 B。
 
 题干补全：画图解释 hidden terminal 问题。为什么 CSMA 监听信道仍会发生碰撞？802.11 如何用 RTS/CTS 缓解？
 
-参考答案：见本页“回忆卷 A：简答题池”第 1 题。答题时一定画出 `A -> B <- C`，强调 A/C 互相听不到但都能干扰 B。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：见本页“回忆卷 A：简答题池”第 1 题。答题时一定画出 `A -> B <- C`，强调 A/C 互相听不到但都能干扰 B。
+
+</details>
 
 ### 2. WEP 加密过程和安全隐患
 
 题干补全：解释 WEP 加密过程，并指出其中的安全隐患。
 
-参考答案：
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
 
 - 加密过程：
   1. 对 message 计算 CRC-32，得到 ICV。
@@ -482,11 +612,15 @@ A 听不到 C，C 听不到 A，但二者都能到达 B。
   - 共享密钥认证会泄露挑战明文和加密挑战，可恢复 keystream。
   - 管理帧缺少认证，可导致 rogue AP、deauth/DoS 等问题。
 
+</details>
+
 ### 3. 智能家居监控系统攻击与隐私
 
 题干补全：一个智能家居监控系统使用室内 WiFi 和蓝牙/BLE，摄像头/传感器/手机 App 与云端联动。攻击者可以采取什么措施攻击？可以获取什么隐私？如何防御？
 
-参考答案：
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
 
 - 攻击措施：
   - WiFi 嗅探、弱 PSK 字典攻击、rogue AP、deauth、jamming。
@@ -503,11 +637,18 @@ A 听不到 C，C 听不到 A，但二者都能到达 B。
   - 端到端加密、固件签名、默认口令强制修改、最小权限、日志审计、异常检测。
   - 隐私设计：最小采集、本地处理优先、数据脱敏、用户授权和可删除。
 
+</details>
+
 ### 4. RFID tag-reader 敏感通信被窃听：作为 reader 如何解决
 
 题干补全：一个 RFID tag 和 reader 之间传递敏感信息时被攻击者窃听。请说明可采取的保护措施，重点从 reader 侧说明。
 
-参考答案：见本页“回忆卷 A：简答题池”第 6 题。重点写 RF-Cloak：reader 随机化信号，random waveform acts like one-time pad on the air；对 MIMO 窃听者结合天线运动和快速天线切换，制造快速变化信道。
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+答案：见本页“回忆卷 A：简答题池”第 6 题。重点写 RF-Cloak：reader 随机化信号，random waveform acts like one-time pad on the air；对 MIMO 窃听者结合天线运动和快速天线切换，制造快速变化信道。
+
+</details>
 
 ## 4. 考前速背版
 

@@ -27,6 +27,25 @@ class ExamContentTests(unittest.TestCase):
             with self.subTest(term=term):
                 self.assertIn(term, text)
 
+    def test_past_exams_answers_are_collapsible(self):
+        text = (ROOT / "notes" / "past-exams.md").read_text(encoding="utf-8")
+        question_sections = [
+            section for section in text.split("\n### ") if section[:1].isdigit()
+        ]
+        self.assertGreaterEqual(len(question_sections), 30)
+
+        for section in question_sections:
+            title = section.splitlines()[0]
+            with self.subTest(question=title):
+                self.assertIn('<details class="self-test-answer">', section)
+                self.assertIn("<summary>参考答案</summary>", section)
+                self.assertIn("</details>", section)
+
+        direct_answer_lines = [
+            line for line in text.splitlines() if line.startswith("参考答案")
+        ]
+        self.assertEqual([], direct_answer_lines)
+
 
 if __name__ == "__main__":
     unittest.main()

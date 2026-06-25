@@ -42,6 +42,7 @@
 - 已扩展 `content/notes.json` 的 `search_text` 字段，支持正文关键词搜索。
 - 线上历年卷页面已验证：`https://foreverhyx.github.io/iotsec/#past-exams`
 - 已为 11 篇章节笔记的“快速自测”增加折叠参考答案，并补充无线基础、MAC、蜂窝、WEP/WPA/WPA2、IoT、RFID、Bluetooth、NFC 等关键机制说明。
+- 历年卷页面原本直接展示 30 个参考答案；已按用户要求改为默认折叠显示。
 
 ## 技术决策
 | 决策 | 理由 |
