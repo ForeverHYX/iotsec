@@ -295,3 +295,7 @@
 | 返修后站点数据重建 | `npm run build:data` | 生成最新 manifest | `Extracted 11 materials`; `Built 13 note records` | 通过 |
 | 返修后全量测试 | `npm test` | Python 和 Node 全部通过 | Python 13 个、Node 4 个通过 | 通过 |
 | subagent 复审 | 3 个只读复审任务 | 无 must-fix | IoT 组 PASS；Wi-Fi/基础组返修后 PASS | 通过 |
+| Pages workflow | `gh run watch 28180254014 --repo ForeverHYX/iotsec --exit-status` | 部署成功 | `deploy in 2m12s`, `conclusion: success`, `headSha: 7f88972` | 通过 |
+| 线上首页 | `curl -I -L https://foreverhyx.github.io/iotsec/?v=7f88972...#past-exams` | HTTP 200 | HTTP/2 200 | 通过 |
+| 线上笔记原文 | 读取 `notes/part2.md`、`notes/wired-equivalent-privacy-wep.md`、`notes/lecture-14-nfc-application-security-1.md` | 包含返修与新增内容 | 三个文件均匹配关键术语 | 通过 |
+| 线上 manifest 索引 | 读取 `content/notes.json?v=7f88972...` | 13 个入口且索引含新增关键词 | 13 个入口；part2、WEP、NFC、Week7 关键词命中 | 通过 |
