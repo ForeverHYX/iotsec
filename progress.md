@@ -223,7 +223,7 @@
 | 线上折叠答案内容 | `curl -L .../notes/week-1-2026.md?v=aeb2a1a` | 包含新增讲解和 `<details>` | 匹配到“安全保证链条”、`<details class="self-test-answer">`、`<summary>参考答案</summary>` | 通过 |
 
 ### 阶段 9：历年卷答案折叠
-- **状态：** in_progress
+- **状态：** complete
 - **开始时间：** 2026-06-25 Asia/Shanghai
 - 执行的操作：
   - 用户要求历年卷界面的答案也做成可折叠，不要直接展示。
@@ -231,6 +231,9 @@
   - 先运行 `python3 -m unittest tests/test_exam_content.py -v` 确认红灯：30 个答案均直接展示。
   - 机械转换 `notes/past-exams.md`，把每个 `参考答案` 到下一个题目标题之间的内容包进折叠块。
   - 运行 `npm run build:data` 重新生成 `content/notes.json`。
+  - 提交 `0751c1a Collapse past exam answers` 并推送到 GitHub。
+  - 等待 Pages workflow `28175871178` 成功完成。
+  - 验证线上历年卷页面：30 个 `<details class="self-test-answer">`，30 个 `<summary>参考答案</summary>`，0 行直出的 `参考答案`。
 - 创建/修改的文件：
   - `notes/past-exams.md`
   - `content/notes.json`
@@ -246,3 +249,7 @@
 | 历年卷答案折叠测试（绿灯） | `python3 -m unittest tests/test_exam_content.py -v` | 3 个测试通过 | 3 个通过 | 通过 |
 | 站点数据重建 | `npm run build:data` | 生成最新 manifest | `Extracted 11 materials`; `Built 13 note records` | 通过 |
 | 全量测试 | `npm test` | Python 和 Node 全部通过 | Python 10 个、Node 4 个通过 | 通过 |
+| Pages workflow | `gh run view 28175871178 ...` | 部署成功 | `status: completed`, `conclusion: success`, `headSha: 0751c1a` | 通过 |
+| 线上首页 | `curl -L .../?v=0751c1a#past-exams` | HTTP 200 | 200 | 通过 |
+| 线上历年卷折叠答案 | `curl -L .../notes/past-exams.md?v=0751c1a` | 30 个折叠答案且无直出答案 | details 30，summary 30，行首 `参考答案` 0 | 通过 |
+| 线上 manifest | `curl -L .../content/notes.json?v=0751c1a` | 13 个入口且含 `past-exams` | 13，`['past-exams']` | 通过 |
