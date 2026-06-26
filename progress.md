@@ -340,3 +340,8 @@
 | 返修后站点数据重建 | `npm run build:data` | 生成最新 manifest | `Extracted 11 materials`; `Built 13 note records` | 通过 |
 | 返修后完整测试 | `npm test` | Python 和 Node 全部通过 | Python 15 个、Node 4 个通过 | 通过 |
 | subagent 返修复审 | 3 个只读复审任务 | 无 remaining MUST-FIX | 基础/无线 PASS；MAC/蜂窝/Wi-Fi PASS；IoT/RFID/Bluetooth/NFC PASS | 通过 |
+| GitHub push | `git push origin main` | 推送 Stage 11 内容更新 | commit `79f9555` 已推送到 `main` | 通过 |
+| Pages workflow | `gh run watch 28228655765 --repo ForeverHYX/iotsec --exit-status` | 部署成功 | deploy in 26s，conclusion success | 通过 |
+| 线上首页 | `curl -I -L https://foreverhyx.github.io/iotsec/?v=79f9555` | HTTP 200 | HTTP/2 200 | 通过 |
+| 线上 manifest 关键词 | 读取 `content/notes.json?v=79f9555` | 13 个入口且关键新增术语命中 | 13 个入口；2023-pdf、RFID、Bluetooth、NFC 关键词均命中 | 通过 |
+| 线上 Markdown 关键词 | 读取 `notes/2023-pdf.md`、`notes/wifi-protected-access-wpa.md`、`notes/lecture-14-nfc-application-security-1.md` | 原始笔记包含新增内容 | hidden terminal、630 years、FWI=0 ≈303μs 均命中 | 通过 |
