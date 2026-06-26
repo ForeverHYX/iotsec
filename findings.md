@@ -50,6 +50,7 @@
 - 阶段 11 新需求：上一轮仍不足以“完全理解 PPT”；必须补齐公式、英文单词/缩写释义、被省略的 PPT 知识点，并按历年卷风格给每章增加练习题与折叠答案。用户明确指出无线基础需覆盖 slow fading 的 major cause 是 Shadowing Effect，并能解释 Signal Overshadowing 和 hidden terminal。
 - 阶段 11 本地补充已覆盖专项测试列出的关键精确项：无线基础公式/衰落模型，Week 1 安全定义和频谱/IoT 缩写，MAC hidden/exposed terminal 与 polling/token，蜂窝 SigOver/ReVoLTE，WEP/WPA/WPA2 细节，IoT/RFID/Bluetooth/NFC 协议参数和公式。新增 Stage 11 章节后，自测答案测试需按“快速自测”二级标题边界截断，否则会把后续历年卷风格练习答案误计入自测答案。
 - 阶段 11 subagent 复审补齐的关键遗漏包括：第二周 802.11 MAC/RTS-CTS 与 near-far effect；ReVoLTE Bearer ID 实测结果；WEP weak IV 完整模式；TKIP IV sequence enforcement；IoT trust management/outsourced data/ciphertext operation 等安全需求；RFID reader 系统功能、HB 参数和防冲突复杂度公式；Bluetooth 距离/跳频/信道/ACK/CRC/MIC/Blue snarfing；NFC FWT 数值、EMV relay、open payment flow 和 Google Wallet 六次 PIN 限制绕过。
+- 阶段 12 表格渲染 bug 根因：前端 `markdownToHtml` 只处理标题、列表和受控 `<details>`，没有 Markdown table 分支；因此 `| 英文/缩写 |...` 行被当成普通段落拼接，页面显示原始管道符。修复方向是为 Markdown table 增加解析状态，并为 `.note-content table` 增加表格样式和横向滚动。
 
 ## 技术决策
 | 决策 | 理由 |
@@ -89,7 +90,7 @@
 ## 视觉/浏览器发现
 <!-- 关键：每执行2次查看/浏览器操作后必须更新此部分 -->
 <!-- 多模态内容必须立即以文本形式记录 -->
-- 尚未进行视觉/浏览器检查。
+- 2026-06-26 阶段 12 本地浏览器检查：打开 `http://localhost:4173/?v=table-render-local#wired-equivalent-privacy-wep`，WEP 页“公式与术语速查”区域有 1 个 `.note-content table`，`document.body.innerText.includes('| 英文/缩写 | 中文含义 |')` 为 false；截图显示三列表格正常显示，表头为“英文/缩写 / 中文含义 / 初学者要会的解释”。
 
 ---
 *每执行2次查看/浏览器/搜索操作后更新此文件*

@@ -29,6 +29,28 @@ function flushList(html, list) {
   return null;
 }
 
+function isTableRow(line) {
+  return /^\|.+\|$/.test(line.trim());
+}
+
+function splitTableRow(line) {
+  return line.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map((cell) => cell.trim());
+}
+
+function isTableSeparator(line) {
+  if (!isTableRow(line)) return false;
+  const cells = splitTableRow(line);
+  return cells.length > 0 && cells.every((cell) => /^:?-{3,}:?$/.test(cell));
+}
+
+function renderTable(headers, rows) {
+  const head = headers.map((cell) => `<th>${inlineMarkdown(cell)}</th>`).join("");
+  const body = rows
+    .map((row) => `<tr>${row.map((cell) => `<td>${inlineMarkdown(cell)}</td>`).join("")}</tr>`)
+    .join("");
+  return `<table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`;
+}
+
 function renderAllowedHtmlBlock(line) {
   if (line === '<details class="self-test-answer">') return line;
   if (line === "</details>") return line;
@@ -51,7 +73,8 @@ export function markdownToHtml(markdown) {
     paragraph = [];
   };
 
-  for (const line of lines) {
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
     const trimmed = line.trim();
     if (!trimmed) {
       flushParagraph();
@@ -64,6 +87,22 @@ export function markdownToHtml(markdown) {
       flushParagraph();
       list = flushList(html, list);
       html.push(htmlBlock);
+      continue;
+    }
+
+    if (isTableRow(trimmed) && isTableSeparator(lines[index + 1] || "")) {
+      flushParagraph();
+      list = flushList(html, list);
+      const headers = splitTableRow(trimmed);
+      const rows = [];
+      index += 2;
+      while (index < lines.length && isTableRow(lines[index]) && !isTableSeparator(lines[index])) {
+        const cells = splitTableRow(lines[index]);
+        rows.push(headers.map((_, cellIndex) => cells[cellIndex] || ""));
+        index += 1;
+      }
+      index -= 1;
+      html.push(renderTable(headers, rows));
       continue;
     }
 

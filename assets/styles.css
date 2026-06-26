@@ -295,12 +295,42 @@ a {
 
 .note-content p,
 .note-content ul,
-.note-content ol {
+.note-content ol,
+.note-content table {
   margin: 0 0 14px;
 }
 
 .note-content li {
   margin: 6px 0;
+}
+
+.note-content table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 0.95em;
+}
+
+.note-content th,
+.note-content td {
+  min-width: 150px;
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.note-content th {
+  background: var(--surface-soft);
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+.note-content td {
+  background: #fff;
 }
 
 .note-content details {

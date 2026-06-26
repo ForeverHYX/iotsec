@@ -87,6 +87,14 @@
 - [x] 重新生成站点数据、测试、subagent 复审、推送并验证 Pages
 - **状态：** complete
 
+### 阶段 12：Markdown 表格渲染修复
+- [x] 复现表格被渲染为普通段落的问题
+- [x] 为 Markdown table 渲染增加前端回归测试
+- [x] 修复 `markdownToHtml` 表格解析和表格样式
+- [x] 本地浏览器检查 WEP 术语表显示
+- [ ] 推送 GitHub 并验证 Pages
+- **状态：** in_progress
+
 ## 关键问题
 1. 本机是否已登录 GitHub CLI，是否有权限创建/推送仓库。
 2. GitHub 仓库名和 Pages URL 若未指定，将优先使用当前目录名 `iotsec`。

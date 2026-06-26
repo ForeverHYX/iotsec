@@ -345,3 +345,33 @@
 | 线上首页 | `curl -I -L https://foreverhyx.github.io/iotsec/?v=79f9555` | HTTP 200 | HTTP/2 200 | 通过 |
 | 线上 manifest 关键词 | 读取 `content/notes.json?v=79f9555` | 13 个入口且关键新增术语命中 | 13 个入口；2023-pdf、RFID、Bluetooth、NFC 关键词均命中 | 通过 |
 | 线上 Markdown 关键词 | 读取 `notes/2023-pdf.md`、`notes/wifi-protected-access-wpa.md`、`notes/lecture-14-nfc-application-security-1.md` | 原始笔记包含新增内容 | hidden terminal、630 years、FWI=0 ≈303μs 均命中 | 通过 |
+
+### 阶段 12：Markdown 表格渲染修复
+- **状态：** in_progress
+- **开始时间：** 2026-06-26 Asia/Shanghai
+- 执行的操作：
+  - 用户截图反馈“公式与术语速查”表格在前端崩坏，Markdown 管道符直接显示为段落。
+  - 读取 `assets/app.js`，确认 `markdownToHtml` 只处理 heading/list/details，没有 table 解析分支，根因是 table 行进入 paragraph 合并。
+  - 在 `tests/test_app_utils.mjs` 新增 `markdownToHtml renders markdown tables` 回归测试，先运行 `node --test tests/test_app_utils.mjs` 验证红灯。
+  - 修改 `assets/app.js`，增加 Markdown table row/separator 识别、单元格拆分和 `<table><thead><tbody>` 输出。
+  - 修改 `assets/styles.css`，为 `.note-content table/th/td` 增加边框、表头背景、单元格 padding 和横向滚动。
+  - 修改 `index.html`，给 `assets/styles.css` 和 `assets/app.js` 增加版本查询参数，避免浏览器或 Pages 短缓存继续使用旧资源。
+  - 运行 `node --test tests/test_app_utils.mjs`，5 个 Node 测试通过。
+  - 运行 `npm test`，Python 15 个测试和 Node 5 个测试通过。
+  - 启动本地服务并用 agent-browser 打开 WEP 页面，DOM 检查确认 `.note-content table` 数量为 1，原始 `| 英文/缩写 | 中文含义 |` 不再出现在正文文本中；截图显示表格视觉正常。
+- 创建/修改的文件：
+  - `assets/app.js`
+  - `assets/styles.css`
+  - `index.html`
+  - `tests/test_app_utils.mjs`
+  - `task_plan.md`
+  - `findings.md`
+  - `progress.md`
+
+## 2026-06-26 阶段 12 测试结果
+| 测试 | 输入 | 预期结果 | 实际结果 | 状态 |
+|------|------|---------|---------|------|
+| 表格渲染测试（红灯） | `node --test tests/test_app_utils.mjs` | 当前渲染器不支持 table 时失败 | 新增测试未匹配 `<table>`，表格源码进入 `<p>` | 已验证失败 |
+| 表格渲染测试（绿灯） | `node --test tests/test_app_utils.mjs` | 5 个 Node 测试通过 | 5 个通过 | 通过 |
+| 完整测试 | `npm test` | Python 和 Node 全部通过 | Python 15 个、Node 5 个通过 | 通过 |
+| 本地浏览器 DOM 检查 | agent-browser 打开 WEP 页面并执行 DOM 检查 | table 数量为 1，原始管道表头不可见 | `tables: 1`, `rawPipeHeaderVisible: false` | 通过 |
