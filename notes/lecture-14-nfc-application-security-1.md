@@ -105,6 +105,7 @@ NFC 是短距离高频 RFID 数据交换标准，工作在 13.56 MHz，典型距
 - “Mole reader” 靠近受害者 NFC 设备，攻击者手机靠近 POS/门禁终端，APDU 通过网络转发。
 - NFC 的短距离不能阻止 relay，因为攻击者延长的是协议链路，而不是让物理 NFC 信号传很远。
 - FWT Frame Waiting Time 决定 reader 等待响应的时间窗口；过宽的超时让中继更容易。
+- **FWT 细节**：FWT 由 FWI 控制，典型值可记为 `FWI=0 ≈303μs`、`FWI=4 ≈4833μs`、`FWI=14 ≈4949ms`；`MIFARE DESFire default FWI=0x8` 对应约 77 ms。PPT 例子里 Nexus S/Jelly Bean 响应可能约 `430ms`，已经远超部分严格 FWT；现实中 `readers often ignore FWT configuration`，也就是很多 reader 不严格按卡声明的 FWT 超时，给 relay attack 留出空间。
 
 ## 8. 手机 NFC 与 Secure Element
 
@@ -123,18 +124,22 @@ NFC 是短距离高频 RFID 数据交换标准，工作在 13.56 MHz，典型距
 - **事件票务**：可把票据标识设计成 `Hash(UID + Master key)`，reader 不直接存明文主密钥；每次入场使用 OTP counter 或一次性状态，防止同一标签被复制后多次入场。
 - **内存标签保护**：lock bytes 用于锁定关键页，MAC 用于保护票据字段完整性，后端数据库记录已使用/已撤销/异常位置。注意 lock bytes 只能防普通改写，不能防高级克隆卡。
 - **公共交通 open payment**：open payment 指乘客直接使用银行卡/手机钱包进出站。角色包括乘客设备或卡、reader/闸机、收单方、卡组织、发卡行、交通运营方和风控后台；安全重点是离线限额、联机清算、tokenization、黑名单同步和异常交易追踪。
+- **open payment ticketing flow**：乘客有 `travel account in SP cloud`，卡或手机中保存身份和凭据；进出站时 reader 读取票据身份并把 `ticket identity/travel info` 发给后端；后端计算行程和票价，再转给 SP 收款。`Transport Authority` 负责交通规则、票价、证据和争议处理，SP 负责账户、凭据和支付扣款；二者要能提供乘车证据、支付证据和凭据生命周期管理。
 
 ## 10. Google Wallet 漏洞案例
 
 - PIN 用于解锁交易，但曾存储在手机 `/data` 目录的 SQLite 数据库中，形式是 64-bit salt + 单轮 SHA-256 hash。
 - 攻击者偷到设备并 root 后，可读取数据库。
-- 因四位 PIN 只有 10,000 种，工具可离线暴力破解。
+- 系统表面上只允许 `six PIN tries`，但 root 后提取 salted hash，攻击者可在设备外做 `offline guessing outside that counter`。因四位 PIN 只有 10,000 种，工具可离线暴力破解。
 - 更好的设计：PIN 存储和验证放入 Secure Element，尝试计数器也放入 SE。
 - 用户侧防护：不要 root、启用锁屏、关闭 ADB、及时更新补丁，但这些不能替代系统设计修复。
 
 ## 11. 移动支付 Relay 攻击
 
 - 攻击者让受害者支付 app 解锁后，通过恶意 reader/应用把 APDU 转发到远处 POS。
+- `contactless EMV relay` 的典型场景是一个设备贴近受害者口袋里的卡/手机，另一个设备在 faraway shop 的 POS 前付款，中间转发 EMV APDU。
+- 若用代理 token 做 relay，`proxy token requires card emulation`，也就是攻击端靠近 POS 的设备必须能模拟一张卡和 POS 交互。
+- `UID spoofing is not needed`，因为 EMV 支付协议不依赖 NFC tag UID 作为支付凭据，真正关键的是 APDU 中的支付应用数据和密码学响应。
 - 限制：目标支付 app 通常需要解锁和 PIN；某些攻击需要 root 或绕过 SE API 签名认证。
 - 防护：
   - POS 强制交易超时，利用网络中继延迟。
@@ -180,5 +185,55 @@ NFC 是短距离高频 RFID 数据交换标准，工作在 13.56 MHz，典型距
 3. 攻击者把受害者附近的 NFC 设备和远处 POS/门禁通过网络转发 APDU，延长的是协议通信路径，而不是让 NFC 射频本身传远。
 4. 四位 PIN 只有 10000 种；若数据库中只有 salt + 单轮 SHA-256 hash，攻击者 root 后可离线枚举所有 PIN，很快找到匹配值。
 5. SE 提供隔离存储和受控执行，密钥不直接暴露给普通 App 或文件系统，还能实现 PIN 尝试计数、应用防火墙和更强的交易授权。
+
+</details>
+
+## 公式与术语速查
+
+| 英文/缩写 | 中文含义 | 初学者要会的解释 |
+|---|---|---|
+| NFC | Near Field Communication | 13.56 MHz 近距离通信，常用于标签、门禁、票务和支付。 |
+| PCD / PICC | Proximity Coupling Device / Card | PCD 是 reader，PICC 是卡或标签。 |
+| REQA / ATQA | Request A / Answer To Request A | ISO 14443A 初始寻卡请求和响应。 |
+| SAK | Select Acknowledge | 防冲突选择后卡返回的选择确认，说明卡类型和后续能力。 |
+| RATS / ATS | Request/Answer To Select | 进入更高层通信前的参数协商，之后可交换 APDU。 |
+| APDU | Application Protocol Data Unit | 卡应用命令/响应数据单元，支付和门禁常用。 |
+| FWT | Frame Waiting Time | reader 等待 card 响应的时间窗口，relay attack 会利用过宽等待。 |
+| NDEF / RTD | NFC Data Exchange Format / Record Type Definition | NFC 数据封装格式和记录类型，如 URL、文本、签名。 |
+| SE / UICC / eSE | 安全元件/SIM/嵌入式 SE | 隔离存放支付、交通 applet 和密钥。 |
+| HCE | Host Card Emulation | 由手机主机模拟卡，部署灵活但更依赖 OS、TEE、云端 token 和风控。 |
+| TSM / MNO / SP | Trusted Service Manager / Mobile Network Operator / Service Provider | 移动支付生态中的凭据发行、运营商和服务提供方角色。 |
+| USSD | Unstructured Supplementary Service Data | 拨号服务代码，恶意 NDEF/URL 可能诱导危险拨号或跳转。 |
+
+票务/门禁常用计算：
+
+- UID 派生票据：`TicketID = Hash(UID + Master key)`，reader 不直接暴露主密钥。
+- 一次性计数：`OTP counter` 每次使用递增或消耗，后端拒绝重复计数。
+- MAC：对 `UID || counter || ticket data` 计算消息认证码，防止离线改票据字段。
+
+PPT 细节补充：
+
+- NFC 主动通信角色可写 `Initiator/Target`：Initiator 发起通信并产生场，Target 响应；在被动卡模式里 PCD/PICC 也是类似主从关系。
+- 超时参数常一起考：`FWI/SFGI/FWT/fc`。`fc` 是 13.56 MHz 载波频率，FWI 决定 Frame Waiting Time，SFGI 决定 Start-up Frame Guard Time。
+- FWT 公式：`FWT = (256 × 16 / fc) × 2^FWI`。当 `FWI=8 ≈77ms`，reader 等待窗口足够让部分 relay attack 通过网络转发 APDU。
+- Type 2/Ultralight 内存字段常见缩写：`BCC/INT/LOCK0/LOCK1/BL`。BCC 是 UID 校验字节，INT/内部字段由厂商使用，LOCK0/LOCK1 是锁定位，BL 是 block lock/锁块相关字段。
+- 安全载体包括 UICC/eSE，也可能是 `Secure MicroSD`；移动支付生态里 `OTA` 是 Over-The-Air 远程下发/更新，`ObC` 是 Over-the-Bluetooth/Over-the-Cloud 这类替代或补充通道的缩写语境。
+- Google Wallet PIN 案例的弱点可写成 `SHA-256(salt || PIN)`：salt 阻止直接查通用表，但四位 PIN 空间只有 10000，root 后仍可离线穷举。
+- NDEF Signature 只能证明内容未被改，不能自动证明物理标签没被复制；高安全场景要把 UID、counter、后端状态、时间/位置或 reader challenge 一起绑定。
+
+## 历年卷风格练习
+
+1. 说明一次 NFC 读卡从 REQA 到 APDU 的基本流程。
+2. 为什么 NDEF Signature 不能完全防止标签克隆？
+3. Relay attack 如何绕过 NFC 短距离假设？FWT 在其中有什么作用？
+4. 一个活动票务系统只使用 UID-based access control，有什么风险？如何用 Hash(UID + Master key)、OTP counter、MAC 和 backend DB 改进？
+
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+1. PCD 产生 13.56 MHz 场，PICC 取能；PCD 发 REQA，PICC 回 ATQA；防冲突阶段选择 UID 并返回 SAK；若需要 ISO 14443-4 通信，PCD 发 RATS，PICC 回 ATS；之后双方用 APDU 命令/响应交换应用数据。
+2. NDEF Signature 保护 NDEF 内容完整性和来源，但如果签名不绑定 UID、计数器、时间、位置或后端状态，攻击者可把同一签名内容复制到另一张可克隆标签。
+3. 攻击者让一个设备靠近受害者卡/手机，另一个设备靠近 POS/门禁，中间通过网络转发 APDU。NFC 射频仍是短距离，但协议链路被延长；若 FWT 等待时间足够宽，远程响应仍会被接受。
+4. 只信 UID 容易被可写 UID 卡克隆。改进方案是用 `Hash(UID + Master key)` 派生票据标识，用 OTP counter 防重复使用，用 MAC 保护票据字段完整性，并让 backend DB 检查票据状态、撤销、使用次数和异常位置。
 
 </details>

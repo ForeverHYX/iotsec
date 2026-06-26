@@ -130,3 +130,54 @@ WEP 是 Wi-Fi 早期安全协议，目标是为无线提供“等同有线”的
 5. WEP 同时存在短 IV、RC4 弱 IV、CRC 非 MAC、共享密钥长期不变、认证泄露密钥流等设计缺陷；单点补丁无法修复整体协议。
 
 </details>
+
+## 公式与术语速查
+
+| 英文/缩写 | 中文含义 | 初学者要会的解释 |
+|---|---|---|
+| WEP | Wired Equivalent Privacy | 早期 802.11 加密协议，目标是让无线链路像有线一样私密，但设计已被淘汰。 |
+| AP / STA | Access Point / Station | AP 是接入点，STA 是客户端设备。 |
+| RC4 | Rivest Cipher 4 stream cipher | 流密码，输出 keystream；同一 seed 绝不能重复使用。 |
+| IV | Initialization Vector | 初始化向量；WEP 中 24-bit，明文发送，与共享 key 拼接生成 RC4 seed。 |
+| ICV | Integrity Check Value | WEP 用 CRC-32 生成的完整性字段，只能防随机错误，不能防恶意篡改。 |
+| CRC-32 | 循环冗余校验 | 无密钥、线性，攻击者可同步修改密文和 ICV。 |
+| LLC/SNAP | 链路层头部 | 常见已知明文字段，攻击者可用它推导部分 keystream。 |
+| ARP replay | ARP 重放 | 重放可预测 ARP 包诱导 AP 产生更多流量，加速收集 IV/密文。 |
+| FMS | Fluhrer-Mantin-Shamir attack | 利用 RC4 weak IV 和已知头部恢复 WEP key 的经典攻击。 |
+| Chopchop | 逐字节明文恢复攻击 | 不直接求 key，通过 ICV 和 AP 响应逐步恢复明文。 |
+| Fragmentation attack | 分片攻击 | 利用 802.11 分片和已知 keystream 构造短加密片段。 |
+
+核心公式：
+
+- WEP 加密：`ciphertext = (message || ICV) XOR RC4(IV || key)`。
+- WEP 解密：`message || ICV = ciphertext XOR RC4(IV || key)`。
+- keystream 重用：若 `C1=P1 XOR K`、`C2=P2 XOR K`，则 `C1 XOR C2 = P1 XOR P2`。
+- Fragmentation 推导：每个 fragment 由 8-byte LLC/SNAP 推出 8 bytes keystream，其中 4 bytes 给 CRC/ICV，16 fragments 总共约 `(8 - 4) * 16 = 64` bytes 可控数据。
+
+PPT 细节补充：
+
+- `Wi-Fi Alliance` 是推动 Wi-Fi 互操作认证的产业组织；考试里 Wi-Fi 标准本身写 IEEE 802.11，认证/品牌生态常写 Wi-Fi Alliance。
+- Wi-Fi 常使用 `2.4 GHz and 5 GHz public spectrum bands`，这些免授权频段易部署，但也更容易拥塞、被监听或被干扰。
+- WEP 设计目标还包含 `Authenticity`、`Replay detection` 和 `Protection against jamming` 等安全期望；但实际 WEP 并没有真正提供强认证、强重放防护或抗干扰能力。
+- WEP 密钥长度常见两种说法：64-bit WEP = 40-bit key + 24-bit IV；扩展 WEP 可写 `256 bit = 232-bit key + 24-bit IV`。无论长期 key 多长，24-bit IV 仍太短。
+- RC4 weak IV/FMS 类攻击里会关注 IV 模式：`first byte 3..7`、`second byte 255`、`third byte anything`。PPT 给出的数量级是约 `9000 weak IVs`，大约占 `5% of IVs`；本质是 RC4 KSA 早期输出泄露 key 字节统计偏差。
+- `AirSnort` 是早期自动收集 WEP 弱 IV 并恢复密钥的工具名，考到工具时写“抓大量包 -> 利用 RC4 weak IV 统计恢复 WEP key”。
+- LLC/SNAP 已知明文常见字节可写 `AA AA 03 00 00 00 08`，攻击者利用这些固定头部从密文中推出 keystream。
+- WEP 的 ICV 只防随机传输错误，不防恶意篡改；真正的数据完整性应使用带密钥的 MAC/HMAC，而不是无密钥 CRC-32。
+
+## 历年卷风格练习
+
+1. WEP 用什么算法保持数据完整性？用什么算法加密？
+2. 画出或写出 WEP 加密过程，并指出 IV 为什么必须明文发送。
+3. 为什么 CRC-32 不能替代 MAC？请用位翻转攻击解释。
+4. 共享密钥认证四步为什么会泄露 keystream？攻击者知道 WEP key 吗？
+
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+1. WEP 使用 CRC-32 生成 ICV 来检查数据完整性，使用 RC4 流密码加密。
+2. 发送方先对 message 算 CRC-32 得 ICV，再用 `IV || key` 作为 RC4 输入生成 keystream，计算 `(message || ICV) XOR keystream` 得密文，并把 IV 明文放入帧中。IV 必须明文发送，因为接收方需要同一 IV 才能生成相同 keystream。
+3. CRC-32 没有密钥且线性。攻击者翻转密文某位会翻转明文对应位，还可计算 ICV 的同步差分，因此能构造通过 CRC 检查的篡改包；MAC/HMAC 依赖密钥，攻击者不能伪造。
+4. AP 发明文 challenge，STA 返回 WEP 加密 challenge。旁观者把明文和密文异或即可得到该 IV 下的 keystream，可伪造认证响应；但这不等于知道长期 WEP key，也不能进一步正常访问网络。
+
+</details>

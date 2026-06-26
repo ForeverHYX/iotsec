@@ -54,6 +54,8 @@ WPA 是 WEP 到 WPA2 之间的过渡方案。它保留 RC4 以兼容旧硬件，
 - **IV 序列规则**：单调递增计数器，丢弃乱序或重放包。
 - **每包密钥混合**：不再简单拼接 `IV || key`，而是用两阶段 mixing 生成 per-packet key，降低 IV 和密钥关系泄露。
 
+PPT 对 IV sequence enforcement 的细节是：WPA 使用 `16-bit monotonically incrementing counter` 抑制重放，规则包括取旧 IV 的 `1st and 3rd bytes of the old IV`，rekey 时 `reset packet sequence to 0`，每包 `increment by 1 per packet`，并 `drop out-of-sequence packets`。
+
 ## 4. Michael MIC 与主动反制
 
 - Michael 是为了旧硬件性能限制设计的，强度有限。
@@ -135,5 +137,55 @@ WPA 是 WEP 到 WPA2 之间的过渡方案。它保留 RC4 以兼容旧硬件，
 3. 在 PSK 模式中，passphrase、SSID、SSID 长度经过 4096 次 PBKDF2 派生出 256-bit PMK。
 4. 输入包括 PMK、ANonce、SNonce、AP MAC 地址和 STA MAC 地址，由此派生 PTK。
 5. 抓到 4-way handshake 后，攻击者可本地尝试候选口令并计算 MIC 验证是否正确，不需要在线登录，因此弱口令会被字典攻击。
+
+</details>
+
+## 公式与术语速查
+
+| 英文/缩写 | 中文含义 | 初学者要会的解释 |
+|---|---|---|
+| WPA | Wi-Fi Protected Access | WEP 到 WPA2 之间的过渡安全方案，核心是 TKIP。 |
+| TKIP | Temporal Key Integrity Protocol | 临时密钥完整性协议，用 48-bit TSC、per-packet key mixing、Michael MIC 修补 WEP。 |
+| TSC | TKIP Sequence Counter | TKIP 序列计数器，防止重放；QoS 可有多个 TSC 通道。 |
+| Michael MIC | Michael Message Integrity Code | TKIP 的轻量完整性保护，8 bytes/64-bit，强度有限。 |
+| PMK | Pairwise Master Key | 主密钥；PSK 模式由 passphrase 和 SSID 经 PBKDF2 得到。 |
+| PTK | Pairwise Transient Key | 临时会话密钥，由 PMK、ANonce、SNonce、双方 MAC 派生。 |
+| EAPOL | EAP over LAN | 客户端和 AP 之间承载 EAP/握手消息。 |
+| RADIUS | Remote Authentication Dial-In User Service | AP 和认证服务器之间传递认证结果和密钥材料。 |
+| brute force | 暴力穷举 | 枚举所有可能密码，随机长密码很难被穷举。 |
+| dictionary attack | 字典攻击 | 只试常见词和变形，现实中常比完全暴力更有效。 |
+| rainbow table | 彩虹表 | 预计算常见 SSID 和口令的结果，加速离线破解。 |
+
+关键公式/流程：
+
+- PSK 到 PMK：`PMK = PBKDF2(passphrase, SSID, 4096 iterations, 256 bits)`。
+- PTK 派生输入：`PTK = PRF(PMK, ANonce, SNonce, AP MAC, STA MAC)`。
+- TKIP 加密一帧：payload -> Michael MIC -> ICV -> per-packet key mixing -> RC4 -> ciphertext。
+- 4-way handshake：Msg1 发 ANonce；Msg2 回 SNonce+MIC；Msg3 下发 GTK/Key Data；Msg4 确认。
+
+PPT 细节补充：
+
+- TKIP 有 `active countermeasures`：如果短时间内检测到 Michael MIC 失败，会触发断开/暂停通信/重新密钥等反制，目的是限制攻击者在线试错速度。
+- `EAPOL-Start` 是客户端发起 802.1X/EAP 认证的常见起始消息。`AS` 是 Authentication Server，通常是 RADIUS 服务器；AP 在 802.1X 中是 Authenticator，客户端是 Supplicant。
+- WPA-PSK 的精确派生式可写 `PSK = PBKDF2(Password, SSID, SSIDlength, 4096, 256)`，输出 256-bit PSK/PMK。SSID 作为盐，所以同一密码在不同 SSID 下结果不同。
+- PTK 的精确输入可写 `PTK = HASH(PMK, ANonce, SNonce, STA MAC Address, AP MAC Address)`；实际标准还会排序 MAC/nonce 并使用 PRF，但考试写出这些输入即可。
+- 暴力破解量级例子：8 位大小写字母数字密码空间 `62^8 = 218,340,105,584,896`。PPT 假设 `280GTX` 每秒 `11000 keys/sec`，8 位随机口令约需 `630 years`；`12-char passphrase` 才对应约 `9,309,091,680 years`。结论是随机长密码难以穷举，但弱口令仍会被 dictionary attack 优先击中。
+- TKIP key mixing 分 `Phase 1` 和 `Phase 2`：Phase 1 把 temporal key、发射端地址和 TSC 高位混合，降低每包计算成本；Phase 2 加入 TSC 低位，生成实际 RC4 per-packet key。
+- 离线口令攻击只需要抓到 4-way handshake；攻击者不需要继续和 AP 交互，因此弱口令的风险主要来自字典和泄露密码库。
+
+## 历年卷风格练习
+
+1. WPA 为什么说是过渡方案？它保留了 WEP 的哪个加密基础，又修补了哪些问题？
+2. 抓到 WPA-PSK 的 4-way handshake 后，为什么可以离线 dictionary attack？
+3. brute force、dictionary attack、rainbow table 的区别是什么？
+4. Beck-Tews 攻击利用了 TKIP/QoS 的什么特性？
+
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+1. WPA 需要兼容旧硬件，所以保留 RC4，但用 TKIP 增加 48-bit TSC、每包密钥混合、Michael MIC、序列检查和重新密钥机制，修补 WEP 的短 IV、弱完整性和密钥管理问题。
+2. 握手中有 ANonce、SNonce、双方 MAC 和 MIC。攻击者本地猜 passphrase，经 PBKDF2 得 PMK，再派生 PTK 并计算 MIC；若和抓包 MIC 相同，密码正确，不需要在线询问 AP。
+3. brute force 枚举所有字符串；dictionary attack 只试常见词和变形；rainbow table 提前预计算常见 SSID/密码组合，抓到握手后查表更快。
+4. 802.11e QoS 有 8 QoS channels，各自维护 TSC/序列空间。攻击者可利用计数器较小的通道绕过部分反重放限制；Michael 失败反制约 2 MIC failures/min 限制了试错速度。
 
 </details>

@@ -67,6 +67,7 @@ Bluetooth 是短距离个人区域网络技术，工作在 2.4 GHz ISM 频段，
 - BLE：低功耗设计，不完全向下兼容 Classic；适合传感器短数据包、低延迟、低占空比场景。
 - Dual Mode/Smart Ready 设备可同时支持 Classic 和 BLE。
 - BLE 不适合长时间流媒体，但非常适合 IoT 外设。
+- **技术参数对比**：Classic 基本覆盖约 `10 m`，通过更高功率可扩展到 `100 m`；Classic 使用 `1600 hops/sec over 79 frequencies`，即 79 个 1 MHz 频点快速跳频，BLE 的数据通道可记为 `37x2MHz`，Classic 是 `79x1MHz`。BLE 为降低功耗和提高鲁棒性使用 `increased GMSK modulation index`；BLE 非连接态建立/响应时延可到约 `3ms`，Classic 常 `>100ms`。Classic 依赖 `FEC/fast ACK` 做可靠性，BLE 用 `Lazy Acknowledgement`、`24-bit CRC` 和 `32-bit Message Integrity Check` 支撑低功耗短包可靠传输。
 
 ## 5. Bluetooth 安全目标与模式
 
@@ -102,6 +103,7 @@ Bluetooth 是短距离个人区域网络技术，工作在 2.4 GHz ISM 频段，
 - DoS 可让设备不可用并消耗电池。
 - Fuzzing 可利用畸形消息触发协议栈漏洞。
 - Bluejacking/其他滥用利用设备标识和可发现状态进行骚扰或劫持。
+- `Blue snarfing` 是未经授权读取蓝牙设备上的联系人、短信、日历或文件等数据；和 Bluejacking 的“发送骚扰消息”相比，Blue snarfing 更直接侵犯机密性。
 
 ## 8. BLE Primer
 
@@ -186,5 +188,58 @@ BLE 安全和隐私机制：
 3. BD_ADDR 是稳定设备标识，长期收集可把设备与用户位置、出行规律、生活习惯和社交场景关联起来。
 4. 蓝牙地址、设备名、服务 UUID、manufacturer data、广播间隔、RSSI 模式和特定 payload 都可能形成指纹。
 5. 它要预测目标设备何时在哪些 BLE 广播信道发广告，才能在对应时隙做定向隐藏，同时尽量不影响合法客户端连接。
+
+</details>
+
+## 公式与术语速查
+
+| 英文/缩写 | 中文含义 | 初学者要会的解释 |
+|---|---|---|
+| Bluetooth Classic | 经典蓝牙 | 面向持续连接和较高吞吐，如耳机音频。 |
+| BLE | Bluetooth Low Energy | 低功耗蓝牙，面向短包、低占空比传感器和 IoT 外设。 |
+| Piconet | 微微网 | 一个 master 加最多 7 个 active slaves，master 控制时钟和跳频。 |
+| Scatternet | 散射网 | 多个 piconet 通过参与多个网络的设备连接起来。 |
+| BD_ADDR | Bluetooth Device Address | 蓝牙设备地址，旧系统中参与跳频和密钥生成，也可造成跟踪。 |
+| FHSS / AFH | 跳频扩频/自适应跳频 | 在 2.4 GHz 多频点跳变，降低固定频点干扰，但不是加密。 |
+| TDD | Time Division Duplex | 用 625 微秒时隙交替收发，因此常按半双工理解。 |
+| Pairing / Bonding | 配对/绑定 | 配对建立信任和密钥；绑定保存密钥供以后复用。 |
+| AES-CCM | AES Counter with CBC-MAC | BLE 常用加密与完整性组合，CTR 加密，CBC-MAC 认证。 |
+| GATT | Generic Attribute Profile | BLE 服务/特征的组织方式，客户端可枚举和读写 characteristic。 |
+| ADV_IND | 可连接非定向广播包 | BLE 设备公开广播自身存在，可能泄露地址、服务和行为模式。 |
+| downgrade attack | 降级攻击 | 诱导设备使用较弱配对方式、短密钥或旧安全模式。 |
+
+关键数字和流程：
+
+- Classic slot：`625 微秒`；master/slave 在相邻时隙交替发送。
+- BLE 广播信道：37/38/39，分别在 2402/2426/2480 MHz 附近。
+- 隐私攻击链：广播包 -> 地址/payload/RSSI/时间模式 -> tracking -> profiling -> harming。
+- BLE-Guardian：学习广告序列 -> 在目标广播时隙隐藏广告 -> 用 OOB 或连接参数放行授权客户端。
+
+PPT 细节补充：
+
+- Bluetooth 名字来自丹麦国王 `Harald "Bluetooth" Gormsson`；标准和认证生态由 `SIG`，即 Bluetooth Special Interest Group 管理。
+- `PAN` 是 Personal Area Network，蓝牙定位就是短距离个人区域网络；早期蓝牙也常被看作替代 `RS-232` 串口线的无线方案。
+- Classic Bluetooth 版本能力：Basic Rate 约 `1 Mbit/s`，`EDR` 是 Enhanced Data Rate，可到 `3 Mbit/s`；`HS` 是 High Speed，借助 802.11 可到 `24 Mbit/s` 量级。
+- 经典蓝牙物理/MAC 可概括为 `TDMA-TDD-Slow Frequency Hopping`：时分多址、时分双工、慢跳频。基本调制是 `GFSK`，即 Gaussian Frequency Shift Keying。
+- `Wibree` 是 BLE 早期名称，后来并入 Bluetooth Low Energy。
+- `SSP` 是 Secure Simple Pairing，用 ECDH 改进旧 PIN 配对，但 Just Works 仍缺少 MITM 保护。
+- 旧 Classic 加密中 `E0` 是流加密算法；配对/认证会用 `RNG` 生成随机数，协议字段常写 `RAND`。弱随机数或短 PIN 会削弱安全。
+- 定向广播参数例子：`ADV_DIRECT_IND 3.75ms for 1.28s` 表示高占空比定向广播间隔很短、持续窗口有限，隐私攻击会利用这种时间模式。
+- BLE-Guardian 论文里的时间预测可写 `adv' = E(t_i) - 5`，即在预计广告时刻前一点点发起定向隐藏，既挡住旁观者又尽量放行授权连接。
+
+## 历年卷风格练习
+
+1. Bluetooth Classic 为什么通常按半双工理解？
+2. Classic Bluetooth 和 BLE 的主要功能差异是什么？
+3. 攻击者如何利用 BLE 广播包进行 tracking/profiling？
+4. 列举 Bluetooth/BLE 的保护方法。
+
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+1. Classic Bluetooth 物理信道按 625 微秒时隙组织，master 和 slave 使用 TDD 交替发送；同一时刻同一链路通常不是双方同时发，所以考试中常归为半双工。
+2. Classic 面向持续连接、音频和较高吞吐；BLE 面向低功耗、短包、低延迟和低占空比传感器，不完全向下兼容 Classic。
+3. 攻击者用 TI sniffer、Ubertooth、手机 App 等扫描 ADV_IND，收集地址、设备名、服务 UUID、manufacturer data、RSSI 和广播间隔。即使地址随机化，payload 和时间模式也可能形成指纹。
+4. 使用强配对和足够密钥长度、避免 Just Works 用于敏感设备、开启地址随机化、最小化广播 payload、关闭不必要 GATT 服务、加密敏感 characteristic、及时更新固件，并可用 BLE-Guardian 类方案限制可见范围。
 
 </details>

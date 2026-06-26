@@ -23,7 +23,8 @@ class SelfTestAnswerTests(unittest.TestCase):
             match = SELF_TEST_HEADING.search(text)
             self.assertIsNotNone(match, f"{path.name} should contain a 快速自测 section")
 
-            section = text[match.end():]
+            next_heading = text.find("\n## ", match.end())
+            section = text[match.end(): next_heading if next_heading != -1 else len(text)]
             with self.subTest(note=path.name):
                 self.assertIn('<details class="self-test-answer">', section)
                 self.assertIn("<summary>参考答案</summary>", section)

@@ -154,3 +154,51 @@ PTK 进一步拆分为：
 5. KRACK 不破解 AES，而是诱导客户端重复安装已安装的 PTK，导致 nonce/PN 重置；实现层破坏了算法安全所依赖的“nonce 不重复”条件。
 
 </details>
+
+## 公式与术语速查
+
+| 英文/缩写 | 中文含义 | 初学者要会的解释 |
+|---|---|---|
+| WPA2 | Wi-Fi Protected Access 2 | 基于 IEEE 802.11i/RSN 的 Wi-Fi 安全协议，主要使用 AES-CCMP。 |
+| RSN IE | Robust Security Network Information Element | AP 在 Beacon/Probe Response 中声明支持的 AKM、pairwise cipher、group cipher。 |
+| AKM | Authentication and Key Management | 认证与密钥管理套件，如 PSK 或 802.1X。 |
+| CCMP | Counter Mode CBC-MAC Protocol | AES-CTR 加密 + CBC-MAC 完整性，替代 TKIP/RC4。 |
+| PN / nonce | Packet Number / 一次性数 | CCMP 每包唯一输入，重复会导致 CTR keystream 重复。 |
+| PMK / PTK / GTK | 主密钥/单播会话密钥/组密钥 | PMK 派生 PTK；PTK 保护单播和握手；GTK 保护广播/组播。 |
+| KCK / KEK / TK | Key Confirmation / Key Encryption / Temporal Key | PTK 的子密钥；KCK 验 MIC，KEK 加密 GTK，TK 加密数据。 |
+| PMK Caching | PMK 缓存 | STA 再次连接同一 AP 时复用 PMK，加快漫游。 |
+| Pre-authentication | 预认证 | STA 还没切换 AP 前先和目标 AP 完成认证，降低切换时延。 |
+| KRACK | Key Reinstallation Attack | 通过重放 Msg3 诱导客户端重复安装密钥，使 nonce/PN 重置。 |
+
+关键流程：
+
+- RSN 协商：AP 广播 RSN IE，STA 在 Association Request 中选择 AKM、pairwise cipher、group cipher。
+- PTK 拆分：`PTK 64 bytes = KCK 16 bytes + KEK 16 bytes + TK 16 bytes + 其它密钥材料`。
+- CCMP：AES-CTR 生成 keystream 加密数据；CBC-MAC 生成认证标签；128-bit AES 是基础块密码。
+- KRACK 时间线：攻击者阻断 Msg4 -> AP 重发 Msg3 -> 客户端重复安装 PTK -> PN/nonce 归零 -> CTR keystream 可能重复。
+
+PPT 细节补充：
+
+- 802.1X/EAP 角色：`Supplicant` 是客户端，`Authenticator` 是 AP/交换机，认证服务器通常是 RADIUS。消息名可写 `EAPOL-start`、EAP request/response、`Radius-access-accept`。
+- `MSK` 是 Master Session Key，EAP 成功后导出的主会话密钥；`MK` 可理解为 Master Key/主密钥材料，随后派生 PMK 等 Wi-Fi 会话密钥。
+- 历史对比可写 `WEP RC4/40-bit/24-bit IV`：WEP 用 RC4，常见 40-bit 长期密钥加 24-bit IV；WPA2/CCMP 改用 AES-CCMP 和 48-bit PN/nonce。
+- `Nonce reuse implies keystream reuse` 是理解 KRACK 和 CTR 模式的关键。CTR 加密等价于用 block cipher 生成 keystream，再与明文 XOR；同一 key+nonce 不能重复。
+- `Abstract model != real code`：形式化证明通常证明抽象协议安全，但真实实现若在重传 Msg3 时重复安装密钥、重置 PN，仍会破坏安全假设。KRACK 考的就是实现状态机和抽象模型的差异。
+- WPA2-Enterprise 与 WPA2-PSK 的差别：Enterprise 用 802.1X/EAP/RADIUS 为每个用户认证并导出密钥；PSK 多人共享同一 passphrase，弱口令更容易被离线猜。
+
+## 历年卷风格练习
+
+1. 阐述 WPA2 四次握手中 Msg1-Msg4 分别完成什么。
+2. PMK、PTK、KCK、KEK、TK、GTK 分别是什么关系？
+3. CCMP 为什么比 TKIP 更强？CTR 和 CBC-MAC 分别负责什么？
+4. KRACK 为什么不需要破解 Wi-Fi 密码也能造成风险？
+
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+1. Msg1：AP 发 ANonce；Msg2：STA 发 SNonce 和 MIC，证明自己能派生 PTK；Msg3：AP 发 GTK/Key Data 并要求安装密钥；Msg4：STA 确认安装完成。
+2. PMK 是主密钥；4-way handshake 用 PMK、nonce 和 MAC 派生 PTK。PTK 中 KCK 验 EAPOL-Key MIC，KEK 加密 GTK，TK 加密单播数据；GTK 用于广播/组播。
+3. CCMP 基于 128-bit AES，不再使用 RC4 和 Michael。CTR 负责把 AES 变成可加密任意长度数据的 keystream，CBC-MAC 负责认证完整性。
+4. KRACK 攻击重放握手消息诱导客户端重复安装已协商好的密钥，使 PN/nonce 重置；它利用状态机实现缺陷，不需要知道密码或破解 AES。
+
+</details>

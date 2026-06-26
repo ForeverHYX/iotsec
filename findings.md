@@ -47,6 +47,9 @@
 - 已给 11 篇课程笔记增加零基础导读、知识地图和初学者常见疑问，并覆盖 subagent 指出的关键术语和流程缺口。
 - 阶段 10 返修后，新一轮 subagent 复审通过；最后两个修正点是 WEP fragmentation 的 64 bytes 总量推导，以及 SigOver 定量结果必须解释为每 UE 每小时请求率而非设备数量。
 - 阶段 10 已部署到 GitHub Pages，workflow `28180254014` 成功，线上原始 Markdown 和 `content/notes.json` 已验证包含新增零基础讲解内容。
+- 阶段 11 新需求：上一轮仍不足以“完全理解 PPT”；必须补齐公式、英文单词/缩写释义、被省略的 PPT 知识点，并按历年卷风格给每章增加练习题与折叠答案。用户明确指出无线基础需覆盖 slow fading 的 major cause 是 Shadowing Effect，并能解释 Signal Overshadowing 和 hidden terminal。
+- 阶段 11 本地补充已覆盖专项测试列出的关键精确项：无线基础公式/衰落模型，Week 1 安全定义和频谱/IoT 缩写，MAC hidden/exposed terminal 与 polling/token，蜂窝 SigOver/ReVoLTE，WEP/WPA/WPA2 细节，IoT/RFID/Bluetooth/NFC 协议参数和公式。新增 Stage 11 章节后，自测答案测试需按“快速自测”二级标题边界截断，否则会把后续历年卷风格练习答案误计入自测答案。
+- 阶段 11 subagent 复审补齐的关键遗漏包括：第二周 802.11 MAC/RTS-CTS 与 near-far effect；ReVoLTE Bearer ID 实测结果；WEP weak IV 完整模式；TKIP IV sequence enforcement；IoT trust management/outsourced data/ciphertext operation 等安全需求；RFID reader 系统功能、HB 参数和防冲突复杂度公式；Bluetooth 距离/跳频/信道/ACK/CRC/MIC/Blue snarfing；NFC FWT 数值、EMV relay、open payment flow 和 Google Wallet 六次 PIN 限制绕过。
 
 ## 技术决策
 | 决策 | 理由 |

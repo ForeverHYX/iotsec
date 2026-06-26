@@ -299,3 +299,44 @@
 | 线上首页 | `curl -I -L https://foreverhyx.github.io/iotsec/?v=7f88972...#past-exams` | HTTP 200 | HTTP/2 200 | 通过 |
 | 线上笔记原文 | 读取 `notes/part2.md`、`notes/wired-equivalent-privacy-wep.md`、`notes/lecture-14-nfc-application-security-1.md` | 包含返修与新增内容 | 三个文件均匹配关键术语 | 通过 |
 | 线上 manifest 索引 | 读取 `content/notes.json?v=7f88972...` | 13 个入口且索引含新增关键词 | 13 个入口；part2、WEP、NFC、Week7 关键词命中 | 通过 |
+
+### 阶段 11：PPT 全覆盖、公式术语与历年题强化
+- **状态：** in_progress
+- **开始时间：** 2026-06-26 Asia/Shanghai
+- 执行的操作：
+  - 用户指出上一轮仍有大量 PPT 知识点、公式、英文单词和缩写被省略；举例说明第二节无线基础无法回答 slow fading 的历年选择题。
+  - 本阶段目标调整为：每章必须能支撑零基础读者理解 PPT 的术语、公式、机制，并能练习历年卷风格题；答案继续折叠。
+  - 新增 `tests/test_stage11_full_coverage.py`，要求 11 篇课程笔记都有“公式与术语速查”“历年卷风格练习”，且新增练习答案用 `<details class="self-test-answer">` 折叠。
+  - 按 subagent 初审缺口和用户示例，为 11 篇课程笔记补充 PPT 术语、英文缩写、公式、协议步骤、攻击原理和历年卷风格练习。
+  - 重点补齐：slow fading/Shadowing Effect、Doppler/multipath、Channel Interleave、hidden terminal 图示/RTS-CTS、Signal Overshadowing/Capture Effect、WEP/WPA/WPA2 细节、IoT contradictions/security architecture、RFID/Bluetooth/NFC 术语和公式。
+  - 运行 `python3 -m unittest tests/test_stage11_full_coverage.py -v`，2 个测试通过。
+  - 运行 `npm run build:data`，重新生成 `content/extracted` 和 `content/notes.json`。
+  - 首次运行 `npm test` 失败：`tests/test_self_test_answers.py` 仍假设“快速自测”是文件最后一节，新增 Stage 11 后续章节中的编号列表被误算进自测答案数。
+  - 修正 `tests/test_self_test_answers.py`，让它只检查“快速自测”到下一个二级标题之间的内容。
+  - 重新运行 `npm test`，Python 15 个测试和 Node 4 个测试通过。
+  - 启动 3 个只读 subagent 复审基础/无线、MAC/蜂窝/Wi-Fi、IoT/RFID/Bluetooth/NFC 三组内容覆盖。
+  - 根据 subagent 复审继续补齐：第二周无线基础的 CSMA/CA、RTS/CTS、near-far effect 和 hidden terminal 练习；MAC 暴露终端 RTS/CTS 规则；ReVoLTE `3/15` 与 `12/15` Bearer ID 结果；WEP weak IV 完整模式；WPA TKIP 序列机制与暴力破解时间；IoT security demands/architecture 细项；RFID reader 功能、HB 参数、二进制树复杂度公式；Bluetooth 技术参数和 Blue snarfing；NFC FWT、EMV relay、open payment 和 Google Wallet PIN 细节。
+  - 扩展 `tests/test_stage11_full_coverage.py`，把 subagent 复审给出的 must-fix 精确术语和公式纳入自动覆盖测试。
+  - 重新运行 `python3 -m unittest tests/test_stage11_full_coverage.py -v`，2 个测试通过。
+  - 重新运行 `npm run build:data` 和 `npm test`，Python 15 个测试和 Node 4 个测试通过。
+  - 3 个 subagent 返修复审均 PASS；最后 RFID 防冲突复杂度公式单点复核也 PASS。
+- 创建/修改的文件：
+  - `task_plan.md`
+  - `progress.md`
+  - `findings.md`
+  - `tests/test_stage11_full_coverage.py`
+  - `tests/test_self_test_answers.py`
+  - `notes/*.md`
+  - `content/notes.json`
+
+## 2026-06-26 阶段 11 测试结果
+| 测试 | 输入 | 预期结果 | 实际结果 | 状态 |
+|------|------|---------|---------|------|
+| Stage 11 专项覆盖测试 | `python3 -m unittest tests/test_stage11_full_coverage.py -v` | 11 篇课程笔记有术语/公式/历年题结构，关键术语精确命中 | 2 个测试通过 | 通过 |
+| 站点数据重建 | `npm run build:data` | 生成最新 manifest | `Extracted 11 materials`; `Built 13 note records` | 通过 |
+| 完整测试首轮 | `npm test` | 全部通过 | 自测答案计数测试 11 个子项失败，原因是测试跨越到后续 Stage 11 章节 | 已记录并修复 |
+| 完整测试返修后 | `npm test` | Python 和 Node 全部通过 | Python 15 个、Node 4 个通过 | 通过 |
+| Stage 11 返修覆盖测试 | `python3 -m unittest tests/test_stage11_full_coverage.py -v` | subagent must-fix 项全部命中 | 2 个测试通过 | 通过 |
+| 返修后站点数据重建 | `npm run build:data` | 生成最新 manifest | `Extracted 11 materials`; `Built 13 note records` | 通过 |
+| 返修后完整测试 | `npm test` | Python 和 Node 全部通过 | Python 15 个、Node 4 个通过 | 通过 |
+| subagent 返修复审 | 3 个只读复审任务 | 无 remaining MUST-FIX | 基础/无线 PASS；MAC/蜂窝/Wi-Fi PASS；IoT/RFID/Bluetooth/NFC PASS | 通过 |

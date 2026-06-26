@@ -52,6 +52,7 @@ RFID 用无线方式给物体分配并读取身份，是“下一代条码”的
 - 典型应用：供应链、护照、药品防伪、图书馆、宠物、门禁、收费、行李追踪。
 - **系统功能**：reader 负责发起查询、供能、调制/解调和防冲突协调；tag 负责存储 ID/数据并按协议响应；后台数据库负责把 ID 映射为业务含义、权限和审计记录。
 - **Reader 内部功能**：射频模块负责产生载波、调制、接收和解调；基带控制模块负责协议控制、编码/解码、anti-collision、防冲突调度、认证、加密/解密和接口控制。
+- **Reader 系统功能补充**：PPT 还强调 reader 要具备 `self-organizing networking ability`，能和其他 reader/网关组成现场网络；要有 `multi-antenna management`，在多天线间选择、切换或协调覆盖；要提供 `middleware interface`，把底层 tag 事件交给上层过滤和业务处理；还要支持 `peripheral connection`，例如连接显示器、蜂鸣器、门禁控制器、传感器或本地控制器；安全上要考虑 `reader/application-layer communication security`，防止 reader 到应用服务器之间的数据被窃听、篡改或伪造。
 - **IoT 层次定位**：RFID 通常属于感知层，因为它直接完成对象识别和数据采集，再把结果交给网络层、管理层和应用层。
 
 ## 3. RFID 相对条码的特点
@@ -91,6 +92,7 @@ RFID 用无线方式给物体分配并读取身份，是“下一代条码”的
 - FSA 时隙结果分为：空时隙、单时隙、冲突时隙。
 - FSA 优点是逻辑简单、电路简单、内存少；缺点是固定帧长不能适应动态标签数量。
 - **动态帧长/Q 算法**：根据空时隙和冲突时隙情况调整帧长，标签多时增大帧，标签少时减小帧。
+- **ALOHA starvation**：随机选择 slot 可能让某些标签长期碰撞或长期没有成功响应，出现“饿死”现象；动态帧长能缓解但不能从根本上保证每个标签立刻成功。
 
 ## 8. 二进制树类防冲突协议
 
@@ -98,6 +100,12 @@ RFID 用无线方式给物体分配并读取身份，是“下一代条码”的
 - **查询二进制树**：reader 广播前缀，匹配前缀的标签响应。标签无状态，只需比较自己的 ID 前缀。
 - **随机二进制树**：标签维护计数器，冲突后随机分裂，逐步减少同时响应数量。
 - 树协议通常识别确定性更强，但交互轮数和传输复杂度可能较高。
+- `random binary tree counter` 的直觉：counter 为 0 的标签响应；若发生冲突，参与冲突的标签随机把 counter 设为 0 或 1，未参与的标签按协议递增/等待；reader 不断查询 counter 为 0 的集合，直到每次只剩一个标签成功。
+- PPT 性能表可按 `FSA/random tree/query tree` 记忆：FSA 依赖帧长和随机 slot，random tree 依赖随机分裂和标签状态，query tree 依赖 reader 前缀查询且标签无状态。答题时可从内存需求、是否 starvation、通信轮数和是否需要同步比较。
+- 性能表变量：`n = number of tags` in recognition area，`k = tag ID length`，`t` = one frame time，`s` = number of frames，`N = estimate of n`。
+- FSA 复杂度：时间上界可写 `t × s + tag-estimation time`，传输上界 `n × s`；标签侧通常需要可写 `8/16-bit` slot counter。
+- Random binary tree：时间复杂度 `O(n)`；传输最坏情况在 `n` 未知时为 `θ(nlogn)`，在 `n` 已知时为 `θ(n)`；标签也需要可写 `8/16-bit` counter。
+- Query binary tree：平均时间 `O(n)`；最坏时间可写 `n × (k + 2 - log n)`；最坏传输可写 `k × (2.21 log n + 4.19)`；优点是 tag 无状态，不需要可写 tag memory。
 
 ## 9. RFID 隐私与安全问题
 
@@ -122,6 +130,8 @@ RFID 用无线方式给物体分配并读取身份，是“下一代条码”的
 - HB 中标签计算类似 `a · x XOR noise` 的响应。
 - **HB 弱点**：主动攻击者可反复发送非随机查询，利用多数投票恢复秘密位。
 - **HB+**：改进 HB，加入额外随机性和双秘密，提升对主动攻击的抵抗能力。
+- **PPT 参数写法**：噪声位 `v=1 with probability η`，reader 和 tag `repeat r times`。认证判决不是要求全对，而是如果错误响应 `fewer than ηr` 就接受，因为合法 tag 也会按概率 η 故意加入噪声。
+- **主动攻击细节**：攻击者使用 `repeated non-random challenges`，例如固定某些 challenge 位反复询问；由于噪声只是概率性翻转，多次采样后可用 `majority vote` 估计真实内积结果，从而逐位 recover secret bits。HB+ 用第二个随机 challenge 和 blinding secret 减少这种固定查询多数投票攻击。
 
 ## 12. 物理层认证研究
 
@@ -165,5 +175,55 @@ RFID 用无线方式给物体分配并读取身份，是“下一代条码”的
 3. Reader 广播前缀，标签只比较自己的 ID 是否匹配并响应，不需要记住协议历史状态或维护复杂计数器，因此称为无状态。
 4. 固定 ID 即使没有语义，也能在商店、街道、门禁等不同 reader 处被关联，推断同一个人携带同一物品的移动轨迹和消费习惯。
 5. HB 基于带噪声线性奇偶问题 LPN；加入噪声让攻击者不能通过简单线性方程直接解出秘密，提高被动学习难度。
+
+</details>
+
+## 公式与术语速查
+
+| 英文/缩写 | 中文含义 | 初学者要会的解释 |
+|---|---|---|
+| RFID | Radio Frequency Identification | 射频识别，用 reader 无线读取 tag 的 ID 或数据。 |
+| Reader / Interrogator | 读写器/询问器 | 产生射频场、给无源 tag 供能、发命令、收响应、防冲突并连接后台。 |
+| Tag / Transponder | 标签/应答器 | 存储 ID 或少量数据，按协议响应 reader。 |
+| LF/HF/UHF | 低频/高频/超高频 | 不同频段对应不同耦合方式、距离、速率和应用。 |
+| Load modulation | 负载调制 | Tag 改变天线负载，让 reader 看到反射变化，常见于近场系统。 |
+| Backscatter | 反向散射 | UHF tag 改变反射特性，把 reader 的射频能量“映回去”。 |
+| FSA | Frame Slotted ALOHA | 一帧多个 slot，tag 随机选 slot，空/单/冲突三种结果。 |
+| Q algorithm | 动态帧长算法 | 根据空 slot 和冲突 slot 调整帧长，适应 tag 数量变化。 |
+| LPN | Learning Parity with Noise | 带噪声线性奇偶学习问题，HB/HB+ 的安全基础。 |
+| dot product | 点积/内积 | HB 中 challenge 向量和 secret 向量逐位相乘再异或求和。 |
+| RN16 | 16-bit random number | EPC/UHF 交互中的短随机数，物理层指纹研究可利用其响应。 |
+| PDoT | Phase Difference of Tags | RF-Mehndi 中用于描述标签阵列相位差的特征。 |
+
+HB/HB+ 公式直觉：
+
+- HB 响应：`z = a · x XOR noise`，其中 `a` 是随机 challenge，`x` 是 secret，`noise` 是少量随机错误。
+- 没有 noise 时，多组线性方程可解出 `x`；有 noise 后变成 LPN，低成本 tag 可用简单 XOR，但攻击者很难可靠求解。
+- HB+ 增加 blinding value 和第二个 secret，防主动攻击者用固定查询多数投票恢复秘密位。
+
+PPT 细节补充：
+
+- Reader 硬件可拆成天线、`Transceiver`、控制器和 `middleware`。middleware 负责把底层读到的 tag 事件清洗、过滤、聚合并交给后端业务系统。
+- RFID 频段：LF 常见 `125kHz`/134 kHz，HF 是 13.56 MHz，UHF 是 860-960 MHz，`SHF` 是 Super High Frequency，可用于更高频/更远或特殊场景。
+- Reader 射频链路里的 `high-frequency interface module` 包含发射、接收、调制/解调等功能；`local oscillator` 提供本振；`mixer` 用于变频；`circulator` 帮助同一天线收发隔离；`I-Q output` 给出同相/正交两路基带信号，便于解调相位和幅度。
+- `Pure ALOHA utilization 18.4%` 是纯 ALOHA 最大利用率约 1/(2e) 的结果；时隙 ALOHA 约 36.8%，FSA/Q algorithm 继续根据标签数量调帧长。
+- HB 协议常写响应为 `(a · x) ⊕ v`，其中 `v` 是噪声位。HB+ 引入第二组 challenge/secret，可写成 `(a · x) ⊕ (b · y) ⊕ v`。
+- EPC Gen2 Q algorithm 中 `Qfp` 是浮点形式的 Q 估计值，用于根据空 slot/冲突 slot 调整下一帧长度。参数 `C=0.1-0.5` 可理解为调整步长，冲突多就增大 Q，空 slot 多就减小 Q。
+- RFID 保护方法按能力分层：低成本 tag 用随机化 ID、kill/sleep、访问密码、HB/HB+；较强 tag 可用 AES/3DES challenge-response；系统侧用 reader 认证、后端授权、日志审计和物理距离控制。
+
+## 历年卷风格练习
+
+1. RFID 在 IoT 哪一层？RFID 系统由哪些功能模块组成？
+2. 用 4 个标签说明 FSA 和二进制树防冲突的区别。
+3. 为什么适合低成本 RFID 的认证算法常选择 HB/HB+ 这类轻量方案，而不是传统公钥密码？
+4. RFID tag 和 reader 之间传递敏感信息被窃听时，可以采取哪些保护措施？
+
+<details class="self-test-answer">
+<summary>参考答案</summary>
+
+1. RFID 通常属于感知层。系统包括 reader/interrogator、tag/transponder、antenna 和后台数据库；reader 内部可分射频模块与基带控制模块，负责供能、调制/解调、编码/解码、防冲突、认证、加密/解密和业务接口。
+2. FSA 中 4 个 tag 随机选 slot，可能空、成功或冲突，冲突后下一帧重试；二进制树按 ID 前缀递归查询，把冲突集合拆成更小集合直到每次只剩一个 tag。
+3. 低成本无源 tag 能量、门数、存储和时钟都有限，难以承受 RSA/ECC 等公钥运算。HB/HB+ 主要用 XOR、点积和少量随机数，更适合廉价标签。
+4. 可用距离限制、kill/renaming、随机 ID、challenge-response 认证、轻量加密/MAC、RF-Cloak 随机波形、后端访问控制和审计。若标签能力太弱，可把复杂安全逻辑放在 reader/后端。
 
 </details>
