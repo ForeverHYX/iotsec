@@ -375,3 +375,8 @@
 | 表格渲染测试（绿灯） | `node --test tests/test_app_utils.mjs` | 5 个 Node 测试通过 | 5 个通过 | 通过 |
 | 完整测试 | `npm test` | Python 和 Node 全部通过 | Python 15 个、Node 5 个通过 | 通过 |
 | 本地浏览器 DOM 检查 | agent-browser 打开 WEP 页面并执行 DOM 检查 | table 数量为 1，原始管道表头不可见 | `tables: 1`, `rawPipeHeaderVisible: false` | 通过 |
+| GitHub push | `git push origin main` | 推送表格渲染修复 | commit `dae5c7e` 已推送到 `main` | 通过 |
+| Pages workflow | `gh run watch 28229550863 --repo ForeverHYX/iotsec --exit-status` | 部署成功 | workflow success | 通过 |
+| 线上资源版本 | 读取 `index.html?v=dae5c7e` 和 `assets/app.js?v=table-render-20260626` | 页面引用新资源且 app.js 含 table renderer | asset version 命中，`renderTable`/`isTableSeparator` 命中 | 通过 |
+| 线上 WEP 表格 DOM 检查 | agent-browser 打开 `https://foreverhyx.github.io/iotsec/?v=dae5c7e#wired-equivalent-privacy-wep` | table 数量为 1，原始管道表头不可见 | `tables: 1`, `rawPipeHeaderVisible: false`，表头三列正确 | 通过 |
+| 线上截图检查 | agent-browser 截图 WEP 公式与术语速查区域 | 表格视觉正常 | 三列表格正常显示，未出现管道符源码段落 | 通过 |

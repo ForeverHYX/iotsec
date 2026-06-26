@@ -92,8 +92,8 @@
 - [x] 为 Markdown table 渲染增加前端回归测试
 - [x] 修复 `markdownToHtml` 表格解析和表格样式
 - [x] 本地浏览器检查 WEP 术语表显示
-- [ ] 推送 GitHub 并验证 Pages
-- **状态：** in_progress
+- [x] 推送 GitHub 并验证 Pages
+- **状态：** complete
 
 ## 关键问题
 1. 本机是否已登录 GitHub CLI，是否有权限创建/推送仓库。
