@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 NOTES_DIR = ROOT / "notes"
-COURSE_NOTE_EXCLUDES = {"index.md", "past-exams.md"}
+COURSE_NOTE_EXCLUDES = {"index.md", "past-exams.md", "mock-exam-a.md", "mock-exam-b.md"}
 ORDERED_ITEM = re.compile(r"^\d+\.\s+", re.MULTILINE)
 
 REQUIRED_TERMS = {

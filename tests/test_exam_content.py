@@ -46,6 +46,29 @@ class ExamContentTests(unittest.TestCase):
         ]
         self.assertEqual([], direct_answer_lines)
 
+    def test_mock_exams_are_in_site_manifest(self):
+        notes = json.loads((ROOT / "content" / "notes.json").read_text(encoding="utf-8"))
+        slugs = {note["slug"] for note in notes}
+        self.assertIn("mock-exam-a", slugs)
+        self.assertIn("mock-exam-b", slugs)
+
+    def test_mock_exams_keep_recalled_exam_question_structure(self):
+        for filename in ["mock-exam-a.md", "mock-exam-b.md"]:
+            text = (ROOT / "notes" / filename).read_text(encoding="utf-8")
+            with self.subTest(file=filename):
+                self.assertIn("## 1. 模拟卷", text)
+                self.assertIn("## 2. 简答题池", text)
+                self.assertIn("## 3. 综合大题", text)
+                self.assertEqual(20, text.count("### 客观题 "))
+                self.assertEqual(6, text.count("### 简答题 "))
+                self.assertEqual(4, text.count("### 大题 "))
+                self.assertGreaterEqual(text.count('<details class="self-test-answer">'), 30)
+                self.assertIn("Hidden Terminal", text)
+                self.assertIn("WEP", text)
+                self.assertIn("IoT Security", text)
+                self.assertIn("RFID", text)
+                self.assertIn("Bluetooth", text)
+
 
 if __name__ == "__main__":
     unittest.main()

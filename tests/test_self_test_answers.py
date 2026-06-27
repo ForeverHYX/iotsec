@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 NOTES_DIR = ROOT / "notes"
 SELF_TEST_HEADING = re.compile(r"^##\s+\d+\.\s+快速自测\s*$", re.MULTILINE)
 ORDERED_ITEM = re.compile(r"^\d+\.\s+", re.MULTILINE)
+NON_CHAPTER_NOTES = {"index.md", "past-exams.md", "mock-exam-a.md", "mock-exam-b.md"}
 
 
 class SelfTestAnswerTests(unittest.TestCase):
@@ -14,7 +15,7 @@ class SelfTestAnswerTests(unittest.TestCase):
         note_files = sorted(
             path
             for path in NOTES_DIR.glob("*.md")
-            if path.name not in {"index.md", "past-exams.md"}
+            if path.name not in NON_CHAPTER_NOTES
         )
         self.assertGreater(len(note_files), 0)
 

@@ -70,3 +70,5 @@ order: 0
 - Lecture 13: Bluetooth Security and Privacy
 - Lecture 14: NFC Application Security
 - 历年卷回忆题与参考答案
+- 模拟卷 A：历年卷风格练习
+- 模拟卷 B：历年卷风格练习
