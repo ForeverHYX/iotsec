@@ -14,6 +14,7 @@ NON_CHAPTER_NOTES = {
     "mock-exam-b.md",
     "mock-exam-c.md",
     "mock-exam-d.md",
+    "mock-exam-e.md",
 }
 
 

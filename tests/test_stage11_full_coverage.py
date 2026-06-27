@@ -12,6 +12,7 @@ COURSE_NOTE_EXCLUDES = {
     "mock-exam-b.md",
     "mock-exam-c.md",
     "mock-exam-d.md",
+    "mock-exam-e.md",
 }
 ORDERED_ITEM = re.compile(r"^\d+\.\s+", re.MULTILINE)
 

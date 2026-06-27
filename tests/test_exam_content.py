@@ -53,6 +53,7 @@ class ExamContentTests(unittest.TestCase):
         self.assertIn("mock-exam-b", slugs)
         self.assertIn("mock-exam-c", slugs)
         self.assertIn("mock-exam-d", slugs)
+        self.assertIn("mock-exam-e", slugs)
 
     def test_mock_exams_keep_recalled_exam_question_structure(self):
         for filename in ["mock-exam-a.md", "mock-exam-b.md"]:
@@ -85,6 +86,32 @@ class ExamContentTests(unittest.TestCase):
                 self.assertGreaterEqual(text.count('<details class="self-test-answer">'), 26)
                 for term in ["Hidden Terminal", "WEP", "IoT Security", "RFID", "Bluetooth"]:
                     self.assertIn(term, text)
+
+    def test_user_topic_mock_exam_keeps_requested_structure(self):
+        text = (ROOT / "notes" / "mock-exam-e.md").read_text(encoding="utf-8")
+        self.assertIn("## 一、选择题（20 题，每题 3 分）", text)
+        self.assertIn("## 二、大题（4 题，每题 10 分）", text)
+        self.assertEqual(20, text.count("### 选择题 "))
+        self.assertEqual(4, text.count("### 大题 "))
+        self.assertGreaterEqual(text.count('<details class="self-test-answer">'), 24)
+
+        required_terms = [
+            "QAM",
+            "扩频",
+            "Fast Fading",
+            "Channel interleaving",
+            "SigOver Attack",
+            "WEP IV",
+            "CCMP",
+            "WPA Pre-Shared Key Mode",
+            "Enterprise Mode",
+            "Security Demands",
+            "Security Architecture",
+            "Bluetooth Security Modes",
+        ]
+        for term in required_terms:
+            with self.subTest(term=term):
+                self.assertIn(term, text)
 
 
 if __name__ == "__main__":
