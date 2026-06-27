@@ -7,7 +7,14 @@ ROOT = Path(__file__).resolve().parents[1]
 NOTES_DIR = ROOT / "notes"
 SELF_TEST_HEADING = re.compile(r"^##\s+\d+\.\s+快速自测\s*$", re.MULTILINE)
 ORDERED_ITEM = re.compile(r"^\d+\.\s+", re.MULTILINE)
-NON_CHAPTER_NOTES = {"index.md", "past-exams.md", "mock-exam-a.md", "mock-exam-b.md"}
+NON_CHAPTER_NOTES = {
+    "index.md",
+    "past-exams.md",
+    "mock-exam-a.md",
+    "mock-exam-b.md",
+    "mock-exam-c.md",
+    "mock-exam-d.md",
+}
 
 
 class SelfTestAnswerTests(unittest.TestCase):

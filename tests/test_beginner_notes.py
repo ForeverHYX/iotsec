@@ -5,7 +5,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 NOTES_DIR = ROOT / "notes"
-COURSE_NOTE_EXCLUDES = {"index.md", "past-exams.md", "mock-exam-a.md", "mock-exam-b.md"}
+COURSE_NOTE_EXCLUDES = {
+    "index.md",
+    "past-exams.md",
+    "mock-exam-a.md",
+    "mock-exam-b.md",
+    "mock-exam-c.md",
+    "mock-exam-d.md",
+}
 
 REQUIRED_TERMS = {
     "week-1-2026.md": [

@@ -51,6 +51,8 @@ class ExamContentTests(unittest.TestCase):
         slugs = {note["slug"] for note in notes}
         self.assertIn("mock-exam-a", slugs)
         self.assertIn("mock-exam-b", slugs)
+        self.assertIn("mock-exam-c", slugs)
+        self.assertIn("mock-exam-d", slugs)
 
     def test_mock_exams_keep_recalled_exam_question_structure(self):
         for filename in ["mock-exam-a.md", "mock-exam-b.md"]:
@@ -68,6 +70,20 @@ class ExamContentTests(unittest.TestCase):
                 self.assertIn("IoT Security", text)
                 self.assertIn("RFID", text)
                 self.assertIn("Bluetooth", text)
+
+    def test_choice_short_answer_mock_exams_do_not_include_big_questions(self):
+        for filename in ["mock-exam-c.md", "mock-exam-d.md"]:
+            text = (ROOT / "notes" / filename).read_text(encoding="utf-8")
+            with self.subTest(file=filename):
+                self.assertIn("## 1. 选择题", text)
+                self.assertIn("## 2. 简答题", text)
+                self.assertNotIn("## 3. 综合大题", text)
+                self.assertNotIn("### 大题 ", text)
+                self.assertEqual(20, text.count("### 选择题 "))
+                self.assertEqual(6, text.count("### 简答题 "))
+                self.assertGreaterEqual(text.count('<details class="self-test-answer">'), 26)
+                for term in ["Hidden Terminal", "WEP", "IoT Security", "RFID", "Bluetooth"]:
+                    self.assertIn(term, text)
 
 
 if __name__ == "__main__":
