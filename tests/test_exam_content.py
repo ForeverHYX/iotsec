@@ -77,6 +77,7 @@ class ExamContentTests(unittest.TestCase):
             with self.subTest(file=filename):
                 self.assertIn("## 1. 选择题", text)
                 self.assertIn("## 2. 简答题", text)
+                self.assertNotIn("综合大题", text)
                 self.assertNotIn("## 3. 综合大题", text)
                 self.assertNotIn("### 大题 ", text)
                 self.assertEqual(20, text.count("### 选择题 "))
